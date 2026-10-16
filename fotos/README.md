@@ -9,9 +9,9 @@ Tudo que está aqui pode ser usado nas artes dos posts. Caminho público:
 |---|---|---|
 | `estudio-blazer-azul/` | Retrato de estúdio, blazer azul, braços cruzados, fundo verde escuro | Autoridade, post técnico, tese forte |
 | `estudio-blazer-verde/` | Retrato de estúdio, blazer verde, fundo escuro | Autoridade, tom consultivo |
-| `escritorio/` | Mesa com laptop e café, em pé no lounge, conversando com alguém | Gestão, rotina, processo, equipe |
+| `escritorio/` | Blazer azul + camiseta preta: mesa com laptop, mesa de reunião, corredor, lounge, conversando | Gestão, rotina, processo, equipe, planilha, reunião |
 | `palco/` | Palestrando, plateia em primeiro plano | Prova social, bastidor, evento |
-| `evento-makers/` | Makers Day: maçã, cubo verde, conversa com crachá | Bastidor, história, experiência do cliente |
+| `evento-makers/` | Blazer azul + camisa rosa, Makers Day: maçã, cubo verde, conversas, anotando, andando com café | Bastidor, história, experiência do cliente, networking |
 | `estudio-moletom-verde/` | Ensaio de moletom verde Makers | Casual, nerd, pessoal |
 | `estudio-camiseta-roxa/` | Ensaio de camiseta roxa | Casual, dica prática |
 | `../videos/evento-makers/` | B-roll vertical do evento (6s a 18s), sem fala | Fundo de Reels com texto, Stories |
