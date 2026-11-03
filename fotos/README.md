@@ -11,6 +11,7 @@ Tudo que está aqui pode ser usado nas artes dos posts. Caminho público:
 | `estudio-blazer-verde/` | Retrato de estúdio, blazer verde, fundo escuro | Autoridade, tom consultivo |
 | `escritorio/` | Blazer azul + camiseta preta: mesa com laptop, mesa de reunião, corredor, lounge, conversando | Gestão, rotina, processo, equipe, planilha, reunião |
 | `palco/` | Palestrando, plateia em primeiro plano | Prova social, bastidor, evento |
+| `blazer-verde-evento/` | Blazer verde escuro (camisa rosa, branca, azul ou camiseta preta), evento corporativo: aperto de mão, rindo com café, explicando, anotando, poltrona, andando, plateia | Networking, bastidor, prova social, tom consultivo |
 | `evento-makers/` | Blazer azul + camisa rosa, Makers Day: maçã, cubo verde, conversas, anotando, andando com café | Bastidor, história, experiência do cliente, networking |
 | `estudio-moletom-verde/` | Ensaio de moletom verde Makers | Casual, nerd, pessoal |
 | `estudio-camiseta-roxa/` | Ensaio de camiseta roxa | Casual, dica prática |
