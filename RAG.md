@@ -47,7 +47,7 @@ Resumo condensado do que já foi feito, para qualquer chat novo começar daqui.
 
 ## Outras entregas
 - Reels "frase do Makers Day" (22s) em `videos/reels-frase-makers-day.mp4`, com legenda pronta. Postar pelo celular com música em alta.
-- **Black November da Liga:** "Audiência vale mais que dinheiro." Bônus: 3 stories por dia no 1º mês pra quem fechar até 30/11. Palavra-chave BLACK. Artes em `ofertas/black-november/` (3 stories + status).
+- **Black November da Liga:** "Audiência vale mais que dinheiro." Só 5 vagas. Bônus: 3 stories por dia no 1º mês pra quem fechar até 30/11. Palavra-chave BLACK. Próximos passos sugeridos: mensagem individual pros clientes atuais, amostra grátis de 1 carrossel pra quem responder BLACK, contagem regressiva 27–30/11, definir o que acontece com os stories depois do 1º mês. Artes em `ofertas/black-november/` (3 stories + status).
 - **Oferta Liga (carrosséis com IA):** 30 por R$1.000, 60 por R$1.500, 90 por R$1.800/mês. Artes: 1 imagem pro status do WhatsApp e 3 stories em sequência (prova +393%, benefícios, planos + "Responde com CARROSSEL").
 
 ## Pendências
