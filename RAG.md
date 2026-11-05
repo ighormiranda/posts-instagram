@@ -37,6 +37,10 @@ Resumo condensado do que já foi feito, para qualquer chat novo começar daqui.
 - **09–15/11:** semana 06 (13 posts), série "5 mensagens difíceis no WhatsApp" (10–14/11 às 12h) + resumo 15/11 19h. Sem collab.
 - **20/11 12h:** Black Friday (montar oferta até 27). Sem collab.
 - **Stories:** 04–15/11 e 20/11 agendados (39).
+- **Reels 18h (3ª postagem do dia):** 06/11 Reels com prints dos insights (CTA segue) · 10/11 loop 7s (CTA BLACK) · 13/11 loop 4s (CTA segue). Arquivos em `videos/`. Sem collab e sem música (agendados pela conexão).
+- **Carrossel "30 dias de automação"** pronto em `2026-11-avulsos/30dias_slideNN.jpg`, ainda sem data.
+- **Case (RAG Black November mídia social, 05/11):** automação começou em 6/10. Falar "+393% nos primeiros 30 dias da automação" (nunca "últimos 30 dias"). Não usar "Visualizadores" (+58,6% em 30d, mas -52,6% em 90d). Pode usar: 85% das visualizações de 90 dias vieram de posts+stories; nenhum dia zerado desde 6/10. Não afirmar "sem anúncio" nem "todos carrosséis" sem confirmação. CTA da Black no feed: "Manda BLACK no direct"; LP em scroll storytelling vai pra bio quando tiver link. RAG completa em `ofertas/black-november/RAG-midia-social.md`.
+- **Regra nova:** não mostrar fraqueza ("seguidores quase nada") em peça com oferta; só em peça cujo CTA é seguir.
 - **Vazio:** 16–19/11 e 21–30/11 (faltam ~29 posts + stories).
 
 ## Ferramentas (no ambiente de trabalho do Claude, recriar se o chat for novo)
