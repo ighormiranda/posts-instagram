@@ -47,13 +47,11 @@ Resumo condensado do que já foi feito, para qualquer chat novo começar daqui.
 
 ## Outras entregas
 - Reels "frase do Makers Day" (22s) em `videos/reels-frase-makers-day.mp4`, com legenda pronta. Postar pelo celular com música em alta.
+- **Black November da Liga:** "Audiência vale mais que dinheiro." Bônus: 3 stories por dia no 1º mês pra quem fechar até 30/11. Palavra-chave BLACK. Artes em `ofertas/black-november/` (3 stories + status).
 - **Oferta Liga (carrosséis com IA):** 30 por R$1.000, 60 por R$1.500, 90 por R$1.800/mês. Artes: 1 imagem pro status do WhatsApp e 3 stories em sequência (prova +393%, benefícios, planos + "Responde com CARROSSEL").
 
 ## Pendências
-1. **Workflow "CARROSSEL"** (aprovado): gatilho resposta contendo "carrossel" → etiqueta *interesse-carrosseis* → resposta automática (texto aprovado abaixo) → notificação pro Ighor. Montar pelo navegador do app com a janela visível. Confirmar se o WhatsApp está conectado no HighLevel.
-   > Oi, {nome}! Que bom que você se interessou 😊
-   > Funciona assim: a gente cria os carrosséis da sua clínica com IA, com as fotos da sua equipe, legenda pronta e já agendados no Instagram.
-   > Pra eu te mostrar exemplos e ver qual plano faz mais sentido, me passa o @ da sua clínica?
+1. **Workflow "BLACK"** (Black November da Liga): gatilho resposta igual a "black" (sem diferenciar maiúscula) → etiqueta *black-november* → resposta automática → notificação pro Ighor. Montar pelo navegador do app com a janela visível. Confirmar se o WhatsApp está conectado no HighLevel. Texto da resposta aguardando aprovação final (versão Black November).
 2. **Bio/nome:** opções enviadas; recomendado nome "Ighor Miranda | Vendas e IA pra Clínicas" + bio "Sua clínica não precisa de mais lead. / Precisa parar de perder os que já tem. / Clínicas de R$25 mil a +R$300 mil/mês. / Comenta DIAGNÓSTICO em um post 👇". Aguardando escolha.
 3. Fixar "Quem sou eu / O que eu faço / O que eu vendo" e subir destaques "Sobre mim" e "Diagnóstico" (artes já na pasta).
 4. Collab arkyon.io nos posts criados pela conexão (09/11 em diante).
