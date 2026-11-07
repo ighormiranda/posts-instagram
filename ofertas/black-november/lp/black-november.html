@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black November da Liga · Audiência vale mais que dinheiro</title>
+<meta name="description" content="Carrosséis pro Instagram da sua clínica, todo dia, feitos com IA, com as fotos da sua equipe, legenda pronta e agendados. Só 5 vagas em novembro.">
+<meta property="og:title" content="Black November da Liga">
+<meta property="og:description" content="Todo mundo vai te dar desconto. A gente vai te dar audiência.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0A0A0A}
+a{color:#9AE04C}a:hover{color:#C4F58E}
+*{box-sizing:border-box}
+.cta{transition:background .2s,transform .2s}
+.cta:hover{background:#B5F070;transform:translateY(-2px)}
+.plan{transition:border-color .2s}
+.plan:hover{border-color:#9AE04C}
+
+/* Storytelling do topo: layout padrão (sem animação) */
+.story{position:relative}
+.stage{max-width:1200px;margin:0 auto;padding:40px 24px 64px;display:flex;flex-direction:column;gap:24px}
+.toprow{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.caps{flex:1 1 520px;display:flex;flex-direction:column;gap:14px}
+.cap{margin:0;font-size:clamp(24px,3.4vw,46px);font-weight:800;line-height:1.08;letter-spacing:-0.035em}
+.count::after{content:"+393%"}
+.hint{display:none}
+
+@keyframes rvUp{from{opacity:0;transform:translateY(56px)}to{opacity:1;transform:none}}
+@keyframes wOn{from{opacity:.16}to{opacity:1}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes zoomIn{from{transform:scale(.72);opacity:.15}to{transform:scale(1);opacity:1}}
+@keyframes popIn{from{opacity:0;transform:scale(.72)}to{opacity:1;transform:none}}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes fadeOut{from{opacity:1}to{opacity:0}}
+@keyframes capIO{0%{opacity:0;transform:translateY(22px)}20%,80%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-22px)}}
+@keyframes capIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes capOut{from{opacity:1;transform:none}to{opacity:0;transform:translateY(-22px)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+@keyframes dim{from{opacity:1}to{opacity:.4}}
+@keyframes chOn{0%{color:#5C5C5C}12%,88%{color:#F5F5F5}100%{color:#8A8A8A}}
+@keyframes chStay{from{color:#5C5C5C}to{color:#F5F5F5}}
+@keyframes stepOn{from{opacity:.22;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes ring{from{transform:scale(.6);opacity:1}to{transform:scale(1.9);opacity:0}}
+.live{animation:pulse 1.6s ease-in-out infinite}
+.ring{transform-box:fill-box;transform-origin:center;animation:ring 1.6s ease-out infinite}
+.chapters{display:flex;gap:10px}
+.dock{display:none}
+@media (max-width: 760px){
+.dock{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;align-items:center;justify-content:space-between;gap:12px;background:#141414;border:1px solid #2E2E2E;border-radius:18px;padding:10px 10px 10px 16px;box-shadow:0 12px 32px rgba(0,0,0,.5)}
+.pagefoot{padding-bottom:110px!important}
+}
+.howstage{max-width:1200px;margin:0 auto;padding:120px 24px;display:flex;flex-direction:column;gap:48px}
+
+@supports (animation-timeline: view()){
+.rv{animation:rvUp linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
+.w{animation:wOn linear both;animation-timeline:view();animation-range:cover 18% cover 42%}
+.zoom{animation:zoomIn linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
+.progress{transform-origin:left;animation:grow linear both;animation-timeline:scroll(root)}
+
+.story{height:4400px;view-timeline-name:--story;view-timeline-axis:block}
+.seg{transform-origin:left;animation:grow linear both;animation-timeline:--story}
+.seg1{animation-range:contain 4% contain 42%}
+.seg2{animation-range:contain 42% contain 54%}
+.seg3{animation-range:contain 54% contain 76%}
+.seg4{animation-range:contain 76% contain 96%}
+.chl{color:#5C5C5C;animation:chOn linear both;animation-timeline:--story}
+.chl1{animation-range:contain 4% contain 42%}
+.chl2{animation-range:contain 42% contain 54%}
+.chl3{animation-range:contain 54% contain 76%}
+.chl4{animation-name:chStay;animation-range:contain 76% contain 80%}
+.enddot{opacity:0;animation:fadeIn linear both;animation-timeline:--story;animation-range:contain 73% contain 76%}
+.st{animation:stepOn linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+@media (min-width: 900px) and (min-height: 700px){
+.how{height:2800px;view-timeline-name:--how;view-timeline-axis:block}
+.howstage{position:sticky;top:0;height:min(100vh,900px);justify-content:center;padding-top:24px;padding-bottom:24px}
+.howbar{transform-origin:left;animation:grow linear both;animation-timeline:--how;animation-range:contain 5% contain 90%}
+.st{animation-timeline:--how}
+.st1{animation-range:contain 5% contain 22%}
+.st2{animation-range:contain 27% contain 44%}
+.st3{animation-range:contain 49% contain 66%}
+.st4{animation-range:contain 71% contain 88%}
+}
+.stage{position:sticky;top:0;height:min(100vh,900px);justify-content:center;padding-top:24px;padding-bottom:24px}
+.caps{display:block;position:relative;height:clamp(120px,15vw,170px)}
+.cap{position:absolute;left:0;right:0;top:0;opacity:0;animation:capIO linear both;animation-timeline:--story}
+.c0{opacity:1;animation-name:capOut;animation-range:contain 1% contain 6%}
+.c1{animation-range:contain 6% contain 26%}
+.c2{animation-range:contain 24% contain 44%}
+.c3{animation-range:contain 42% contain 56%}
+.c4{animation-range:contain 54% contain 76%}
+.c5{animation-range:contain 76% contain 96%}
+.cap.c6{animation-name:capIn;animation-range:contain 95% contain 99%}
+.gdraw{stroke-dasharray:1;animation-name:draw,dim;animation-timing-function:linear;animation-fill-mode:both;animation-timeline:--story,--story;animation-range:contain 6% contain 40%,contain 56% contain 62%}
+.peak{opacity:0;animation:fadeIn linear both;animation-timeline:--story;animation-range:contain 28% contain 33%}
+.mark{opacity:0;animation:fadeIn linear both;animation-timeline:--story;animation-range:contain 44% contain 50%}
+.vdraw{stroke-dasharray:1;animation:draw linear both;animation-timeline:--story;animation-range:contain 54% contain 74%}
+.countwrap{opacity:0;transform-origin:left bottom;animation:popIn linear both;animation-timeline:--story;animation-range:contain 76% contain 84%}
+.hint{display:flex;animation:fadeOut linear both;animation-timeline:--story;animation-range:contain 0% contain 5%}
+.hint svg{animation:bob 1.8s ease-in-out infinite}
+}
+@media (prefers-reduced-motion: reduce){
+.rv,.w,.zoom,.progress,.live,.hint svg,.ring{animation:none!important}
+}
+</style>
+</head>
+<body>
+<div style="width: 100%; min-height: 100vh; background: #0A0A0A; color: #F5F5F5; font-family: 'Plus Jakarta Sans', system-ui, sans-serif">
+
+<div aria-hidden="true" class="progress" style="position: fixed; top: 0; left: 0; right: 0; height: 4px; background: #9AE04C; z-index: 50"></div>
+
+<!-- TOPO -->
+<header style="max-width: 1200px; margin: 0 auto; padding: 24px 24px 0; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap">
+<span style="font-weight: 800; font-size: 18px; letter-spacing: -0.02em">Liga do Marketing</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #9AE04C; color: #9AE04C; border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 700; letter-spacing: 0.08em">
+<span class="live" style="width: 8px; height: 8px; border-radius: 50%; background: #9AE04C"></span>BLACK NOVEMBER DA LIGA</span>
+</header>
+
+<!-- STORYTELLING: o gráfico evolui com o scroll -->
+<section class="story" aria-label="O case do perfil @o.ighormiranda">
+<div class="stage">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="color: #9AE04C; font-size: 14px; font-weight: 800; letter-spacing: 0.12em">O CASE: MEU PRÓPRIO PERFIL · @o.ighormiranda</span>
+<span style="color: #A3A3A3; font-size: 15px; line-height: 1.45">Dados reais, do painel do meu Instagram. O print original está mais abaixo.</span>
+</div>
+<div class="chapters" aria-hidden="true">
+<div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div style="height: 4px; background: #262626; border-radius: 2px; overflow: hidden"><div class="seg seg1" style="height: 100%; background: #8A8A8A"></div></div><span class="chl chl1" style="font-size: 12px; font-weight: 800; letter-spacing: 0.1em">ANTES</span></div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div style="height: 4px; background: #262626; border-radius: 2px; overflow: hidden"><div class="seg seg2" style="height: 100%; background: #9AE04C"></div></div><span class="chl chl2" style="font-size: 12px; font-weight: 800; letter-spacing: 0.1em">A VIRADA</span></div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div style="height: 4px; background: #262626; border-radius: 2px; overflow: hidden"><div class="seg seg3" style="height: 100%; background: #9AE04C"></div></div><span class="chl chl3" style="font-size: 12px; font-weight: 800; letter-spacing: 0.1em">CONSTÂNCIA</span></div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div style="height: 4px; background: #262626; border-radius: 2px; overflow: hidden"><div class="seg seg4" style="height: 100%; background: #9AE04C"></div></div><span class="chl chl4" style="font-size: 12px; font-weight: 800; letter-spacing: 0.1em">RESULTADO</span></div>
+</div>
+<div class="toprow">
+<div class="caps">
+<p class="cap c0">Antes de te oferecer qualquer coisa, olha o que aconteceu com o meu perfil.</p>
+<p class="cap c1" style="color: #A3A3A3">Agosto e setembro: eu postava quando dava.</p>
+<p class="cap c2" style="color: #A3A3A3">Às vezes um vídeo ia acima do normal. Depois, semanas paradas.</p>
+<p class="cap c3">6 de outubro: <span style="color: #9AE04C">liguei a automação.</span></p>
+<p class="cap c4">Post todo dia. <span style="color: #9AE04C">Nenhum dia zerado desde então.</span></p>
+<p class="cap c5">Nos primeiros 30 dias da automação, as visualizações subiram:</p>
+<p class="cap c6">Agora imagina isso <span style="color: #9AE04C">na sua clínica.</span></p>
+</div>
+<div class="countwrap" style="display: flex; flex-direction: column; align-items: flex-end">
+<span class="count" style="font-size: clamp(64px, 10vw, 140px); line-height: 0.9; letter-spacing: -0.06em; font-weight: 800; color: #9AE04C; font-variant-numeric: tabular-nums"></span>
+<span style="color: #A3A3A3; font-size: 14px; font-weight: 600">visualizações</span>
+</div>
+</div>
+
+<div style="width: 100%">
+<svg role="img" aria-label="Visualizações diárias do perfil de 7 de agosto a 4 de novembro. Antes de 6 de outubro: picos isolados e muitos dias zerados. A partir de 6 de outubro, com a automação: visualizações altas todos os dias, sem nenhum dia zerado." viewBox="0 0 900 330" style="width: 100%; height: auto; display: block; overflow: visible">
+<line x1="0" y1="280" x2="900" y2="280" stroke="#262626" stroke-width="1.5"></line>
+<line x1="0" y1="140" x2="900" y2="140" stroke="#1F1F1F" stroke-width="1.5" stroke-dasharray="5 7"></line>
+<g class="mark">
+<rect x="607" y="10" width="293" height="270" fill="#9AE04C" opacity="0.08"></rect>
+<line x1="607" y1="10" x2="607" y2="280" stroke="#9AE04C" stroke-width="2" stroke-dasharray="6 6"></line>
+<rect x="447" y="0" width="152" height="34" rx="17" fill="#9AE04C"></rect>
+<text x="523" y="23" fill="#0A0A0A" font-size="16" font-weight="800" font-family="Plus Jakarta Sans, sans-serif" text-anchor="middle">6/10 · automação</text>
+</g>
+<g class="peak">
+<circle cx="80.9" cy="63.6" r="7" fill="none" stroke="#A3A3A3" stroke-width="2"></circle>
+<text x="98" y="68" fill="#A3A3A3" font-size="17" font-weight="600" font-family="Plus Jakarta Sans, sans-serif">1 vídeo acima do normal</text>
+</g>
+<path class="gdraw" pathLength="1" d="M0,280 L10.1,280 L20.2,277.5 L30.3,277.5 L40.4,274.9 L50.6,272.4 L60.7,272.4 L70.8,262.2 L80.9,63.6 L91,127.3 L101.1,280 L111.2,280 L121.3,280 L131.5,280 L141.6,280 L151.7,277.5 L161.8,170.5 L171.9,254.5 L182,280 L192.1,280 L202.2,239.3 L212.4,280 L222.5,277.5 L232.6,236.7 L242.7,269.8 L252.8,280 L262.9,280 L273,280 L283.1,280 L293.3,280 L303.4,277.5 L313.5,137.5 L323.6,183.3 L333.7,208.7 L343.8,241.8 L353.9,280 L364,280 L374.2,259.6 L384.3,272.4 L394.4,221.5 L404.5,269.8 L414.6,280 L424.7,280 L434.8,280 L444.9,280 L455.1,280 L465.2,280 L475.3,221.5 L485.4,208.7 L495.5,274.9 L505.6,280 L515.7,280 L525.8,280 L536,280 L546.1,280 L556.2,137.5 L566.3,241.8 L576.4,145.1 L586.5,254.5 L596.6,68.7 L606.7,114.5" fill="none" stroke="#5C5C5C" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"></path>
+<path class="vdraw" pathLength="1" d="M606.7,114.5 L616.9,140 L627,106.9 L637.1,91.6 L647.2,10 L657.3,165.5 L667.4,150.2 L677.5,114.5 L687.6,50.9 L697.8,183.3 L707.9,71.3 L718,101.8 L728.1,178.2 L738.2,196 L748.3,198.5 L758.4,127.3 L768.5,86.5 L778.7,152.7 L788.8,165.5 L798.9,122.2 L809,20.2 L819.1,25.5 L829.2,127.3 L839.3,132.4 L849.4,147.6 L859.6,127.3 L869.7,178.2 L879.8,135 L889.9,127.3 L900,56" fill="none" stroke="#9AE04C" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"></path>
+<g class="enddot">
+<circle class="ring" cx="900" cy="56" r="10" fill="none" stroke="#9AE04C" stroke-width="2"></circle>
+<circle cx="900" cy="56" r="6" fill="#9AE04C"></circle>
+</g>
+<text x="0" y="312" fill="#8A8A8A" font-size="16" font-family="Plus Jakarta Sans, sans-serif">7 ago</text>
+<text x="430" y="312" fill="#8A8A8A" font-size="16" font-family="Plus Jakarta Sans, sans-serif" text-anchor="middle">20 set</text>
+<text x="900" y="312" fill="#8A8A8A" font-size="16" font-family="Plus Jakarta Sans, sans-serif" text-anchor="end">4 nov</text>
+</svg>
+<p style="margin: 10px 0 0; color: #737373; font-size: 12px">Visualizações por dia, redesenhado a partir do painel do Instagram do @o.ighormiranda (90 dias, capturado em 05/11/2026).</p>
+</div>
+
+<div class="hint" aria-hidden="true" style="align-items: center; gap: 10px; color: #8A8A8A; font-size: 13px; font-weight: 700; letter-spacing: 0.1em">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></svg>ROLE DEVAGAR</div>
+</div>
+</section>
+
+<!-- OFERTA -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 140px 24px 140px; display: flex; flex-direction: column; gap: 32px">
+<p class="rv" style="margin: 0; color: #A3A3A3; font-size: 18px; font-weight: 600">Agora é a vez da sua clínica.</p>
+<h1 class="rv" style="margin: 0; font-size: clamp(44px, 8vw, 112px); line-height: 0.98; letter-spacing: -0.045em; font-weight: 800">Todo mundo vai te dar desconto.<br><span style="color: #9AE04C">A gente vai te dar audiência.</span></h1>
+<p class="rv" style="margin: 0; max-width: 640px; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: #D4D4D4">Carrosséis pro Instagram da sua clínica, todo dia, feitos com IA.<br>Com as fotos da sua equipe, legenda pronta e já agendados.</p>
+<div class="rv" style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center">
+<a class="cta" href="https://wa.me/5521998867022?text=BLACK" style="display: inline-flex; align-items: center; gap: 12px; background: #9AE04C; color: #0A0A0A; text-decoration: none; font-weight: 800; font-size: 18px; padding: 20px 32px; border-radius: 14px; min-height: 44px">Quero uma das vagas
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+<span style="color: #A3A3A3; font-size: 15px; font-weight: 600"><span data-vagas>5 vagas abertas</span> em novembro</span>
+</div>
+</section>
+
+<!-- MANIFESTO -->
+<section style="max-width: 1100px; margin: 0 auto; padding: 100px 24px 160px">
+<div style="display: flex; flex-direction: column; gap: clamp(32px, 5vw, 56px); font-size: clamp(30px, 4.6vw, 60px); line-height: 1.18; font-weight: 700; letter-spacing: -0.03em">
+<p style="margin: 0">
+<span class="w">Desconto</span> <span class="w">acaba</span> <span class="w">no</span> <span class="w">dia</span> <span class="w">1º</span> <span class="w">de</span> <span class="w">dezembro.</span><br><span class="w" style="color: #9AE04C">Seguidor</span> <span class="w" style="color: #9AE04C">não.</span>
+</p>
+<p style="margin: 0">
+<span class="w">Cada</span> <span class="w">dia</span> <span class="w">que</span> <span class="w">sua</span> <span class="w">clínica</span> <span class="w">fica</span> <span class="w">sem</span> <span class="w">postar,</span> <span class="w">alguém</span> <span class="w">que</span> <span class="w">ia</span> <span class="w">te</span> <span class="w">conhecer</span> <span class="w">conhece</span> <span class="w">outra</span> <span class="w">clínica.</span>
+</p>
+<p style="margin: 0; color: #9AE04C">
+<span class="w">Presença</span> <span class="w">todo</span> <span class="w">dia</span> <span class="w">vira</span> <span class="w">lembrança.</span><br><span class="w">Lembrança</span> <span class="w">vira</span> <span class="w">agenda.</span>
+</p>
+</div>
+</section>
+
+<!-- FRASE -->
+<section style="padding: 160px 24px; background: #9AE04C; color: #0A0A0A; overflow: hidden">
+<h2 class="zoom" style="margin: 0 auto; max-width: 1200px; text-align: center; font-size: clamp(48px, 9vw, 136px); line-height: 0.95; letter-spacing: -0.05em; font-weight: 800">Audiência vale mais que dinheiro.</h2>
+</section>
+
+<!-- NÚMEROS DO CASE -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 160px 24px 120px; display: flex; flex-direction: column; gap: 48px">
+<div class="rv" style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<span style="color: #9AE04C; font-size: 14px; font-weight: 800; letter-spacing: 0.12em">OS NÚMEROS DO CASE</span>
+<h2 style="margin: 0; font-size: clamp(34px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 800">Antes de vender pra você, testei em mim.</h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #D4D4D4">No @o.ighormiranda eu rodo a mesma automação que a gente vai rodar na sua clínica. Começou em 6 de outubro.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div class="rv" style="flex: 1 1 240px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: -0.05em; font-weight: 800; color: #9AE04C">+393%</div>
+<span style="color: #A3A3A3; font-size: 15px; line-height: 1.5">de visualizações nos primeiros 30 dias da automação</span></div>
+<div class="rv" style="flex: 1 1 240px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: -0.05em; font-weight: 800">27,6 mil</div>
+<span style="color: #A3A3A3; font-size: 15px; line-height: 1.5">visualizações em 90 dias</span></div>
+<div class="rv" style="flex: 1 1 240px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: -0.05em; font-weight: 800">15 mil</div>
+<span style="color: #A3A3A3; font-size: 15px; line-height: 1.5">vieram dos posts no feed, mais da metade de tudo</span></div>
+<div class="rv" style="flex: 1 1 240px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: -0.05em; font-weight: 800">8,5 mil</div>
+<span style="color: #A3A3A3; font-size: 15px; line-height: 1.5">vieram dos stories; posts e stories somam 85%</span></div>
+</div>
+<div class="rv" style="display: flex; flex-wrap: wrap; gap: 20px; border-top: 1px solid #262626; padding-top: 32px">
+<div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 8px">
+<span style="color: #9AE04C; font-weight: 800; font-size: 14px; letter-spacing: 0.08em">1. CONSTÂNCIA</span>
+<p style="margin: 0; color: #D4D4D4; line-height: 1.55">Post todo dia, sem depender de tempo livre ou inspiração.</p></div>
+<div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 8px">
+<span style="color: #9AE04C; font-weight: 800; font-size: 14px; letter-spacing: 0.08em">2. ANÁLISE</span>
+<p style="margin: 0; color: #D4D4D4; line-height: 1.55">Com post todo dia, dá pra ver o que está dando certo e o que está dando errado.</p></div>
+<div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 8px">
+<span style="color: #9AE04C; font-weight: 800; font-size: 14px; letter-spacing: 0.08em">3. MELHORIA</span>
+<p style="margin: 0; color: #D4D4D4; line-height: 1.55">As próximas postagens já saem ajustadas pelo que funcionou.</p></div>
+</div>
+<div class="rv" style="background: #141414; border: 1px solid #262626; border-radius: 28px; padding: clamp(28px, 4vw, 56px); display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 16px">
+<span style="color: #9AE04C; font-size: 14px; font-weight: 800; letter-spacing: 0.12em">A PROVA</span>
+<h3 style="margin: 0; font-size: clamp(28px, 3.6vw, 44px); line-height: 1.05; letter-spacing: -0.035em; font-weight: 800">O print original, direto do meu Instagram.</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #D4D4D4">É o mesmo painel e o mesmo período do gráfico lá de cima: 90 dias, de 7 de agosto a 4 de novembro.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #D4D4D4">As visualizações por tipo também estão aqui: <strong style="color: #F5F5F5">15 mil em posts</strong> e <strong style="color: #F5F5F5">8,5 mil em stories</strong>.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #A3A3A3">Repara no desenho da linha: é o mesmo do gráfico do topo.<br>Antes, picos soltos. A partir de outubro, constância.</p>
+<span style="color: #8A8A8A; font-size: 13px">Capturado em 05/11/2026. Tirei a barra de status, a linha de cards de resumo e o fim da tela. Gráfico e números por tipo estão intactos.</span>
+</div>
+<div style="flex: 0 1 380px; display: flex; justify-content: center">
+<img src="https://raw.githubusercontent.com/ighormiranda/posts-instagram/9e0200e8fec89ecae6bbf5dd7e214d6d24c47815/ofertas/black-november/lp/print-painel-ig.jpg" loading="lazy" alt="Print do painel do Instagram do @o.ighormiranda em 90 dias: gráfico diário de 7 de agosto a 4 de novembro, 15 mil visualizações em posts, 8,5 mil em stories e 4,1 mil em reels." style="width: 100%; max-width: 380px; height: auto; display: block; border-radius: 24px; border: 1px solid #333333">
+</div>
+</div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="how" aria-label="Como funciona">
+<div class="howstage">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="color: #9AE04C; font-size: 14px; font-weight: 800; letter-spacing: 0.12em">COMO FUNCIONA</span>
+<h2 style="margin: 0; max-width: 760px; font-size: clamp(34px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 800">Você manda as fotos. <span style="color: #9AE04C">O resto é com a gente.</span></h2>
+</div>
+<div aria-hidden="true" style="height: 4px; background: #262626; border-radius: 2px; overflow: hidden"><div class="howbar" style="height: 100%; background: #9AE04C"></div></div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div class="st st1" style="flex: 1 1 240px; border-top: 2px solid #9AE04C; padding: 28px 4px 0; display: flex; flex-direction: column; gap: 14px">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9AE04C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
+<span style="color: #8A8A8A; font-weight: 800; font-size: 14px">01</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 800">Fotos da sua equipe</h3>
+<p style="margin: 0; color: #A3A3A3; line-height: 1.55">Sua clínica com rosto de verdade, não banco de imagem.</p></div>
+<div class="st st2" style="flex: 1 1 240px; border-top: 2px solid #9AE04C; padding: 28px 4px 0; display: flex; flex-direction: column; gap: 14px">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9AE04C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"></path></svg>
+<span style="color: #8A8A8A; font-weight: 800; font-size: 14px">02</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 800">Carrossel feito com IA</h3>
+<p style="margin: 0; color: #A3A3A3; line-height: 1.55">Conteúdo pensado pro seu público, todo dia, sem você travar na criação.</p></div>
+<div class="st st3" style="flex: 1 1 240px; border-top: 2px solid #9AE04C; padding: 28px 4px 0; display: flex; flex-direction: column; gap: 14px">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9AE04C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6h14"></path><path d="M5 11h14"></path><path d="M5 16h9"></path></svg>
+<span style="color: #8A8A8A; font-weight: 800; font-size: 14px">03</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 800">Legenda pronta</h3>
+<p style="margin: 0; color: #A3A3A3; line-height: 1.55">Texto escrito e revisado, com chamada pra agendar.</p></div>
+<div class="st st4" style="flex: 1 1 240px; border-top: 2px solid #9AE04C; padding: 28px 4px 0; display: flex; flex-direction: column; gap: 14px">
+<svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9AE04C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M4 10h16"></path><path d="M9 3v4"></path><path d="M15 3v4"></path><path d="M9 15l2 2 4-4"></path></svg>
+<span style="color: #8A8A8A; font-weight: 800; font-size: 14px">04</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 800">Agendado no Instagram</h3>
+<p style="margin: 0; color: #A3A3A3; line-height: 1.55">Sai no horário certo, sem ninguém da clínica precisar lembrar.</p></div>
+</div>
+</div>
+</section>
+
+<!-- PLANOS -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 120px 24px; display: flex; flex-direction: column; gap: 48px">
+<div class="rv" style="display: flex; flex-direction: column; gap: 14px; max-width: 760px">
+<span style="color: #9AE04C; font-size: 14px; font-weight: 800; letter-spacing: 0.12em">PREÇO CHEIO. SEM DESCONTO.</span>
+<h2 style="margin: 0; font-size: clamp(34px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 800">Quanto mais você posta, menos cada post custa.</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch">
+<div class="rv plan" style="flex: 1 1 300px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
+<span style="font-weight: 700; color: #A3A3A3">1 por dia</span>
+<h3 style="margin: 0; font-size: 28px; font-weight: 800">30 carrosséis/mês</h3>
+<div style="font-size: 48px; font-weight: 800; letter-spacing: -0.04em">R$ 1.000</div>
+<span style="color: #A3A3A3">R$ 33 por carrossel</span></div>
+<div class="rv plan" style="flex: 1 1 300px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
+<span style="font-weight: 700; color: #A3A3A3">2 por dia</span>
+<h3 style="margin: 0; font-size: 28px; font-weight: 800">60 carrosséis/mês</h3>
+<div style="font-size: 48px; font-weight: 800; letter-spacing: -0.04em">R$ 1.500</div>
+<span style="color: #A3A3A3">R$ 25 por carrossel</span></div>
+<div class="rv" style="flex: 1 1 300px; background: #9AE04C; color: #0A0A0A; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap"><span style="font-weight: 700">3 por dia</span><span style="background: #0A0A0A; color: #9AE04C; border-radius: 999px; padding: 6px 12px; font-size: 12px; font-weight: 800; letter-spacing: 0.08em">MELHOR CUSTO</span></div>
+<h3 style="margin: 0; font-size: 28px; font-weight: 800">90 carrosséis/mês</h3>
+<div style="font-size: 48px; font-weight: 800; letter-spacing: -0.04em">R$ 1.800</div>
+<span style="font-weight: 600">R$ 20 por carrossel</span></div>
+</div>
+</section>
+
+<!-- BÔNUS + CONTAGEM -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 120px 24px">
+<div class="rv" style="border: 2px solid #9AE04C; border-radius: 32px; padding: clamp(32px, 5vw, 72px); display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<span style="color: #9AE04C; font-size: 14px; font-weight: 800; letter-spacing: 0.12em">BÔNUS, NO LUGAR DO DESCONTO</span>
+<h2 style="margin: 0; font-size: clamp(34px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 800">Fechou até 30/11? <span style="color: #9AE04C">3 stories por dia</span> no primeiro mês.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #D4D4D4">No meu perfil, posts e stories juntos trouxeram 85% das visualizações. Sua clínica recebe os dois.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<span style="color: #A3A3A3; font-size: 14px; font-weight: 700; letter-spacing: 0.08em">O BÔNUS ACABA EM</span>
+<div role="timer" aria-live="off" style="display: flex; gap: 12px; flex-wrap: wrap">
+<div style="background: #141414; border-radius: 18px; padding: 20px 24px; min-width: 112px; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 48px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums"><span data-cd="days">00</span></span><span style="color: #A3A3A3; font-size: 13px; font-weight: 700">dias</span></div>
+<div style="background: #141414; border-radius: 18px; padding: 20px 24px; min-width: 112px; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 48px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums"><span data-cd="hrs">00</span></span><span style="color: #A3A3A3; font-size: 13px; font-weight: 700">horas</span></div>
+<div style="background: #141414; border-radius: 18px; padding: 20px 24px; min-width: 112px; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 48px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums"><span data-cd="min">00</span></span><span style="color: #A3A3A3; font-size: 13px; font-weight: 700">min</span></div>
+<div style="background: #141414; border-radius: 18px; padding: 20px 24px; min-width: 112px; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 48px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; color: #9AE04C"><span data-cd="sec">00</span></span><span style="color: #A3A3A3; font-size: 13px; font-weight: 700">seg</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- VAGAS + CTA FINAL -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 120px 24px 160px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 32px">
+<span class="rv" style="color: #9AE04C; font-size: 14px; font-weight: 800; letter-spacing: 0.12em">SÓ 5 VAGAS EM NOVEMBRO</span>
+<div class="rv" style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap" aria-label="5 vagas abertas de 5" data-vagas-aria>
+<span class="slot" style="width: 56px; height: 56px; border-radius: 16px; background: #9AE04C; display: block"></span>
+<span class="slot" style="width: 56px; height: 56px; border-radius: 16px; background: #9AE04C; display: block"></span>
+<span class="slot" style="width: 56px; height: 56px; border-radius: 16px; background: #9AE04C; display: block"></span>
+<span class="slot" style="width: 56px; height: 56px; border-radius: 16px; background: #9AE04C; display: block"></span>
+<span class="slot" style="width: 56px; height: 56px; border-radius: 16px; background: #9AE04C; display: block"></span>
+</div>
+<h2 class="rv" style="margin: 0; font-size: clamp(40px, 7vw, 96px); line-height: 0.98; letter-spacing: -0.045em; font-weight: 800"><span data-vagas>5 vagas abertas</span>.</h2>
+<p class="rv" style="margin: 0; max-width: 560px; font-size: 19px; line-height: 1.55; color: #D4D4D4">Clica no botão, manda <strong style="color: #9AE04C">BLACK</strong> no WhatsApp e eu te mostro um carrossel de amostra com a sua clínica.</p>
+<a class="cta" href="https://wa.me/5521998867022?text=BLACK" style="display: inline-flex; align-items: center; gap: 12px; background: #9AE04C; color: #0A0A0A; text-decoration: none; font-weight: 800; font-size: 20px; padding: 24px 40px; border-radius: 16px; min-height: 44px">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"></path></svg>
+Mandar BLACK no WhatsApp</a>
+<span style="color: #8A8A8A; font-size: 14px">Abre o WhatsApp com a mensagem pronta. É só enviar.</span>
+</section>
+
+<div class="dock">
+<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 0.08em; color: #9AE04C">BLACK NOVEMBER</span>
+<span style="font-size: 13px; color: #D4D4D4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span data-vagas>5 vagas abertas</span> · bônus até 30/11</span>
+</div>
+<a class="cta" href="https://wa.me/5521998867022?text=BLACK" style="flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px; background: #9AE04C; color: #0A0A0A; text-decoration: none; font-weight: 800; font-size: 15px; padding: 14px 18px; border-radius: 12px; min-height: 44px">Mandar BLACK</a>
+</div>
+<footer class="pagefoot" style="border-top: 1px solid #1F1F1F; padding: 32px 24px; text-align: center; color: #8A8A8A; font-size: 14px">Liga do Marketing · Black November 2026 · Audiência vale mais que dinheiro.</footer>
+</div>
+
+<script>
+(function(){
+  /* EDITE AQUI: quantas vagas ainda estão abertas (0 a 5) */
+  var VAGAS_ABERTAS = 5;
+
+  var total = 5;
+  var left = Math.max(0, Math.min(total, VAGAS_ABERTAS));
+  var label = left === 5 ? '5 vagas abertas' : left === 1 ? 'Última vaga' : left === 0 ? 'Vagas esgotadas' : 'Restam ' + left + ' vagas';
+  document.querySelectorAll('[data-vagas]').forEach(function(el){ el.textContent = label; });
+  document.querySelectorAll('[data-vagas-aria]').forEach(function(el){ el.setAttribute('aria-label', label + ' de 5'); });
+  document.querySelectorAll('.slot').forEach(function(el, i){
+    if (i >= left) { el.style.background = 'transparent'; el.style.border = '2px dashed #404040'; }
+  });
+
+  var end = Date.parse('2026-11-30T23:59:59-03:00');
+  function pad(n){ return String(n).padStart(2, '0'); }
+  function tick(){
+    var d = Math.max(0, end - Date.now());
+    var v = { days: Math.floor(d/864e5), hrs: Math.floor(d%864e5/36e5), min: Math.floor(d%36e5/6e4), sec: Math.floor(d%6e4/1e3) };
+    document.querySelectorAll('[data-cd]').forEach(function(el){ el.textContent = pad(v[el.getAttribute('data-cd')]); });
+  }
+  tick(); setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
