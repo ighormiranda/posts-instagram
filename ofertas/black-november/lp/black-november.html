@@ -77,7 +77,7 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 .st{animation:stepOn linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
 @media (min-width: 900px) and (min-height: 700px){
 .how{height:2800px;view-timeline-name:--how;view-timeline-axis:block}
-.howstage{position:sticky;top:0;height:min(100vh,900px);justify-content:center;padding-top:24px;padding-bottom:24px}
+.howstage{position:sticky;top:0;height:min(100vh,900px);justify-content:safe center;padding-top:24px;padding-bottom:24px}
 .howbar{transform-origin:left;animation:grow linear both;animation-timeline:--how;animation-range:contain 5% contain 90%}
 .st{animation-timeline:--how}
 .st1{animation-range:contain 5% contain 22%}
@@ -85,7 +85,8 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 .st3{animation-range:contain 49% contain 66%}
 .st4{animation-range:contain 71% contain 88%}
 }
-.stage{position:sticky;top:0;height:min(100vh,900px);justify-content:center;padding-top:24px;padding-bottom:24px}
+.stage{position:sticky;top:0;height:min(100vh,900px);justify-content:safe center;padding-top:24px;padding-bottom:24px;overflow:hidden}
+.stage svg[role=img]{max-height:max(160px,calc(100vh - 420px))}
 .caps{display:block;position:relative;height:clamp(120px,15vw,170px)}
 .cap{position:absolute;left:0;right:0;top:0;opacity:0;animation:capIO linear both;animation-timeline:--story}
 .c0{opacity:1;animation-name:capOut;animation-range:contain 1% contain 6%}
