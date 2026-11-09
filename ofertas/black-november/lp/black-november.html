@@ -50,6 +50,15 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 .live{animation:pulse 1.6s ease-in-out infinite}
 .ring{transform-box:fill-box;transform-origin:center;animation:ring 1.6s ease-out infinite}
 .chapters{display:flex;gap:10px}
+.scrollcue{position:fixed;left:50%;bottom:36px;z-index:70;transform:translateX(-50%);width:76px;height:76px;padding:0;border:0;border-radius:50%;cursor:pointer;background:#9AE04C;color:#0A0A0A;display:flex;align-items:center;justify-content:center;animation:cueGlow 1.8s ease-out infinite;transition:opacity .15s linear}
+.scrollcue:hover{background:#B5F070}
+.scrollcue .cue-arrow{display:inline-flex;animation:cueBob 1.2s ease-in-out infinite}
+.scrollcue .cue-arrow svg{width:34px;height:34px}
+.scrollcue.gone{pointer-events:none}
+@keyframes cueGlow{0%{box-shadow:0 0 0 0 rgba(154,224,76,.65),0 0 46px rgba(154,224,76,.6)}70%{box-shadow:0 0 0 26px rgba(154,224,76,0),0 0 70px rgba(154,224,76,.35)}100%{box-shadow:0 0 0 0 rgba(154,224,76,0),0 0 46px rgba(154,224,76,.6)}}
+@keyframes cueBob{0%,100%{transform:translateY(-4px)}50%{transform:translateY(5px)}}
+@media (max-width: 760px){.scrollcue{bottom:104px;width:68px;height:68px}}
+@media (prefers-reduced-motion: reduce){.scrollcue,.scrollcue .cue-arrow{animation:none}}
 .dock{display:none}
 @media (max-width: 760px){
 .dock{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;align-items:center;justify-content:space-between;gap:12px;background:#141414;border:1px solid #2E2E2E;border-radius:18px;padding:10px 10px 10px 16px;box-shadow:0 12px 32px rgba(0,0,0,.5)}
@@ -178,9 +187,10 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 <p style="margin: 10px 0 0; color: #737373; font-size: 12px">Visualizações por dia, redesenhado a partir do painel do Instagram do @o.ighormiranda (90 dias, capturado em 05/11/2026).</p>
 </div>
 
-<div class="hint" aria-hidden="true" style="align-items: center; gap: 10px; color: #8A8A8A; font-size: 13px; font-weight: 700; letter-spacing: 0.1em">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="M6 13l6 6 6-6"></path></svg>ROLE DEVAGAR</div>
 </div>
+<button type="button" class="scrollcue" aria-label="Role a página para baixo para ver a história">
+<span class="cue-arrow" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15"></path><path d="M5 12l7 7 7-7"></path></svg></span>
+</button>
 </section>
 
 <!-- OFERTA -->
@@ -390,6 +400,12 @@ Mandar BLACK no WhatsApp</a>
     document.querySelectorAll('[data-cd]').forEach(function(el){ el.textContent = pad(v[el.getAttribute('data-cd')]); });
   }
   tick(); setInterval(tick, 1000);
+  var cue = document.querySelector('.scrollcue');
+  if (cue) {
+    var upd = function(){ var o=Math.max(0,1-window.scrollY/260); cue.style.opacity=o; cue.classList.toggle('gone', o===0); };
+    window.addEventListener('scroll', upd, {passive:true}); upd();
+    cue.addEventListener('click', function(){ window.scrollBy({top: Math.round(window.innerHeight*0.9), behavior:'smooth'}); });
+  }
 })();
 </script>
 </body>
