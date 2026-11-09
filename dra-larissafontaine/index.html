@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dra. Larissa Fontaine · Transplante Capilar e Tricologia · Muriaé/MG</title>
+<meta name="description" content="Dra. Larissa Fontaine, médica dermatologista e tricologista. Transplante capilar FUE com assinatura de naturalidade. Muriaé/MG. CRM MG 69391.">
+<meta name="theme-color" content="#140d07">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --espresso:#140d07; --cacau:#1f140b; --terra:#2b1c0f; --bronze:#654206;
+  --ouro:#c9a15b; --ouro-claro:#e6c991; --creme:#f3e9da; --creme-2:#d9cbb5; --cinza:#9b8b76;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--espresso);-webkit-text-size-adjust:100%}
+body{background:var(--espresso);color:var(--creme);font-family:var(--sans);font-weight:300;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+img{display:block;max-width:100%}
+.eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ouro);font-weight:500}
+.serif{font-family:var(--serif)}
+.wrap{width:min(1180px,90vw);margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:.7em;padding:1.05em 1.9em;border-radius:999px;background:linear-gradient(135deg,var(--ouro-claro),var(--ouro) 55%,#a87f3c);color:var(--espresso);font-weight:600;font-size:.95rem;text-decoration:none;letter-spacing:.02em;box-shadow:0 10px 40px -10px rgba(201,161,91,.55);transition:transform .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 50px -10px rgba(201,161,91,.75)}
+.btn.ghost{background:transparent;color:var(--creme);border:1px solid rgba(243,233,218,.3);box-shadow:none}
+.btn svg{width:18px;height:18px}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px 5vw;transition:background .4s,padding .4s}
+.nav.solid{background:rgba(20,13,7,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:14px 5vw}
+.mark{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.mark b{font-family:var(--serif);font-weight:500;font-size:1.45rem;letter-spacing:.01em}
+.mark small{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ouro);margin-top:5px}
+.nav .btn{padding:.75em 1.3em;font-size:.82rem}
+
+/* HERO: o fio nascendo */
+#hero{height:560vh;position:relative}
+#hero .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:radial-gradient(120% 80% at 50% 100%,#2a1a0b 0%,#170f08 45%,#0d0804 100%)}
+#hair{position:absolute;inset:0;width:100%;height:100%}
+.scene{position:absolute;left:0;right:0;top:14vh;text-align:center;padding:0 7vw;opacity:0;pointer-events:none;will-change:opacity,transform}
+.scene h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.1rem,5.4vw,4.6rem);line-height:1.05;letter-spacing:-.01em}
+.scene h2 em{font-style:italic;color:var(--ouro-claro)}
+.scene p{margin-top:1rem;color:var(--creme-2);font-size:clamp(.95rem,1.4vw,1.1rem)}
+.counter{font-family:var(--serif);font-size:clamp(3rem,9vw,7.5rem);line-height:1;color:var(--ouro-claro);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.scene.final{top:11vh}
+.scene.final::before{content:"";position:absolute;left:50%;top:48%;width:min(900px,120vw);height:120%;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(13,8,4,.82),rgba(13,8,4,.55) 55%,rgba(13,8,4,0));z-index:-1}
+.scene.final .eyebrow{display:block;margin-bottom:1.3rem}
+.scene.final h1{font-family:var(--serif);font-weight:400;font-size:clamp(3rem,9vw,8rem);line-height:.95;letter-spacing:-.02em;text-shadow:0 4px 50px rgba(13,8,4,.9)}
+.scene.final h1 i{color:var(--ouro-claro)}
+.scene.final .sub{margin-top:1.4rem;font-size:clamp(.95rem,1.5vw,1.15rem);color:var(--creme-2);text-shadow:0 2px 20px #0d0804}
+.scene.final .ctas{margin-top:2rem;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;pointer-events:auto}
+.hint{position:absolute;bottom:4vh;left:50%;transform:translateX(-50%);text-align:center;font-size:.68rem;letter-spacing:.35em;text-transform:uppercase;color:var(--cinza);transition:opacity .5s}
+.hint i{display:block;width:1px;height:46px;margin:12px auto 0;background:linear-gradient(var(--ouro),transparent);animation:drip 2.2s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.progress-fio{position:absolute;right:3.2vw;top:50%;transform:translateY(-50%);width:1px;height:28vh;background:rgba(243,233,218,.12)}
+.progress-fio span{position:absolute;bottom:0;left:0;width:1px;height:0;background:linear-gradient(to top,var(--bronze),var(--ouro-claro))}
+
+/* MANIFESTO */
+#manifesto{height:260vh;position:relative}
+#manifesto .stage{position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center}
+.manifesto-text{font-family:var(--serif);font-size:clamp(2rem,5vw,4.3rem);line-height:1.12;font-weight:400;max-width:1050px}
+.manifesto-text .w{opacity:.13;transition:opacity .25s,color .25s}
+.manifesto-text .w.on{opacity:1}
+.manifesto-text .w.gold.on{color:var(--ouro-claro);font-style:italic}
+
+/* OLHAR DUPLO */
+#olhar{padding:16vh 0}
+.olhar-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:7vw;align-items:center}
+.portrait{position:relative;aspect-ratio:4/5;border-radius:300px 300px 18px 18px;overflow:hidden;background:linear-gradient(160deg,var(--terra),var(--cacau));border:1px solid rgba(201,161,91,.25)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(.92) contrast(1.03)}
+.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,13,7,.65),transparent 45%)}
+.portrait .tag{position:absolute;left:24px;bottom:22px;z-index:2;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--creme-2)}
+.portrait .tag b{display:block;font-family:var(--serif);font-size:1.6rem;letter-spacing:0;text-transform:none;color:var(--creme);font-weight:500}
+.olhar h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:1.05;margin:1rem 0 1.4rem}
+.olhar h2 em{color:var(--ouro-claro)}
+.olhar > p{color:var(--creme-2);max-width:520px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:2.6rem;background:rgba(201,161,91,.2);border:1px solid rgba(201,161,91,.2);border-radius:14px;overflow:hidden}
+.duo div{background:var(--espresso);padding:1.6rem}
+.duo h3{font-family:var(--serif);font-weight:500;font-size:1.5rem;margin-bottom:.4rem}
+.duo p{font-size:.9rem;color:var(--cinza)}
+.duo .ico{width:34px;height:34px;margin-bottom:1rem;color:var(--ouro)}
+
+/* ASSINATURA DE NATURALIDADE */
+#assinatura{height:340vh;position:relative;background:linear-gradient(var(--espresso),var(--cacau) 20%,var(--cacau) 80%,var(--espresso))}
+#assinatura .stage{position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center}
+.ass-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:5vw;align-items:center}
+.ass-grid h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:1.02;margin:1rem 0 2rem}
+.steps{position:relative;min-height:190px}
+.step{position:absolute;inset:0;opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
+.step.on{opacity:1;transform:none}
+.step .n{font-family:var(--serif);font-size:1rem;color:var(--ouro)}
+.step h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,2.6vw,2.2rem);margin:.3rem 0 .6rem}
+.step p{color:var(--creme-2);max-width:440px}
+.dots-nav{display:flex;gap:8px;margin-top:1.5rem}
+.dots-nav i{width:26px;height:2px;background:rgba(243,233,218,.18);transition:background .4s}
+.dots-nav i.on{background:var(--ouro)}
+.hairline-box{position:relative;aspect-ratio:6/5;border-radius:24px;background:radial-gradient(80% 70% at 50% 75%,#3a2614 0%,#24170b 60%,#1a1109 100%);border:1px solid rgba(201,161,91,.18);overflow:hidden}
+.hairline-box svg{position:absolute;inset:0;width:100%;height:100%}
+.hairline-box .legend{position:absolute;left:22px;bottom:18px;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--cinza)}
+
+/* NÚMEROS */
+#numeros{padding:16vh 0 12vh}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(201,161,91,.2)}
+.num{padding:3rem 2rem 1rem 0}
+.num + .num{padding-left:2rem;border-left:1px solid rgba(201,161,91,.2)}
+.num b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,5.2vw,4.6rem);line-height:1;color:var(--ouro-claro);font-variant-numeric:tabular-nums}
+.num span{display:block;margin-top:.8rem;color:var(--creme-2);font-size:.95rem}
+.stars{color:var(--ouro);letter-spacing:.15em;font-size:.9rem;margin-top:.4rem}
+
+/* RESULTADOS */
+#resultados{height:360vh;position:relative}
+#resultados .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.res-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:5vh}
+.res-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:1.02;margin-top:1rem}
+.res-head p{max-width:330px;color:var(--cinza);font-size:.85rem}
+.track{display:flex;gap:22px;padding-left:5vw;will-change:transform}
+.card{flex:0 0 auto;width:clamp(260px,30vw,420px);border-radius:18px;overflow:hidden;background:var(--cacau);border:1px solid rgba(201,161,91,.15);position:relative}
+.card img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.card figcaption{display:flex;justify-content:space-between;padding:14px 18px;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cinza)}
+.card figcaption b{color:var(--ouro);font-weight:500}
+.card.fail{display:flex;align-items:center;justify-content:center;aspect-ratio:1/1.1;color:var(--cinza);font-size:.8rem;text-align:center;padding:2rem}
+.disclaimer{margin-top:4vh;font-size:.75rem;color:var(--cinza);padding:0 5vw}
+
+/* TRAJETÓRIA */
+#trajetoria{padding:16vh 0}
+.traj-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:6vw}
+.traj-grid h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:1.02;margin-top:1rem;position:sticky;top:20vh}
+.timeline{position:relative;padding-left:46px}
+.timeline .line{position:absolute;left:8px;top:6px;bottom:6px;width:1px;background:rgba(243,233,218,.12)}
+.timeline .line span{position:absolute;top:0;left:0;width:1px;height:0;background:linear-gradient(var(--ouro-claro),var(--bronze))}
+.ev{position:relative;padding-bottom:3.4rem;opacity:.25;transition:opacity .6s}
+.ev.on{opacity:1}
+.ev::before{content:"";position:absolute;left:-43px;top:.55rem;width:11px;height:11px;border-radius:50%;background:var(--espresso);border:1px solid var(--ouro);transition:background .5s,box-shadow .5s}
+.ev.on::before{background:var(--ouro);box-shadow:0 0 18px var(--ouro)}
+.ev .y{font-family:var(--serif);font-size:1.1rem;color:var(--ouro)}
+.ev h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.15;margin:.2rem 0 .5rem}
+.ev p{color:var(--creme-2);max-width:520px}
+
+/* AVALIAÇÃO */
+#avaliacao{padding:14vh 0;background:linear-gradient(var(--espresso),var(--cacau))}
+.aval{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start}
+.aval h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:1.02;margin:1rem 0 1.4rem}
+.aval > div > p{color:var(--creme-2);max-width:460px}
+.list{list-style:none}
+.list li{display:flex;gap:1.2rem;padding:1.5rem 0;border-bottom:1px solid rgba(201,161,91,.16)}
+.list li:first-child{border-top:1px solid rgba(201,161,91,.16)}
+.list li span{font-family:var(--serif);color:var(--ouro);font-size:1.1rem;min-width:2rem}
+.list li b{display:block;font-family:var(--serif);font-weight:500;font-size:1.45rem;line-height:1.2}
+.list li small{color:var(--cinza);font-size:.9rem}
+
+/* FAQ */
+#faq{padding:12vh 0}
+#faq h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,3.6vw,3rem);margin:1rem 0 2rem}
+details{border-bottom:1px solid rgba(201,161,91,.16);padding:1.4rem 0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.6rem)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--ouro);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--creme-2);margin-top:.8rem;max-width:760px}
+
+/* CONTATO */
+#contato{position:relative;padding:20vh 0 14vh;text-align:center;overflow:hidden}
+#contato canvas{position:absolute;inset:auto 0 0 0;width:100%;height:60%;opacity:.55;pointer-events:none}
+#contato .wrap{position:relative}
+#contato h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,6.5vw,6rem);line-height:1;margin:1.2rem 0 1.6rem}
+#contato h2 em{color:var(--ouro-claro)}
+#contato p{color:var(--creme-2);max-width:520px;margin:0 auto 2.4rem}
+.info{display:flex;justify-content:center;gap:4vw;flex-wrap:wrap;margin-top:4rem;font-size:.9rem;color:var(--creme-2)}
+.info div small{display:block;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ouro);margin-bottom:.4rem}
+footer{border-top:1px solid rgba(201,161,91,.14);padding:2.4rem 5vw 6rem;display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;font-size:.75rem;color:var(--cinza)}
+footer p{max-width:620px}
+
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--ouro-claro),var(--ouro));color:var(--espresso);box-shadow:0 10px 30px -6px rgba(0,0,0,.6);opacity:0;transform:scale(.6);transition:opacity .4s,transform .4s;pointer-events:none}
+.wa-float.on{opacity:1;transform:none;pointer-events:auto}
+.wa-float svg{width:28px;height:28px}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* SEÇÕES CLARAS (identidade do Instagram dela) */
+.light{background:#f2eee7 !important;color:#2a2118}
+.light .eyebrow{color:#8a6a3a}
+.light h2 em,.light .olhar h2 em{color:#8a6a3a}
+.light p,.light .olhar > p,.light .aval > div > p,.light details p{color:#5d5246}
+.light .duo{background:rgba(138,106,58,.25);border-color:rgba(138,106,58,.25)}
+.light .duo div{background:#f8f5f0}
+.light .duo .ico{color:#8a6a3a}
+.light .duo p,.light .list li small{color:#7a6e60}
+.light .list li,.light .list li:first-child,.light details{border-color:rgba(138,106,58,.22)}
+.light .list li span,.light summary::after{color:#8a6a3a}
+.light .portrait{border-color:rgba(138,106,58,.3)}
+#olhar.light{background:linear-gradient(#f2eee7,#f2eee7) !important}
+.clube{margin-top:3rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.6rem;align-items:center;padding:1.8rem 2rem;border-radius:18px;background:#2a2118;color:var(--creme)}
+.clube .seal{width:54px;height:54px;border-radius:50%;border:1px solid var(--ouro);display:grid;place-items:center;font-family:var(--serif);font-style:italic;color:var(--ouro-claro);font-size:1.3rem}
+.clube h3{font-family:var(--serif);font-weight:500;font-size:1.7rem;line-height:1.1}
+.clube h3 i{color:var(--ouro-claro)}
+.clube p{color:var(--creme-2) !important;font-size:.92rem}
+.clube .btn{padding:.8em 1.4em;font-size:.85rem}
+@media (max-width:860px){.clube{grid-template-columns:1fr;text-align:left}}
+
+@media (max-width:860px){
+  .olhar-grid,.ass-grid,.traj-grid,.aval{grid-template-columns:1fr}
+  .portrait{max-width:420px;margin:0 auto}
+  .ass-grid{gap:3vh}
+  .ass-grid h2{margin-bottom:1rem}
+  .hairline-box{aspect-ratio:6/4.4;order:-1}
+  .steps{min-height:170px}
+  .nums{grid-template-columns:1fr}
+  .num,.num + .num{padding:2rem 0;border-left:0;border-bottom:1px solid rgba(201,161,91,.2)}
+  .res-head{flex-direction:column;align-items:start;gap:1rem}
+  .traj-grid h2{position:static}
+  .nav .btn span{display:none}
+  .duo{grid-template-columns:1fr}
+  .progress-fio{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="#hero" class="mark"><b>Larissa Fontaine</b><small>Dermatologia · Tricologia</small></a>
+  <a class="btn" data-wa href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg><span>Agendar avaliação</span></a>
+</nav>
+
+<!-- 1. O FIO NASCENDO -->
+<section id="hero">
+  <div class="stage">
+    <canvas id="hair" aria-hidden="true"></canvas>
+
+    <div class="scene" data-s="0">
+      <span class="eyebrow">Dra. Larissa Fontaine</span>
+      <h2 style="margin-top:1.2rem">Tudo começa<br>em <em>um único fio.</em></h2>
+    </div>
+    <div class="scene" data-s="1">
+      <h2>Ele nasce da raiz.<br><em>Devagar.</em> Com cuidado.</h2>
+      <p>Técnica, tempo e um olhar que entende de pele e de cabelo.</p>
+    </div>
+    <div class="scene" data-s="2">
+      <div class="counter" id="counter">1</div>
+      <p style="margin-top:.8rem">fios transplantados, um a um.</p>
+    </div>
+    <div class="scene final" data-s="3">
+      <span class="eyebrow">Transplante capilar FUE · Muriaé/MG</span>
+      <h1>Larissa<br><i>Fontaine</i></h1>
+      <p class="sub">Dermatologista e tricologista.<br>Mais do que implantar cabelo: devolver a sua identidade.</p>
+      <div class="ctas">
+        <a class="btn" data-wa href="#">Agendar minha avaliação</a>
+        <a class="btn ghost" href="#resultados">Ver resultados</a>
+      </div>
+    </div>
+
+    <div class="hint" id="hint">Role devagar<i></i></div>
+    <div class="progress-fio"><span id="pf"></span></div>
+  </div>
+</section>
+
+<!-- 2. MANIFESTO -->
+<section id="manifesto">
+  <div class="stage">
+    <div class="wrap">
+      <p class="manifesto-text" id="mtext">Quando o cabelo vai embora, leva junto um pedaço de quem você é. O reflexo muda. A confiança muda. Por isso o compromisso aqui não é *implantar* *cabelo.* É *devolver* *a* *sua* *identidade.*</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. OLHAR DUPLO -->
+<section id="olhar" class="light">
+  <div class="wrap olhar-grid">
+    <figure class="portrait reveal">
+      <img src="https://clinicalarissafontaine.com.br/assets/img/hero-mobile.webp" alt="Dra. Larissa Fontaine, dermatologista e tricologista" loading="lazy" onerror="this.style.display='none'">
+      <figcaption class="tag"><b>Dra. Larissa Fontaine</b>CRM MG 69391</figcaption>
+    </figure>
+    <div class="olhar reveal">
+      <span class="eyebrow">Um olhar duplo</span>
+      <h2>O rosto e o cabelo,<br><em>pensados juntos.</em></h2>
+      <p>Um bom transplante não termina no couro cabeludo. A Dra. Larissa une a visão da dermatologista com a da tricologista para que o resultado converse com o seu rosto, e não pareça um cabelo colocado ali.</p>
+      <div class="duo">
+        <div>
+          <svg class="ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="20" cy="17" r="10"/><path d="M8 37c2-7 7-10 12-10s10 3 12 10"/></svg>
+          <h3>Dermatologista</h3>
+          <p>Enxerga proporção, pele e harmonia do rosto.</p>
+        </div>
+        <div>
+          <svg class="ico" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 34c3-10 2-20 6-28M16 34c2-9 3-17 8-26M24 34c1-8 4-15 9-22"/><path d="M5 34h30"/></svg>
+          <h3>Tricologista</h3>
+          <p>Lê o couro cabeludo e cada unidade de fio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ASSINATURA DE NATURALIDADE -->
+<section id="assinatura">
+  <div class="stage">
+    <div class="wrap ass-grid">
+      <div>
+        <span class="eyebrow">Assinatura de Naturalidade</span>
+        <h2>Um resultado<br>que ninguém percebe.</h2>
+        <div class="steps">
+          <div class="step on"><span class="n">01</span><h3>Diagnóstico completo</h3><p>Análise com câmera de tricoscopia digital para entender o seu couro cabeludo, fio a fio, antes de qualquer decisão.</p></div>
+          <div class="step"><span class="n">02</span><h3>Design da linha</h3><p>A linha de implantação é desenhada para o seu rosto. É aqui que o olhar da dermatologista faz diferença.</p></div>
+          <div class="step"><span class="n">03</span><h3>FUE de alta precisão</h3><p>Unidade por unidade, com anestesia local e sedação leve. A maioria dos pacientes relata pouco ou nenhum desconforto.</p></div>
+          <div class="step"><span class="n">04</span><h3>Acompanhamento</h3><p>O cuidado continua depois da cirurgia, com acompanhamento pós-cirúrgico até o resultado aparecer.</p></div>
+        </div>
+        <div class="dots-nav" id="dotsnav"><i class="on"></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="hairline-box">
+        <svg id="hl" viewBox="0 0 600 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <defs>
+            <radialGradient id="skin" cx="50%" cy="85%" r="70%"><stop offset="0" stop-color="#5a3c22"/><stop offset=".7" stop-color="#2e1d0f"/><stop offset="1" stop-color="#1a1109"/></radialGradient>
+            <linearGradient id="g-hair" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#6b4a20"/><stop offset="1" stop-color="#e6c991"/></linearGradient>
+          </defs>
+          <!-- testa estilizada -->
+          <path d="M112 330 C130 250 170 210 222 196 C255 188 280 194 300 190 C320 194 345 188 378 196 C430 210 470 250 488 330 L520 500 L80 500 Z" fill="url(#skin)" opacity=".85"/>
+          <path d="M210 420 q90 -18 180 0" fill="none" stroke="#c9a15b" stroke-width="1" opacity=".25"/>
+          <path id="hlpath" d="M112 330 C130 250 170 210 222 196 C255 188 280 194 300 190 C320 194 345 188 378 196 C430 210 470 250 488 330" fill="none" stroke="#e6c991" stroke-width="1.4" stroke-dasharray="4 6" opacity=".9"/>
+          <g id="grafts"></g>
+          <g id="scan" opacity="0"><circle cx="300" cy="300" r="70" fill="none" stroke="#c9a15b" stroke-width="1"/><circle cx="300" cy="300" r="4" fill="#c9a15b"/><path d="M300 222v16M300 362v16M222 300h16M362 300h16" stroke="#c9a15b"/></g>
+        </svg>
+        <span class="legend" id="hllegend">Tricoscopia digital</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. NÚMEROS -->
+<section id="numeros">
+  <div class="wrap">
+    <span class="eyebrow reveal">Em números</span>
+    <div class="nums reveal" style="margin-top:2rem">
+      <div class="num"><b data-count="900">0</b><span>cirurgias realizadas</span></div>
+      <div class="num"><b data-count="6267857">0</b><span>fios transplantados</span></div>
+      <div class="num"><b data-count="5" data-dec="1">0</b><div class="stars">★★★★★</div><span>no Google, com 88 avaliações</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. RESULTADOS -->
+<section id="resultados">
+  <div class="stage">
+    <div class="wrap res-head">
+      <div><span class="eyebrow">Resultados</span><h2>Antes e depois,<br>de verdade.</h2></div>
+      <p>Pacientes reais da Dra. Larissa Fontaine. Cada caso foi planejado individualmente.</p>
+    </div>
+    <div class="track" id="track"></div>
+    <p class="disclaimer">Imagens de pacientes reais. Os resultados podem variar conforme as características individuais de cada paciente.</p>
+  </div>
+</section>
+
+<!-- 7. TRAJETÓRIA -->
+<section id="trajetoria">
+  <div class="wrap traj-grid">
+    <div><span class="eyebrow">Trajetória</span><h2>Um caminho<br>que também<br>cresceu fio a fio.</h2></div>
+    <div class="timeline" id="timeline">
+      <div class="line"><span id="tline"></span></div>
+      <div class="ev"><div class="y">2016</div><h3>Formada em Medicina</h3><p>Graduação em Itaperuna, no Rio de Janeiro.</p></div>
+      <div class="ev"><div class="y">São Paulo</div><h3>Dermatologia, Estética e Tricologia</h3><p>Especialização em tricologia clínica e cirúrgica, somada à dermatologia e à estética.</p></div>
+      <div class="ev"><div class="y">Vinci Hair</div><h3>Corpo clínico em São Paulo</h3><p>Anos atendendo pacientes de todo o país, inclusive nomes conhecidos do esporte e da música.</p></div>
+      <div class="ev"><div class="y">2022</div><h3>Vinci Hair no Rio de Janeiro</h3><p>Responsável por levar a clínica para o Rio.</p></div>
+      <div class="ev"><div class="y">2023</div><h3>Clínica própria em Muriaé</h3><p>Toda essa experiência, agora perto de você, no Centro de Muriaé/MG.</p></div>
+      <div class="ev"><div class="y">2026</div><h3>3 anos de evolução</h3><p>A mesma essência de cuidar. E a participação no 34º Congresso Mundial de Restauração Capilar, no Rio de Janeiro, porque o conhecimento nos leva mais longe.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. AVALIAÇÃO -->
+<section id="avaliacao" class="light">
+  <div class="wrap aval">
+    <div class="reveal">
+      <span class="eyebrow">O primeiro passo</span>
+      <h2>A consulta de avaliação.</h2>
+      <p>Antes de falar em cirurgia, a Dra. Larissa entende o seu caso. Você sai da consulta sabendo exatamente o que é possível, como vai ficar e quanto vai investir. As condições de pagamento são facilitadas: é só conversar com a clínica.</p>
+      <a class="btn" data-wa href="#" style="margin-top:2rem">Quero agendar a minha</a>
+    </div>
+    <ul class="list reveal">
+      <li><span>01</span><div><b>Planejamento personalizado</b><small>Feito para o seu rosto e o seu tipo de fio.</small></div></li>
+      <li><span>02</span><div><b>Simulação de resultados</b><small>Para você enxergar o depois antes de decidir.</small></div></li>
+      <li><span>03</span><div><b>Tricoscopia digital</b><small>Análise do couro cabeludo com câmera de alta ampliação.</small></div></li>
+      <li><span>04</span><div><b>Orçamento detalhado</b><small>Sem surpresa, com tudo explicado.</small></div></li>
+    </ul>
+  </div>
+  <div class="wrap clube reveal">
+    <div class="seal">LF</div>
+    <div><span class="eyebrow">Novidade</span><h3>Chegou o <i>Clube do Cabelo</i></h3><p>Seu cuidado capilar o ano inteiro, acompanhado de perto pela Dra. Larissa.</p></div>
+    <a class="btn" data-wa href="#">Quero saber mais</a>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section id="faq" class="light" style="padding-top:4vh">
+  <div class="wrap">
+    <span class="eyebrow">Dúvidas</span>
+    <h2>Perguntas frequentes</h2>
+    <details><summary>O transplante dói?</summary><p>O procedimento é feito com anestesia local e sedação leve. A maioria dos pacientes relata pouco ou nenhum desconforto.</p></details>
+    <details><summary>Como é a consulta de avaliação?</summary><p>Inclui planejamento personalizado, simulação de resultados, análise com câmera de tricoscopia digital e orçamento detalhado.</p></details>
+    <details><summary>Quais técnicas a clínica utiliza?</summary><p>Transplante capilar pela técnica FUE de alta precisão, com design da linha de implantação e acompanhamento pós-cirúrgico. A clínica também atende tricologia clínica.</p></details>
+    <details><summary>Existem condições de pagamento?</summary><p>Sim. As condições são facilitadas e combinadas diretamente com a clínica.</p></details>
+  </div>
+</section>
+
+<!-- 10. CONTATO -->
+<section id="contato">
+  <canvas id="hair2" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <span class="eyebrow">Muriaé · Minas Gerais</span>
+    <h2>O seu próximo fio<br><em>começa aqui.</em></h2>
+    <p>Agende a sua consulta de avaliação e descubra o que é possível para o seu caso.</p>
+    <a class="btn" data-wa href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg>Agendar pelo WhatsApp</a>
+    <div class="info">
+      <div><small>Endereço</small>Praça João Pinheiro, 20, salas 204/205<br>Centro, Muriaé/MG</div>
+      <div><small>WhatsApp</small>(32) 99971-5101</div>
+      <div><small>Google</small><a href="https://www.google.com/maps/search/?api=1&query=Cl%C3%ADnica+Dra.+Larissa+Fontaine+Muria%C3%A9" target="_blank" rel="noopener">5,0 ★ · 88 avaliações</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Dra. Larissa Fontaine · Médica · CRM MG 69391<br>Conteúdo informativo, não substitui avaliação médica presencial. Os resultados podem variar conforme as características individuais de cada paciente.</p>
+  <p>© <span id="yr"></span> Clínica Dra. Larissa Fontaine</p>
+</footer>
+
+<a class="wa-float" id="waf" data-wa href="#" aria-label="Agendar pelo WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5 0-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg></a>
+
+<script>
+(function(){
+const WA = 'https://wa.me/5532999715101?text=' + encodeURIComponent('Olá! Vim pelo site e gostaria de agendar uma consulta de avaliação com a Dra. Larissa Fontaine.');
+document.querySelectorAll('[data-wa]').forEach(a=>{a.href=WA;a.target='_blank';a.rel='noopener'});
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+const easeOut=t=>1-Math.pow(1-t,3);
+const fmt=n=>Math.round(n).toLocaleString('pt-BR');
+function prog(el){const r=el.getBoundingClientRect();const tot=r.height-innerHeight;return tot>0?clamp(-r.top/tot):clamp((innerHeight-r.top)/(innerHeight+r.height));}
+
+/* ========== FIOS (canvas) ========== */
+function HairField(canvas,opts){
+  const ctx=canvas.getContext('2d');
+  let W,H,strands=[],baseY,dpr;
+  const mouse={x:-9999,y:-9999,sx:-9999};
+  function build(){
+    dpr=Math.min(window.devicePixelRatio||1,2);
+    const r=canvas.getBoundingClientRect();W=r.width;H=r.height;
+    canvas.width=W*dpr;canvas.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+    const n=Math.round((W<700?opts.nMobile:opts.n));
+    baseY=H*opts.base;strands=[];
+    let seed=7;const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};
+    for(let i=0;i<n;i++){
+      const u=rnd()*2-1, side=Math.sign(u)||1;
+      const x=W/2+side*Math.pow(Math.abs(u),.85)*W*.62;
+      const dx=(x-W/2)/(W*.62);
+      const y=baseY-(1-dx*dx)*H*opts.dome+(rnd()-.5)*6;
+      const dist=Math.abs(dx);
+      strands.push({x,y,
+        len:H*(opts.lenMin+rnd()*opts.lenVar)*(1-dist*.25),
+        ang:-Math.PI/2+dx*.55+(rnd()-.5)*.22,
+        bend:(dx*.9+(rnd()-.5)*.8)*.9,
+        ph:rnd()*6.28,
+        w:.4+rnd()*.75,
+        a:.35+rnd()*.55,
+        delay:clamp(dist*.78+rnd()*.22)
+      });
+    }
+    strands.sort((a,b)=>a.a-b.a);
+  }
+  function strand(s,g,t,hero){
+    const L=s.len*g, segs=hero?26:16, step=L/segs;
+    let x=s.x,y=s.y;
+    ctx.moveTo(x,y);
+    const sway=Math.sin(t*.0009+s.x*.006+s.ph)*.22+Math.sin(t*.0017+s.ph)*.06;
+    const md=(mouse.sx-s.x)/170, push=-Math.sign(md)*Math.exp(-md*md)*.7;
+    for(let k=1;k<=segs;k++){
+      const f=k/segs, f2=f*f;
+      const wave=Math.sin(f*3.4+s.ph+t*.0006)*.22*f*(hero?.8:1);
+      const a=s.ang+s.bend*f2*g+wave+(sway+push)*f2*(0.4+.6*g);
+      x+=Math.cos(a)*step;y+=Math.sin(a)*step;ctx.lineTo(x,y);
+    }
+    return [x,y];
+  }
+  const hero={x:0,y:0,len:0,ang:-Math.PI/2-.08,bend:.45,ph:1.3,w:2.2};
+  function draw(p,t){
+    mouse.sx+=(mouse.x-mouse.sx)*.08;
+    ctx.clearRect(0,0,W,H);
+    // pele (cúpula)
+    const sg=ctx.createRadialGradient(W/2,baseY+H*.5,10,W/2,baseY+H*.3,W*.75);
+    sg.addColorStop(0,'rgba(120,80,42,'+(.35*opts.skin)+')');sg.addColorStop(1,'rgba(20,13,7,0)');
+    ctx.fillStyle=sg;ctx.beginPath();
+    ctx.moveTo(0,H);
+    for(let i=0;i<=40;i++){const xx=i/40*W,dx=(xx-W/2)/(W*.62);ctx.lineTo(xx,baseY-(1-Math.min(1,dx*dx))*H*opts.dome+2);}
+    ctx.lineTo(W,H);ctx.fill();
+
+    const grad=ctx.createLinearGradient(0,baseY,0,baseY-H*.75);
+    grad.addColorStop(0,'#3d2610');grad.addColorStop(.25,'#7a5524');grad.addColorStop(.7,'#c9a15b');grad.addColorStop(1,'#f3e2bd');
+    ctx.strokeStyle=grad;ctx.lineCap='round';
+
+    // folículos + fios do campo
+    const fieldStart=opts.fieldStart, fieldSpan=opts.fieldSpan;
+    for(const s of strands){
+      const st=fieldStart+s.delay*fieldSpan;
+      const g=easeOut(clamp((p-st)/opts.growDur));
+      const pre=clamp((p-st+.04)/.04);
+      if(pre>0&&g<1){
+        ctx.fillStyle='rgba(230,201,145,'+(pre*(1-g)*.8)+')';
+        ctx.beginPath();ctx.arc(s.x,s.y,1.6,0,6.28);ctx.fill();
+      }
+      if(g<=0)continue;
+      ctx.globalAlpha=s.a;ctx.lineWidth=s.w;ctx.beginPath();strand(s,g,t,false);ctx.stroke();
+    }
+    ctx.globalAlpha=1;
+
+    if(opts.hero){
+      hero.x=W/2;hero.y=baseY-H*opts.dome;hero.len=H*opts.heroLen;
+      // pulso do primeiro folículo
+      const pulse=.6+.4*Math.sin(t*.004);
+      const glowA=clamp(p/.03)*(1-clamp((p-.5)/.3)*.6);
+      const rg=ctx.createRadialGradient(hero.x,hero.y,0,hero.x,hero.y,40*pulse+10);
+      rg.addColorStop(0,'rgba(243,226,189,'+(.9*glowA)+')');rg.addColorStop(.25,'rgba(201,161,91,'+(.35*glowA)+')');rg.addColorStop(1,'rgba(201,161,91,0)');
+      ctx.fillStyle=rg;ctx.beginPath();ctx.arc(hero.x,hero.y,60,0,6.28);ctx.fill();
+      const g=ease(clamp((p-opts.heroStart)/opts.heroDur));
+      if(g>0){
+        ctx.save();ctx.shadowColor='rgba(230,201,145,.8)';ctx.shadowBlur=14*(1-clamp((p-.55)/.3)*.7);
+        const hg=ctx.createLinearGradient(0,hero.y,0,hero.y-hero.len);
+        hg.addColorStop(0,'#6b4a20');hg.addColorStop(.5,'#e6c991');hg.addColorStop(1,'#fff6e2');
+        ctx.strokeStyle=hg;ctx.lineWidth=hero.w;ctx.beginPath();
+        const tip=strand(hero,g,t,true);ctx.stroke();ctx.restore();
+        // brilho na ponta enquanto cresce
+        if(g<1){ctx.fillStyle='rgba(255,246,226,'+(1-g)+')';ctx.beginPath();ctx.arc(tip[0],tip[1],2.6,0,6.28);ctx.fill();}
+      }
+    }
+  }
+  canvas.parentElement.addEventListener('pointermove',e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;},{passive:true});
+  canvas.parentElement.addEventListener('pointerleave',()=>{mouse.x=-9999});
+  build();addEventListener('resize',()=>{clearTimeout(this._r);this._r=setTimeout(build,150)});
+  return {draw};
+}
+
+const heroEl=document.getElementById('hero');
+const field=HairField(document.getElementById('hair'),{hero:true,n:640,nMobile:300,base:.97,dome:.13,lenMin:.3,lenVar:.3,heroLen:.55,heroStart:.09,heroDur:.24,fieldStart:.36,fieldSpan:.34,growDur:.14,skin:1});
+const field2=HairField(document.getElementById('hair2'),{hero:false,n:420,nMobile:200,base:1.02,dome:.22,lenMin:.45,lenVar:.4,fieldStart:0,fieldSpan:.5,growDur:.4,skin:.6});
+const scenes=[...document.querySelectorAll('#hero .scene')];
+const counter=document.getElementById('counter'), hint=document.getElementById('hint'), pf=document.getElementById('pf');
+// janelas de cada cena [entra, sai]
+const win=[[-.1,.02,.08,.12],[.12,.16,.3,.35],[.36,.41,.66,.72],[.76,.82,9,9]];
+
+/* ========== MANIFESTO ========== */
+const mt=document.getElementById('mtext');
+mt.innerHTML=mt.textContent.trim().split(/\s+/).map(w=>w.startsWith('*')?`<span class="w gold">${w.slice(1).replace(/\*$/,'')}</span>`:`<span class="w">${w}</span>`).join(' ');
+const words=[...mt.querySelectorAll('.w')];
+
+/* ========== HAIRLINE ========== */
+const svgNS='http://www.w3.org/2000/svg', path=document.getElementById('hlpath'), gr=document.getElementById('grafts');
+const PL=path.getTotalLength(); const grafts=[];
+(function(){let seed=11;const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};
+  for(let row=0;row<7;row++){
+    const count=row===0?46:38+row*4;
+    for(let i=0;i<count;i++){
+      const pos=(i+rnd()*.8)/count*PL;
+      const pt=path.getPointAtLength(pos), pt2=path.getPointAtLength(Math.min(PL,pos+2));
+      const nx=pt2.y-pt.y, ny=-(pt2.x-pt.x); const nl=Math.hypot(nx,ny)||1;
+      const off=row*15+(row===0?(rnd()-.5)*9:rnd()*10);
+      const x=pt.x+nx/nl*-off*-1, y=pt.y-Math.abs(ny/nl)*off - (rnd()*4);
+      const hairs=row===0?1:row<3?(rnd()<.6?2:1):(rnd()<.5?3:2);
+      const g=document.createElementNS(svgNS,'g');
+      const lean=(pt.x-300)/300*25;
+      for(let h=0;h<hairs;h++){
+        const l=document.createElementNS(svgNS,'line');
+        const sx=x+(h-(hairs-1)/2)*1.6, ang=(-90+lean+(rnd()-.5)*18)*Math.PI/180, len=10+rnd()*6;
+        l.setAttribute('x1',sx);l.setAttribute('y1',y);l.setAttribute('x2',sx+Math.cos(ang)*len);l.setAttribute('y2',y+Math.sin(ang)*len);
+        l.setAttribute('stroke','url(#g-hair)');l.setAttribute('stroke-width',row===0?.9:1.2);l.setAttribute('stroke-linecap','round');
+        g.appendChild(l);
+      }
+      const c=document.createElementNS(svgNS,'circle');c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r',1.1);c.setAttribute('fill','#e6c991');g.appendChild(c);
+      g.style.opacity=0;g.style.transition='opacity .35s';gr.appendChild(g);
+      grafts.push({g,order:row+rnd()*.9});
+    }
+  }
+  grafts.sort((a,b)=>a.order-b.order);
+})();
+path.style.strokeDasharray=PL;path.style.strokeDashoffset=PL;
+const steps=[...document.querySelectorAll('.step')], dn=[...document.querySelectorAll('#dotsnav i')], scan=document.getElementById('scan'), leg=document.getElementById('hllegend');
+let lastStep=-1;
+
+/* ========== RESULTADOS ========== */
+const track=document.getElementById('track');
+const ids=[2,3,4,5,6,7,8,9,10,11,12,1];
+ids.forEach((id,i)=>{
+  const f=document.createElement('figure');f.className='card';
+  f.innerHTML=`<img loading="lazy" src="https://clinicalarissafontaine.com.br/assets/img/resultado-${id}-969.webp" alt="Antes e depois de transplante capilar, paciente ${i+1}"><figcaption><span>Paciente ${String(i+1).padStart(2,'0')}</span><b>FUE</b></figcaption>`;
+  f.querySelector('img').onerror=function(){f.classList.add('fail');f.innerHTML='Foto de resultado '+(i+1)};
+  track.appendChild(f);
+});
+
+/* ========== TIMELINE ========== */
+const tl=document.getElementById('timeline'), tline=document.getElementById('tline'), evs=[...tl.querySelectorAll('.ev')];
+
+/* ========== NÚMEROS ========== */
+const nums=[...document.querySelectorAll('[data-count]')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;e.target.classList.add('in');
+  e.target.querySelectorAll('[data-count]').forEach(el=>{
+    const to=+el.dataset.count, dec=el.dataset.dec, t0=performance.now();
+    (function tick(now){const k=easeOut(clamp((now-t0)/2200));el.textContent=dec?(to*k).toFixed(1).replace('.',','):fmt(to*k);if(k<1)requestAnimationFrame(tick)})(t0);
+  });
+  io.unobserve(e.target);
+}),{threshold:.25});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ========== LOOP ========== */
+const nav=document.getElementById('nav'), waf=document.getElementById('waf');
+const contato=document.getElementById('contato');
+function frame(t){
+  // HERO
+  let p=reduce?1:prog(heroEl);
+  const hr=heroEl.getBoundingClientRect();
+  if(hr.bottom>0){
+    field.draw(p,t);
+    scenes.forEach((s,i)=>{const w=win[i];let o=p<w[0]||p>w[3]?0:p<w[1]?(p-w[0])/(w[1]-w[0]):p<w[2]?1:1-(p-w[2])/(w[3]-w[2]);
+      o=clamp(o);s.style.opacity=o;s.style.transform=`translateY(${(1-o)*(p<(w[1]+w[2])/2?24:-24)}px)`;s.style.pointerEvents=o>.6?'auto':'none';});
+    counter.textContent=fmt(1+6267856*ease(clamp((p-.38)/.32)));
+    hint.style.opacity=p>.02?0:1;
+    pf.style.height=(p*100)+'%';
+  }
+  nav.classList.toggle('solid',p>=1);
+  waf.classList.toggle('on',p>=1);
+
+  // MANIFESTO
+  const mp=prog(document.getElementById('manifesto'));
+  const lit=Math.floor(clamp((mp-.08)/.75)*words.length+ .001);
+  words.forEach((w,i)=>w.classList.toggle('on',i<lit));
+
+  // ASSINATURA
+  const ap=prog(document.getElementById('assinatura'));
+  const st=Math.min(3,Math.floor(ap*4));
+  if(st!==lastStep){steps.forEach((s,i)=>s.classList.toggle('on',i===st));dn.forEach((d,i)=>d.classList.toggle('on',i<=st));lastStep=st;
+    leg.textContent=['Tricoscopia digital','Design da linha de implantação','Unidades foliculares, uma a uma','Resultado natural'][st];}
+  scan.setAttribute('opacity',ap<.25?Math.sin(clamp(ap/.25)*Math.PI)*.9:0);
+  scan.setAttribute('transform',`translate(${Math.sin(ap*20)*60},${-60+Math.cos(ap*14)*30})`);
+  path.style.strokeDashoffset=PL*(1-ease(clamp((ap-.22)/.2)));
+  path.style.opacity=ap>.9?.25:.9;
+  const shown=Math.floor(clamp((ap-.45)/.42)*grafts.length);
+  for(let i=0;i<grafts.length;i++){const on=i<shown;if(grafts[i].on!==on){grafts[i].g.style.opacity=on?1:0;grafts[i].on=on;}}
+
+  // RESULTADOS: rolagem horizontal
+  const rp=prog(document.getElementById('resultados'));
+  const max=track.scrollWidth-innerWidth+innerWidth*.05;
+  track.style.transform=`translateX(${-max*ease(clamp((rp-.05)/.9))}px)`;
+
+  // TIMELINE
+  const tr=tl.getBoundingClientRect();
+  const tp=clamp((innerHeight*.6-tr.top)/tr.height);
+  tline.style.height=(tp*100)+'%';
+  evs.forEach(e=>{const r=e.getBoundingClientRect();e.classList.toggle('on',r.top<innerHeight*.62)});
+
+  // CONTATO: fios crescendo no rodapé
+  const cr=contato.getBoundingClientRect();
+  if(cr.top<innerHeight&&cr.bottom>0)field2.draw(clamp((innerHeight-cr.top)/(innerHeight*.9)),t);
+
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
