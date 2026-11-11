@@ -66,3 +66,8 @@ Resumo condensado do que já foi feito, para qualquer chat novo começar daqui.
 5. Montar posts e stories de 16–19/11 e 21–30/11 (com série nova na semana de 16/11).
 6. Workflows do DIAGNÓSTICO aparecem só como rascunho no HighLevel; conferir se a automação está ativa.
 7. Mais Reels: Ighor manda vídeos curtos, Claude monta.
+
+## Série "Novidades da IA" (toda sexta, desde 11/11)
+- Tarefa agendada toda quinta 9h47 (Brasília): pesquisa novidades da semana em fonte oficial, monta prévia com `ferramentas/novidades.py`, manda pro Ighor com links de vídeos oficiais. Só agenda (sexta 10h) depois do ok dele e com os vídeos que ele baixar. Vídeo só oficial da empresa, com crédito.
+- Ferramentas agora no repositório: `ferramentas/` (capa.py, gen.py, novidades.py, fontes).
+- Também agendados: apresentação 10/11, prompts 16/11 12h, 30 dias 16/11 19h, lembrete WhatsApp 17/11 12h, retenção carrossel 18/11 12h e Reels 19/11 18h. 21 stories dos destaques saíram em 10/11 às 23h.
