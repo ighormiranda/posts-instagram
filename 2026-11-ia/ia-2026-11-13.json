@@ -1,7 +1,37 @@
-{"id":"ia-2026-11-13","semana":"SEMANA DE 09 A 13/11","titulo":"O que saiu de IA essa semana\n*e o que muda pro seu negócio.*","foto":"escritorio/mesa-laptop-cafe.jpg",
-"itens":[
-{"empresa":"Anthropic","titulo":"Saiu o Claude Fable 5.2","texto":"Novo modelo da Anthropic, lançado na segunda (09/11). Responde até 30% mais rápido que a versão anterior e já está disponível em todas as plataformas.","pratica":"Se você já usa o Claude, tarefas longas como relatório e análise ficam mais rápidas.","fonte":"Anthropic, anúncio de 09/11"},
-{"empresa":"Anthropic","titulo":"Mais de 1.000 agentes de IA criaram um sistema operacional em 8 dias","texto":"O Fable 5.2 coordenou os agentes a partir de uma pasta vazia. O sistema liga num notebook, tem tela de login, instalador e janelas.","pratica":"Projeto grande deixa de depender de um time enorme: a IA divide o trabalho.","fonte":"Anthropic, demonstração de lançamento"},
-{"empresa":"Anthropic","titulo":"Projetou 3 aparelhos que foram fabricados e funcionaram","texto":"Um hub de assistente de voz, um viva-voz USB e um bichinho virtual. Placa, caixa e software feitos pela IA. Todos funcionaram sem ajuste elétrico.","pratica":"Do desenho ao produto físico: a IA já entra no desenvolvimento de produto.","fonte":"Anthropic, demonstração com a fabricante Diode"},
-{"empresa":"Anthropic","titulo":"Reescreveu um sistema que ficou 26 vezes mais rápido","texto":"Uma versão inicial do Fable 5.2 migrou um serviço em produção de Python pra Rust. O serviço novo inicia cerca de 26 vezes mais rápido.","pratica":"Sistema antigo e lento da empresa pode ser modernizado com ajuda de IA.","fonte":"Anthropic, anúncio de 09/11"}
-]}
+{
+ "id": "ia-2026-11-13",
+ "semana": "SEMANA DE 09 A 13/11",
+ "titulo": "O que saiu de IA essa semana\n*e o que muda pro seu negócio.*",
+ "foto": "escritorio/mesa-laptop-cafe.jpg",
+ "itens": [
+  {
+   "empresa": "Anthropic",
+   "titulo": "Saiu o Claude Fable 5.2",
+   "texto": "Novo modelo da Anthropic, lançado na segunda (09/11). Responde até 30% mais rápido que a versão anterior e já está disponível em todas as plataformas.",
+   "pratica": "Se você já usa o Claude, tarefas longas como relatório e análise ficam mais rápidas.",
+   "fonte": "Anthropic, vídeo oficial de lançamento (@claudeai)",
+   "video": "2026-11-ia/videos/fable52-oficial.mp4"
+  },
+  {
+   "empresa": "Anthropic",
+   "titulo": "Mais de 1.000 agentes de IA criaram um sistema operacional em 8 dias",
+   "texto": "O Fable 5.2 coordenou os agentes a partir de uma pasta vazia. O sistema liga num notebook, tem tela de login, instalador e janelas.",
+   "pratica": "Projeto grande deixa de depender de um time enorme: a IA divide o trabalho.",
+   "fonte": "Anthropic, demonstração de lançamento"
+  },
+  {
+   "empresa": "Anthropic",
+   "titulo": "Projetou 3 aparelhos que foram fabricados e funcionaram",
+   "texto": "Um hub de assistente de voz, um viva-voz USB e um bichinho virtual. Placa, caixa e software feitos pela IA. Todos funcionaram sem ajuste elétrico.",
+   "pratica": "Do desenho ao produto físico: a IA já entra no desenvolvimento de produto.",
+   "fonte": "Anthropic, demonstração com a fabricante Diode"
+  },
+  {
+   "empresa": "Anthropic",
+   "titulo": "Reescreveu um sistema que ficou 26 vezes mais rápido",
+   "texto": "Uma versão inicial do Fable 5.2 migrou um serviço em produção de Python pra Rust. O serviço novo inicia cerca de 26 vezes mais rápido.",
+   "pratica": "Sistema antigo e lento da empresa pode ser modernizado com ajuda de IA.",
+   "fonte": "Anthropic, anúncio de 09/11"
+  }
+ ]
+}
