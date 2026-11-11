@@ -1,0 +1,548 @@
+<!-- ELO: código do corpo -->
+<style>#preview-container .c-section{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Mundo único: bordô profundo + ouro branco. Uma coluna central, cenas presas na tela que avançam com a rolagem. */
+  --vinho:#4d1a22;
+  --vinho-2:#5e1f2a;
+  --vinho-3:#6e2a34;
+  --rosa:#f0b9b3;
+  --creme:#f5ece6;
+  --papel:#f3e9e3;
+  --display:"EB Garamond", Georgia, "Times New Roman", serif;
+  --body:"Jost", "Helvetica Neue", Arial, sans-serif;
+  --hand:"Caveat", "Segoe Script", cursive;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--vinho)}
+body{background:var(--vinho);color:var(--creme);font-family:var(--body);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;letter-spacing:-.01em}
+em{font-family:var(--display);font-style:italic;color:var(--rosa)}
+.caps{font-size:12px;letter-spacing:.32em;text-transform:uppercase;font-weight:400}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--rosa);outline-offset:4px}
+
+/* ---------- cenas presas ---------- */
+.scene{position:relative}
+.stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.inner{position:relative;width:min(100%,560px);height:100%;padding:0 22px}
+
+/* topo fixo */
+.bar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;pointer-events:none}
+.bar img{width:74px;opacity:.95}
+.bar .caps{font-size:10px;opacity:.7;display:none}
+.progress{position:fixed;left:0;top:0;height:2px;background:var(--rosa);width:0;z-index:60}
+
+/* ---------- hero ---------- */
+#hero .inner{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#links{width:min(88vw,460px);height:auto;overflow:visible}
+.hero-t{position:absolute;left:22px;right:22px;font-family:var(--display);font-size:clamp(30px,7.4vw,46px);line-height:1.12}
+.hero-t.a{bottom:18%}
+.hero-t.b{bottom:18%;opacity:0}
+.hint{position:absolute;bottom:28px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:.3em;opacity:.7}
+.hint i{display:block;width:1px;height:34px;background:var(--rosa);margin:10px auto 0;animation:drip 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* ---------- abertura ---------- */
+#open .inner{display:flex;flex-direction:column;justify-content:center;gap:28px}
+.line{font-family:var(--display);font-size:clamp(34px,8.6vw,54px);line-height:1.08;opacity:.12;transform:translateY(10px)}
+#open .line:first-child{opacity:1;transform:none}
+
+/* ---------- caos ---------- */
+#chaos .inner{padding:0}
+.you{position:absolute;left:50%;top:50%;width:92px;height:92px;margin:-46px 0 0 -46px;border-radius:50%;background:var(--vinho-3);border:1px solid var(--rosa);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-style:italic;font-size:24px;color:var(--rosa);z-index:3}
+.card{position:absolute;width:43%;max-width:230px;background:var(--papel);color:var(--vinho);border-radius:14px;padding:12px 14px;font-size:14px;line-height:1.35;box-shadow:0 14px 30px rgba(0,0,0,.28);opacity:0;z-index:2}
+.card b{display:block;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:#8e2f3c;margin-bottom:4px}
+.c1{left:4%;top:10%}
+.c2{right:4%;top:15%}
+.c3{left:3%;top:29%}
+.c4{right:3%;top:34%}
+.c5{left:5%;top:64%}
+.c6{right:5%;top:70%}
+#wires{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+#wires line{stroke:var(--rosa);stroke-width:1.2;opacity:.75}
+.verdict{position:absolute;left:22px;right:22px;top:50%;transform:translateY(-50%);text-align:center;font-family:var(--display);font-size:clamp(30px,7.6vw,46px);line-height:1.12;opacity:0;z-index:5}
+.veil{position:absolute;inset:0;background:var(--vinho);opacity:0;z-index:4}
+
+/* ---------- revelação ---------- */
+#reveal .inner{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.q{font-family:var(--display);font-size:clamp(32px,8vw,50px);line-height:1.1;position:absolute;left:22px;right:22px;top:50%;transform:translateY(-50%)}
+.brand{position:absolute;left:22px;right:22px;top:50%;transform:translateY(-50%);opacity:0;display:flex;flex-direction:column;align-items:center;gap:22px}
+.brand img{width:min(64vw,300px)}
+.brand .caps{opacity:.85}
+
+/* ---------- ponte ---------- */
+.bridge{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:12vh 22px;text-align:center}
+.bridge p{font-family:var(--display);font-style:italic;font-size:clamp(24px,6vw,34px);line-height:1.25;max-width:520px}
+.thread{width:1px;height:16vh;background:var(--rosa);transform-origin:top;transform:scaleY(0)}
+
+/* ---------- membros ---------- */
+.member .inner{display:flex;flex-direction:column;justify-content:center;gap:22px;padding-top:64px;padding-bottom:26px}
+.stage{position:relative;width:100%;height:56vh;height:56svh;max-height:560px}
+.sig{opacity:0;transform:translateY(14px)}
+.sig .caps{color:var(--rosa);font-size:11px}
+.sig h3{font-size:clamp(38px,9.6vw,58px);line-height:1;margin:8px 0 10px}
+.sig p{font-family:var(--display);font-style:italic;font-size:clamp(19px,4.8vw,24px);line-height:1.3;opacity:.95}
+.sig a{display:inline-block;margin-top:10px;font-size:13px;letter-spacing:.12em;opacity:.75;text-decoration:none}
+.arch{position:absolute;left:50%;top:0;height:100%;aspect-ratio:3/4;max-width:100%;transform:translateX(-50%);border-radius:999px 999px 18px 18px;overflow:hidden;background:var(--vinho-3)}
+.arch img{width:100%;height:100%;object-fit:cover}
+
+/* Ighor: chat */
+.phone{position:absolute;inset:0;margin:0 auto;width:min(100%,340px);border-radius:30px;background:#2b0f14;border:1px solid rgba(240,185,179,.25);padding:56px 14px 14px;display:flex;flex-direction:column;gap:12px;overflow:hidden}
+.phone .top{position:absolute;top:0;left:0;right:0;height:44px;display:flex;align-items:center;gap:10px;padding:0 16px;border-bottom:1px solid rgba(240,185,179,.15);font-size:12px;letter-spacing:.06em}
+.phone .top i{width:24px;height:24px;border-radius:50%;background:var(--vinho-3);display:block}
+.clock{position:absolute;top:58px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:.2em;opacity:.6}
+.msg{max-width:78%;padding:10px 13px;border-radius:16px;font-size:14.5px;line-height:1.35;position:relative}
+.msg small{display:block;font-size:10px;opacity:.6;margin-top:4px;text-align:right}
+.in{background:#3d1820;align-self:flex-start;border-bottom-left-radius:4px;margin-top:22px}
+.out{background:var(--papel);color:var(--vinho);align-self:flex-end;border-bottom-right-radius:4px;opacity:0}
+.typing{align-self:flex-end;background:var(--papel);border-radius:16px;padding:12px 14px;display:flex;gap:5px;opacity:0}
+.typing span{width:6px;height:6px;border-radius:50%;background:var(--vinho);animation:blink 1s infinite}
+.typing span:nth-child(2){animation-delay:.15s}.typing span:nth-child(3){animation-delay:.3s}
+@keyframes blink{0%,100%{opacity:.25}50%{opacity:1}}
+.burst{position:absolute;inset:0;margin:0 auto;width:min(100%,340px);border-radius:999px 999px 18px 18px;overflow:hidden;clip-path:circle(0% at 70% 62%)}
+.burst img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+
+/* Amanda */
+.vp{position:absolute;left:0;right:0;top:22%;text-align:center;font-family:var(--display);font-size:clamp(58px,16vw,96px);line-height:1;z-index:2}
+.vp span{position:relative;display:inline-block}
+.strike{position:absolute;left:-4%;top:54%;height:4px;width:0;background:var(--rosa);border-radius:2px;transform:rotate(-4deg)}
+.sim{position:absolute;left:0;right:0;top:52%;text-align:center;font-family:var(--hand);font-size:clamp(70px,20vw,120px);color:var(--rosa);opacity:0;z-index:2;transform:rotate(-5deg)}
+.amanda-ph{position:absolute;inset:0;clip-path:circle(0% at 50% 66%);z-index:1}
+.amanda-ph .arch{background:#8e4450}
+
+/* Lucão */
+.gaze{position:absolute;left:50%;top:0;height:100%;aspect-ratio:3/4;max-width:100%;transform:translateX(-50%);overflow:visible;z-index:2}
+.lucph{clip-path:circle(0% at 50% 31%);z-index:1}
+.heatwash{position:absolute;inset:0;background:radial-gradient(circle at 50% 31%,rgba(255,224,138,.75),rgba(255,138,92,.55) 25%,rgba(214,55,90,.45) 50%,rgba(77,26,34,.2) 80%);mix-blend-mode:screen}
+.fixn{font-family:Jost,sans-serif;font-size:11px;font-weight:500;fill:#4d1a22}
+.lq{position:absolute;left:0;right:0;bottom:-92px;z-index:3;text-align:center;font-family:var(--display);font-size:clamp(22px,5.6vw,30px);line-height:1.2;padding:16px 10px;z-index:2}
+
+/* João */
+.ledger{position:absolute;inset:0;margin:0 auto;width:min(100%,360px);display:flex;flex-direction:column;justify-content:center;gap:4px;z-index:2}
+.row{display:flex;justify-content:space-between;align-items:baseline;padding:14px 4px;border-top:1px solid rgba(240,185,179,.25);font-variant-numeric:tabular-nums}
+.row:last-child{border-bottom:1px solid rgba(240,185,179,.25)}
+.row span{font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+.row b{font-family:var(--display);font-weight:400;font-size:clamp(28px,7vw,38px)}
+.row.lucro b{color:var(--rosa)}
+.joao-ph{opacity:0;z-index:1}
+
+/* Rodolfo */
+.paper{position:absolute;left:50%;top:50%;width:min(86%,320px);aspect-ratio:3/4;background:var(--papel);color:var(--vinho);border-radius:6px;padding:26px 24px;transform:translate(-50%,-50%) rotate(-8deg) scaleY(.26);transform-origin:50% 50%;box-shadow:0 20px 40px rgba(0,0,0,.35);z-index:2;display:flex;flex-direction:column;gap:10px}
+.paper .hand{font-family:var(--hand);font-size:44px;line-height:1;color:#8e2f3c}
+.paper .doc{opacity:0;display:flex;flex-direction:column;gap:9px}
+.paper .doc h4{font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:.02em}
+.paper .doc i{display:block;height:6px;border-radius:3px;background:rgba(77,26,34,.16)}
+.paper svg{margin-top:auto;width:100%;height:60px}
+.paper svg path{fill:none;stroke:#4d1a22;stroke-width:2.2;stroke-linecap:round}
+.paper .sline{height:1px;background:rgba(77,26,34,.5)}
+.paper .who{font-size:10px;letter-spacing:.24em;text-transform:uppercase;margin-top:6px}
+.rod-ph{opacity:0;z-index:1}
+
+/* Ana */
+.fog{position:absolute;inset:0;z-index:2}
+.fog span{position:absolute;font-family:var(--display);font-style:italic;font-size:clamp(22px,5.8vw,32px);white-space:nowrap;filter:blur(10px);opacity:.9}
+.ana-ph{z-index:1}
+.ana-ph img{filter:blur(28px);transform:scale(1.08)}
+.ana-ph{opacity:.0}
+
+/* ---------- seções finais ---------- */
+.block{padding:16vh 22px;display:flex;justify-content:center}
+.block .w{width:min(100%,560px)}
+.block h2{font-size:clamp(38px,9.4vw,60px);line-height:1.04;margin:18px 0 24px}
+.rule{width:64px;height:1px;background:var(--rosa);opacity:.7;margin:18px 0}
+.pillars{display:grid;gap:0;margin-top:28px}
+.pillar{display:grid;grid-template-columns:54px 1fr;gap:12px;padding:22px 0;border-top:1px solid rgba(245,236,230,.2)}
+.pillar:last-child{border-bottom:1px solid rgba(245,236,230,.2)}
+.pillar .n{font-family:var(--display);font-size:30px;color:var(--rosa)}
+.pillar h3{font-size:30px;line-height:1.1;margin-bottom:6px}
+.pillar p{font-size:17px;line-height:1.5;opacity:.9}
+.lead{font-size:19px;line-height:1.6;max-width:60ch;opacity:.92}
+.light{background:var(--papel);color:var(--vinho)}
+.light em{color:#8e2f3c}
+.light .rule{background:#8e2f3c}
+.belief{min-height:90vh;display:flex;align-items:center;justify-content:center;padding:14vh 22px;text-align:center}
+.belief h2{font-size:clamp(44px,11vw,84px);line-height:1.04;max-width:12ch}
+.faces{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0}
+.faces img{width:62px;height:62px;border-radius:50%;object-fit:cover;object-position:50% 25%;border:2px solid var(--rosa)}
+.cta{display:inline-flex;align-items:center;gap:12px;padding:18px 28px;border:1px solid var(--rosa);border-radius:999px;font-size:13px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;font-weight:400;transition:background .25s,color .25s}
+.cta:hover{background:var(--rosa);color:var(--vinho)}
+.small{margin-top:18px;font-size:15px;opacity:.8}
+footer{padding:40px 22px 60px;text-align:center;font-size:11px;letter-spacing:.3em;opacity:.6}
+
+@media (min-width:900px){
+  .bar .caps{display:block}
+  #links{width:min(50vw,620px)}
+  .hero-t{font-size:50px}
+  .hero-t.a,.hero-t.b{bottom:9%}
+  #chaos .inner{width:min(100%,980px)}
+  .card{max-width:300px;font-size:16px;padding:16px 18px}
+  .you{width:120px;height:120px;margin:-60px 0 0 -60px;font-size:30px}
+  .member .inner{width:min(100%,1120px);flex-direction:row;align-items:center;gap:80px;padding:0 48px}
+  .member .stage{flex:1 1 0;height:74vh;max-height:700px}
+  .member .sig{flex:0 0 380px}
+  .sig h3{font-size:60px}
+  .line{font-size:60px}
+  .bar{padding:26px 40px}.bar img{width:92px}
+  .card{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){
+  .hint i,.typing span{animation:none}
+}
+</style>
+<div class="progress" id="prog"></div>
+<header class="bar"><img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/logo.png" alt="ELO"><span class="caps">Comunidade de crescimento na saúde</span></header>
+
+<!-- 1 · HERO: dois elos -->
+<section class="scene" id="hero" style="height:260vh"><div class="stick"><div class="inner">
+  <svg id="links" viewBox="-60 -40 520 380" aria-label="Dois elos de corrente se encaixando">
+    <defs>
+      <linearGradient id="wg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#fbfaf8"/>
+        <stop offset=".22" stop-color="#cfc9c1"/>
+        <stop offset=".45" stop-color="#ffffff"/>
+        <stop offset=".62" stop-color="#a9a299"/>
+        <stop offset=".8" stop-color="#ebe7e1"/>
+        <stop offset="1" stop-color="#8f877e"/>
+      </linearGradient>
+      <linearGradient id="wg2" x1="1" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f7f5f2"/>
+        <stop offset=".3" stop-color="#b9b2a9"/>
+        <stop offset=".5" stop-color="#ffffff"/>
+        <stop offset=".75" stop-color="#9c948b"/>
+        <stop offset="1" stop-color="#e9e5df"/>
+      </linearGradient>
+      <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#1a0508" flood-opacity=".55"/></filter>
+      <clipPath id="front"><rect x="-150" y="-80" width="110" height="80"/></clipPath>
+    </defs>
+    <g id="linkB" filter="url(#sh)"><g><rect x="-130" y="-52" width="260" height="104" rx="52" fill="none" stroke="url(#wg2)" stroke-width="26"/><rect x="-130" y="-52" width="260" height="104" rx="52" fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="2" transform="translate(-3,-6)"/></g></g>
+    <g id="linkA" filter="url(#sh)"><g><rect x="-130" y="-52" width="260" height="104" rx="52" fill="none" stroke="url(#wg)" stroke-width="26"/><rect x="-130" y="-52" width="260" height="104" rx="52" fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="2" transform="translate(-3,-6)"/></g></g>
+    <g id="linkBfront"><g clip-path="url(#front)"><rect x="-130" y="-52" width="260" height="104" rx="52" fill="none" stroke="url(#wg2)" stroke-width="26"/></g></g>
+  </svg>
+  <p class="hero-t a">Toda clínica é feita de <em>elos.</em></p>
+  <p class="hero-t b">Quando um deles se solta, <em>tudo pesa.</em></p>
+  <div class="hint" id="hint">ROLE PARA BAIXO<i></i></div>
+</div></div></section>
+
+<!-- 2 · ABERTURA -->
+<section class="scene" id="open" style="height:280vh"><div class="stick"><div class="inner">
+  <p class="line">Você estudou anos para <em>cuidar de pessoas.</em></p>
+  <p class="line">Um dia, abriu a sua clínica.</p>
+  <p class="line">E, sem perceber, virou <em>gerente de tudo.</em></p>
+</div></div></section>
+
+<!-- 3 · CAOS -->
+<section class="scene" id="chaos" style="height:420vh"><div class="stick"><div class="inner">
+  <svg id="wires"></svg>
+  <div class="you" id="you">você</div>
+  <div class="card c1" data-k="ighor"><b>WhatsApp · 22:07</b>O paciente perguntou o valor. Ninguém respondeu.</div>
+  <div class="card c2" data-k="amanda"><b>Orçamento</b>A consulta foi ótima. Virou "vou pensar".</div>
+  <div class="card c3" data-k="lucao"><b>Concorrência</b>Você é ótimo no que faz. O paciente escolheu outro.</div>
+  <div class="card c4" data-k="joao"><b>Contador</b>Chegou o imposto. Ninguém disse se sobrou lucro.</div>
+  <div class="card c5" data-k="rodolfo"><b>Sociedade</b>O sócio quer uma coisa. Você, outra. Nada no papel.</div>
+  <div class="card c6" data-k="ana"><b>Equipe</b>Todos esperam você decidir tudo. E você está cansado.</div>
+  <div class="veil" id="veil"></div>
+  <p class="verdict" id="verdict">Seis frentes. Nenhuma conversa com a outra. E o único elo entre elas <em>é você.</em></p>
+</div></div></section>
+
+<!-- 4 · REVELAÇÃO -->
+<section class="scene" id="reveal" style="height:240vh"><div class="stick"><div class="inner">
+  <p class="q" id="q">E se você não precisasse ser o elo <em>sozinho?</em></p>
+  <div class="brand" id="brand"><img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/logo.png" alt="ELO"><span class="caps">Sua comunidade de crescimento na saúde</span><span class="caps" style="opacity:.6;font-size:10px">Seis especialistas · um só lugar</span></div>
+</div></div></section>
+
+<div class="bridge"><div class="thread"></div><p>Começa pelo primeiro contato. Às 22h, quando a clínica já fechou.</p></div>
+
+<!-- MEMBRO 1 · IGHOR -->
+<section class="scene member" id="m-ighor" style="height:320vh"><div class="stick"><div class="inner">
+  <div class="stage">
+    <div class="phone" id="phone">
+      <div class="top"><i></i>Paciente · online</div>
+      <div class="clock">HOJE · 22:07</div>
+      <div class="msg in">Oi! Quanto custa a avaliação? Vocês atendem sábado?<small>22:07</small></div>
+      <div class="typing" id="typing"><span></span><span></span><span></span></div>
+      <div class="msg out" id="reply">Oi! Atendemos sim. Te explico tudo agora. Prefere sábado às 9h ou às 11h?<small>22:07 ✓✓</small></div>
+    </div>
+    <div class="burst" id="burst"><img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/ighor.jpg" alt="Ighor Miranda"></div>
+  </div>
+  <div class="sig"><span class="caps">IA e Automação</span><h3>Ighor Miranda</h3><p>A IA responde. A equipe converte. Você cuida.</p><a href="https://www.instagram.com/o.ighormiranda/">@o.ighormiranda</a></div>
+</div></div></section>
+
+<div class="bridge"><div class="thread"></div><p>Responder rápido é o começo. Mas aí o paciente diz…</p></div>
+
+<!-- MEMBRO 2 · AMANDA -->
+<section class="scene member" id="m-amanda" style="height:320vh"><div class="stick"><div class="inner">
+  <div class="stage">
+    <div class="vp" id="vp"><span>Vou pensar.<i class="strike" id="strike"></i></span></div>
+    <div class="sim" id="sim">Sim.</div>
+    <div class="amanda-ph" id="amph"><div class="arch"><img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/amanda.jpg" alt="Amanda Adels"></div></div>
+  </div>
+  <div class="sig"><span class="caps">Vendas High Ticket</span><h3>Amanda Adels</h3><p>O preço só pesa quando o valor não aparece.</p><a href="https://www.instagram.com/amandaadels/">@amandaadels</a></div>
+</div></div></section>
+
+<div class="bridge"><div class="thread"></div><p>E antes mesmo do orçamento, o paciente já decidiu muita coisa.</p></div>
+
+<!-- MEMBRO 3 · LUCÃO -->
+<section class="scene member lucao" id="m-lucao" style="height:340vh"><div class="stick"><div class="inner">
+  <div class="stage">
+    <div class="arch lucph" id="lucph"><img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/lucao.jpg" alt="Lucão Mendanha"><div class="heatwash" id="heatwash"></div></div>
+    <svg class="gaze" id="gaze" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <defs>
+        <radialGradient id="heat"><stop offset="0" stop-color="#ffe08a" stop-opacity=".95"/><stop offset=".35" stop-color="#ff8a5c" stop-opacity=".7"/><stop offset=".7" stop-color="#d6375a" stop-opacity=".35"/><stop offset="1" stop-color="#d6375a" stop-opacity="0"/></radialGradient>
+      </defs>
+      <g id="wire">
+        <rect x="18" y="16" width="264" height="368" rx="18" fill="#f3e9e3"/>
+        <rect x="34" y="32" width="232" height="118" rx="10" fill="#dcc6be"/>
+        <circle cx="150" cy="84" r="22" fill="#c9aea5"/><rect x="118" y="108" width="64" height="30" rx="15" fill="#c9aea5"/>
+        <rect x="34" y="166" width="170" height="13" rx="6" fill="#4d1a22" opacity=".85"/>
+        <rect x="34" y="186" width="120" height="9" rx="4" fill="#4d1a22" opacity=".3"/>
+        <text x="34" y="222" font-size="15" fill="#8e2f3c" letter-spacing="2">★★★★★</text><text x="118" y="221" font-size="10" fill="#4d1a22" opacity=".6" font-family="Jost, sans-serif">avaliações</text>
+        <rect x="34" y="240" width="232" height="1" fill="#4d1a22" opacity=".15"/>
+        <text x="34" y="268" font-size="11" fill="#4d1a22" opacity=".6" font-family="Jost, sans-serif">Avaliação inicial</text>
+        <text x="200" y="268" font-size="15" fill="#4d1a22" font-family="EB Garamond, serif">R$ ···</text>
+        <rect x="34" y="282" width="200" height="8" rx="4" fill="#4d1a22" opacity=".2"/>
+        <rect x="34" y="296" width="150" height="8" rx="4" fill="#4d1a22" opacity=".2"/>
+        <rect x="60" y="324" width="180" height="38" rx="19" fill="#4d1a22"/><text x="150" y="348" text-anchor="middle" font-size="12" letter-spacing="3" fill="#f5ece6" font-family="Jost, sans-serif">AGENDAR</text>
+      </g>
+      <g id="heats"></g>
+      <polyline id="path" fill="none" stroke="#f0b9b3" stroke-width="1.6" stroke-dasharray="4 4" points=""/>
+      <g id="fix"></g>
+    </svg>
+    <p class="lq" id="lq">Em segundos, o olhar do paciente <em>já decidiu</em> por onde passar.</p>
+  </div>
+  <div class="sig"><span class="caps">Neuromarketing</span><h3>Lucão Mendanha</h3><p>Entenda a mente. Domine o mercado.</p><a href="https://www.instagram.com/lucaomendanha/">@lucaomendanha</a></div>
+</div></div></section>
+
+<div class="bridge"><div class="thread"></div><p>Ele escolheu você. Agora, a pergunta do fim do mês: sobrou?</p></div>
+
+<!-- MEMBRO 4 · JOÃO -->
+<section class="scene member" id="m-joao" style="height:320vh"><div class="stick"><div class="inner">
+  <div class="stage">
+    <div class="ledger" id="ledger">
+      <div class="row"><span>Faturamento</span><b data-d="6">000.000</b></div>
+      <div class="row"><span>Custos</span><b data-d="5">00.000</b></div>
+      <div class="row"><span>Impostos</span><b data-d="5">00.000</b></div>
+      <div class="row lucro"><span>Lucro</span><b id="lucro">?</b></div>
+    </div>
+    <div class="arch joao-ph" id="joph"><img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/joao.jpg" alt="João Chiarotti"></div>
+  </div>
+  <div class="sig"><span class="caps">Finanças e Contabilidade</span><h3>João Chiarotti</h3><p>Números também cuidam de pessoas.</p><a href="https://www.instagram.com/jpchiarotti/">@jpchiarotti</a></div>
+</div></div></section>
+
+<div class="bridge"><div class="thread"></div><p>Crescer exige regras claras. Principalmente entre sócios.</p></div>
+
+<!-- MEMBRO 5 · RODOLFO -->
+<section class="scene member" id="m-rodolfo" style="height:320vh"><div class="stick"><div class="inner">
+  <div class="stage">
+    <div class="paper" id="paper">
+      <div class="hand">o combinado</div>
+      <div class="doc" id="doc"><h4>Acordo de cotistas</h4><i style="width:92%"></i><i style="width:80%"></i><i style="width:88%"></i><i style="width:64%"></i><i style="width:84%"></i></div>
+      <svg viewBox="0 0 300 60"><path id="sign" d="M10 44 C 30 10, 48 10, 52 40 S 70 52, 84 26 C 92 12, 104 18, 100 34 C 98 46, 120 44, 132 28 C 142 16, 152 30, 162 36 S 190 22, 214 30 C 236 38, 258 26, 286 20"/></svg>
+      <div class="sline"></div><div class="who">Sócio A · Sócio B</div>
+    </div>
+    <div class="arch rod-ph" id="roph"><img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/rodolfo.jpg" alt="Rodolfo Spigai"></div>
+  </div>
+  <div class="sig"><span class="caps">Direito e Governança</span><h3>Rodolfo Spigai</h3><p>Mais clareza para decidir. Mais segurança para crescer.</p><a href="https://www.instagram.com/spigairodolfo/">@spigairodolfo</a></div>
+</div></div></section>
+
+<div class="bridge"><div class="thread"></div><p>E no meio de tudo isso, tem você.</p></div>
+
+<!-- MEMBRO 6 · ANA -->
+<section class="scene member" id="m-ana" style="height:320vh"><div class="stick"><div class="inner">
+  <div class="stage">
+    <div class="fog" id="fog">
+      <span style="left:2%;top:8%">Não consigo cobrar…</span>
+      <span style="right:0;top:28%">Não consigo delegar…</span>
+      <span style="left:6%;top:50%">Por que eu sou assim?</span>
+      <span style="right:4%;top:72%">Puxo tudo para mim…</span>
+    </div>
+    <div class="arch ana-ph" id="anph"><img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/ana.jpg" alt="Ana Cláudia Raymundi Spigai" id="animg"></div>
+  </div>
+  <div class="sig"><span class="caps">Psicanálise</span><h3>Ana Cláudia Raymundi Spigai</h3><p>Escuta, ética e tempo para pensar. A escuta transforma.</p><a href="https://www.instagram.com/anaraymundi_psicanalise/">@anaraymundi_psicanalise</a></div>
+</div></div></section>
+
+<!-- COMO FUNCIONA -->
+<section class="block light"><div class="w">
+  <span class="caps">Como funciona a ELO</span>
+  <h2>Aqui, a gente começa <em>servindo.</em></h2>
+  <p class="lead">A ELO é uma comunidade para servir e prosperar juntos. Quando surgir uma necessidade concreta, você aprofunda com quem já está aqui dentro, sem sair procurando fornecedor por fornecedor.</p>
+  <div class="pillars">
+    <div class="pillar"><span class="n">01</span><div><h3>Conexões</h3><p>Pessoas que atuam na saúde trocando de verdade, com quem vive os mesmos desafios.</p></div></div>
+    <div class="pillar"><span class="n">02</span><div><h3>Conhecimento</h3><p>O que funciona na prática, compartilhado por quem vive cada área.</p></div></div>
+    <div class="pillar"><span class="n">03</span><div><h3>Crescimento</h3><p>Visão de negócio além da técnica, para uma clínica mais organizada e leve de conduzir.</p></div></div>
+  </div>
+</div></section>
+
+<section class="belief"><h2>Se todo mundo crescer e prosperar junto, <em>melhor ainda.</em></h2></section>
+
+<!-- CTA -->
+<section class="block" style="padding-top:6vh"><div class="w">
+  <span class="caps">Faça parte</span>
+  <div class="rule"></div>
+  <h2>Cada pilar da sua clínica, <em>conectado.</em></h2>
+  <div class="faces">
+    <img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/ighor.jpg" alt="Ighor Miranda"><img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/amanda.jpg" alt="Amanda Adels"><img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/lucao.jpg" alt="Lucão Mendanha"><img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/joao.jpg" alt="João Chiarotti"><img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/rodolfo.jpg" alt="Rodolfo Spigai"><img src="https://cdn.jsdelivr.net/gh/ighormiranda/posts-instagram@3989ad7c0fcd3cc886c638930b7d0bc44871589d/elo/img/ana.jpg" alt="Ana Cláudia Raymundi Spigai">
+  </div>
+  <a class="cta" href="https://www.instagram.com/elosaudeclube/">Siga a @elosaudeclube →</a>
+  <p class="small">Quer conversar com um especialista? Chama no direct.</p>
+</div></section>
+
+<footer>CONEXÕES · CONHECIMENTO · CRESCIMENTO</footer>
+
+<script>
+(function(){
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const C=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+  const seg=(p,a,b)=>C((p-a)/(b-a));
+  const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+  const lerp=(a,b,t)=>a+(b-a)*t;
+  const $=s=>document.querySelector(s);
+  const scenes=[...document.querySelectorAll('.scene')];
+  const sig=el=>el.querySelector('.sig');
+  const showSig=(el,t)=>{const s=sig(el);if(!s)return;s.style.opacity=t;s.style.transform=`translateY(${(1-t)*14}px)`};
+
+  // HERO
+  const A=$('#linkA'),B=$('#linkB'),BF=$('#linkBfront');
+  function hero(p){
+    const t=ease(seg(p,0,.55));
+    const ax=lerp(10,110,t), ay=lerp(270,214,t);
+    const bx=lerp(400,292,t), by=lerp(10,86,t);
+    const ra=lerp(15,-35,t), rb=lerp(-85,-35,t);
+    A.setAttribute('transform',`translate(${ax} ${ay}) rotate(${ra})`);
+    B.setAttribute('transform',`translate(${bx} ${by}) rotate(${rb})`);
+    BF.setAttribute('transform',`translate(${bx} ${by}) rotate(${rb})`);
+    BF.style.opacity=t>.96?1:0;
+    const ta=$('.hero-t.a'),tb=$('.hero-t.b');
+    ta.style.opacity=1-seg(p,.62,.72);
+    tb.style.opacity=seg(p,.72,.82);
+    $('#hint').style.opacity=1-seg(p,0,.08);
+    $('#links').style.transform=`scale(${lerp(1,.94,seg(p,.6,1))})`;
+    const g=(p*140).toFixed(1); document.getElementById('wg').setAttribute('gradientTransform',`rotate(${g} .5 .5)`); document.getElementById('wg2').setAttribute('gradientTransform',`rotate(${-g} .5 .5)`);
+  }
+  // ABERTURA
+  const lines=[...document.querySelectorAll('#open .line')];
+  function open(p){
+    lines.forEach((l,i)=>{if(i===0)return;const t=seg(p,.18+i*.22,.34+i*.22);l.style.opacity=lerp(.12,1,t);l.style.transform=`translateY(${(1-t)*10}px)`});
+  }
+  // CAOS
+  const cards=[...document.querySelectorAll('#chaos .card')], wires=$('#wires'), you=$('#you');
+  let wireEls=[];
+  function layoutWires(){
+    const box=wires.getBoundingClientRect(); wires.setAttribute('viewBox',`0 0 ${box.width} ${box.height}`);
+    wires.innerHTML=''; wireEls=cards.map(c=>{
+      const r=c.getBoundingClientRect(), y=you.getBoundingClientRect();
+      const l=document.createElementNS('http://www.w3.org/2000/svg','line');
+      const x1=y.left+y.width/2-box.left, y1=y.top+y.height/2-box.top, x2=r.left+r.width/2-box.left, y2=r.top+r.height/2-box.top;
+      l.setAttribute('x1',x1);l.setAttribute('y1',y1);l.setAttribute('x2',x2);l.setAttribute('y2',y2);
+      const len=Math.hypot(x2-x1,y2-y1); l.style.strokeDasharray=len; l.style.strokeDashoffset=len; l.dataset.len=len;
+      wires.appendChild(l); return l;});
+  }
+  function chaos(p){
+    cards.forEach((c,i)=>{const t=ease(seg(p,.04+i*.085,.12+i*.085));const jitter=(i%2?1:-1)*(1-t)*30;c.style.opacity=t*(1-seg(p,.86,.94)*.75);c.style.transform=`translate(${jitter}px,${(1-t)*20}px) rotate(${(i%3-1)*2.5*(1-seg(p,.6,.8))+(i%2?1.5:-1.5)}deg)`});
+    const w=seg(p,.58,.72); wireEls.forEach(l=>l.style.strokeDashoffset=l.dataset.len*(1-w));
+    wires.style.opacity=1-seg(p,.86,.94);
+    const heavy=seg(p,.66,.8); you.style.transform=`scale(${1+heavy*.25})`; you.style.boxShadow=`0 0 ${heavy*60}px rgba(240,185,179,${heavy*.45})`;
+    $('#veil').style.opacity=seg(p,.82,.92)*.92;
+    const v=$('#verdict'); v.style.opacity=seg(p,.86,.95); you.style.opacity=1-seg(p,.84,.9);
+  }
+  // REVELAÇÃO
+  function reveal(p){
+    const q=$('#q'), b=$('#brand');
+    q.style.opacity=1-seg(p,.4,.52); q.style.transform=`translateY(calc(-50% - ${seg(p,.4,.52)*20}px))`;
+    const t=ease(seg(p,.52,.75)); b.style.opacity=t; b.style.transform=`translateY(-50%) scale(${lerp(.92,1,t)})`;
+  }
+  // IGHOR
+  function ighor(p,el){
+    $('#typing').style.opacity=seg(p,.1,.16)*(1-seg(p,.28,.32));
+    $('#typing').style.display=p>.32?'none':'flex';
+    const r=$('#reply'); const rt=seg(p,.3,.4); r.style.opacity=rt; r.style.transform=`translateY(${(1-rt)*10}px)`;
+    const bt=ease(seg(p,.46,.78)); $('#burst').style.clipPath=`circle(${bt*95}% at 70% 62%)`;
+    $('#phone').style.opacity=1-seg(p,.7,.8);
+    showSig(el,seg(p,.76,.9));
+  }
+  // AMANDA
+  function amanda(p,el){
+    $('#strike').style.width=(seg(p,.1,.3)*108)+'%';
+    const s=seg(p,.3,.42); $('#sim').style.opacity=s; $('#sim').style.transform=`rotate(-5deg) scale(${lerp(.8,1,s)})`;
+    const ph=ease(seg(p,.48,.78)); $('#amph').style.clipPath=`circle(${ph*90}% at 50% 66%)`;
+    $('#vp').style.opacity=1-seg(p,.55,.7); $('#sim').style.opacity=s*(1-seg(p,.62,.74));
+    showSig(el,seg(p,.76,.9));
+  }
+  // LUCÃO: rastreamento do olhar
+  const FX=[[150,92],[118,172],[70,216],[214,264],[150,343]], EYE=[150,124];
+  const NS='http://www.w3.org/2000/svg', heats=$('#heats'), fixg=$('#fix'), path=$('#path');
+  const hEls=FX.map(([x,y])=>{const c=document.createElementNS(NS,'circle');c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r',0);c.setAttribute('fill','url(#heat)');heats.appendChild(c);return c});
+  function mkFix(x,y,n){const g=document.createElementNS(NS,'g');g.setAttribute('transform',`translate(${x} ${y})`);g.innerHTML=`<circle r="11" fill="#f0b9b3" stroke="#4d1a22" stroke-width="1.5"/><text class="fixn" text-anchor="middle" dy="4">${n}</text>`;g.style.opacity=0;fixg.appendChild(g);return g}
+  const fEls=FX.map(([x,y],i)=>mkFix(x,y,'0'+(i+1)));
+  const eyeFix=mkFix(EYE[0],EYE[1],'06'); eyeFix.querySelector('circle').setAttribute('fill','none'); eyeFix.querySelector('circle').setAttribute('stroke','#f0b9b3'); eyeFix.querySelector('circle').setAttribute('r','30'); eyeFix.querySelector('circle').setAttribute('stroke-width','2'); eyeFix.querySelector('text').setAttribute('dy','-38'); eyeFix.querySelector('text').style.fill='#f0b9b3'; eyeFix.querySelector('text').textContent='06';
+  function lucao(p,el){
+    let pts=[];
+    FX.forEach(([x,y],i)=>{const t=seg(p,.06+i*.075,.12+i*.075); fEls[i].style.opacity=t*(1-seg(p,.5,.58)); fEls[i].setAttribute('transform',`translate(${x} ${y}) scale(${lerp(.4,1,ease(t))})`);
+      hEls[i].setAttribute('r',ease(t)*(i===4?48:40)); hEls[i].style.opacity=1-seg(p,.5,.6); if(t>0){const prev=i?FX[i-1]:[x,y]; pts.push(`${lerp(prev[0],x,t)},${lerp(prev[1],y,t)}`)}});
+    path.setAttribute('points',pts.join(' ')); path.style.opacity=1-seg(p,.5,.58);
+    $('#wire').style.opacity=1-seg(p,.48,.6);
+    const r=ease(seg(p,.5,.74)); $('#lucph').style.clipPath=`circle(${r*100}% at 50% 31%)`;
+    $('#heatwash').style.opacity=1-seg(p,.66,.82);
+    const e=seg(p,.6,.7); eyeFix.style.opacity=e*(1-seg(p,.84,.92)); eyeFix.setAttribute('transform',`translate(${EYE[0]} ${EYE[1]}) scale(${lerp(1.6,1,e)})`);
+    $('#lq').style.opacity=1-seg(p,.46,.56);
+    showSig(el,seg(p,.76,.88));
+  }
+  // JOÃO
+  const rows=[...document.querySelectorAll('#ledger b[data-d]')];
+  function rnd(n,seed){let s='';let x=seed;for(let i=0;i<n;i++){x=(x*9301+49297)%233280;s+=Math.floor(x/233280*10)}return s.slice(0,n-3)+'.'+s.slice(n-3)}
+  function joao(p,el){
+    const roll=p<.5; const step=Math.floor(p*160);
+    rows.forEach((b,i)=>{const n=+b.dataset.d; b.textContent=roll?'R$ '+rnd(n,step*7+i*131):b.textContent; b.style.filter=`blur(${seg(p,.55,.75)*6}px)`});
+    $('#lucro').textContent = p<.42 ? (step%2?'?':'¿') : '?';
+    $('#ledger').style.opacity=1-seg(p,.58,.76);
+    const t=ease(seg(p,.6,.82)); const ph=$('#joph'); ph.style.opacity=t; ph.style.transform=`translateX(-50%) scale(${lerp(1.08,1,t)})`;
+    showSig(el,seg(p,.78,.9));
+  }
+  // RODOLFO
+  const sign=$('#sign'); let signLen=0;
+  function rodolfo(p,el){
+    if(!signLen){signLen=sign.getTotalLength();sign.style.strokeDasharray=signLen}
+    const u=ease(seg(p,.06,.36));
+    $('#paper').style.transform=`translate(-50%,-50%) rotate(${lerp(-8,0,u)}deg) scaleY(${lerp(.26,1,u)})`;
+    $('#doc').style.opacity=seg(p,.3,.42);
+    sign.style.strokeDashoffset=signLen*(1-seg(p,.42,.58));
+    $('#paper').style.opacity=1-seg(p,.64,.76);
+    const t=ease(seg(p,.64,.82)); const ph=$('#roph'); ph.style.opacity=t; ph.style.transform=`translateX(-50%) scale(${lerp(1.06,1,t)})`;
+    showSig(el,seg(p,.78,.9));
+  }
+  // ANA
+  const fog=[...document.querySelectorAll('#fog span')];
+  function ana(p,el){
+    const f=seg(p,.08,.4);
+    fog.forEach((s,i)=>{s.style.filter=`blur(${lerp(10,0,f)}px)`;s.style.opacity=(1-seg(p,.5,.62))*.95});
+    const t=seg(p,.46,.8); const ph=$('#anph'); ph.style.opacity=seg(p,.46,.58);
+    $('#animg').style.filter=`blur(${lerp(28,0,ease(t))}px)`; $('#animg').style.transform=`scale(${lerp(1.08,1,t)})`;
+    showSig(el,seg(p,.78,.9));
+  }
+
+  const fns={hero,open,chaos,reveal,'m-ighor':ighor,'m-amanda':amanda,'m-lucao':lucao,'m-joao':joao,'m-rodolfo':rodolfo,'m-ana':ana};
+  const threads=[...document.querySelectorAll('.thread')];
+
+  function frame(){
+    const vh=window.innerHeight;
+    scenes.forEach(el=>{
+      const r=el.getBoundingClientRect(); const span=el.offsetHeight-vh;
+      if(r.bottom<-vh||r.top>vh*2)return;
+      const p=reduce?1:C(-r.top/span); const f=fns[el.id]; if(f)f(p,el);
+    });
+    threads.forEach(t=>{const r=t.getBoundingClientRect(); const v=reduce?1:C((vh-r.top)/(vh*.6)); t.style.transform=`scaleY(${v})`});
+    const doc=document.documentElement; $('#prog').style.width=(100*scrollY/(doc.scrollHeight-vh))+'%';
+  }
+  let ticking=false;
+  addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(()=>{frame();ticking=false})}},{passive:true});
+  addEventListener('resize',()=>{layoutWires();frame()});
+  if(reduce){scenes.forEach(el=>el.style.height='100vh')}
+  layoutWires(); frame();
+  if(reduce){Object.entries(fns).forEach(([id,f])=>{const el=document.getElementById(id); if(el)f(1,el)}); $('#verdict').style.opacity=1}
+})();
+</script>
