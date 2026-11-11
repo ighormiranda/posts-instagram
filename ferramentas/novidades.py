@@ -65,14 +65,25 @@ def capa_slide(ed, tot, out):
     im.save(out, quality=92)
 
 
-def item_slide(it, k, n, tot, out_png):
+def item_slide(it, k, n, tot, out_png, final=False):
     """Desenha o slide e devolve a caixa da moldura de mídia (x0,y0,x1,y1)."""
     im = Image.new('RGB', (W, H), PR); d = ImageDraw.Draw(im)
-    capa.tracked(d, (M, 110), f'{k:02d} · {it["empresa"].upper()}', fnt('mono500', 26), LM)
-    y = rich(d, it['titulo'], M, 160, 52, {'b': BR, 'd': LM}, 60)
-    y = rich(d, it['texto'], M, y + 18, 34, {'b': SUB, 'd': LM}, 46, peso='pjs500')
+    semmidia = final and not ((it.get('imagem') and os.path.exists(it['imagem'])) or (it.get('video') and os.path.exists(it['video'])))
+    top = 330 if semmidia else 110
+    capa.tracked(d, (M, top), f'{k:02d} · {it["empresa"].upper()}', fnt('mono500', 26), LM)
+    y = rich(d, it['titulo'], M, top + 50, 60 if semmidia else 52, {'b': BR, 'd': LM}, 70 if semmidia else 60)
+    y = rich(d, it['texto'], M, y + 18, 38 if semmidia else 34, {'b': SUB, 'd': LM}, 52 if semmidia else 46, peso='pjs500')
     fy = y + 34
     box = (M, fy, M + FW, fy + FH)
+    temmidia = (it.get('imagem') and os.path.exists(it['imagem'])) or (it.get('video') and os.path.exists(it['video']))
+    if final and not temmidia:
+        d.text((M, y + 30), 'Fonte: ' + it.get('fonte', ''), font=fnt('pjs500', 24), fill=(130, 140, 130))
+        if it.get('pratica'):
+            yy = y + 110
+            d.rounded_rectangle((M, yy, W - M, yy + 170), 22, fill=(20, 40, 24))
+            capa.tracked(d, (M + 28, yy + 24), 'NA PRÁTICA', fnt('mono500', 24), LM)
+            rich(d, it['pratica'], M + 28, yy + 62, 36, {'b': BR, 'd': LM}, 46, maxw=W - 2 * M - 56, peso='pjs700')
+        foot(d, n, tot); im.save(out_png, quality=92); return None
     if it.get('imagem') and os.path.exists(it['imagem']):
         img = ImageOps.fit(Image.open(it['imagem']).convert('RGB'), (FW, FH))
         m = Image.new('L', (FW, FH), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, FW, FH), 24, fill=255)
@@ -121,8 +132,8 @@ if __name__ == '__main__':
     capa_slide(ed, tot, f'{outd}/{pid}_slide01.jpg')
     for k, it in enumerate(ed['itens'], 1):
         png = f'{outd}/{pid}_slide{k + 1:02d}.jpg'
-        box = item_slide(it, k, k + 1, tot, png)
-        if comvideo and it.get('video') and os.path.exists(it['video']):
+        box = item_slide(it, k, k + 1, tot, png, final=comvideo)
+        if comvideo and box and it.get('video') and os.path.exists(it['video']):
             video_slide(png, box, it['video'], f'{outd}/{pid}_slide{k + 1:02d}.mp4')
     final_slide(tot, tot, f'{outd}/{pid}_slide{tot:02d}.jpg')
     print('ok', tot, 'slides')
