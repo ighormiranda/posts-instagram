@@ -25,7 +25,7 @@ Resumo condensado do que já foi feito, para qualquer chat novo começar daqui.
 - **Público mais amplo (06/11):** falar com empresários em geral (negócios, crescimento, mentalidade), não só clínicas, pra ganhar seguidor. Clínica continua na oferta.
 - **YAP (método Stella Soragi):** falar com a câmera como amigo, em série ("Episódio 1 de..."), gancho com número, "não sei se vai dar certo", final "me segue pro episódio 2". Roteiro do ep. 1 entregue (visualização sem seguidor). PDF no projeto.
 - **Stories interativos:** jogo do dragão escondido (09/11 20h30 e 20h32; revelação manual com o nome do ganhador), quiz por toque (11/11), reações no coração/emoji (12, 13, 14/11 às 20h30). Arquivos em `stories/jogos/`. Enquete/caixinha/link só manual.
-- **Fotos removidas (não parecem o Ighor):** aperto-de-mao-camisa-branca, rindo-conversa-pingente, blazer-azul-claro/conversa-lounge-sentado, moletom 1746. Nunca usar.
+- **Fotos removidas (não parecem o Ighor):** aperto-de-mao-camisa-branca, rindo-conversa-pingente, blazer-azul-claro/conversa-lounge-sentado, moletom 1746, blazer-verde-evento/conversando-pingente (12/11). Nunca usar.
 - 2 posts/dia (12h e 19h) + 3 stories/dia automáticos (9h dica, 12h15 e 19h15 chamada pro post). Stories automáticos nunca dependem dos stories dele.
 - Rosto na maioria das capas, variar roupas e cenários, não repetir foto em sequência. Nunca usar `Fotos_MentalidadeMaster1744`.
 - Frases curtas, linhas quebradas, margem de segurança nas artes.
