@@ -37,15 +37,19 @@ M['mumia']=svg(f'''
 ''')
 # LOBISOMEM uivando na lua cheia, no rochedo
 M['lobisomem']=svg(f'''
-<circle cx="590" cy="250" r="235" fill="url(#moon)"/>
-<circle cx="520" cy="190" r="30" fill="#c9b6a2" opacity=".6"/><circle cx="700" cy="320" r="46" fill="#c9b6a2" opacity=".5"/><circle cx="650" cy="140" r="16" fill="#c9b6a2" opacity=".6"/>
-<path d="M120 640 L300 560 L400 575 L520 545 L660 570 L780 560 L960 640Z" fill="#050303"/>
-<path fill="#050303" d="M430 565 Q380 560 372 520 Q370 492 396 488 Q392 512 412 524 Q430 532 440 520
-L432 470 Q426 420 452 380 L488 330 Q500 300 512 288 L506 252 L524 226 L540 262
-Q556 252 572 246 L632 176 L652 160 Q660 158 656 170 L646 186 L622 214 L612 226 L640 210 Q646 210 642 218 L612 248
-Q600 262 594 284 L590 330 Q596 360 598 400 L606 480 L620 548 Q600 556 580 552 L572 480 L556 486 L566 548 Q546 556 520 552 L520 520 Q500 540 470 548 Z"/>
-<path d="M520 300 L540 320" stroke="#be121c" stroke-width="0"/>
-<circle cx="574" cy="258" r="5" fill="#be121c"/>''')
+<circle cx="590" cy="270" r="235" fill="url(#moon)"/>
+<circle cx="500" cy="190" r="28" fill="#c9b6a2" opacity=".6"/><circle cx="730" cy="350" r="46" fill="#c9b6a2" opacity=".5"/><circle cx="700" cy="160" r="16" fill="#c9b6a2" opacity=".6"/>
+<g fill="#050303">
+<path d="M60 640 L240 586 L360 594 L480 572 L660 580 L780 566 L1020 640Z"/>
+<path d="M704 158 L646 200 Q628 196 612 206 L588 158 L582 214
+Q566 224 556 246 L548 250 L556 258 Q536 296 514 330 L500 330 L510 342
+Q470 396 456 452 Q404 470 396 524 Q386 548 352 556 Q318 562 330 578 Q350 588 400 580 L470 584 L648 584
+Q664 580 652 570 L622 564 L618 478 Q632 430 628 386 L640 380 L630 370 Q632 330 646 304 L656 302 L650 292 Q658 276 668 262
+L696 212 L662 230 L712 170 Z"/>
+</g>
+<path d="M520 470 Q560 500 560 570" stroke="#2a1a18" stroke-width="3" fill="none"/>
+<path d="M600 480 L604 570" stroke="#2a1a18" stroke-width="3" fill="none"/>
+<circle cx="618" cy="222" r="5" fill="#be121c"/>''')
 # CAVEIRA
 M['caveira']=svg(f'''
 <circle cx="540" cy="320" r="290" fill="url(#glow)"/>
