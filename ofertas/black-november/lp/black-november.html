@@ -66,6 +66,53 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 .dock{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;align-items:center;justify-content:space-between;gap:12px;background:#141414;border:1px solid #2E2E2E;border-radius:18px;padding:10px 10px 10px 16px;box-shadow:0 12px 32px rgba(0,0,0,.5)}
 .pagefoot{padding-bottom:110px!important}
 }
+
+/* Transições criativas entre seções */
+.strike{position:relative;white-space:nowrap}
+.strike::after{content:"";position:absolute;left:-3%;right:-3%;top:55%;height:.1em;background:#9AE04C;border-radius:6px;transform-origin:left}
+.ticker{overflow:hidden;border-top:1px solid #1F1F1F;border-bottom:1px solid #1F1F1F;padding:26px 0;white-space:nowrap;background:#0A0A0A}
+.tk{display:inline-block;font-weight:800;font-size:clamp(30px,5.4vw,72px);letter-spacing:-.035em;line-height:1;color:transparent;-webkit-text-stroke:1.5px #3A3A3A}
+.tk b{color:#9AE04C;-webkit-text-stroke:0;font-weight:800}
+.tk i{font-style:normal;color:#9AE04C;-webkit-text-stroke:0;margin:0 .35em;font-size:.6em;vertical-align:.18em}
+.pillars{position:relative}
+.pillars::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:#9AE04C;transform-origin:left}
+.glow{animation:cueGlow 2.2s ease-out infinite}
+@keyframes strikeIn{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes audIn{from{opacity:.08;transform:translateX(-40px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+@keyframes flood{from{clip-path:circle(6% at 50% 50%)}to{clip-path:circle(80% at 50% 50%)}}
+@keyframes slideX{from{transform:translateX(0)}to{transform:translateX(-38%)}}
+@keyframes slideXr{from{transform:translateX(-38%)}to{transform:translateX(0)}}
+@keyframes flipIn{from{opacity:0;transform:perspective(900px) rotateX(-75deg) translateY(30px)}to{opacity:1;transform:none}}
+@keyframes tiltUp{from{opacity:.15;transform:perspective(1100px) rotateX(42deg) translateY(90px) scale(.88)}to{opacity:1;transform:none}}
+@keyframes curtain{from{clip-path:inset(100% 0 0 0 round 28px)}to{clip-path:inset(0 0 0 0 round 28px)}}
+@keyframes riseIn{from{opacity:0;transform:translateY(160px) rotate(-4deg)}to{opacity:1;transform:none}}
+@keyframes slam{0%{opacity:0;transform:translateY(160px) scale(.9)}75%{opacity:1;transform:translateY(-10px) scale(1.04)}100%{opacity:1;transform:none}}
+@keyframes liIn{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:none}}
+@keyframes boxOn{from{border-color:#262626;box-shadow:0 0 0 rgba(154,224,76,0);transform:scale(.93)}to{border-color:#9AE04C;box-shadow:0 0 90px rgba(154,224,76,.2);transform:none}}
+@keyframes slotIn{from{opacity:0;transform:scale(.2) rotate(-25deg)}to{opacity:1;transform:none}}
+
+/* Acabamento de design */
+.eyebrow{color:#9AE04C;font-size:14px;font-weight:800;letter-spacing:.12em}
+.faq{border-bottom:1px solid #262626}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;font-size:clamp(19px,2.2vw,24px);font-weight:800;letter-spacing:-.02em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:#9AE04C}
+.faq summary:focus-visible{outline:2px solid #9AE04C;outline-offset:4px;border-radius:8px}
+.faq-plus{position:relative;flex:0 0 36px;height:36px;border-radius:50%;border:1.5px solid #3A3A3A;transition:transform .25s,background .25s,border-color .25s}
+.faq-plus::before,.faq-plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;background:#9AE04C;transform:translate(-50%,-50%)}
+.faq-plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq[open] .faq-plus{transform:rotate(45deg);background:#9AE04C;border-color:#9AE04C}
+.faq[open] .faq-plus::before,.faq[open] .faq-plus::after{background:#0A0A0A}
+.faq p{margin:0 0 26px;max-width:720px;color:#D4D4D4;font-size:17px;line-height:1.65}
+.stat{white-space:nowrap;font-size:clamp(40px,4.2vw,60px)!important}
+.plan,.rise.s3{transition:transform .25s,border-color .2s,box-shadow .25s}
+.plan:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.rise.s3{box-shadow:0 30px 90px rgba(154,224,76,.22)}
+.final{position:relative;isolation:isolate}
+.final::before{content:"";position:absolute;left:50%;top:42%;width:min(980px,120vw);height:620px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(154,224,76,.16),rgba(154,224,76,0));z-index:-1;pointer-events:none}
+.offer-sec{position:relative;isolation:isolate}
+.offer-sec::before{content:"";position:absolute;right:-10%;top:10%;width:640px;height:640px;background:radial-gradient(closest-side,rgba(154,224,76,.10),rgba(154,224,76,0));z-index:-1;pointer-events:none}
+@media (max-width: 760px){.final .cta.glow{width:100%;justify-content:center;padding:22px 16px;font-size:18px!important;white-space:nowrap}}
 .howstage{max-width:1200px;margin:0 auto;padding:120px 24px;display:flex;flex-direction:column;gap:48px}
 
 @supports (animation-timeline: view()){
@@ -115,9 +162,37 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 .countwrap{opacity:0;transform-origin:left bottom;animation:popIn linear both;animation-timeline:--story;animation-range:contain 76% contain 84%}
 .hint{display:flex;animation:fadeOut linear both;animation-timeline:--story;animation-range:contain 0% contain 5%}
 .hint svg{animation:bob 1.8s ease-in-out infinite}
+
+.offer-h{view-timeline-name:--offer}
+.strike::after{animation:strikeIn linear both;animation-timeline:--offer;animation-range:entry 70% cover 42%}
+.aud{display:inline-block;animation:audIn linear both;animation-timeline:--offer;animation-range:cover 30% cover 52%}
+.flood{animation:flood linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
+.tk{animation:slideX linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+.tk.rev{animation-name:slideXr}
+.flip{animation:flipIn linear both;animation-timeline:view();transform-origin:50% 100%;animation-range:entry 0% cover 30%}
+.pillars::before{animation:grow linear both;animation-timeline:view();animation-range:entry 30% cover 50%}
+.tilt{animation:tiltUp linear both;animation-timeline:view();animation-range:entry 0% cover 50%;transform-origin:50% 100%}
+.curtain img{animation:curtain linear both;animation-timeline:view();animation-range:entry 10% cover 45%}
+.pop{animation:popIn linear both;animation-timeline:view();animation-range:entry 100% cover 55%}
+.rise{animation:riseIn linear both;animation-timeline:view();animation-range:entry 0% cover 32%}
+.rise.s3{animation-name:slam}
+.li-in{animation:liIn linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
+.boxon{animation:boxOn linear both;animation-timeline:view();animation-range:entry 0% cover 40%}
+.slots>*{animation:slotIn linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+@media (min-width: 900px){
+.flip.d2{animation-range:entry 8% cover 36%}
+.flip.d3{animation-range:entry 16% cover 42%}
+.flip.d4{animation-range:entry 24% cover 48%}
+.rise.s2{animation-range:entry 10% cover 40%}
+.rise.s3{animation-range:entry 20% cover 50%}
+.slots>:nth-child(2){animation-range:entry 6% cover 34%}
+.slots>:nth-child(3){animation-range:entry 12% cover 38%}
+.slots>:nth-child(4){animation-range:entry 18% cover 42%}
+.slots>:nth-child(5){animation-range:entry 24% cover 46%}
+}
 }
 @media (prefers-reduced-motion: reduce){
-.rv,.w,.zoom,.progress,.live,.hint svg,.ring{animation:none!important}
+.rv,.w,.zoom,.progress,.live,.hint svg,.ring,.strike::after,.aud,.flood,.tk,.flip,.pillars::before,.tilt,.curtain img,.pop,.rise,.li-in,.boxon,.slots>*,.glow{animation:none!important}
 }
 </style>
 </head>
@@ -196,14 +271,14 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 </section>
 
 <!-- OFERTA -->
-<section style="max-width: 1200px; margin: 0 auto; padding: 140px 24px 140px; display: flex; flex-direction: column; gap: 32px">
+<section class="offer-sec" style="max-width: 1200px; margin: 0 auto; padding: 140px 24px 140px; display: flex; flex-direction: column; gap: 32px">
 <p class="rv" style="margin: 0; color: #A3A3A3; font-size: 18px; font-weight: 600">Agora é a vez da sua empresa.</p>
-<h1 class="rv" style="margin: 0; font-size: clamp(44px, 8vw, 112px); line-height: 0.98; letter-spacing: -0.045em; font-weight: 800">Todo mundo vai te dar desconto.<br><span style="color: #9AE04C">A gente vai te dar audiência.</span></h1>
-<p class="rv" style="margin: 0; max-width: 640px; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: #D4D4D4">Carrosséis e Reels pro Instagram da sua empresa, todo dia.<br>Com story de chamada em cada post, legenda pronta, e quem publica é a gente.</p>
+<h1 class="rv offer-h" style="margin: 0; font-size: clamp(44px, 8vw, 112px); line-height: 0.98; letter-spacing: -0.045em; font-weight: 800">Todo mundo vai te dar <span class="strike">desconto</span>.<br><span class="aud" style="color: #9AE04C">A gente vai te dar audiência.</span></h1>
+<p class="rv" style="margin: 0; max-width: 640px; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: #D4D4D4">Carrosséis, Reels e stories pro Instagram da sua empresa, todo santo dia.<br>A gente cria, você aprova, a gente publica. <strong style="color: #F5F5F5">Você nunca mais precisa lembrar de postar.</strong></p>
 <div class="rv" style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center">
 <a class="cta" href="https://w.app/blackliga" style="display: inline-flex; align-items: center; gap: 12px; background: #9AE04C; color: #0A0A0A; text-decoration: none; font-weight: 800; font-size: 18px; padding: 20px 32px; border-radius: 14px; min-height: 44px">Quero uma das vagas
 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
-<span style="color: #A3A3A3; font-size: 15px; font-weight: 600"><span data-vagas>5 vagas abertas</span> em novembro</span>
+<span style="color: #A3A3A3; font-size: 15px; font-weight: 600"><span data-vagas>5 vagas abertas</span> em novembro · amostra antes de fechar</span>
 </div>
 </section>
 
@@ -223,9 +298,11 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 </section>
 
 <!-- FRASE -->
-<section style="padding: 160px 24px; background: #9AE04C; color: #0A0A0A; overflow: hidden">
+<section class="flood" style="padding: 160px 24px; background: #9AE04C; color: #0A0A0A; overflow: hidden">
 <h2 class="zoom" style="margin: 0 auto; max-width: 1200px; text-align: center; font-size: clamp(48px, 9vw, 136px); line-height: 0.95; letter-spacing: -0.05em; font-weight: 800">Audiência vale mais que dinheiro.</h2>
 </section>
+
+<div class="ticker" aria-hidden="true"><div class="tk">CONSTÂNCIA<i>✦</i><b>AUDIÊNCIA</b><i>✦</i>LEMBRANÇA<i>✦</i><b>VENDA</b><i>✦</i>CONSTÂNCIA<i>✦</i><b>AUDIÊNCIA</b><i>✦</i>LEMBRANÇA<i>✦</i><b>VENDA</b><i>✦</i>CONSTÂNCIA<i>✦</i><b>AUDIÊNCIA</b><i>✦</i>LEMBRANÇA<i>✦</i><b>VENDA</b><i>✦</i></div></div>
 
 <!-- NÚMEROS DO CASE -->
 <section style="max-width: 1200px; margin: 0 auto; padding: 160px 24px 120px; display: flex; flex-direction: column; gap: 48px">
@@ -235,20 +312,20 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #D4D4D4">No @o.ighormiranda eu rodo a mesma automação que a gente vai rodar no seu perfil. Começou em 6 de outubro.</p>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 20px">
-<div class="rv" style="flex: 1 1 240px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 8px">
-<div style="font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: -0.05em; font-weight: 800; color: #9AE04C">+393%</div>
+<div class="flip d1" style="flex: 1 1 240px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 8px">
+<div class="stat" style="font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: -0.05em; font-weight: 800; color: #9AE04C">+393%</div>
 <span style="color: #A3A3A3; font-size: 15px; line-height: 1.5">de visualizações nos primeiros 30 dias da automação</span></div>
-<div class="rv" style="flex: 1 1 240px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 8px">
-<div style="font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: -0.05em; font-weight: 800">27,6 mil</div>
+<div class="flip d2" style="flex: 1 1 240px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 8px">
+<div class="stat" style="font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: -0.05em; font-weight: 800">27,6 mil</div>
 <span style="color: #A3A3A3; font-size: 15px; line-height: 1.5">visualizações em 90 dias</span></div>
-<div class="rv" style="flex: 1 1 240px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 8px">
-<div style="font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: -0.05em; font-weight: 800">15 mil</div>
+<div class="flip d3" style="flex: 1 1 240px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 8px">
+<div class="stat" style="font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: -0.05em; font-weight: 800">15 mil</div>
 <span style="color: #A3A3A3; font-size: 15px; line-height: 1.5">vieram dos posts no feed, mais da metade de tudo</span></div>
-<div class="rv" style="flex: 1 1 240px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 8px">
-<div style="font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: -0.05em; font-weight: 800">8,5 mil</div>
+<div class="flip d4" style="flex: 1 1 240px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 8px">
+<div class="stat" style="font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: -0.05em; font-weight: 800">8,5 mil</div>
 <span style="color: #A3A3A3; font-size: 15px; line-height: 1.5">vieram dos stories; posts e stories somam 85%</span></div>
 </div>
-<div class="rv" style="display: flex; flex-wrap: wrap; gap: 20px; border-top: 1px solid #262626; padding-top: 32px">
+<div class="rv pillars" style="display: flex; flex-wrap: wrap; gap: 20px; padding-top: 32px">
 <div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 8px">
 <span style="color: #9AE04C; font-weight: 800; font-size: 14px; letter-spacing: 0.08em">1. CONSTÂNCIA</span>
 <p style="margin: 0; color: #D4D4D4; line-height: 1.55">Post todo dia, sem depender de tempo livre ou inspiração.</p></div>
@@ -268,7 +345,7 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #A3A3A3">Repara no desenho da linha: é o mesmo do gráfico do topo.<br>Antes, picos soltos. A partir de outubro, constância.</p>
 <span style="color: #8A8A8A; font-size: 13px">Capturado em 05/11/2026. Tirei a barra de status, a linha de cards de resumo e o fim da tela. Gráfico e números por tipo estão intactos.</span>
 </div>
-<div style="flex: 0 1 380px; display: flex; justify-content: center">
+<div class="tilt" style="flex: 0 1 380px; display: flex; justify-content: center">
 <img src="https://raw.githubusercontent.com/ighormiranda/posts-instagram/9e0200e8fec89ecae6bbf5dd7e214d6d24c47815/ofertas/black-november/lp/print-painel-ig.jpg" loading="lazy" alt="Print do painel do Instagram do @o.ighormiranda em 90 dias: gráfico diário de 7 de agosto a 4 de novembro, 15 mil visualizações em posts, 8,5 mil em stories e 4,1 mil em reels." style="width: 100%; max-width: 380px; height: auto; display: block; border-radius: 24px; border: 1px solid #333333">
 </div>
 </div>
@@ -277,9 +354,9 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 <!-- QUEM FAZ -->
 <section style="max-width: 1200px; margin: 0 auto; padding: 40px 24px 140px">
 <div class="rv" style="display: flex; flex-wrap: wrap; gap: clamp(32px, 5vw, 72px); align-items: center">
-<div style="flex: 0 1 400px; position: relative">
+<div class="curtain" style="flex: 0 1 400px; position: relative">
 <img src="https://raw.githubusercontent.com/ighormiranda/posts-instagram/47730d50cd39cb39bf510bd24050868a39cb0d82/ofertas/black-november/lp/ighor.jpg" alt="Foto de Ighor Miranda, dono da Liga do Marketing" width="900" height="1122" style="width: 100%; height: auto; display: block; border-radius: 28px; border: 1px solid #333333">
-<span style="position: absolute; left: 16px; bottom: 16px; background: #0A0A0A; color: #9AE04C; border: 1px solid #9AE04C; border-radius: 999px; padding: 8px 14px; font-size: 14px; font-weight: 800">@o.ighormiranda</span>
+<span class="pop" style="position: absolute; left: 16px; bottom: 16px; background: #0A0A0A; color: #9AE04C; border: 1px solid #9AE04C; border-radius: 999px; padding: 8px 14px; font-size: 14px; font-weight: 800">@o.ighormiranda</span>
 </div>
 <div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 20px">
 <span style="color: #9AE04C; font-size: 14px; font-weight: 800; letter-spacing: 0.12em">QUEM ESTÁ POR TRÁS</span>
@@ -327,28 +404,31 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 </div>
 </section>
 
+<div class="ticker" aria-hidden="true"><div class="tk rev">CARROSSÉIS<i>✦</i><b>REELS</b><i>✦</i>STORIES<i>✦</i><b>LEGENDA</b><i>✦</i>PUBLICAÇÃO<i>✦</i>CARROSSÉIS<i>✦</i><b>REELS</b><i>✦</i>STORIES<i>✦</i><b>LEGENDA</b><i>✦</i>PUBLICAÇÃO<i>✦</i>CARROSSÉIS<i>✦</i><b>REELS</b><i>✦</i>STORIES<i>✦</i><b>LEGENDA</b><i>✦</i>PUBLICAÇÃO<i>✦</i></div></div>
+
 <!-- PLANOS -->
 <section style="max-width: 1200px; margin: 0 auto; padding: 120px 24px; display: flex; flex-direction: column; gap: 48px">
 <div class="rv" style="display: flex; flex-direction: column; gap: 14px; max-width: 760px">
 <span style="color: #9AE04C; font-size: 14px; font-weight: 800; letter-spacing: 0.12em">PREÇO CHEIO. SEM DESCONTO.</span>
 <h2 style="margin: 0; font-size: clamp(34px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 800">Quanto mais você posta, menos cada post custa.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #D4D4D4">Escolhe pelo ritmo em que você quer aparecer. Antes de fechar qualquer plano, você vê uma amostra com a sua empresa.</p>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch">
-<div class="rv plan" style="flex: 1 1 300px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
+<div class="rise s1 plan" style="flex: 1 1 300px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
 <span style="font-weight: 700; color: #A3A3A3">1 post por dia</span>
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; font-weight: 800; letter-spacing: 0.1em; color: #A3A3A3">PRESENÇA</span>
 <h3 style="margin: 0; font-size: 26px; line-height: 1.15; font-weight: 800">20 carrosséis +&nbsp;10&nbsp;Reels</h3></div>
 <div style="font-size: 48px; font-weight: 800; letter-spacing: -0.04em">R$ 1.000</div>
 <span style="font-weight: 600">+ 30 stories de chamada por mês</span>
 <span style="color: #A3A3A3">R$ 33 por post</span></div>
-<div class="rv plan" style="flex: 1 1 300px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
+<div class="rise s2 plan" style="flex: 1 1 300px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
 <span style="font-weight: 700; color: #A3A3A3">2 posts por dia</span>
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; font-weight: 800; letter-spacing: 0.1em; color: #A3A3A3">CONSTÂNCIA</span>
 <h3 style="margin: 0; font-size: 26px; line-height: 1.15; font-weight: 800">40 carrosséis +&nbsp;20&nbsp;Reels</h3></div>
 <div style="font-size: 48px; font-weight: 800; letter-spacing: -0.04em">R$ 1.500</div>
 <span style="font-weight: 600">+ 60 stories de chamada por mês</span>
 <span style="color: #A3A3A3">R$ 25 por post</span></div>
-<div class="rv" style="flex: 1 1 300px; background: #9AE04C; color: #0A0A0A; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
+<div class="rise s3" style="flex: 1 1 300px; background: #9AE04C; color: #0A0A0A; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap"><span style="font-weight: 700">3 posts por dia</span><span style="background: #0A0A0A; color: #9AE04C; border-radius: 999px; padding: 6px 12px; font-size: 12px; font-weight: 800; letter-spacing: 0.08em">MELHOR CUSTO</span></div>
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; font-weight: 800; letter-spacing: 0.1em; color: #262626">DOMÍNIO</span>
 <h3 style="margin: 0; font-size: 26px; line-height: 1.15; font-weight: 800">60 carrosséis +&nbsp;30&nbsp;Reels</h3></div>
@@ -371,37 +451,52 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 <div class="rv" style="flex: 1 1 300px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
 <h3 style="margin: 0; font-size: 22px; font-weight: 800; color: #9AE04C">A gente faz</h3>
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; color: #D4D4D4; font-size: 16px">
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Pesquisa do que está funcionando no seu nicho, antes de criar</span></li>
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Carrosséis com a identidade da sua marca</span></li>
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Reels editados com os seus vídeos, com texto na tela</span></li>
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Um story de chamada pra cada post</span></li>
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Legendas prontas</span></li>
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>O mês inteiro numa página de aprovação, uma semana antes de começar</span></li>
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>A publicação, no horário certo</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Pesquisa do que está funcionando no seu nicho, antes de criar</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Carrosséis com a identidade da sua marca</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Reels editados com os seus vídeos, com texto na tela</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Um story de chamada pra cada post</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Legendas prontas</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>O mês inteiro numa página de aprovação, uma semana antes de começar</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>A publicação, no horário certo</span></li>
 </ul></div>
 <div class="rv" style="flex: 1 1 300px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
 <h3 style="margin: 0; font-size: 22px; font-weight: 800; color: #F5F5F5">Você faz</h3>
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; color: #D4D4D4; font-size: 16px">
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #F5F5F5; font-weight: 800">→</span><span>Conecta o Instagram uma vez: conta profissional e página do Facebook</span></li>
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #F5F5F5; font-weight: 800">→</span><span>Manda fotos e vídeos curtos do celular. A gente te diz quais.</span></li>
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #F5F5F5; font-weight: 800">→</span><span>Aprova o mês em até 3 dias, com uma rodada de ajustes</span></li>
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #F5F5F5; font-weight: 800">→</span><span>Posta os stories com figurinha (o Instagram só deixa você)</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #F5F5F5; font-weight: 800">→</span><span>Conecta o Instagram uma vez: conta profissional e página do Facebook</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #F5F5F5; font-weight: 800">→</span><span>Manda fotos e vídeos curtos do celular. A gente te diz quais.</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #F5F5F5; font-weight: 800">→</span><span>Aprova o mês em até 3 dias, com uma rodada de ajustes</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #F5F5F5; font-weight: 800">→</span><span>Posta os stories com figurinha (o Instagram só deixa você)</span></li>
 </ul></div>
 <div class="rv" style="flex: 1 1 300px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
 <h3 style="margin: 0; font-size: 22px; font-weight: 800; color: #8A8A8A">Não está incluído</h3>
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; color: #D4D4D4; font-size: 16px">
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Responder direct e comentários</span></li>
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Tráfego pago</span></li>
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Gravação. A gente não grava: sem vídeo seu, o Reels vira texto em movimento sobre as suas fotos.</span></li>
-<li style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Promessa de número. O +393% é do meu perfil, não garantia pro seu.</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Responder direct e comentários</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Tráfego pago</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Gravação. A gente não grava: sem vídeo seu, o Reels vira texto em movimento sobre as suas fotos.</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Promessa de número. O +393% é do meu perfil, não garantia pro seu.</span></li>
 </ul></div>
 </div>
 <p class="rv" style="margin: 0; max-width: 820px; font-size: 15px; line-height: 1.6; color: #A3A3A3">É da área da saúde? O conteúdo segue o código do seu conselho: sem antes e depois, e paciente só aparece com autorização por escrito.</p>
 </section>
 
+<!-- PERGUNTAS -->
+<section style="max-width: 900px; margin: 0 auto; padding: 40px 24px 120px; display: flex; flex-direction: column; gap: 32px">
+<div class="rv" style="display: flex; flex-direction: column; gap: 14px">
+<span class="eyebrow">AINDA FICOU DÚVIDA?</span>
+<h2 style="margin: 0; font-size: clamp(34px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 800">As perguntas que todo mundo faz antes de fechar.</h2>
+</div>
+<div style="display: flex; flex-direction: column">
+<details class="faq li-in"><summary>Preciso gravar vídeo?<span class="faq-plus" aria-hidden="true"></span></summary><p>Nada de produção. Você manda vídeos curtos do celular, do seu dia a dia, e a gente te diz quais. Os Reels são editados com eles.</p></details>
+<details class="faq li-in"><summary>Quem posta?<span class="faq-plus" aria-hidden="true"></span></summary><p>A Liga. Você aprova o mês inteiro numa página só e a gente publica no horário certo. Só os stories com figurinha ficam com você, porque o Instagram não deixa outra pessoa postar figurinha.</p></details>
+<details class="faq li-in"><summary>E se eu não gostar de algum post?<span class="faq-plus" aria-hidden="true"></span></summary><p>Você pede o ajuste na aprovação. Todo mês tem uma rodada de ajustes antes de qualquer coisa ir pro ar.</p></details>
+<details class="faq li-in"><summary>Em quanto tempo eu vejo resultado?<span class="faq-plus" aria-hidden="true"></span></summary><p>Ninguém sério promete número. O que a gente entrega é a constância: post todo dia, sem falhar. No meu perfil, a diferença apareceu nos primeiros 30 dias.</p></details>
+<details class="faq li-in"><summary>Serve pra minha empresa?<span class="faq-plus" aria-hidden="true"></span></summary><p>Se ela tem Instagram profissional e precisa aparecer todo dia, serve. E você não precisa acreditar em mim: antes de fechar, vê a amostra com a sua marca e decide.</p></details>
+</div>
+</section>
+
 <!-- BÔNUS + CONTAGEM -->
 <section style="max-width: 1200px; margin: 0 auto; padding: 120px 24px">
-<div class="rv" style="border: 2px solid #9AE04C; border-radius: 32px; padding: clamp(32px, 5vw, 72px); display: flex; flex-direction: column; gap: 36px">
+<div class="boxon" style="border: 2px solid #9AE04C; border-radius: 32px; padding: clamp(32px, 5vw, 72px); display: flex; flex-direction: column; gap: 36px">
 <div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
 <span style="color: #9AE04C; font-size: 14px; font-weight: 800; letter-spacing: 0.12em">BÔNUS, NO LUGAR DO DESCONTO</span>
 <h2 style="margin: 0; font-size: clamp(34px, 5vw, 64px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 800">Fechou até 30/11? <span style="color: #9AE04C">Funil de stories com figurinha</span> todo mês, por 3 meses.</h2>
@@ -411,19 +506,19 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 <div style="display: flex; flex-direction: column; gap: 14px">
 <span style="color: #A3A3A3; font-size: 14px; font-weight: 700; letter-spacing: 0.08em">O BÔNUS ACABA EM</span>
 <div role="timer" aria-live="off" style="display: flex; gap: 12px; flex-wrap: wrap">
-<div style="background: #141414; border-radius: 18px; padding: 20px 24px; min-width: 112px; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 48px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums"><span data-cd="days">00</span></span><span style="color: #A3A3A3; font-size: 13px; font-weight: 700">dias</span></div>
-<div style="background: #141414; border-radius: 18px; padding: 20px 24px; min-width: 112px; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 48px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums"><span data-cd="hrs">00</span></span><span style="color: #A3A3A3; font-size: 13px; font-weight: 700">horas</span></div>
-<div style="background: #141414; border-radius: 18px; padding: 20px 24px; min-width: 112px; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 48px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums"><span data-cd="min">00</span></span><span style="color: #A3A3A3; font-size: 13px; font-weight: 700">min</span></div>
-<div style="background: #141414; border-radius: 18px; padding: 20px 24px; min-width: 112px; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 48px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; color: #9AE04C"><span data-cd="sec">00</span></span><span style="color: #A3A3A3; font-size: 13px; font-weight: 700">seg</span></div>
+<div class="flip d1" style="background: #141414; border-radius: 18px; padding: 20px 24px; min-width: 112px; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 48px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums"><span data-cd="days">00</span></span><span style="color: #A3A3A3; font-size: 13px; font-weight: 700">dias</span></div>
+<div class="flip d2" style="background: #141414; border-radius: 18px; padding: 20px 24px; min-width: 112px; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 48px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums"><span data-cd="hrs">00</span></span><span style="color: #A3A3A3; font-size: 13px; font-weight: 700">horas</span></div>
+<div class="flip d3" style="background: #141414; border-radius: 18px; padding: 20px 24px; min-width: 112px; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 48px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums"><span data-cd="min">00</span></span><span style="color: #A3A3A3; font-size: 13px; font-weight: 700">min</span></div>
+<div class="flip d4" style="background: #141414; border-radius: 18px; padding: 20px 24px; min-width: 112px; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 48px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; color: #9AE04C"><span data-cd="sec">00</span></span><span style="color: #A3A3A3; font-size: 13px; font-weight: 700">seg</span></div>
 </div>
 </div>
 </div>
 </section>
 
 <!-- VAGAS + CTA FINAL -->
-<section style="max-width: 1200px; margin: 0 auto; padding: 120px 24px 160px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 32px">
+<section class="final" style="max-width: 1200px; margin: 0 auto; padding: 120px 24px 160px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 32px">
 <span class="rv" style="color: #9AE04C; font-size: 14px; font-weight: 800; letter-spacing: 0.12em">SÓ 5 VAGAS EM NOVEMBRO</span>
-<div class="rv" style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap" aria-label="5 vagas abertas de 5" data-vagas-aria>
+<div class="slots" style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap" aria-label="5 vagas abertas de 5" data-vagas-aria>
 <span class="slot" style="width: 56px; height: 56px; border-radius: 16px; background: #9AE04C; display: block"></span>
 <span class="slot" style="width: 56px; height: 56px; border-radius: 16px; background: #9AE04C; display: block"></span>
 <span class="slot" style="width: 56px; height: 56px; border-radius: 16px; background: #9AE04C; display: block"></span>
@@ -431,11 +526,11 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 <span class="slot" style="width: 56px; height: 56px; border-radius: 16px; background: #9AE04C; display: block"></span>
 </div>
 <h2 class="rv" style="margin: 0; font-size: clamp(40px, 7vw, 96px); line-height: 0.98; letter-spacing: -0.045em; font-weight: 800"><span data-vagas>5 vagas abertas</span>.</h2>
-<p class="rv" style="margin: 0; max-width: 560px; font-size: 19px; line-height: 1.55; color: #D4D4D4">Clica no botão, manda <strong style="color: #9AE04C">BLACK</strong> no WhatsApp e eu te mostro um carrossel de amostra com a sua empresa.</p>
-<a class="cta" href="https://w.app/blackliga" style="display: inline-flex; align-items: center; gap: 12px; background: #9AE04C; color: #0A0A0A; text-decoration: none; font-weight: 800; font-size: 20px; padding: 24px 40px; border-radius: 16px; min-height: 44px">
+<p class="rv" style="margin: 0; max-width: 560px; font-size: 19px; line-height: 1.55; color: #D4D4D4">Manda <strong style="color: #9AE04C">BLACK</strong> no WhatsApp. Eu monto um carrossel de amostra com a sua empresa pra você ver antes de decidir. Sem compromisso.</p>
+<a class="cta glow" href="https://w.app/blackliga" style="display: inline-flex; align-items: center; gap: 12px; background: #9AE04C; color: #0A0A0A; text-decoration: none; font-weight: 800; font-size: 20px; padding: 24px 40px; border-radius: 16px; min-height: 44px">
 <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-13.4 7.9L3 21l1.2-4.4A9 9 0 1 1 21 12z"></path></svg>
-Mandar BLACK no WhatsApp</a>
-<span style="color: #8A8A8A; font-size: 14px">Abre o WhatsApp com a mensagem pronta. É só enviar.</span>
+Quero ver minha amostra</a>
+<span style="color: #8A8A8A; font-size: 14px">Abre o WhatsApp com BLACK já escrito. É só enviar.</span>
 <span style="color: #A3A3A3; font-size: 15px">Ainda não me conhece? <a href="https://www.instagram.com/o.ighormiranda/" target="_blank" rel="noopener" style="font-weight: 700">Me segue no Instagram</a> e vê como fica todo dia.</span>
 </section>
 
@@ -444,7 +539,7 @@ Mandar BLACK no WhatsApp</a>
 <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.08em; color: #9AE04C">BLACK NOVEMBER</span>
 <span style="font-size: 13px; color: #D4D4D4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><span data-vagas>5 vagas abertas</span> · bônus até 30/11</span>
 </div>
-<a class="cta" href="https://w.app/blackliga" style="flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px; background: #9AE04C; color: #0A0A0A; text-decoration: none; font-weight: 800; font-size: 15px; padding: 14px 18px; border-radius: 12px; min-height: 44px">Mandar BLACK</a>
+<a class="cta" href="https://w.app/blackliga" style="flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px; background: #9AE04C; color: #0A0A0A; text-decoration: none; font-weight: 800; font-size: 15px; padding: 14px 18px; border-radius: 12px; min-height: 44px">Ver amostra</a>
 </div>
 <footer class="pagefoot" style="border-top: 1px solid #1F1F1F; padding: 32px 24px; text-align: center; color: #8A8A8A; font-size: 14px">Liga do Marketing · Black November 2026 · <a href="https://www.instagram.com/o.ighormiranda/" target="_blank" rel="noopener" style="color: #A3A3A3">@o.ighormiranda</a></footer>
 </div>
