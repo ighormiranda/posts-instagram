@@ -105,6 +105,40 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 .offer-sec{position:relative;isolation:isolate}
 .offer-sec::before{content:"";position:absolute;right:-10%;top:10%;width:640px;height:640px;background:radial-gradient(closest-side,rgba(154,224,76,.10),rgba(154,224,76,0));z-index:-1;pointer-events:none}
 @media (max-width: 760px){.final .cta.glow{width:100%;justify-content:center;padding:22px 16px;font-size:18px!important;white-space:nowrap}}
+
+/* CRM: quem engaja vira contato */
+.crmstage{max-width:1200px;margin:0 auto;padding:110px 24px;display:flex;flex-direction:column;gap:28px}
+.crmhead{display:flex;flex-direction:column;gap:12px}
+.crmhead h2{margin:0;font-size:clamp(34px,5vw,64px);line-height:1.02;letter-spacing:-.04em;font-weight:800}
+.crmcaps{display:flex;flex-direction:column;gap:6px}
+.ccap{margin:0;font-size:clamp(17px,1.9vw,22px);line-height:1.45;color:#D4D4D4;font-weight:600}
+.ccap b{color:#9AE04C}
+.crmgrid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(20px,4vw,56px);align-items:start}
+.igpost,.crmbox{background:#141414;border:1px solid #262626;border-radius:22px;overflow:hidden}
+.ighd{display:flex;align-items:center;gap:10px;padding:12px 14px;font-weight:700;font-size:14px}
+.av{width:30px;height:30px;border-radius:50%;flex:0 0 30px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:#0A0A0A;background:#9AE04C}
+.igimg{height:clamp(110px,16vw,190px);background:linear-gradient(135deg,#9AE04C,#5C9A1E);color:#0A0A0A;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-weight:800;font-size:clamp(18px,2.2vw,28px);letter-spacing:-.03em;line-height:1.05}
+.cms{display:flex;flex-direction:column;gap:8px;padding:14px}
+.cm{display:flex;align-items:center;gap:8px;font-size:14px;color:#D4D4D4}
+.cm b{color:#F5F5F5}
+.cm .kw{background:#9AE04C;color:#0A0A0A;border-radius:6px;padding:1px 7px;font-weight:800}
+.crmtop{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid #262626;font-weight:800;font-size:14px;letter-spacing:.06em;color:#A3A3A3}
+.crmtop .dot{width:8px;height:8px;border-radius:50%;background:#9AE04C;display:inline-block;margin-right:8px}
+.cts{display:flex;flex-direction:column}
+.ct{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:12px 16px;border-bottom:1px solid #1F1F1F}
+.ct .who{display:flex;flex-direction:column;gap:3px;min-width:0}
+.ct .who b{font-size:15px}
+.tag{display:inline-block;width:max-content;font-size:11px;font-weight:800;letter-spacing:.05em;color:#9AE04C;border:1px solid #3E5A20;background:#16200C;border-radius:999px;padding:2px 8px}
+.stt{display:grid;font-size:12px;font-weight:800;text-align:right}
+.stt span{grid-area:1/1}
+.st-new{color:#A3A3A3}
+.st-sent{color:#9AE04C;opacity:0}
+.dm{margin:14px 16px 16px;align-self:flex-start;max-width:86%;background:#262626;border-radius:16px 16px 16px 4px;padding:10px 14px;font-size:14px;line-height:1.45;color:#F5F5F5}
+.dm small{display:block;color:#8A8A8A;font-size:11px;margin-top:4px}
+.crmnote{font-size:12px;color:#5C5C5C}
+@media (max-width: 760px){.crmstage{gap:16px}.crmhead h2{font-size:30px}.crmgrid{grid-template-columns:1fr;gap:12px}.ighd{padding:8px 12px}.igimg{height:74px;font-size:17px}.cms{padding:8px 12px;gap:6px}.cm{font-size:13px}.crmtop{padding:10px 14px;font-size:12px}.ct{padding:7px 14px}.ct .who b{font-size:14px}.dm{margin:8px 14px 10px;font-size:13px}.crmnote{display:none}}
+@keyframes fly{from{opacity:1;transform:none}to{opacity:0;transform:translate(var(--fx),var(--fy)) scale(.55)}}
+@keyframes rowIn{from{opacity:0;transform:translateX(-36px)}to{opacity:1;transform:none}}
 .howstage{max-width:1200px;margin:0 auto;padding:120px 24px;display:flex;flex-direction:column;gap:48px}
 
 @supports (animation-timeline: view()){
@@ -155,6 +189,28 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 .hint{display:flex;animation:fadeOut linear both;animation-timeline:--story;animation-range:contain 0% contain 5%}
 .hint svg{animation:bob 1.8s ease-in-out infinite}
 
+.crm{height:3400px;view-timeline-name:--crm;view-timeline-axis:block}
+.crmstage{position:sticky;top:0;height:min(100vh,940px);justify-content:safe center;overflow:hidden;padding-top:20px;padding-bottom:20px}
+.crmcaps{display:block;position:relative;height:3.2em}
+.ccap{position:absolute;left:0;right:0;top:0;opacity:0;animation:capIO linear both;animation-timeline:--crm}
+.k1{opacity:1;animation-name:capOut;animation-range:contain 24% contain 30%}
+.k2{animation-range:contain 28% contain 58%}
+.k3{animation-range:contain 56% contain 80%}
+.k4{animation-name:capIn;animation-range:contain 78% contain 84%}
+.cm{--fx:min(48vw,560px);--fy:0px;animation-name:popIn,fly;animation-timing-function:linear;animation-fill-mode:both,forwards;animation-timeline:--crm,--crm;opacity:0}
+.m1{animation-range:contain 4% contain 10%,contain 30% contain 40%}
+.m2{animation-range:contain 10% contain 16%,contain 34% contain 44%}
+.m3{animation-range:contain 16% contain 22%,contain 38% contain 48%}
+.ct{animation:rowIn linear both;animation-timeline:--crm}
+.t1{animation-range:contain 36% contain 44%}
+.t2{animation-range:contain 40% contain 48%}
+.t3{animation-range:contain 44% contain 52%}
+.t1 .st-new{animation:fadeOut linear both;animation-timeline:--crm;animation-range:contain 60% contain 64%}
+.t1 .st-sent{animation:fadeIn linear both;animation-timeline:--crm;animation-range:contain 62% contain 66%}
+.dm{opacity:0;transform-origin:left bottom;animation:popIn linear both;animation-timeline:--crm;animation-range:contain 64% contain 72%}
+.crmbox{animation:boxOn linear both;animation-timeline:--crm;animation-range:contain 34% contain 50%}
+@media (max-width: 760px){.cm{--fx:0px;--fy:min(34vh,260px)}.crmstage{padding-top:12px;padding-bottom:96px}}
+
 .offer-h{view-timeline-name:--offer}
 .strike::after{animation:strikeIn linear both;animation-timeline:--offer;animation-range:entry 70% cover 42%}
 .aud{display:inline-block;animation:audIn linear both;animation-timeline:--offer;animation-range:cover 30% cover 52%}
@@ -184,7 +240,7 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 }
 }
 @media (prefers-reduced-motion: reduce){
-.rv,.w,.zoom,.progress,.live,.hint svg,.ring,.strike::after,.aud,.flood,.tk,.flip,.pillars::before,.tilt,.curtain img,.pop,.rise,.li-in,.boxon,.slots>*,.glow{animation:none!important}
+.rv,.w,.zoom,.progress,.live,.hint svg,.ring,.strike::after,.aud,.flood,.tk,.flip,.pillars::before,.tilt,.curtain img,.pop,.rise,.li-in,.boxon,.slots>*,.glow,.ccap,.cm,.ct,.st-new,.st-sent,.dm,.crmbox{animation:none!important}
 }
 </style>
 <div style="width: 100%; min-height: 100vh; background: #0A0A0A; color: #F5F5F5; font-family: 'Plus Jakarta Sans', system-ui, sans-serif">
@@ -394,6 +450,43 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 </div>
 </section>
 
+<!-- CRM -->
+<section class="crm" aria-label="CRM incluso: quem engaja no seu Instagram vira contato">
+<div class="crmstage">
+<div class="crmhead">
+<span class="eyebrow">CRM INCLUSO</span>
+<h2>Quem engaja <span style="color: #9AE04C">vira contato.</span></h2>
+<div class="crmcaps">
+<p class="ccap k1">Alguém comenta a <b>palavra-chave</b> no seu post.</p>
+<p class="ccap k2">No mesmo instante, vira contato no seu CRM: <b>nome, @ e etiqueta</b>.</p>
+<p class="ccap k3">E recebe a sua mensagem no direct, <b>sem você digitar nada</b>.</p>
+<p class="ccap k4">Curtida passa. <b>Contato fica.</b> E dá pra chamar de novo amanhã.</p>
+</div>
+</div>
+<div class="crmgrid">
+<div class="igpost">
+<div class="ighd"><span class="av">S</span>sua.empresa</div>
+<div class="igimg">Comenta BLACK que eu te mando os detalhes</div>
+<div class="cms">
+<div class="cm m1"><span class="av" style="background: #F0B9B3">A</span><span><b>ana.souza</b> <span class="kw">BLACK</span></span></div>
+<div class="cm m2"><span class="av" style="background: #9EC5FF">J</span><span><b>dr.joao</b> <span class="kw">BLACK</span> quero saber</span></div>
+<div class="cm m3"><span class="av" style="background: #FFD27A">C</span><span><b>clinica.vida</b> <span class="kw">BLACK</span> 🔥</span></div>
+</div>
+</div>
+<div class="crmbox">
+<div class="crmtop"><span><span class="dot"></span>SEU CRM · CONTATOS</span><span>HOJE</span></div>
+<div class="cts">
+<div class="ct t1"><span class="av" style="background: #F0B9B3">A</span><span class="who"><b>Ana Souza</b><span class="tag">COMENTOU BLACK</span></span><span class="stt"><span class="st-new">Novo</span><span class="st-sent">Direct enviado ✓</span></span></div>
+<div class="ct t2"><span class="av" style="background: #9EC5FF">J</span><span class="who"><b>Dr. João</b><span class="tag">COMENTOU BLACK</span></span><span class="stt"><span class="st-new">Novo</span></span></div>
+<div class="ct t3"><span class="av" style="background: #FFD27A">C</span><span class="who"><b>Clínica Vida</b><span class="tag">COMENTOU BLACK</span></span><span class="stt"><span class="st-new">Novo</span></span></div>
+</div>
+<div class="dm">Oi, Ana! Vi seu comentário. Te mandei os detalhes aqui 👇<small>enviada automaticamente</small></div>
+</div>
+</div>
+<span class="crmnote">Exemplo ilustrativo. Nomes fictícios.</span>
+</div>
+</section>
+
 <div class="ticker" aria-hidden="true"><div class="tk rev">CARROSSÉIS<i>✦</i><b>REELS</b><i>✦</i>STORIES<i>✦</i><b>LEGENDA</b><i>✦</i>PUBLICAÇÃO<i>✦</i>CARROSSÉIS<i>✦</i><b>REELS</b><i>✦</i>STORIES<i>✦</i><b>LEGENDA</b><i>✦</i>PUBLICAÇÃO<i>✦</i>CARROSSÉIS<i>✦</i><b>REELS</b><i>✦</i>STORIES<i>✦</i><b>LEGENDA</b><i>✦</i>PUBLICAÇÃO<i>✦</i></div></div>
 
 <!-- PLANOS -->
@@ -408,31 +501,31 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 <span style="font-weight: 700; color: #A3A3A3">1 post por dia</span>
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; font-weight: 800; letter-spacing: 0.1em; color: #A3A3A3">PRESENÇA</span>
 <h3 style="margin: 0; font-size: 26px; line-height: 1.15; font-weight: 800">20 carrosséis +&nbsp;10&nbsp;Reels</h3></div>
-<div style="font-size: 48px; font-weight: 800; letter-spacing: -0.04em">R$ 1.200</div>
+<div style="font-size: 48px; font-weight: 800; letter-spacing: -0.04em">R$ 1.000</div>
 <span style="font-weight: 600">+ 60 stories por mês</span>
 <span style="font-size: 14px; opacity: .75; margin-top: -12px">30 de chamada + 30 de interação, no automático</span>
-<span style="color: #A3A3A3">R$ 40 por post</span></div>
+<span style="color: #A3A3A3">R$ 33 por post</span></div>
 <div class="rise s2 plan" style="flex: 1 1 300px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
 <span style="font-weight: 700; color: #A3A3A3">2 posts por dia</span>
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; font-weight: 800; letter-spacing: 0.1em; color: #A3A3A3">CONSTÂNCIA</span>
 <h3 style="margin: 0; font-size: 26px; line-height: 1.15; font-weight: 800">40 carrosséis +&nbsp;20&nbsp;Reels</h3></div>
-<div style="font-size: 48px; font-weight: 800; letter-spacing: -0.04em">R$ 1.800</div>
+<div style="font-size: 48px; font-weight: 800; letter-spacing: -0.04em">R$ 1.500</div>
 <span style="font-weight: 600">+ 90 stories por mês</span>
 <span style="font-size: 14px; opacity: .75; margin-top: -12px">60 de chamada + 30 de interação, no automático</span>
-<span style="color: #A3A3A3">R$ 30 por post</span></div>
+<span style="color: #A3A3A3">R$ 25 por post</span></div>
 <div class="rise s3" style="flex: 1 1 300px; background: #9AE04C; color: #0A0A0A; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap"><span style="font-weight: 700">3 posts por dia</span><span style="background: #0A0A0A; color: #9AE04C; border-radius: 999px; padding: 6px 12px; font-size: 12px; font-weight: 800; letter-spacing: 0.08em">MELHOR CUSTO</span></div>
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; font-weight: 800; letter-spacing: 0.1em; color: #262626">DOMÍNIO</span>
 <h3 style="margin: 0; font-size: 26px; line-height: 1.15; font-weight: 800">60 carrosséis +&nbsp;30&nbsp;Reels</h3></div>
-<div style="font-size: 48px; font-weight: 800; letter-spacing: -0.04em">R$ 2.400</div>
+<div style="font-size: 48px; font-weight: 800; letter-spacing: -0.04em">R$ 1.800</div>
 <span style="font-weight: 600">+ 120 stories por mês</span>
 <span style="font-size: 14px; opacity: .75; margin-top: -12px">90 de chamada + 30 de interação, no automático</span>
-<span style="color: #262626">R$ 26,67 por post</span>
+<span style="color: #262626">R$ 20 por post</span>
 <span style="font-size: 15px; font-weight: 800">+ 1 campanha de oferta por mês</span>
 <span style="font-size: 14px; margin-top: -12px">Aquecimento, véspera, uma peça por dia e palavra-chave no direct.</span>
 <span style="font-size: 14px; font-weight: 800">Só 2 vagas neste plano</span></div>
 </div>
-<p class="rv" style="margin: 0; max-width: 820px; font-size: 17px; line-height: 1.6; color: #D4D4D4"><strong style="color: #F5F5F5">Em todos os planos:</strong> arrumação do perfil no 1º mês (bio, destaques e post fixado), pesquisa do que está viralizando no seu nicho, a identidade visual da sua marca, legendas prontas, séries com episódios, a página de aprovação do mês e a publicação feita pela Liga.<br><span style="color: #A3A3A3">Ninguém segue por causa de uma dica. A pessoa segue pra saber o fim de uma história. Por isso o seu feed tem séries.</span></p>
+<p class="rv" style="margin: 0; max-width: 820px; font-size: 17px; line-height: 1.6; color: #D4D4D4"><strong style="color: #F5F5F5">Em todos os planos:</strong> arrumação do perfil no 1º mês (bio, destaques e post fixado), pesquisa do que está viralizando no seu nicho, a identidade visual da sua marca, legendas prontas, séries com episódios, CRM com quem comenta e chama no direct, a página de aprovação do mês e a publicação feita pela Liga.<br><span style="color: #A3A3A3">Ninguém segue por causa de uma dica. A pessoa segue pra saber o fim de uma história. Por isso o seu feed tem séries.</span></p>
 </section>
 
 <!-- O COMBINADO -->
@@ -453,6 +546,7 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 <li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Roteiro de Reels no formato que mais traz seguidor, se você quiser gravar</span></li>
 <li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Um story de chamada pra cada post</span></li>
 <li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Um story de interação por dia, o mês inteiro programado</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>CRM: quem comenta a palavra-chave ou chama no direct vira contato, com etiqueta e mensagem automática</span></li>
 <li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>Legendas prontas</span></li>
 <li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>O mês inteiro numa página de aprovação, uma semana antes de começar</span></li>
 <li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #9AE04C; font-weight: 800">✓</span><span>A publicação, no horário certo</span></li>
@@ -468,7 +562,8 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 <div class="rv" style="flex: 1 1 300px; background: #141414; border: 1px solid #262626; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 18px">
 <h3 style="margin: 0; font-size: 22px; font-weight: 800; color: #8A8A8A">Não está incluído</h3>
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; color: #D4D4D4; font-size: 16px">
-<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Responder direct e comentários</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Responder direct e comentários. A mensagem automática abre a conversa; continuar é com você.</span></li>
+<li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Curtida e visualização no CRM. O Instagram não entrega quem curtiu: entra quem comenta ou manda direct.</span></li>
 <li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Tráfego pago</span></li>
 <li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Gravação. A gente não grava: sem vídeo seu, o Reels vira texto em movimento sobre as suas fotos.</span></li>
 <li class="li-in" style="display: flex; gap: 12px; line-height: 1.5"><span aria-hidden="true" style="color: #8A8A8A; font-weight: 800">×</span><span>Promessa de número. O +393% é do meu perfil, não garantia pro seu.</span></li>
@@ -488,6 +583,7 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 <details class="faq li-in"><summary>Quem posta?<span class="faq-plus" aria-hidden="true"></span></summary><p>A Liga. Você aprova o mês inteiro numa página só e a gente publica no horário certo. Só ficam com você figurinha nos stories (enquete, caixinha, link), collab e música, porque o Instagram não deixa outra pessoa fazer isso.</p></details>
 <details class="faq li-in"><summary>E se eu não gostar de algum post?<span class="faq-plus" aria-hidden="true"></span></summary><p>Você pede o ajuste na aprovação. Todo mês tem uma rodada de ajustes antes de qualquer coisa ir pro ar.</p></details>
 <details class="faq li-in"><summary>Em quanto tempo eu vejo resultado?<span class="faq-plus" aria-hidden="true"></span></summary><p>Ninguém sério promete número. O que a gente entrega é a constância: post todo dia, sem falhar. No meu perfil, a diferença apareceu nos primeiros 30 dias.</p></details>
+<details class="faq li-in"><summary>Como funciona o CRM?<span class="faq-plus" aria-hidden="true"></span></summary><p>Quem comenta a palavra-chave no seu post ou te chama no direct vira contato, com nome, @ e etiqueta, e recebe uma mensagem automática. Você vê todo mundo numa lista só e pode chamar de novo depois. Quem só curte não entra, porque o Instagram não mostra esses dados.</p></details>
 <details class="faq li-in"><summary>Serve pra minha empresa?<span class="faq-plus" aria-hidden="true"></span></summary><p>Se ela tem Instagram profissional e precisa aparecer todo dia, serve. E você não precisa acreditar em mim: antes de fechar, vê a amostra com a sua marca e decide.</p></details>
 </div>
 </section>
