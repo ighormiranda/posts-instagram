@@ -98,7 +98,7 @@ Só incluir "gente me chamou / cliente comentou" se o Ighor confirmar que aconte
 ## 10. Plano do mês (17/11 a 16/12) · criado em 16/11
 Arquivos: `stories/2026-11-mes/` (74 stories prontos + 5 revelações MANUAL_ + plano.json com data e hora de cada um).
 Gerador: `stories/2026-11-mes/mes.py` + `mes_conteudo.py` (textos). Para o mês seguinte, é só trocar os textos e rodar de novo.
-Status: **arte pronta, agendamento pendente** (o HighLevel estava ligado na subconta da Dra. Shakti). Quando voltar para a Liga: agendar tudo pelo plano.json (link raw fixado no commit) e criar as chamadas de post das 12h15 e 19h15 conforme o feed.
+Status: **74 stories agendados no HighLevel em 16/11** (commit 38e8ade). Falta: chamadas de post 12h15 e 19h15 quando o feed do período for criado.
 
 ### 9h · quadros fixos (a pessoa aprende o que esperar de cada dia)
 - Segunda: 3 emojis ("descreve sua semana em 3 emojis")
