@@ -83,3 +83,13 @@ Destaques atuais: Sobre mim, Black, Resultados, IA na prática, Bastidores, Perg
 - `RAG.md`: histórico completo do perfil.
 - `RAG-yap-stories.md`: estratégia de série YAP e stories interativos.
 - `ofertas/black-november/RAG-midia-social.md`: funil da Black.
+
+## 11. Banco de fotos novas (17/11)
+Em `fotos/`, todas do Ighor e aprovadas para uso:
+- `estudio-branco-camisa-preta/`: fundo branco, bom para recorte e capa (caneca, celular, mão no queixo, braços cruzados).
+- `estudio-camisa-roxa/`: fundo laranja, gestos de apontar (para cima, para o lado) e dedo na testa. Ótimas para capa com texto.
+- `estudio-moletom-makers/`: moletom verde Makers.
+- `estudio-blazer-marinho/`: ensaio 2026 (Drive).
+- `evento-a-vida-e-hoje/`: letreiro "A vida é hoje", apontando.
+- `familia-com-filha/`: com a filha. Usar só em post pessoal/bastidor e com o OK do Ighor.
+- `natureza-rio/` (sem camisa), `viagem/`, `jantar/`: uso pontual em conteúdo pessoal.
