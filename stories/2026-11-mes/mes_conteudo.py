@@ -1,0 +1,95 @@
+# ===== 9h: QUADROS FIXOS =====
+# Terça: mini-aula
+T_long('2026-11-17','0900','mini-aula','O cliente\nnão some.\n*Ele esquece.*','Quem pediu preço hoje tá olhando\noutras 10 empresas.\n\nQuem aparece de novo amanhã\né lembrado. Quem some, é esquecido.\n\nNão é falta de interesse.\n*É falta de lembrança.*')
+T_long('2026-11-24','0900','mini-aula','Antes de dar\ndesconto,\n*lê isso.*','Desconto traz quem compra\npelo preço. Na próxima promoção,\nele vai pro mais barato.\n\nAudiência traz quem compra\n*porque lembra de você.*')
+T_long('2026-12-01','0900','mini-aula','Dezembro não\né mês de\n*parar de postar.*','Muita empresa some em dezembro.\n\nQuem continua aparecendo\ncomeça janeiro sendo lembrado.\n\n*Janeiro começa agora.*')
+T_long('2026-12-08','0900','mini-aula','Por que eu\nautomatizei o\n*meu Instagram.*','Eu ajudo empresa a crescer\ne o meu perfil vivia parado.\nFerreiro com espeto de pau.\n\nEm 6 de outubro liguei a automação.\n*Desde então, nenhum dia zerado.*')
+T_long('2026-12-15','0900','mini-aula','Se eu começasse\ndo zero hoje,\n*faria 3 coisas.*','1. Postar todo dia, mesmo simples.\n\n2. Mostrar bastidor com\nnúmero real.\n\n3. Responder todo direct\n*no mesmo dia.*')
+# Quarta: quiz
+T_quiz('2026-11-18','0900','quiz','Qual mensagem faz o cliente *voltar a responder?*','"Oi, conseguiu pensar?"','"Separei 2 horários pra você: quinta 10h ou sexta 16h. Qual fica melhor?"','B','Pergunta fechada, com opção\npronta, se responde em\n*2 segundos.*\n\n"Conseguiu pensar?" dá\nespaço pro "ainda não".')
+T_quiz('2026-11-25','0900','quiz','O que faz mais diferença no Instagram de *um negócio?*','Um post viral de vez em quando','Post todo dia, mesmo sem viralizar','B','Viral traz pico.\n*Constância traz lembrança.*\n\nNo meu perfil, posts e stories\nforam 85% das visualizações\nem 90 dias.')
+T_quiz('2026-12-02','0900','quiz','Qual post gera *mais confiança?*','Dica genérica que qualquer um dá','Bastidor com número real','B','Número real é prova.\nBastidor é confiança.\n\n*Dica genérica, o cliente\nacha em qualquer lugar.*')
+T_quiz('2026-12-09','0900','quiz','Cliente pediu o preço e sumiu. *O que fazer?*','Esperar ele voltar quando quiser','Voltar a falar em 24h com algo útil','B','Quem pede preço tá\ncomparando.\n\n*Quem volta com algo útil\nsai na frente* de quem espera.')
+T_quiz('2026-12-16','0900','quiz','E o lead que pediu preço *em novembro?*','Esquecer. Ele não quis.','Chamar de novo em dezembro com uma novidade','B','"Não agora" não é "não".\n\n*Dezembro é ótimo pra\nreabrir conversa* com quem\njá te conhece.')
+# Quinta: complete a frase
+T_frase('2026-11-19','0900','complete','O que mais me trava\npra postar é...')
+T_frase('2026-11-26','0900','complete','Se eu tivesse mais\ntempo no meu\nnegócio, eu...')
+T_frase('2026-12-03','0900','complete','Em 2027, o Instagram\ndo meu negócio vai...')
+T_frase('2026-12-10','0900','complete','O melhor cliente\nque eu já tive\nchegou por...')
+# Sexta: coração
+T_heart('2026-11-20','0900','coracao','Toca no coração se\nvocê já respondeu\ncliente *depois das 22h.*')
+T_heart('2026-11-27','0900','coracao','Toca no coração se\nvocê já recebeu\n*50 e-mails de Black\nFriday hoje.*')
+T_heart('2026-12-04','0900','coracao','Toca no coração se\nvocê já deixou de\npostar porque *não\nsabia o que postar.*')
+T_heart('2026-12-11','0900','coracao','Toca no coração se\no seu Instagram\nficou *parado em algum\nmês de 2026.*')
+# Sábado: jogos de palavra/adivinha/legenda
+T_text('2026-11-21','0900','embaralhada','SÁBADO: DESEMBARALHA','*AICÂNTSONC*','Essa palavra explica o meu\nperfil nos últimos 40 dias.\n\nAcertou? Me manda a palavra.',cta='Toca pra ver a resposta',em='👉',tam=110)
+T_text('2026-11-21','0901','embaralhada-resposta','RESPOSTA','*CONSTÂNCIA.*','Post todo dia desde 6 de outubro.\nNenhum dia zerado.\n\nQuem acertou de primeira?',tam=96)
+im=ImageOps.fit(ImageOps.exif_transpose(Image.open(FOT+'evento-makers/maca-mordida.jpg')).convert('RGB'),(W,H),centering=(0.5,0.4)).convert('RGBA')
+g=Image.new('L',(1,H))
+for yy in range(H): g.putpixel((0,yy),int(225*max(0,(yy-1150)/600)))
+sh=Image.new('RGBA',(W,H),PR+(255,)); sh.putalpha(g.resize((W,H))); im=Image.alpha_composite(im,sh); d=ImageDraw.Draw(im)
+capa.tracked(d,(M,1330),'SÁBADO: CRIA A LEGENDA',fnt('mono500',30),LM)
+capa.draw_title(d,segs('Cria uma legenda\npra essa foto.'),M,1390,fnt('pjs800',70),900,{'b':BR,'d':LM},80)
+d.text((M,1580),'A melhor eu reposto aqui amanhã.',font=fnt('pjs500',40),fill=(215,220,215))
+handle(d); save(im,'2026-11-28','0900','legenda','repostar a melhor legenda no domingo (manual)')
+T_text('2026-12-05','0900','adivinha','SÁBADO: ADIVINHA','Quantas visualizações\nmeu perfil teve\n*em 90 dias?*','De 7 de agosto a 4 de novembro.\n\nMe responde com um número.',cta='Chuta e toca pra ver',em='👉',tam=80)
+T_text('2026-12-05','0901','adivinha-resposta','RESPOSTA','*27,6 mil.*','Mais da metade veio de\npost no feed.\n\nQuem chegou mais perto?',tam=120)
+T_text('2026-12-12','0900','embaralhada','SÁBADO: DESEMBARALHA','*ADEGNA*','É o que fica cheia quando\no Instagram não para.\n\nAcertou? Me manda a palavra.',cta='Toca pra ver a resposta',em='👉',tam=120)
+T_text('2026-12-12','0901','embaralhada-resposta','RESPOSTA','*AGENDA.*','Presença todo dia vira lembrança.\nLembrança vira agenda.',tam=120)
+# Domingo: isso ou aquilo
+T_ab('2026-11-22','0900','isso-aquilo','O que funciona\nmais pro seu negócio?','1 post perfeito por semana','1 post bom todo dia')
+T_ab('2026-11-29','0900','isso-aquilo','Pra vender mais\nem dezembro, você vai...','Postar mais','Anunciar mais')
+T_ab('2026-12-06','0900','isso-aquilo','Em 2027 você\nquer mais...','Clientes novos','Clientes voltando')
+T_ab('2026-12-13','0900','isso-aquilo','Você prefere\naparecer...','No feed','Nos stories')
+# Segunda: semana em emojis
+for dt,ti in [('2026-11-23','Descreve a sua\nsemana de Black\nem *3 emojis.*'),('2026-11-30','Descreve o seu\nnovembro em\n*3 emojis.*'),('2026-12-07','Descreve como tá\no seu negócio em\n*3 emojis.*'),('2026-12-14','Descreve o seu\n2026 em\n*3 emojis.*')]:
+    T_text(dt,'0900','3-emojis','SEGUNDA: 3 EMOJIS',ti,'Sem texto, só emoji.\nEu respondo todo mundo.',cta='Me manda aqui',tam=92)
+# ===== 20h30 =====
+# Série do case (aquecimento)
+T_text('2026-11-17','2030','case-ep1','EPISÓDIO 1 DE 4','Agosto e setembro:\neu postava\n*quando dava.*','Às vezes um vídeo ia\nacima do normal.\nDepois, semanas paradas.\n\n*No episódio 2, o que mudou.*',cta='Me segue pra não perder',tam=86)
+T_text('2026-11-19','2030','case-ep2','EPISÓDIO 2 DE 4','6 de outubro:\n*liguei a\nautomação.*','Post todo dia.\nNenhum dia zerado\ndesde então.\n\n*No episódio 3, o número.*',cta='Amanhã tem o 3',tam=90)
+T_text('2026-11-20','2030','case-ep3','EPISÓDIO 3 DE 4','*+393%*\nde visualizações.','Nos primeiros 30 dias\nda automação.\n\n*No episódio 4, o que eu\nvou fazer com isso.*',tam=130)
+T_text('2026-11-21','2030','case-ep4','EPISÓDIO 4 DE 4','Posts + stories:\n*85% das\nvisualizações.*','Em 90 dias.\n\nPor isso eu vou abrir isso\npra outras empresas.\n*Segunda eu conto como.*',tam=86)
+T_text('2026-11-22','2030','black-aviso','AMANHÃ','Amanhã abre a\n*Black November\nda Liga.*','Quer saber primeiro?',cta='Me responde com',em='🖤',tam=86)
+# Black (23 a 30/11)
+T_text('2026-11-23','2030','black-abriu',BN,'Todo mundo vai\nte dar desconto.\n*A gente vai te dar\naudiência.*','Post todo dia no Instagram\ndo seu negócio, no automático.',cta='Responde BLACK aqui',tam=82,tom='escuro')
+T_text('2026-11-24','2030','black-como',BN,'Você manda\nas fotos.\n*O resto é\ncom a gente.*','Carrossel todo dia, feito com IA,\ncom a sua foto, legenda pronta\ne agendado.',cta='Responde BLACK aqui',tam=90,tom='escuro')
+T_text('2026-11-26','2030','black-planos',BN,'Quanto mais\nvocê posta,\n*menos cada\npost custa.*','30 por mês: R$ 1.000\n60 por mês: R$ 1.500\n*90 por mês: R$ 1.800*',cta='Responde BLACK aqui',tam=86,tom='escuro')
+T_text('2026-11-27','2030','black-bonus',BN,'Hoje todo mundo\ndá desconto.\n*A gente dá\naudiência.*','Bônus pra quem fechar até 30/11:\n*3 stories por dia no 1º mês.*',cta='Responde BLACK aqui',tam=82,tom='escuro')
+T_text('2026-11-28','2030','black-prova',BN,'Antes de vender\npra você,\n*testei em mim.*','+393% de visualizações\nnos primeiros 30 dias\nda automação.',cta='Responde BLACK aqui',tam=88,tom='escuro')
+T_text('2026-11-29','2030','black-vagas',BN,'Só *5 vagas*\nem novembro.','Desconto acaba.\n*Seguidor não.*',cta='Responde BLACK aqui',tam=100,tom='escuro')
+T_text('2026-11-30','2030','black-ultimo',BN,'*Último dia.*','O bônus dos 3 stories por dia\nacaba hoje às 23h59.\n\nAudiência vale mais\nque dinheiro.',cta='Responde BLACK aqui',tam=120,tom='escuro')
+# Dezembro
+T_text('2026-12-01','2030','dez-palavra','DEZEMBRO','A Black acabou.\n*O post todo dia\ncontinua.*','O que você quer ver aqui\nem dezembro?',cta='Me responde em 1 palavra',tam=84)
+T_text('2026-12-03','2030','bingo-chamada','AMANHÃ CEDO','Amanhã tem\n*bingo do dono\nde negócio.*','Separa um print.',cta='Me segue pra não perder',tam=90)
+T_text('2026-12-04','2030','agendado','CURIOSIDADE','Este story foi\nagendado *semanas\natrás.*','Eu nem tô no celular agora.\nÉ isso que a automação faz.',cta='Quer saber como? Responde',em='🤖',tam=88)
+T_emojis('2026-12-05','2030','fim-de-ano','ME RESPONDE','A sua empresa abre\nentre o Natal e\no Ano Novo?',[('🎄','Abre','trabalho direto'),('🏖️','Fecha','merecido descanso'),('🤷','Meio período','depende do dia')])
+T_text('2026-12-06','2030','melhor-post','ME CONTA','Qual post seu\n*deu mais resultado\nem 2026?*','Me manda o link ou o print.\nOs melhores eu comento aqui.',cta='Manda aqui',tam=84)
+T_long('2026-12-07','2030','ideia-post','Ideia de post\npra dezembro:\n*os números\ndo seu ano.*','Clientes atendidos, projetos\nentregues, cidades alcançadas.\n\nNúmero real é prova.\n*E dezembro é o mês dela.*')
+T_emojis('2026-12-08','2030','agenda-dez','ME RESPONDE','Como tá a sua\nagenda de dezembro?',[('📈','Cheia','sem vaga'),('😐','Normal','dá pra encaixar'),('📉','Fraca','precisa de movimento')])
+T_ab('2026-12-10','2030','janeiro','Em janeiro\nvocê vai...','Recomeçar do zero','Continuar de onde parou')
+T_text('2026-12-11','2030','agradece','UMA PALAVRA','O que você\n*agradece* no seu\nnegócio esse ano?','Eu leio todas.',cta='Me responde em 1 palavra',tam=88)
+T_long('2026-12-12','2030','aprendizados','3 coisas que\no Instagram\n*me ensinou\nem 2026.*','1. Constância ganha de viral.\n\n2. Número real gera confiança.\n\n3. Posts e stories juntos foram\n*85% das minhas visualizações.*')
+T_text('2026-12-13','2030','spoiler-2027','SPOILER','Em 2027 por aqui:\n*mais bastidor,\nmais número real,\nmais IA na prática.*','O que você quer ver?',cta='Me responde aqui',tam=80)
+T_emojis('2026-12-14','2030','bateria','ME RESPONDE','Como você chega\nno fim do ano?',[('🔋','Cheio','pronto pra 2027'),('🪫','No zero','precisando de férias'),('⚡','No gás','acelerando até o fim')])
+T_heart('2026-12-15','2030','coracao-dez','Toca no coração se\nvocê vai *postar até\no fim de dezembro.*')
+# Jogos do objeto escondido (quartas 20h30 e 20h32)
+jogo('2026-11-18','evento-makers/cubo-verde-plateia.jpg','🖤',860,1060,'Makers Day.\nAté o fundo da foto\ntem história.')
+jogo('2026-11-25','evento-makers/anotando-plateia.jpg','🏷️',940,730,'Anotando tudo.\nQuem para de aprender\npara de crescer.')
+jogo('2026-12-02','palco/palestrando.jpg','🎁',930,540,'Dia de palco.\nFalar pra empresário\né o meu combustível.')
+jogo('2026-12-09','escritorio/andando-corredor-caderno.jpg','🎄',80,440,'Caderno na mão,\ncabeça em 2027.')
+jogo('2026-12-16','escritorio/mesa-reuniao-maos-cruzadas.jpg','🎅',120,280,'Última reunião\ndo ano chegando.')
+# Bingo (sexta 04/12 9h é coração; bingo vai no próprio 04/12 às 12h? -> sábado? Usamos 04/12 às 20h30 conflito) -> bingo 2026-12-04 0905
+im=grad((22,70,32),(4,12,6)); d=ImageDraw.Draw(im)
+capa.tracked(d,(M,180),'BINGO DO DONO DE NEGÓCIO',fnt('mono500',32),LM)
+capa.draw_title(d,segs('Quantas dessas\n*já aconteceram\ncom você?*'),M,240,fnt('pjs800',70),900,{'b':BR,'d':LM},80)
+cel=['Respondeu cliente\nàs 23h','"Vou pensar"\ne sumiu','Postou e\nninguém viu','Deu desconto\nsem pedirem','Ficou 1 mês\nsem postar','Pediram preço\nno direct','Faltou na\nreunião','Concorrente\npostando\ntodo dia','Não sabia\no que postar']
+x0,y0,s=M,560,300
+for i,t in enumerate(cel):
+    x=x0+(i%3)*s; y=y0+(i//3)*s
+    d.rounded_rectangle((x,y,x+s-20,y+s-20),24,fill=(10,30,14),outline=LM,width=3)
+    lines=t.split('\n'); f=fnt('pjs700',34); ty=y+(s-20)/2-len(lines)*22
+    for ln in lines: d.text((x+(s-20-d.textlength(ln,font=f))/2,ty),ln,font=f,fill=BR); ty+=44
+d.text((M,1500),'Tira print, marca as suas',font=fnt('pjs800',46),fill=BR)
+d.text((M,1565),'e me manda quantas foram.',font=fnt('pjs800',46),fill=BR)
+handle(d); save(im,'2026-12-04','0905','bingo','pode compartilhar nos stories marcando @o.ighormiranda')

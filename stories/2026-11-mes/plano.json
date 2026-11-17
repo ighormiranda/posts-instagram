@@ -1,0 +1,476 @@
+[
+ {
+  "data": "2026-11-17",
+  "hora": "09:00",
+  "arquivo": "2026-11-17_0900-mini-aula.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-24",
+  "hora": "09:00",
+  "arquivo": "2026-11-24_0900-mini-aula.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-01",
+  "hora": "09:00",
+  "arquivo": "2026-12-01_0900-mini-aula.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-08",
+  "hora": "09:00",
+  "arquivo": "2026-12-08_0900-mini-aula.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-15",
+  "hora": "09:00",
+  "arquivo": "2026-12-15_0900-mini-aula.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-18",
+  "hora": "09:00",
+  "arquivo": "2026-11-18_0900-quiz-pergunta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-18",
+  "hora": "09:01",
+  "arquivo": "2026-11-18_0901-quiz-resposta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-25",
+  "hora": "09:00",
+  "arquivo": "2026-11-25_0900-quiz-pergunta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-25",
+  "hora": "09:01",
+  "arquivo": "2026-11-25_0901-quiz-resposta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-02",
+  "hora": "09:00",
+  "arquivo": "2026-12-02_0900-quiz-pergunta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-02",
+  "hora": "09:01",
+  "arquivo": "2026-12-02_0901-quiz-resposta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-09",
+  "hora": "09:00",
+  "arquivo": "2026-12-09_0900-quiz-pergunta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-09",
+  "hora": "09:01",
+  "arquivo": "2026-12-09_0901-quiz-resposta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-16",
+  "hora": "09:00",
+  "arquivo": "2026-12-16_0900-quiz-pergunta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-16",
+  "hora": "09:01",
+  "arquivo": "2026-12-16_0901-quiz-resposta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-19",
+  "hora": "09:00",
+  "arquivo": "2026-11-19_0900-complete.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-26",
+  "hora": "09:00",
+  "arquivo": "2026-11-26_0900-complete.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-03",
+  "hora": "09:00",
+  "arquivo": "2026-12-03_0900-complete.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-10",
+  "hora": "09:00",
+  "arquivo": "2026-12-10_0900-complete.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-20",
+  "hora": "09:00",
+  "arquivo": "2026-11-20_0900-coracao.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-27",
+  "hora": "09:00",
+  "arquivo": "2026-11-27_0900-coracao.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-04",
+  "hora": "09:00",
+  "arquivo": "2026-12-04_0900-coracao.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-11",
+  "hora": "09:00",
+  "arquivo": "2026-12-11_0900-coracao.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-21",
+  "hora": "09:00",
+  "arquivo": "2026-11-21_0900-embaralhada.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-21",
+  "hora": "09:01",
+  "arquivo": "2026-11-21_0901-embaralhada-resposta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-28",
+  "hora": "09:00",
+  "arquivo": "2026-11-28_0900-legenda.jpg",
+  "obs": "repostar a melhor legenda no domingo (manual)"
+ },
+ {
+  "data": "2026-12-05",
+  "hora": "09:00",
+  "arquivo": "2026-12-05_0900-adivinha.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-05",
+  "hora": "09:01",
+  "arquivo": "2026-12-05_0901-adivinha-resposta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-12",
+  "hora": "09:00",
+  "arquivo": "2026-12-12_0900-embaralhada.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-12",
+  "hora": "09:01",
+  "arquivo": "2026-12-12_0901-embaralhada-resposta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-22",
+  "hora": "09:00",
+  "arquivo": "2026-11-22_0900-isso-aquilo.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-29",
+  "hora": "09:00",
+  "arquivo": "2026-11-29_0900-isso-aquilo.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-06",
+  "hora": "09:00",
+  "arquivo": "2026-12-06_0900-isso-aquilo.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-13",
+  "hora": "09:00",
+  "arquivo": "2026-12-13_0900-isso-aquilo.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-23",
+  "hora": "09:00",
+  "arquivo": "2026-11-23_0900-3-emojis.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-30",
+  "hora": "09:00",
+  "arquivo": "2026-11-30_0900-3-emojis.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-07",
+  "hora": "09:00",
+  "arquivo": "2026-12-07_0900-3-emojis.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-14",
+  "hora": "09:00",
+  "arquivo": "2026-12-14_0900-3-emojis.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-17",
+  "hora": "20:30",
+  "arquivo": "2026-11-17_2030-case-ep1.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-19",
+  "hora": "20:30",
+  "arquivo": "2026-11-19_2030-case-ep2.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-20",
+  "hora": "20:30",
+  "arquivo": "2026-11-20_2030-case-ep3.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-21",
+  "hora": "20:30",
+  "arquivo": "2026-11-21_2030-case-ep4.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-22",
+  "hora": "20:30",
+  "arquivo": "2026-11-22_2030-black-aviso.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-23",
+  "hora": "20:30",
+  "arquivo": "2026-11-23_2030-black-abriu.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-24",
+  "hora": "20:30",
+  "arquivo": "2026-11-24_2030-black-como.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-26",
+  "hora": "20:30",
+  "arquivo": "2026-11-26_2030-black-planos.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-27",
+  "hora": "20:30",
+  "arquivo": "2026-11-27_2030-black-bonus.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-28",
+  "hora": "20:30",
+  "arquivo": "2026-11-28_2030-black-prova.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-29",
+  "hora": "20:30",
+  "arquivo": "2026-11-29_2030-black-vagas.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-30",
+  "hora": "20:30",
+  "arquivo": "2026-11-30_2030-black-ultimo.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-01",
+  "hora": "20:30",
+  "arquivo": "2026-12-01_2030-dez-palavra.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-03",
+  "hora": "20:30",
+  "arquivo": "2026-12-03_2030-bingo-chamada.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-04",
+  "hora": "20:30",
+  "arquivo": "2026-12-04_2030-agendado.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-05",
+  "hora": "20:30",
+  "arquivo": "2026-12-05_2030-fim-de-ano.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-06",
+  "hora": "20:30",
+  "arquivo": "2026-12-06_2030-melhor-post.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-07",
+  "hora": "20:30",
+  "arquivo": "2026-12-07_2030-ideia-post.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-08",
+  "hora": "20:30",
+  "arquivo": "2026-12-08_2030-agenda-dez.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-10",
+  "hora": "20:30",
+  "arquivo": "2026-12-10_2030-janeiro.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-11",
+  "hora": "20:30",
+  "arquivo": "2026-12-11_2030-agradece.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-12",
+  "hora": "20:30",
+  "arquivo": "2026-12-12_2030-aprendizados.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-13",
+  "hora": "20:30",
+  "arquivo": "2026-12-13_2030-spoiler-2027.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-14",
+  "hora": "20:30",
+  "arquivo": "2026-12-14_2030-bateria.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-15",
+  "hora": "20:30",
+  "arquivo": "2026-12-15_2030-coracao-dez.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-18",
+  "hora": "20:30",
+  "arquivo": "2026-11-18_2030-jogo-1-foto.jpg",
+  "obs": "jogo: 🖤 escondido em x=860,y=1060"
+ },
+ {
+  "data": "2026-11-18",
+  "hora": "20:32",
+  "arquivo": "2026-11-18_2032-jogo-2-pergunta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-19",
+  "hora": "manual",
+  "arquivo": "MANUAL_2026-11-19-revelacao-2026-11-18.jpg",
+  "obs": "revelação manual com o @ do ganhador"
+ },
+ {
+  "data": "2026-11-25",
+  "hora": "20:30",
+  "arquivo": "2026-11-25_2030-jogo-1-foto.jpg",
+  "obs": "jogo: 🏷️ escondido em x=940,y=730"
+ },
+ {
+  "data": "2026-11-25",
+  "hora": "20:32",
+  "arquivo": "2026-11-25_2032-jogo-2-pergunta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-11-26",
+  "hora": "manual",
+  "arquivo": "MANUAL_2026-11-26-revelacao-2026-11-25.jpg",
+  "obs": "revelação manual com o @ do ganhador"
+ },
+ {
+  "data": "2026-12-02",
+  "hora": "20:30",
+  "arquivo": "2026-12-02_2030-jogo-1-foto.jpg",
+  "obs": "jogo: 🎁 escondido em x=930,y=540"
+ },
+ {
+  "data": "2026-12-02",
+  "hora": "20:32",
+  "arquivo": "2026-12-02_2032-jogo-2-pergunta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-03",
+  "hora": "manual",
+  "arquivo": "MANUAL_2026-12-03-revelacao-2026-12-02.jpg",
+  "obs": "revelação manual com o @ do ganhador"
+ },
+ {
+  "data": "2026-12-09",
+  "hora": "20:30",
+  "arquivo": "2026-12-09_2030-jogo-1-foto.jpg",
+  "obs": "jogo: 🎄 escondido em x=80,y=440"
+ },
+ {
+  "data": "2026-12-09",
+  "hora": "20:32",
+  "arquivo": "2026-12-09_2032-jogo-2-pergunta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-10",
+  "hora": "manual",
+  "arquivo": "MANUAL_2026-12-10-revelacao-2026-12-09.jpg",
+  "obs": "revelação manual com o @ do ganhador"
+ },
+ {
+  "data": "2026-12-16",
+  "hora": "20:30",
+  "arquivo": "2026-12-16_2030-jogo-1-foto.jpg",
+  "obs": "jogo: 🎅 escondido em x=120,y=280"
+ },
+ {
+  "data": "2026-12-16",
+  "hora": "20:32",
+  "arquivo": "2026-12-16_2032-jogo-2-pergunta.jpg",
+  "obs": ""
+ },
+ {
+  "data": "2026-12-17",
+  "hora": "manual",
+  "arquivo": "MANUAL_2026-12-17-revelacao-2026-12-16.jpg",
+  "obs": "revelação manual com o @ do ganhador"
+ },
+ {
+  "data": "2026-12-04",
+  "hora": "09:05",
+  "arquivo": "2026-12-04_0905-bingo.jpg",
+  "obs": "pode compartilhar nos stories marcando @o.ighormiranda"
+ }
+]
