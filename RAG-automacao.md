@@ -97,3 +97,4 @@ Em `fotos/`, todas do Ighor e aprovadas para uso:
 - `evento-a-vida-e-hoje/`: letreiro "A vida é hoje", apontando.
 - `familia-com-filha/`: com a filha. Usar só em post pessoal/bastidor e com o OK do Ighor.
 - `natureza-rio/` (sem camisa), `viagem/`, `jantar/`: uso pontual em conteúdo pessoal.
+- `gerada-ia/`: fotos do Ighor geradas com IA (ChatGPT). Ao postar, ligar o "rótulo de IA" no Instagram (regra para foto realista feita com IA). Usar com moderação: post com cara de IA tende a performar menos.
