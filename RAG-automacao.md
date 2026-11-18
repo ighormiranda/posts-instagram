@@ -52,8 +52,8 @@ body_media: [{"type":"image/jpeg","url":"<raw>"}, ...]   (carrossel = vários it
 - **Antes de agendar, rode `get-posts`** no período (body_type "all") para não marcar dois posts no mesmo horário.
 - **Legenda:** nunca use os caracteres de maior e menor (o HighLevel transforma em &gt;).
 - **Collab** com @arkyon.io não dá pela API. Depois que o post sai, o Claude adiciona pelo Chrome (Instagram web, já logado): post → ⋯ → Editar → "Adicionar colaboradores" → arkyon.io → marcar → Concluir → Concluir. O Ighor aceita o convite no perfil da Arkyon. Não precisa perguntar antes.
-  - Leva collab Arkyon: posts de negócio, automação, IA, case (+393%), Black e tendências de mercado.
-  - Não leva: post pessoal, família, viagem, jogos e reações de stories.
+  - Leva collab Arkyon **só o que faz sentido no perfil da Arkyon** (transformação comercial): atendimento e WhatsApp, follow-up, agendamento, CRM, processo comercial, IA no atendimento, gestão e riscos do negócio (ex.: Economist 2027).
+  - Não leva: Black November e oferta da Liga (é produto da Liga), dicas de Instagram e conteúdo (retenção, Reels, stories), Novidades da IA genéricas, post pessoal, família, viagem, jogos e reações de stories.
   - Collab com a ELO (@elosaudeclube): só o Reels de terça ("Terça com IA"). Nunca ELO e Arkyon no mesmo post.
   - Cuidado no menu ⋯: o 2º item é Editar e o 3º é "Ocultar número de curtidas". Conferir na tela antes de clicar e deixar o "rótulo de IA" desligado.
 - **Enquete, caixinha, quiz oficial, link e menção** também não vão pela API. Faça story "toque/responda com emoji" ou deixe para o Ighor colar na hora.
