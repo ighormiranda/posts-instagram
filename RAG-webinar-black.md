@@ -104,6 +104,17 @@ Base para montar o webinar que vende a oferta da LP **black.ligadomarketing.com*
      - **@afonsomolina:** @ na 1ª linha da legenda, um único pedido por post, citar o post anterior, horários quebrados (12h07, 19h23), mais posts simples com foto real.
      - **@tiagolemosx:** palavra-chave no comentário que vira direct, demonstração ao vivo, série "meu Claude trabalha enquanto eu durmo".
    - Molda o formato, nunca copia o texto.
+   - **Prova pronta para mostrar na tela: Radar de 05/10/2026.**
+     - Arquivo: `ofertas/black-november/webinar/Radar-o.ighormiranda-05-10-2026.pdf`.
+     - Leu 11 perfis de referência e 359 posts, comparando 84 carrosséis e 179 Reels com a média de cada perfil.
+     - Entrega "o que moldar" com o quanto cada post passou da média (ex.: 2,69×, 2,04×).
+     - Achados que servem de argumento no webinar:
+       - **Reels curto e sem fala também vence:** 15 segundos só com texto na tela fez 1,98× a média, 7 segundos fez 1,61× e 10 segundos fez 1,46×. Isso responde a objeção "não tenho tempo de gravar": dá para ter Reels com texto em movimento sobre as fotos do cliente.
+       - **Objeção de preço e atendimento puxam os maiores Reels do nicho** (ex.: "vi mais barato", 2,04×). Mostra que o conteúdo sai da dor real do cliente, não de achismo.
+       - **No perfil do próprio Ighor, o post que mais passou da média foi opinião sobre o assunto do momento** (1,44×). É o mesmo princípio do post da Economist.
+     - Ao mostrar na tela:
+       - cortar a última página, que é propaganda de terceiros (Magnetic Flows);
+       - não destacar os "Comenta ARKYBOOK", que são da época em que o Radar mirava a Arkyon. O webinar é da Liga.
 2. **Criação com IA e com a cara da marca**
    - Carrosséis gerados com a identidade visual do cliente e as fotos reais dele, não banco de imagem.
    - Legenda pronta.
@@ -148,7 +159,7 @@ Formato YAP: falar com a câmera, contar a história em andamento e mostrar a te
    - gráfico antes e depois, o +393% e os 85% de posts + stories;
    - "constância, análise, melhoria".
 5. **A máquina por dentro (20–35 min), na tela:**
-   - Radar e pesquisa do nicho (mostrar o estudo do Afonso e do Tiago);
+   - Radar e pesquisa do nicho: o PDF do Radar de 05/10 (11 perfis, 359 posts) e o estudo do Afonso e do Tiago;
    - um carrossel sendo gerado com fotos reais;
    - o Planejador do HighLevel cheio até dezembro e os 74 stories do mês;
    - os quadros de stories e o jogo do objeto escondido;
