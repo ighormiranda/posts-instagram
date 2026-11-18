@@ -3,15 +3,16 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Liga do Marketing — a estrutura comercial do empresário brasileiro. Site, tráfego, conteúdo, agente de IA 24h e CRM num sistema só.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Poppins:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: dark-only brand world. Pinned chapters (story, manifesto, system) alternate with quiet full-width bands; one yellow per screen. */
 :root{
-  --preto:#040404; --sup:#0C0C10; --sup2:#14141B; --linha:#22222C;
-  --branco:#FEFEFE; --suave:#B9B9C6; --apagado:#8E8E9C;
-  --roxo:#6D28D9; --roxo-luz:#8B47F0; --roxo-texto:#B794FF;
-  --amarelo:#DFE625; --sobre-amarelo:#040404;
-  --f-display:"Sora", system-ui, sans-serif;
+  --preto:#07050B; --sup:#110A1A; --sup2:#1B1228; --linha:#2C2040;
+  --branco:#FEFEFE; --suave:#C6BCD2; --apagado:#9387A6;
+  --roxo:#47017D; --roxo-luz:#4E49C1; --roxo-texto:#BCA8EE;
+  --carmim:#CE143D; --carmim-luz:#E8325A; --navy:#2D1A47;
+  --amarelo:#E3E62A; --sobre-carmim:#FFFFFF;
+  --f-display:"Anton", "Arial Narrow", system-ui, sans-serif;
   --f-body:"Poppins", system-ui, sans-serif;
   --f-mono:"IBM Plex Mono", ui-monospace, monospace;
   --gut-l:max(20px, env(safe-area-inset-left, 0px));
@@ -20,18 +21,19 @@
 }
 *{box-sizing:border-box}
 html{background:var(--preto)}
-body{background:var(--preto);color:var(--branco);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--preto) radial-gradient(rgba(206,20,61,.16) 1px,transparent 1.45px) 0 0/15px 15px;color:var(--branco);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--preto)}
 a{color:inherit}
-:focus-visible{outline:2px solid var(--amarelo);outline-offset:3px}
-h1,h2,h3{font-family:var(--f-display);font-weight:800;letter-spacing:-.035em;line-height:1.02;margin:0;text-wrap:balance}
+:focus-visible{outline:2px solid var(--carmim);outline-offset:3px}
+h1,h2{font-family:var(--f-display);font-weight:400;letter-spacing:-.004em;line-height:1.04;margin:0;text-wrap:balance}
+h3{font-family:var(--f-body);font-weight:600;letter-spacing:-.022em;line-height:1.14;margin:0;text-wrap:balance}
 p{margin:0}
 .wrap{max-width:1200px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
 .tag{font-family:var(--f-mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--apagado)}
-.tag b{color:var(--amarelo);font-weight:500}
+.tag b{color:var(--carmim);font-weight:500}
 .hl{color:var(--roxo-texto)}
 .btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:6px;font-family:var(--f-body);font-weight:600;font-size:16px;text-decoration:none;border:1px solid transparent;transition:transform .2s ease, background .2s ease}
-.btn-primary{background:var(--amarelo);color:var(--sobre-amarelo)}
+.btn-primary{background:var(--carmim);color:var(--sobre-carmim)}
 .btn-primary:hover{transform:translateY(-2px)}
 .btn-ghost{border-color:var(--linha);color:var(--branco)}
 .btn-ghost:hover{background:var(--sup2)}
@@ -43,9 +45,9 @@ p{margin:0}
 .nav.solid{background:rgba(4,4,4,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--linha)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand svg{width:34px;height:34px;flex:none}
-.brand .n1{font-family:var(--f-display);font-weight:800;font-size:19px;letter-spacing:-.035em;line-height:1;display:flex;align-items:center;gap:7px}
-.brand .n1 i{display:block;width:8px;height:8px;background:var(--amarelo);transform:rotate(45deg)}
+.brand svg{width:23px;height:36px;flex:none;color:var(--branco)}
+.brand .n1{font-family:var(--f-display);font-weight:400;letter-spacing:.005em;font-size:19px;letter-spacing:-.035em;line-height:1;display:flex;align-items:center;gap:7px}
+.brand .n1 i{display:block;width:8px;height:8px;background:var(--carmim);transform:rotate(45deg)}
 .brand .n2{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.26em;color:var(--suave);margin-top:3px}
 .nav-links{display:flex;gap:28px;font-size:14px;color:var(--suave)}
 .nav-links a{text-decoration:none}
@@ -65,11 +67,11 @@ p{margin:0}
 .shield-stage{position:relative;aspect-ratio:1;max-width:100%;display:grid;place-items:center}
 .shield-stage .ring{position:absolute;inset:6%;border:1px solid var(--linha);border-radius:50%}
 .shield-stage .ring.r2{inset:20%;border-style:dashed}
-.shield-stage .ring span{position:absolute;top:-7px;left:50%;width:12px;height:12px;background:var(--amarelo);transform:translateX(-50%) rotate(45deg)}
-.shield-stage svg.big{width:56%;height:auto;filter:drop-shadow(0 30px 80px rgba(109,40,217,.55))}
+.shield-stage .ring span{position:absolute;top:-7px;left:50%;width:12px;height:12px;background:var(--carmim);transform:translateX(-50%) rotate(45deg)}
+.shield-stage svg.big{width:38%;height:auto;color:var(--carmim);filter:drop-shadow(0 30px 90px rgba(206,20,61,.5))}
 .cue{margin-top:72px;display:flex;align-items:center;gap:14px}
 .cue .line{width:48px;height:1px;background:var(--linha);position:relative;overflow:hidden}
-.cue .line::after{content:"";position:absolute;inset:0;background:var(--amarelo);animation:cue 2.4s ease-in-out infinite}
+.cue .line::after{content:"";position:absolute;inset:0;background:var(--carmim);animation:cue 2.4s ease-in-out infinite}
 @keyframes cue{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
 @media (max-width:860px){
   .hero-grid{grid-template-columns:1fr}
@@ -81,7 +83,7 @@ p{margin:0}
 .ticker{border-block:1px solid var(--linha);overflow:hidden;padding-block:18px;background:var(--sup)}
 .ticker-track{display:flex;gap:48px;width:max-content;animation:tick 38s linear infinite}
 .ticker span{font-family:var(--f-mono);font-size:13px;letter-spacing:.14em;color:var(--suave);white-space:nowrap;display:flex;align-items:center;gap:48px}
-.ticker span::after{content:"";width:7px;height:7px;background:var(--amarelo);transform:rotate(45deg)}
+.ticker span::after{content:"";width:7px;height:7px;background:var(--carmim);transform:rotate(45deg)}
 @keyframes tick{to{transform:translateX(-50%)}}
 
 /* STORY */
@@ -92,13 +94,13 @@ p{margin:0}
 .cap{display:flex;flex-direction:column;gap:18px}
 .cap h2{font-size:clamp(32px,4.4vw,60px)}
 .cap p{color:var(--suave);font-size:18px;max-width:520px}
-.cap .clock{font-family:var(--f-mono);font-size:14px;color:var(--amarelo);letter-spacing:.1em}
+.cap .clock{font-family:var(--f-mono);font-size:14px;color:var(--carmim);letter-spacing:.1em}
 .cap .clock.off{color:var(--apagado)}
 .js .caps .cap{position:absolute;inset:auto 0 auto 0;top:50%;transform:translateY(-50%)}
 .no-js-stack .cap + .cap{margin-top:56px}
 .story-progress{display:flex;gap:6px;margin-bottom:28px}
 .story-progress i{flex:1;height:2px;background:var(--linha);position:relative;overflow:hidden}
-.story-progress i b{position:absolute;inset:0;background:var(--amarelo);transform-origin:left;transform:scaleX(0)}
+.story-progress i b{position:absolute;inset:0;background:var(--carmim);transform-origin:left;transform:scaleX(0)}
 
 .phone{width:100%;max-width:380px;margin-left:auto;border-radius:38px;border:1px solid var(--linha);background:var(--sup);padding:12px;box-shadow:0 40px 120px rgba(109,40,217,.25)}
 .screen{border-radius:28px;background:#0A0A0E;overflow:hidden;display:flex;flex-direction:column;height:560px;position:relative}
@@ -106,7 +108,7 @@ p{margin:0}
 .ph-head{display:flex;align-items:center;gap:12px;padding:10px 16px 14px;border-bottom:1px solid var(--linha)}
 .avatar{width:38px;height:38px;border-radius:50%;background:var(--sup2);display:grid;place-items:center;font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--suave);flex:none;position:relative}
 .avatar.ai{background:var(--roxo);color:var(--branco)}
-.avatar .on{position:absolute;right:-1px;bottom:-1px;width:11px;height:11px;border-radius:50%;background:var(--amarelo);border:2px solid #0A0A0E}
+.avatar .on{position:absolute;right:-1px;bottom:-1px;width:11px;height:11px;border-radius:50%;background:var(--carmim);border:2px solid #0A0A0E}
 .ph-head .who{font-size:14px;font-weight:600;line-height:1.2}
 .ph-head .st{font-family:var(--f-mono);font-size:11px;color:var(--apagado)}
 .chat{flex:1;padding:16px 14px;display:flex;flex-direction:column;gap:10px;overflow:hidden;justify-content:flex-end}
@@ -118,13 +120,13 @@ p{margin:0}
 .b.ai small{color:#D9CCFF}
 .b.lost{opacity:.55}
 .sysmsg{align-self:center;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;color:var(--apagado);padding:4px 10px;border:1px solid var(--linha);border-radius:3px}
-.sysmsg.ok{color:var(--sobre-amarelo);background:var(--amarelo);border-color:var(--amarelo)}
+.sysmsg.ok{color:var(--sobre-carmim);background:var(--carmim);border-color:var(--carmim)}
 .crm{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:12px;border-top:1px solid var(--linha);background:var(--sup)}
 .crm .col{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.08em;color:var(--apagado);text-transform:uppercase}
 .crm .slot{margin-top:6px;height:30px;border:1px dashed var(--linha);border-radius:4px}
-.crm .lead-card{position:absolute;bottom:12px;left:12px;height:30px;border-radius:4px;background:var(--amarelo);color:var(--sobre-amarelo);font-family:var(--f-body);font-size:11px;font-weight:600;display:flex;align-items:center;padding:0 8px;letter-spacing:0;text-transform:none}
+.crm .lead-card{position:absolute;bottom:12px;left:12px;height:30px;border-radius:4px;background:var(--carmim);color:var(--sobre-carmim);font-family:var(--f-body);font-size:11px;font-weight:600;display:flex;align-items:center;padding:0 8px;letter-spacing:0;text-transform:none}
 .phone-layer{position:absolute;inset:0;display:flex;flex-direction:column}
-.rewind{position:absolute;inset:0;display:grid;place-items:center;background:rgba(4,4,4,.86);font-family:var(--f-mono);color:var(--amarelo);font-size:13px;letter-spacing:.14em;opacity:0;pointer-events:none}
+.rewind{position:absolute;inset:0;display:grid;place-items:center;background:rgba(4,4,4,.86);font-family:var(--f-mono);color:var(--carmim);font-size:13px;letter-spacing:.14em;opacity:0;pointer-events:none}
 @media (max-width:860px){
   .story-grid{grid-template-columns:1fr;gap:24px}
   .phone{margin:0 auto;max-width:330px}
@@ -141,7 +143,7 @@ p{margin:0}
 .manifesto p.big{font-family:var(--f-display);font-weight:700;letter-spacing:-.035em;font-size:clamp(34px,5.4vw,76px);line-height:1.06;text-wrap:balance;margin-top:28px}
 .manifesto .w{opacity:1;transition:none}
 .js .manifesto .w{opacity:.18}
-.manifesto .w.y{color:var(--amarelo)}
+.manifesto .w.y{color:var(--carmim)}
 .manifesto .w.p{color:var(--roxo-texto)}
 .manifesto .sub{margin-top:40px;font-size:18px;color:var(--suave);max-width:560px}
 
@@ -154,7 +156,7 @@ p{margin:0}
 .rail{display:flex;gap:20px;margin-top:56px;padding-left:var(--gut-l);padding-right:var(--gut-r);width:max-content}
 .mod{width:340px;flex:none;border:1px solid var(--linha);border-radius:12px;background:var(--preto);padding:28px;display:flex;flex-direction:column;gap:16px;min-height:360px;position:relative;overflow:hidden}
 .mod .ic{width:44px;height:44px;border-radius:8px;border:1px solid var(--linha);display:grid;place-items:center}
-.mod .ic svg{width:22px;height:22px;stroke:var(--amarelo);fill:none;stroke-width:1.5}
+.mod .ic svg{width:22px;height:22px;stroke:var(--carmim);fill:none;stroke-width:1.5}
 .mod h3{font-size:26px;letter-spacing:-.03em;line-height:1.1}
 .mod p{color:var(--suave);font-size:15px}
 .mod .spec{margin-top:auto;padding-top:16px;border-top:1px solid var(--linha);font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;color:var(--branco)}
@@ -179,11 +181,11 @@ p{margin:0}
 .titan-sticky{position:sticky;top:120px}
 .steps{position:relative;display:flex;flex-direction:column;gap:0}
 .steps .track{position:absolute;left:23px;top:24px;bottom:24px;width:1px;background:var(--linha)}
-.steps .fill{position:absolute;left:23px;top:24px;width:1px;height:calc(100% - 48px);background:var(--amarelo);transform-origin:top;transform:scaleY(1)}
+.steps .fill{position:absolute;left:23px;top:24px;width:1px;height:calc(100% - 48px);background:var(--carmim);transform-origin:top;transform:scaleY(1)}
 .js .steps .fill{transform:scaleY(0)}
 .step{display:grid;grid-template-columns:48px minmax(0,1fr);gap:24px;padding-block:28px;position:relative}
 .step .num{width:48px;height:48px;border-radius:50%;border:1px solid var(--linha);background:var(--preto);display:grid;place-items:center;font-family:var(--f-mono);font-size:13px;color:var(--suave);position:relative;z-index:1;transition:all .3s ease}
-.step.on .num{background:var(--amarelo);color:var(--sobre-amarelo);border-color:var(--amarelo)}
+.step.on .num{background:var(--carmim);color:var(--sobre-carmim);border-color:var(--carmim)}
 .step h3{font-size:26px;letter-spacing:-.03em;margin-top:8px}
 .step p{color:var(--suave);margin-top:10px;max-width:480px}
 .step .get{margin-top:14px;font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;color:var(--roxo-texto)}
@@ -194,7 +196,7 @@ p{margin:0}
 .cases-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
 .cases-head h2{font-size:clamp(34px,4.6vw,60px);margin-top:16px;max-width:680px}
 .stars{display:flex;align-items:center;gap:10px;font-family:var(--f-mono);font-size:12.5px;color:var(--suave);letter-spacing:.06em}
-.stars span{color:var(--amarelo);letter-spacing:2px;font-size:15px}
+.stars span{color:var(--carmim);letter-spacing:2px;font-size:15px}
 .case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:56px}
 .case{border:1px solid var(--linha);border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:14px;background:var(--sup);min-width:0;transition:border-color .3s ease, transform .3s ease}
 .case:hover{border-color:var(--roxo);transform:translateY(-4px)}
@@ -207,7 +209,7 @@ p{margin:0}
 .case.feat{grid-column:1 / -1;background:var(--preto);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;position:relative;overflow:hidden}
 .case.feat::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 90% at 100% 100%, rgba(109,40,217,.45), transparent 70%);pointer-events:none}
 .case.feat h3{font-size:clamp(32px,3.6vw,46px)}
-.big-num{font-family:var(--f-display);font-weight:800;font-size:clamp(72px,10vw,150px);line-height:.85;letter-spacing:-.05em;color:var(--amarelo);position:relative}
+.big-num{font-family:var(--f-display);font-weight:800;font-size:clamp(72px,10vw,150px);line-height:.85;letter-spacing:-.05em;color:var(--carmim);position:relative}
 .big-num small{display:block;font-family:var(--f-mono);font-size:12.5px;letter-spacing:.1em;color:var(--suave);font-weight:500;margin-top:14px}
 @media (max-width:860px){.case-grid{grid-template-columns:1fr}.case.feat{grid-template-columns:1fr;gap:24px}}
 
@@ -231,7 +233,7 @@ p{margin:0}
 .cta .ctas{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:44px}
 .copy{display:inline-flex;align-items:center;gap:12px;font-family:var(--f-mono);font-size:14px;color:var(--suave);border:1px solid var(--linha);border-radius:6px;min-height:52px;padding:0 16px;background:transparent;cursor:pointer;user-select:all}
 .copy:hover{color:var(--branco)}
-.cta .clockbig{font-family:var(--f-mono);font-size:13px;letter-spacing:.14em;color:var(--amarelo);margin-bottom:28px;display:block}
+.cta .clockbig{font-family:var(--f-mono);font-size:13px;letter-spacing:.14em;color:var(--carmim);margin-bottom:28px;display:block}
 
 footer{border-top:1px solid var(--linha);padding-block:40px calc(40px + env(safe-area-inset-bottom,0px))}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--apagado)}
@@ -248,13 +250,7 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="escudo" viewBox="0 0 118 118">
-      <path d="M59 4 L108 22 V62 C108 90 87 106 59 114 C31 106 10 90 10 62 V22 Z" fill="#6D28D9"/>
-      <path d="M59 4 L108 22 V62 C108 90 87 106 59 114 Z" fill="#8B47F0"/>
-      <path d="M10 62 C10 90 31 106 59 114 C87 106 108 90 108 62 Z" fill="#040404" opacity="0.18"/>
-      <path d="M31 36 h11 v34 h21 v11 H31 Z" fill="#DFE625"/>
-      <path d="M68 81 V36 h9 l8 13 l8 -13 h9 v45 h-10 V55 l-7 11 l-7 -11 v26 Z" fill="#DFE625"/>
-    </symbol>
+    <symbol id="escudo" viewBox="327 179 426 682"><path fill="currentColor" fill-rule="evenodd" d="M547.4 853.1 C551.3 851.0 569.6 841.3 588.0 831.7 C624.0 812.9 676.7 785.4 694.5 776.0 C713.5 765.9 734.2 755.1 741.7 751.2 L749.0 747.5 L749.0 528.2 L749.0 309.0 L540.0 309.0 L331.0 309.0 L331.2 529.1 L331.5 749.1 L340.5 753.9 C345.4 756.5 356.2 762.1 364.5 766.4 C372.8 770.8 392.6 781.1 408.5 789.5 C424.4 797.9 443.8 808.0 451.5 812.0 C459.2 816.0 468.2 820.7 471.5 822.5 C474.8 824.3 484.7 829.5 493.5 834.1 C502.3 838.7 515.6 845.7 523.0 849.6 C530.4 853.6 537.3 856.8 538.4 856.9 C539.4 857.0 543.5 855.2 547.4 853.1 Z M525.0 812.6 C510.0 804.6 495.7 797.2 451.0 773.8 C434.2 765.0 416.9 755.9 412.5 753.5 C408.1 751.2 397.3 745.5 388.5 741.0 C379.7 736.4 370.7 731.6 368.5 730.4 L364.5 728.2 L364.2 535.6 L364.0 343.0 L540.0 343.0 L716.0 343.0 L716.0 534.8 L716.0 726.5 L710.2 729.6 C707.1 731.3 684.9 743.0 661.0 755.5 C637.1 768.0 613.0 780.6 607.5 783.5 C602.0 786.4 588.3 793.6 577.0 799.5 C565.7 805.4 552.5 812.4 547.5 815.0 L538.5 819.7 L525.0 812.6 Z M566.8 763.8 L596.4 749.5 L566.2 749.2 C549.6 749.1 522.4 749.1 505.8 749.2 L475.5 749.5 L482.0 752.6 C485.6 754.4 498.2 760.5 510.1 766.2 C533.7 777.7 533.9 777.8 535.9 777.9 C536.6 778.0 550.6 771.6 566.8 763.8 Z M492.0 686.5 L492.0 675.0 L467.5 675.0 L443.0 675.0 L443.0 544.0 L443.0 413.0 L429.0 413.0 L415.0 413.0 L415.0 555.5 L415.0 698.0 L453.5 698.0 L492.0 698.0 L492.0 686.5 Z M542.0 625.6 C542.0 585.8 541.5 540.6 540.9 525.0 C540.3 509.5 540.0 496.7 540.2 496.5 C540.4 496.3 548.4 538.9 557.9 591.3 C567.4 643.7 575.5 687.7 575.7 689.2 L576.2 692.0 L589.4 692.0 L602.6 692.0 L609.4 653.2 C613.1 631.9 619.7 594.5 624.0 570.0 C628.3 545.5 633.0 519.4 634.4 512.0 L636.9 498.5 L636.5 514.0 C636.2 522.5 635.7 567.4 635.4 613.8 L634.8 698.0 L647.9 698.0 L661.0 698.0 L661.0 555.5 L661.0 413.0 L645.6 413.0 L630.2 413.0 L629.6 415.8 C628.2 422.7 590.0 635.2 590.0 636.2 C590.0 636.8 589.8 637.1 589.5 636.8 C589.2 636.6 579.8 587.1 568.5 526.9 C557.2 466.7 547.8 416.5 547.5 415.2 C547.0 413.0 546.7 413.0 532.0 413.0 L517.0 413.0 L517.0 555.5 L517.0 698.0 L529.5 698.0 L542.0 698.0 L542.0 625.6 Z M532.2 258.2 L539.9 254.1 L553.7 261.4 C561.3 265.4 567.6 268.3 567.8 267.9 C568.0 267.5 567.0 260.5 565.5 252.4 L562.9 237.6 L574.1 226.4 C584.2 216.3 585.0 215.2 582.9 214.7 C581.6 214.4 574.6 213.4 567.4 212.4 L554.2 210.6 L547.4 196.8 C543.6 189.2 540.3 183.0 540.0 183.0 C539.7 183.0 536.4 189.2 532.6 196.8 L525.8 210.6 L512.6 212.4 C505.4 213.4 498.4 214.4 497.1 214.7 C495.0 215.2 495.8 216.3 505.9 226.4 L517.1 237.6 L514.5 252.0 C513.1 260.0 512.0 267.0 512.0 267.7 C512.0 268.5 514.3 267.7 518.2 265.6 C521.7 263.8 528.0 260.4 532.2 258.2 Z"/></symbol>
     <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3Z"/></symbol>
   </defs>
 </svg>
@@ -297,7 +293,7 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
         <div class="shield-stage" aria-hidden="true">
           <div class="ring"><span></span></div>
           <div class="ring r2"></div>
-          <svg class="big" viewBox="0 0 118 118"><use href="#escudo"/></svg>
+          <svg class="big" viewBox="327 179 426 682"><use href="#escudo"/></svg>
         </div>
       </div>
     </div>
@@ -486,43 +482,43 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
     <div class="wrap">
       <div class="cases-head">
         <div>
-          <div class="tag">Cases</div>
-          <h2 id="h-cases">Empresas brasileiras que cresceram com a Liga.</h2>
+          <div class="tag">O que a gente faz</div>
+          <h2 id="h-cases">Os sites que a gente fez. Abra qualquer um.</h2>
         </div>
-        <div class="stars"><span aria-hidden="true">★★★★★</span>Avaliações 5 estrelas no Google</div>
+        <div class="stars"><span aria-hidden="true">◆</span>Nenhum print. Todos no ar agora.</div>
       </div>
       <div class="case-grid">
         <article class="case feat">
           <div>
-            <div class="seg">Seguros · Estados Unidos</div>
-            <h3 style="margin-top:14px">UP Insurance</h3>
-            <p style="margin-top:14px;max-width:440px">O problema era visibilidade local. Com posicionamento e presença digital trabalhados juntos, a empresa abriu novas unidades e levou a operação para novos estados.</p>
+            <div class="seg">Comunidade de especialistas · Saúde</div>
+            <h3 style="margin-top:14px">ELO</h3>
+            <p style="margin-top:14px;max-width:460px">Seis especialistas, um problema só: o dono de clínica que virou o elo entre todo mundo. O site não apresenta os seis — ele faz a pessoa sentir o peso de ser o único. Dois elos de corrente se encaixam na abertura e, mais à frente, seis problemas cercam o dono com todos os fios chegando na mesma pessoa.</p>
           </div>
-          <div class="big-num"><span>+2</span><small>NOVAS UNIDADES EM 6 MESES · EXPANSÃO PARA CAROLINA DO SUL E DO NORTE</small></div>
+          <div class="res"><a class="btn btn-primary" href="https://elo.ligadomarketing.com" target="_blank" rel="noopener">Abrir o site</a><span>elo.ligadomarketing.com</span></div>
         </article>
         <article class="case">
-          <div class="seg">Extensões de cabelo · Venda nacional</div>
-          <h3>Di Milesi</h3>
-          <p>Vende para salões no país inteiro, com público majoritariamente hispânico. Branding, presença e campanhas segmentadas para esse cliente.</p>
-          <div class="res"><b>Rebranding</b><span>e tráfego na Flórida</span></div>
+          <div class="seg">Transformação comercial para clínicas</div>
+          <h3>Arkyon</h3>
+          <p>Explicar CRM e automação para dono de clínica não funciona. Então o site perde uma paciente na frente da pessoa, às 23:47, e só depois volta no tempo.</p>
+          <div class="res"><a href="https://arkyon.io" target="_blank" rel="noopener"><b>arkyon.io</b></a><span>abrir</span></div>
         </article>
         <article class="case">
-          <div class="seg">Salão de beleza</div>
-          <h3>Morgana Beauty</h3>
-          <p>Tinha dificuldade para atrair clientes. Diagnóstico, plano comercial e posicionamento digital para virar referência na região.</p>
-          <div class="res"><b>Diagnóstico</b><span>+ plano comercial</span></div>
+          <div class="seg">Medicina · transplante capilar</div>
+          <h3>Dra. Larissa Fontaine</h3>
+          <p>Publicidade médica proíbe preço, promessa e antes e depois. Sobra pouquíssimo para dizer — e foi por isso que esse site ficou bonito. Um folículo pulsa e dali crescem milhares de fios.</p>
+          <div class="res"><a href="https://site.ligadomarketing.com/dra.larissafontaine" target="_blank" rel="noopener"><b>Ver o site</b></a><span>abrir</span></div>
         </article>
         <article class="case">
-          <div class="seg">Limpeza e manutenção de piscinas</div>
-          <h3>Vitoria Pool Care</h3>
-          <p>Site focado em conversão e anúncios segmentados trouxeram novos contratos de manutenção recorrente.</p>
-          <div class="res"><b>Novos contratos</b><span>via site e anúncios</span></div>
+          <div class="seg">Demonstração · clínica fictícia</div>
+          <h3>Clínica Aura</h3>
+          <p>Modelo para clínicas de estética. A clínica não existe e isso está escrito na tela. Em vez de uma lista de procedimentos, um mapa do corpo: a paciente aponta onde incomoda.</p>
+          <div class="res"><a href="https://aura.arkyon.io" target="_blank" rel="noopener"><b>aura.arkyon.io</b></a><span>abrir</span></div>
         </article>
         <article class="case" style="justify-content:center">
-          <div class="seg">Sua empresa</div>
-          <h3>O próximo case.</h3>
-          <p>A conversa começa com um diagnóstico gratuito do seu comercial.</p>
-          <div class="res"><a class="btn btn-ghost" href="#ativar">Quero ser o próximo</a></div>
+          <div class="seg">Os seis juntos</div>
+          <h3>O portfólio completo.</h3>
+          <p>Cada site com a cena que o faz ser lembrado. Nenhum deles se parece com o outro.</p>
+          <div class="res"><a class="btn btn-ghost" href="https://site.ligadomarketing.com/portfolio" target="_blank" rel="noopener">Ver o portfólio</a></div>
         </article>
       </div>
     </div>
