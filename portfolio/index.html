@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portfólio · Liga do Marketing — sites que contam história</title>
+<meta name="description" content="O seu site está certo. E ninguém lembra dele. Seis sites em que a empresa não é explicada: ela acontece enquanto a pessoa rola a tela.">
+<meta property="og:title" content="O seu site está certo. E ninguém lembra dele.">
+<meta property="og:description" content="Estes seis, sim. Em cada um a empresa não é explicada: ela acontece enquanto a pessoa rola a tela.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#050505">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&display=swap" rel="stylesheet">
+<style>
+@property --pg-bg{syntax:"<color>";inherits:true;initial-value:#050505}
+@property --pg-ink{syntax:"<color>";inherits:true;initial-value:#FEFEFE}
+@property --pg-acc{syntax:"<color>";inherits:true;initial-value:#9AE04C}
+@property --pg-soft{syntax:"<color>";inherits:true;initial-value:#9a9a9a}
+
+:root{
+  --pg-bg:#050505; --pg-ink:#FEFEFE; --pg-acc:#9AE04C; --pg-soft:#9a9a9a;
+  --lime:#9AE04C;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  transition:--pg-bg 1.1s cubic-bezier(.4,0,.2,1),--pg-ink 1.1s cubic-bezier(.4,0,.2,1),
+             --pg-acc 1.1s cubic-bezier(.4,0,.2,1),--pg-soft 1.1s cubic-bezier(.4,0,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--pg-bg); color:var(--pg-ink);
+  font-family:"Plus Jakarta Sans",system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+a{color:inherit}
+::selection{background:var(--pg-acc);color:var(--pg-bg)}
+
+/* grão fixo — dá peso de impresso e tira o plástico do gradiente */
+#grain{
+  position:fixed;inset:-50%;z-index:90;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode:overlay;
+}
+/* vinheta que respira com a paleta */
+#vig{position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(130% 90% at 50% 45%,transparent 38%,var(--pg-bg) 100%);opacity:.75}
+
+#prog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--pg-acc);z-index:100;will-change:width}
+
+/* espinha de capítulos à direita */
+#spine{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:99;
+  display:flex;flex-direction:column;gap:3px;align-items:flex-end}
+#spine button{
+  display:flex;align-items:center;gap:10px;background:none;border:0;cursor:pointer;
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--pg-soft);
+  padding:5px 0;opacity:.45;transition:opacity .4s,color .4s;
+}
+#spine button i{display:block;width:22px;height:1px;background:currentColor;transition:width .45s cubic-bezier(.4,0,.2,1)}
+#spine button span{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .45s cubic-bezier(.4,0,.2,1)}
+#spine button:hover{opacity:.9}
+#spine button:hover span{max-width:160px}
+#spine button.on{opacity:1;color:var(--pg-acc)}
+#spine button.on i{width:34px}
+#spine button.on span{max-width:160px}
+
+.pad{padding:0 26px;max-width:1240px;margin:0 auto;position:relative;z-index:2}
+.kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;color:var(--pg-acc);text-transform:uppercase}
+h1,h2,h3{font-weight:800;letter-spacing:-.035em;line-height:1}
+.big{font-size:clamp(2.7rem,8.4vw,7rem)}
+.mid{font-size:clamp(2rem,5.2vw,4rem)}
+.lead{font-size:clamp(1rem,2.1vw,1.28rem);line-height:1.55;opacity:.78;max-width:50ch}
+
+/* ---------- hero ---------- */
+#hero{height:380vh;position:relative;z-index:2}
+#hero .sticky{position:sticky;top:0;height:100vh;display:grid;place-items:center;overflow:hidden}
+#hero .inner{text-align:center;padding:0 26px;width:100%;max-width:1040px}
+.deadsite{
+  width:min(430px,78vw);margin:0 auto 38px;border:1px solid #232323;border-radius:6px;
+  background:#0d0d0d;padding:15px;position:relative;
+}
+.deadsite .l{height:9px;background:#1e1e1e;border-radius:2px;margin-bottom:9px}
+.deadsite .l.t{height:17px;width:60%}
+.deadsite .l.s{width:88%}
+.deadsite .l.s2{width:68%}
+.deadsite .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:15px}
+.deadsite .grid div{height:40px;background:#191919;border-radius:3px}
+.strike{position:absolute;left:7%;right:7%;top:50%;height:2px;background:var(--lime);transform-origin:left;transform:scaleX(0)}
+#hero h1 span{display:block}
+.heroline2{color:var(--lime)}
+.scrollcue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:9.5px;letter-spacing:.24em;opacity:.4}
+.scrollcue i{display:block;width:1px;height:30px;background:linear-gradient(var(--lime),transparent);margin:9px auto 0}
+
+/* ---------- manifesto ---------- */
+#tese{padding:26vh 0 20vh}
+#tese p{font-size:clamp(1.7rem,4.9vw,3.2rem);font-weight:700;letter-spacing:-.035em;line-height:1.18;max-width:19ch}
+#tese .w{opacity:.13;transition:opacity .4s ease,color .4s ease}
+#tese .w.on{opacity:1}
+#tese .w.hi.on{color:var(--pg-acc)}
+
+/* ---------- stage ---------- */
+.stage{position:relative;z-index:2}
+.stage .sticky{position:sticky;top:0;height:100vh;display:flex;align-items:center;overflow:hidden}
+.wrap{
+  width:100%;max-width:1240px;margin:0 auto;padding:64px 26px 26px;
+  display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);
+  gap:46px;align-items:center;
+}
+.wrap.flip{grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr)}
+.wrap.flip .panel{order:2}
+.panel .num{font-family:var(--mono);font-size:11px;color:var(--pg-acc);letter-spacing:.18em}
+.panel .tag{
+  display:inline-block;margin:11px 0 16px;font-family:var(--mono);font-size:9.5px;
+  letter-spacing:.14em;text-transform:uppercase;opacity:.55;
+  border:1px solid currentColor;border-radius:100px;padding:4px 11px;
+}
+.panel h2{font-size:clamp(2.1rem,4.9vw,3.6rem);margin-bottom:7px}
+.panel[data-font="serif"] h2{font-family:var(--serif);font-weight:600;font-style:italic;letter-spacing:-.01em}
+.panel .sub{opacity:.55;font-size:.92rem;margin-bottom:18px}
+.panel .desc{font-size:1rem;line-height:1.62;opacity:.86;max-width:40ch}
+.panel .cena{
+  margin-top:18px;padding-left:15px;border-left:1px solid var(--pg-acc);
+  font-size:.88rem;line-height:1.6;opacity:.66;max-width:40ch;
+}
+.panel .cena b{opacity:1;font-weight:700;letter-spacing:.01em}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;margin-top:22px;
+  background:var(--pg-acc);color:var(--pg-bg);text-decoration:none;font-weight:800;
+  font-size:.88rem;padding:13px 22px;border-radius:100px;
+  transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s;
+}
+.btn:hover{transform:translateY(-2px)}
+
+.frameWrap{will-change:transform}
+.frame{
+  border-radius:10px;overflow:hidden;background:#000;
+  box-shadow:0 40px 100px -20px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.07);
+}
+.frame .bar{display:flex;align-items:center;gap:6px;padding:9px 13px;background:rgba(255,255,255,.055)}
+.frame .dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.18)}
+.frame .url{
+  margin-left:9px;flex:1;background:rgba(0,0,0,.3);border-radius:4px;padding:4px 11px;
+  font-family:var(--mono);font-size:9.5px;color:rgba(255,255,255,.5);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.screen{position:relative;aspect-ratio:16/10.3;overflow:hidden}
+.screen svg{display:block;width:100%;height:100%}
+.cap{position:absolute;left:0;right:0;bottom:7%;text-align:center;padding:0 9%;
+  font-size:clamp(.8rem,1.5vw,1.06rem);line-height:1.35;font-weight:700;letter-spacing:-.015em}
+
+/* ---------- prova de alcance ---------- */
+#range{padding:20vh 0;text-align:center}
+.bars{display:flex;gap:7px;justify-content:center;margin:40px auto 0;max-width:620px}
+.bars i{display:block;height:84px;flex:1;border-radius:3px;transform:scaleY(.06);transform-origin:bottom;
+  transition:transform .9s cubic-bezier(.34,1.4,.5,1)}
+
+/* ---------- método / honestidade / cta ---------- */
+.band{padding:18vh 0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
+.step{border-top:1px solid currentColor;padding-top:18px}
+.step .n{font-family:var(--mono);font-size:10.5px;color:var(--pg-acc);letter-spacing:.18em}
+.step h3{font-size:1.3rem;margin:10px 0 10px}
+.step p{font-size:.92rem;line-height:1.6;opacity:.66}
+#honesto{background:var(--lime);color:#050505;position:relative;z-index:2}
+#honesto .kicker{color:#1d2e0c}
+#honesto .mid{max-width:15ch}
+#honesto p{max-width:48ch;font-size:1.06rem;line-height:1.62;margin-top:20px;color:#152106}
+#cta{padding:20vh 0 15vh;text-align:center}
+#cta .lead{margin:0 auto}
+.count{display:flex;gap:9px;justify-content:center;margin:30px 0 32px;font-family:var(--mono)}
+.count div{border:1px solid rgba(255,255,255,.14);border-radius:7px;padding:11px 15px;min-width:68px}
+.count b{display:block;font-size:1.55rem;color:var(--pg-acc);font-weight:800;font-family:"Plus Jakarta Sans",sans-serif}
+.count span{font-size:8.5px;letter-spacing:.16em;opacity:.45}
+.obj{margin-top:20px;font-size:.88rem;opacity:.5;max-width:40ch;margin-left:auto;margin-right:auto;line-height:1.55}
+footer{border-top:1px solid rgba(255,255,255,.1);padding:32px 26px;text-align:center;font-size:.76rem;opacity:.42;position:relative;z-index:2}
+
+@media (max-width:980px){
+  #spine{display:none}
+  .wrap,.wrap.flip{grid-template-columns:1fr;gap:20px;padding:54px 18px 18px;align-content:center}
+  .wrap .panel,.wrap.flip .panel{order:2}
+  .wrap .frameWrap,.wrap.flip .frameWrap{order:1}
+  .panel h2{font-size:1.75rem}
+  .panel .desc{font-size:.88rem;max-width:none;line-height:1.5}
+  .panel .cena{font-size:.78rem;max-width:none;margin-top:13px;line-height:1.5}
+  .panel .sub{margin-bottom:11px;font-size:.82rem}
+  .panel .tag{margin:9px 0 11px}
+  .btn{margin-top:15px;padding:11px 18px;font-size:.82rem}
+  .screen{aspect-ratio:16/11.6}
+  .steps{grid-template-columns:1fr;gap:22px}
+  .bars i{height:60px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div id="vig"></div>
+<div id="grain"></div>
+<div id="prog"></div>
+<nav id="spine"></nav>
+
+<!-- ============== HERO ============== -->
+<section id="hero">
+  <div class="sticky">
+    <div class="inner">
+      <div class="deadsite" id="dead">
+        <div class="l t"></div><div class="l s"></div><div class="l s2"></div>
+        <div class="grid"><div></div><div></div><div></div></div>
+        <div class="strike" id="strike"></div>
+      </div>
+      <h1 class="big">
+        <span id="h1a">O seu site está certo.</span>
+        <span class="heroline2" id="h1b">E ninguém lembra dele.</span>
+      </h1>
+      <p class="lead" id="h1c" style="margin:24px auto 0;text-align:center">
+        Estes seis, sim. Em cada um a empresa não é explicada:<br>ela acontece, enquanto a pessoa rola a tela.
+      </p>
+    </div>
+    <div class="scrollcue">ROLE<i></i></div>
+  </div>
+</section>
+
+<!-- ============== TESE ============== -->
+<section id="tese" class="pad">
+  <div class="kicker">A tese</div>
+  <p style="margin-top:20px" id="manifesto"></p>
+</section>
+
+<!-- ============== 01 ELO ============== -->
+<section class="stage" id="st-elo" data-h="390" data-title="ELO"
+         data-bg="#4d1a22" data-ink="#f7e8e4" data-acc="#f0b9b3" data-soft="#c9a09c">
+  <div class="sticky"><div class="wrap">
+    <div class="panel" data-font="serif">
+      <div class="num">01 / 06</div>
+      <div class="tag">Cliente · comunidade</div>
+      <h2>ELO</h2>
+      <p class="sub">Comunidade de Crescimento na Saúde</p>
+      <p class="desc">Seis especialistas, um problema só: o dono de clínica que virou o elo entre todo mundo. O site não apresenta os seis — ele faz a pessoa sentir o peso de ser o único.</p>
+      <div class="cena"><b>A cena.</b> Dois elos vêm de lados opostos e se encaixam. Mais à frente, seis problemas cercam o dono e todos os fios chegam na mesma pessoa.</div>
+      <a class="btn" href="https://elo.ligadomarketing.com" target="_blank" rel="noopener">Abrir o site →</a>
+    </div>
+    <div class="frameWrap"><div class="frame">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">elo.ligadomarketing.com</div></div>
+      <div class="screen" style="background:#4d1a22">
+        <svg viewBox="0 0 640 416" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#6e7880"/><stop offset=".22" stop-color="#f4f7f9"/>
+              <stop offset=".48" stop-color="#9fa9b1"/><stop offset=".68" stop-color="#eef2f5"/>
+              <stop offset="1" stop-color="#5d666e"/>
+            </linearGradient>
+            <linearGradient id="steel2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#5d666e"/><stop offset=".26" stop-color="#e3e9ed"/>
+              <stop offset=".52" stop-color="#8d969e"/><stop offset=".74" stop-color="#dde4e9"/>
+              <stop offset="1" stop-color="#4e565d"/>
+            </linearGradient>
+          </defs>
+          <g id="elo-links">
+            <g id="elo-L">
+              <rect x="232" y="168" width="104" height="72" rx="36" fill="none" stroke="url(#steel)" stroke-width="14"/>
+              <rect x="232" y="168" width="104" height="72" rx="36" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-opacity=".5" transform="translate(0,-3.6)" stroke-dasharray="54 200" stroke-dashoffset="26"/>
+            </g>
+            <g id="elo-R">
+              <rect x="304" y="168" width="104" height="72" rx="36" fill="none" stroke="url(#steel2)" stroke-width="14"/>
+              <rect x="304" y="168" width="104" height="72" rx="36" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-opacity=".4" transform="translate(0,-3.6)" stroke-dasharray="48 200" stroke-dashoffset="30"/>
+            </g>
+            <circle id="elo-flash" cx="320" cy="204" r="0" fill="#fff" opacity="0"/>
+          </g>
+          <g id="elo-chaos" opacity="0">
+            <g id="elo-threads" stroke="#f0b9b3" stroke-width="1.1" opacity=".55" fill="none"></g>
+            <g id="elo-cards"></g>
+            <circle id="elo-you" cx="320" cy="208" r="30" fill="#f0b9b3"/>
+            <text x="320" y="213" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="13" font-weight="700" fill="#4d1a22">você</text>
+          </g>
+        </svg>
+        <div class="cap" id="elo-cap" style="color:#f6e3df;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1rem,2.1vw,1.5rem)"></div>
+      </div>
+    </div></div>
+  </div></div>
+</section>
+
+<!-- ============== 02 ARKYON ============== -->
+<section class="stage" id="st-ark" data-h="410" data-title="ARKYON"
+         data-bg="#07120a" data-ink="#e3ece3" data-acc="#9AE04C" data-soft="#6f8572">
+  <div class="sticky"><div class="wrap flip">
+    <div class="panel">
+      <div class="num">02 / 06</div>
+      <div class="tag">Nosso · empresa do grupo</div>
+      <h2>Arkyon</h2>
+      <p class="sub">Transformação comercial para clínicas</p>
+      <p class="desc">Explicar CRM e automação para dono de clínica não funciona. Então o site não explica: ele perde uma paciente na frente da pessoa, e só depois volta no tempo.</p>
+      <div class="cena"><b>A cena.</b> 23:47, uma paciente manda mensagem. Ninguém responde. O site rebobina a mesma noite com a IA atendendo.</div>
+      <a class="btn" href="https://arkyon.io" target="_blank" rel="noopener">Abrir o site →</a>
+    </div>
+    <div class="frameWrap"><div class="frame">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">arkyon.io</div></div>
+      <div class="screen" id="ark-screen" style="background:#07120a">
+        <div id="ark-chat" style="position:absolute;inset:0;padding:7% 10%;display:flex;flex-direction:column;gap:9px;justify-content:center;font-size:clamp(.62rem,1.25vw,.86rem)"></div>
+        <div id="ark-rewind" style="position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(154,224,76,.3),transparent);transform:translateX(110%);mix-blend-mode:screen"></div>
+        <div class="cap" id="ark-cap" style="color:#9AE04C"></div>
+      </div>
+    </div></div>
+  </div></div>
+</section>
+
+<!-- ============== 03 AURA ============== -->
+<section class="stage" id="st-aura" data-h="370" data-title="AURA"
+         data-bg="#efe9e0" data-ink="#2e2822" data-acc="#8a6a3a" data-soft="#7d7368">
+  <div class="sticky"><div class="wrap">
+    <div class="panel" data-font="serif">
+      <div class="num">03 / 06</div>
+      <div class="tag">Demonstração · clínica fictícia</div>
+      <h2>Clínica Aura</h2>
+      <p class="sub">Modelo para cirurgia plástica e estética</p>
+      <p class="desc">Modelo que a Arkyon usa para mostrar o padrão a clínicas. A clínica não existe — e isso está escrito na tela, porque cliente que descobre sozinho não volta.</p>
+      <div class="cena"><b>A cena.</b> Em vez de uma lista de procedimentos, um mapa do corpo. A paciente aponta onde incomoda, não decora nome técnico.</div>
+      <a class="btn" href="https://aura.arkyon.io" target="_blank" rel="noopener">Abrir o site →</a>
+    </div>
+    <div class="frameWrap"><div class="frame">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">aura.arkyon.io</div></div>
+      <div class="screen" style="background:#f3efe9">
+        <svg viewBox="0 0 640 416">
+          <defs>
+            <linearGradient id="auraSkin" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e7dccd"/>
+              <stop offset="1" stop-color="#cdbda7"/>
+            </linearGradient>
+          </defs>
+          <g id="aura-body" fill="url(#auraSkin)">
+            <circle cx="320" cy="78" r="30"/>
+            <path d="M320 104 C306 104 300 112 300 123 C272 133 252 151 246 181
+                     C240 213 242 251 250 287 C256 313 262 341 264 374 L376 374
+                     C378 341 384 313 390 287 C398 251 400 213 394 181
+                     C388 151 368 133 340 123 C340 112 334 104 320 104 Z"/>
+          </g>
+          <g id="aura-pts"></g>
+        </svg>
+        <div class="cap" id="aura-cap" style="color:#3a332b;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(.95rem,2vw,1.45rem)"></div>
+      </div>
+    </div></div>
+  </div></div>
+</section>
+
+<!-- ============== 04 LARISSA ============== -->
+<section class="stage" id="st-lar" data-h="390" data-title="LARISSA"
+         data-bg="#120d08" data-ink="#ece0c4" data-acc="#c9a227" data-soft="#8a7a55">
+  <div class="sticky"><div class="wrap flip">
+    <div class="panel" data-font="serif">
+      <div class="num">04 / 06</div>
+      <div class="tag">Cliente · medicina</div>
+      <h2>Dra. Larissa Fontaine</h2>
+      <p class="sub">Transplante capilar e tricologia · Muriaé/MG</p>
+      <p class="desc">Publicidade médica proíbe preço, promessa e antes e depois. Sobra pouquíssimo para dizer — e foi exatamente por isso que esse site ficou bonito.</p>
+      <div class="cena"><b>A cena.</b> Um folículo pulsa, nasce um fio, e dali crescem milhares, com o contador subindo até o número real de fios que ela já transplantou.</div>
+      <a class="btn" href="https://site.ligadomarketing.com/dra.larissafontaine" target="_blank" rel="noopener">Abrir o site →</a>
+    </div>
+    <div class="frameWrap"><div class="frame">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">site.ligadomarketing.com/dra.larissafontaine</div></div>
+      <div class="screen" style="background:#120d08">
+        <svg viewBox="0 0 640 416">
+          <g id="lar-strands" fill="none" stroke="#c9a227" stroke-width="1.15" stroke-linecap="round"></g>
+          <circle id="lar-foll" cx="320" cy="300" r="7" fill="#c9a227"/>
+          <circle id="lar-halo" cx="320" cy="300" r="7" fill="none" stroke="#c9a227" stroke-width="1" opacity=".5"/>
+          <text id="lar-count" x="320" y="112" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="40" font-weight="800" fill="#e8d9b0" opacity="0">0</text>
+          <text id="lar-lab" x="320" y="136" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2" fill="#8a7a55" opacity="0">FIOS TRANSPLANTADOS</text>
+        </svg>
+        <div class="cap" id="lar-cap" style="color:#e8d9b0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(.95rem,2vw,1.45rem)"></div>
+      </div>
+    </div></div>
+  </div></div>
+</section>
+
+<!-- ============== 05 BLACK NOVEMBER ============== -->
+<section class="stage" id="st-bn" data-h="390" data-title="BLACK NOVEMBER"
+         data-bg="#000000" data-ink="#f0f0f0" data-acc="#9AE04C" data-soft="#777777">
+  <div class="sticky"><div class="wrap">
+    <div class="panel">
+      <div class="num">05 / 06</div>
+      <div class="tag">Nosso · campanha</div>
+      <h2>Black November</h2>
+      <p class="sub">A landing da campanha da Liga</p>
+      <p class="desc">Uma página de oferta que não começa pela oferta. Começa pelo gráfico do nosso próprio Instagram, antes e depois de a automação entrar.</p>
+      <div class="cena"><b>A cena.</b> A linha cinza arrasta no chão, a faixa marca o dia 6 de outubro, e a verde sobe até os +393% de visualizações nos 30 dias seguintes.</div>
+      <a class="btn" href="https://black.ligadomarketing.com" target="_blank" rel="noopener">Abrir o site →</a>
+    </div>
+    <div class="frameWrap"><div class="frame">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">black.ligadomarketing.com</div></div>
+      <div class="screen" style="background:#000">
+        <svg viewBox="0 0 640 416">
+          <line x1="60" y1="340" x2="590" y2="340" stroke="#222" stroke-width="1"/>
+          <path id="bn-before" d="M60 316 L110 322 L160 310 L210 324 L260 312 L310 320" fill="none" stroke="#4a4a4a" stroke-width="3" stroke-linecap="round"/>
+          <g id="bn-band" opacity="0">
+            <line x1="310" y1="90" x2="310" y2="340" stroke="#9AE04C" stroke-width="1" stroke-dasharray="4 4" opacity=".6"/>
+            <rect x="256" y="62" width="108" height="22" rx="11" fill="#9AE04C"/>
+            <text x="310" y="77" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" font-weight="700" fill="#000">6/10 · AUTOMAÇÃO</text>
+          </g>
+          <path id="bn-after" d="M310 320 L360 296 L410 260 L460 268 L510 196 L560 128" fill="none" stroke="#9AE04C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle id="bn-head" cx="310" cy="320" r="5" fill="#9AE04C" opacity="0"/>
+          <text id="bn-num" x="470" y="104" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="44" font-weight="800" fill="#9AE04C" opacity="0">+0%</text>
+        </svg>
+        <div class="cap" id="bn-cap" style="color:#cfcfcf"></div>
+      </div>
+    </div></div>
+  </div></div>
+</section>
+
+<!-- ============== 06 LIGA ============== -->
+<section class="stage" id="st-liga" data-h="370" data-title="LIGA"
+         data-bg="#0a0410" data-ink="#ece0ff" data-acc="#DFE625" data-soft="#9a86b8">
+  <div class="sticky"><div class="wrap flip">
+    <div class="panel">
+      <div class="num">06 / 06</div>
+      <div class="tag">Nosso · a casa</div>
+      <h2>Liga do Marketing</h2>
+      <p class="sub">O nosso próprio site</p>
+      <p class="desc">Repare que esta página virou roxa. É de propósito: a experiência não vem da nossa paleta. Cada site sai com a cara do dono — nenhum sai com a nossa.</p>
+      <div class="cena"><b>A cena.</b> O escudo se monta peça por peça enquanto a pessoa rola, até o raio amarelo fechar a marca.</div>
+      <a class="btn" href="https://ligadomarketing.com" target="_blank" rel="noopener">Abrir o site →</a>
+    </div>
+    <div class="frameWrap"><div class="frame">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">ligadomarketing.com</div></div>
+      <div class="screen" style="background:#040404">
+        <svg viewBox="0 0 640 416">
+          <g id="liga-shield"></g>
+          <text id="liga-mono" x="320" y="214" text-anchor="middle" font-family="Plus Jakarta Sans" font-size="62" font-weight="800" letter-spacing="-3" fill="#DFE625" opacity="0">LM</text>
+          <g id="liga-dia" opacity="0"><rect x="307" y="253" width="26" height="26" fill="#DFE625" transform="rotate(45 320 266)"/></g>
+        </svg>
+        <div class="cap" id="liga-cap" style="color:#B794FF"></div>
+      </div>
+    </div></div>
+  </div></div>
+</section>
+
+<!-- ============== PROVA DE ALCANCE ============== -->
+<section id="range" class="pad">
+  <div class="kicker">Seis empresas, seis caras</div>
+  <h2 class="mid" style="margin:20px auto 0;max-width:17ch">Nenhum deles se parece com o outro. Nenhum se parece com a gente.</h2>
+  <div class="bars" id="bars">
+    <i style="background:#4d1a22"></i><i style="background:#9AE04C"></i><i style="background:#c9b9a4"></i>
+    <i style="background:#c9a227"></i><i style="background:#2e2e2e"></i><i style="background:#6D28D9"></i>
+  </div>
+</section>
+
+<!-- ============== POR QUE VENDE ============== -->
+<section class="band pad">
+  <div class="kicker">Por que isso vende</div>
+  <h2 class="mid" style="margin:20px 0 0;max-width:19ch">Ninguém manda print de um site bonito. Manda de um site que surpreendeu.</h2>
+  <p class="lead" style="margin-top:24px">É assim que a sua empresa entra em conversas onde você não estava. O site deixa de ser um endereço que o cliente visita uma vez e vira uma coisa que ele mostra para outra pessoa.</p>
+</section>
+
+<!-- ============== MÉTODO ============== -->
+<section class="band pad" style="padding-top:0">
+  <div class="kicker">Como nasce um desses</div>
+  <h2 class="mid" style="margin-top:18px;max-width:15ch">Primeiro a história. O site é consequência.</h2>
+  <div class="steps">
+    <div class="step"><div class="n">01</div><h3>A virada</h3><p>Qual é o segundo exato em que o cliente da sua empresa muda de ideia? A gente acha esse segundo e constrói o site inteiro em volta dele.</p></div>
+    <div class="step"><div class="n">02</div><h3>As cenas</h3><p>A história é quebrada em cenas presas na tela. A pessoa não assiste: ela empurra a história com o dedo, no ritmo dela.</p></div>
+    <div class="step"><div class="n">03</div><h3>No ar</h3><p>Código escrito à mão, arquivo único, abre rápido até em celular ruim, no domínio da sua empresa. Sem construtor, sem plugin, sem mensalidade de plataforma.</p></div>
+  </div>
+</section>
+
+<!-- ============== HONESTIDADE ============== -->
+<section class="band pad" id="honesto">
+  <div class="kicker">Regra da casa</div>
+  <h2 class="mid" style="margin-top:18px">Nenhum número inventado.</h2>
+  <p>Todos os sites desta página estão no ar e você pode abrir agora. Quando um é demonstração, está escrito demonstração. Quando um número aparece na tela, ele veio do cliente ou de um lugar que dá para conferir. Dá mais trabalho — e é o que faz o site ainda estar de pé daqui a um ano, quando alguém perguntar de onde saiu aquele número.</p>
+</section>
+
+<!-- ============== CTA ============== -->
+<section id="cta" class="pad">
+  <div class="kicker">Black Friday da Liga</div>
+  <h2 class="big" style="margin:20px 0 14px">Agora conta a sua.</h2>
+  <p class="lead">São poucas vagas porque cada um começa com uma conversa sobre o seu negócio, não com um modelo pronto. Fecha dia 30 de novembro.</p>
+  <div class="count" id="cd">
+    <div><b id="cd-d">--</b><span>DIAS</span></div>
+    <div><b id="cd-h">--</b><span>HORAS</span></div>
+    <div><b id="cd-m">--</b><span>MIN</span></div>
+    <div><b id="cd-s">--</b><span>SEG</span></div>
+  </div>
+  <a class="btn" href="https://wa.me/5521998867022?text=Oi!%20Vi%20o%20portf%C3%B3lio%20e%20quero%20contar%20a%20hist%C3%B3ria%20da%20minha%20empresa." target="_blank" rel="noopener">Começar a minha história →</a>
+  <p class="obj">Se você acha que a sua empresa não tem uma história, essa conversa é ainda mais necessária. Normalmente ela existe — só nunca foi contada.</p>
+</section>
+
+<footer>
+  Liga do Marketing · sites que contam história<br>
+  <span style="opacity:.7">Os sites de clientes exibidos aqui são publicados com o conhecimento de cada um.</span>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var clamp=function(v,a,b){a=a||0;b=(b===undefined)?1:b;return v<a?a:(v>b?b:v)};
+var seg=function(p,a,b){return clamp((p-a)/(b-a))};
+var lerp=function(a,b,t){return a+(b-a)*t};
+var easeOut=function(t){return 1-Math.pow(1-t,3)};
+var $=function(s){return document.querySelector(s)};
+var SVGNS="http://www.w3.org/2000/svg";
+var reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var root=document.documentElement;
+var BASE={bg:"#050505",ink:"#FEFEFE",acc:"#9AE04C",soft:"#9a9a9a"};
+
+/* ---------- manifesto ---------- */
+(function(){
+  var txt="Ninguém escolhe uma empresa lendo o site. Escolhe sentindo alguma coisa enquanto rola. E quase nenhum site faz sentir nada.";
+  var hi=["sentindo","nada."];
+  var el=$("#manifesto"),parts=txt.split(" ");
+  for(var i=0;i<parts.length;i++){
+    var s=document.createElement("span");
+    s.className="w"+(hi.indexOf(parts[i])>-1?" hi":"");
+    s.textContent=parts[i]+" ";
+    el.appendChild(s);
+  }
+})();
+
+/* ---------- ELO ---------- */
+var eloCards=["WhatsApp 22:07","“vou pensar”","concorrência","imposto","sócio","equipe"];
+(function(){
+  var g=$("#elo-cards"),th=$("#elo-threads");
+  for(var i=0;i<6;i++){
+    var a=(-90+i*60)*Math.PI/180, cx=320+Math.cos(a)*188, cy=208+Math.sin(a)*126;
+    var gg=document.createElementNS(SVGNS,"g");
+    gg.setAttribute("transform","translate("+cx+","+cy+")");
+    var r=document.createElementNS(SVGNS,"rect");
+    r.setAttribute("x",-62);r.setAttribute("y",-16);r.setAttribute("width",124);r.setAttribute("height",32);
+    r.setAttribute("rx",6);r.setAttribute("fill","#612129");
+    r.setAttribute("stroke","#f0b9b3");r.setAttribute("stroke-width","1");r.setAttribute("stroke-opacity",".45");
+    var t=document.createElementNS(SVGNS,"text");
+    t.setAttribute("text-anchor","middle");t.setAttribute("y",4);
+    t.setAttribute("font-family","Plus Jakarta Sans");t.setAttribute("font-size","11");t.setAttribute("fill","#f6e3df");
+    t.textContent=eloCards[i];
+    gg.appendChild(r);gg.appendChild(t);g.appendChild(gg);
+    var ln=document.createElementNS(SVGNS,"line");
+    ln.setAttribute("x1",cx);ln.setAttribute("y1",cy);ln.setAttribute("x2",320);ln.setAttribute("y2",208);
+    th.appendChild(ln);
+  }
+})();
+
+/* ---------- ARKYON chat ---------- */
+var arkMsgs=[
+ {side:"in",  t:"Oi, queria saber o valor da avaliação 😊",time:"23:47"},
+ {side:"sys", t:"— sem resposta —"},
+ {side:"sys2",t:"08:12 · paciente já marcou em outra clínica",bad:true}
+];
+var arkMsgs2=[
+ {side:"in", t:"Oi, queria saber o valor da avaliação 😊",time:"23:47"},
+ {side:"out",t:"Oi, Camila! Posso te explicar em 1 minuto 🙂",time:"23:47 · 4s"},
+ {side:"out",t:"Tenho sábado 9h ou 11h. Qual fica melhor?",time:"23:48"},
+ {side:"in", t:"9h 🙌",time:"23:49"},
+ {side:"chip",t:"CRM · Camila → Agendado · sáb 9h"}
+];
+function arkBubble(m){
+  var d=document.createElement("div");
+  var base="max-width:76%;padding:8px 11px;border-radius:12px;line-height:1.35;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s;";
+  if(m.side==="in"){d.style.cssText=base+"align-self:flex-start;background:#17231a;color:#dfe8df;border-bottom-left-radius:4px"}
+  else if(m.side==="out"){d.style.cssText=base+"align-self:flex-end;background:#9AE04C;color:#07120a;border-bottom-right-radius:4px;font-weight:600"}
+  else if(m.side==="chip"){d.style.cssText=base+"align-self:center;background:none;border:1px solid #9AE04C;color:#9AE04C;border-radius:100px;font-family:ui-monospace,monospace;font-size:.72em;letter-spacing:.04em;padding:6px 12px"}
+  else{d.style.cssText=base+"align-self:center;color:"+(m.bad?"#e07b6a":"#5f6b60")+";font-family:ui-monospace,monospace;font-size:.76em;letter-spacing:.04em"}
+  d.innerHTML=m.t+(m.time?'<span style="display:block;margin-top:3px;font-size:.72em;opacity:.6;font-family:ui-monospace,monospace">'+m.time+'</span>':"");
+  return d;
+}
+var arkChat=$("#ark-chat"),arkSetA=[],arkSetB=[];
+(function(){
+  var i;
+  for(i=0;i<arkMsgs.length;i++){var b=arkBubble(arkMsgs[i]);arkSetA.push(b);arkChat.appendChild(b)}
+  for(i=0;i<arkMsgs2.length;i++){var c=arkBubble(arkMsgs2[i]);c.style.display="none";arkSetB.push(c);arkChat.appendChild(c)}
+})();
+
+/* ---------- AURA pontos ---------- */
+var auraPts=[
+ {x:320,y:76,lx:404,ly:68,n:"Rosto"},
+ {x:320,y:114,lx:398,ly:110,n:"Pescoço"},
+ {x:294,y:166,lx:206,ly:156,n:"Mamas"},
+ {x:320,y:234,lx:202,ly:242,n:"Abdômen"},
+ {x:374,y:284,lx:430,ly:292,n:"Quadril e glúteos"},
+ {x:288,y:348,lx:204,ly:356,n:"Coxas"}
+];
+var auraEls=[];
+(function(){
+  var g=$("#aura-pts");
+  for(var i=0;i<auraPts.length;i++){
+    var p=auraPts[i],right=p.lx>p.x;
+    var gg=document.createElementNS(SVGNS,"g");gg.setAttribute("opacity","0");
+    var ln=document.createElementNS(SVGNS,"line");
+    ln.setAttribute("x1",p.x);ln.setAttribute("y1",p.y);ln.setAttribute("x2",p.lx);ln.setAttribute("y2",p.ly);
+    ln.setAttribute("stroke","#a08f74");ln.setAttribute("stroke-width",".9");
+    var c=document.createElementNS(SVGNS,"circle");
+    c.setAttribute("cx",p.x);c.setAttribute("cy",p.y);c.setAttribute("r",3.2);c.setAttribute("fill","#8a6a3a");
+    var t=document.createElementNS(SVGNS,"text");
+    t.setAttribute("x",p.lx+(right?9:-9));t.setAttribute("y",p.ly+5);
+    t.setAttribute("text-anchor",right?"start":"end");
+    t.setAttribute("font-family","Cormorant Garamond,Georgia,serif");t.setAttribute("font-style","italic");
+    t.setAttribute("font-size","17");t.setAttribute("fill","#4a4036");
+    t.textContent=p.n;
+    gg.appendChild(ln);gg.appendChild(c);gg.appendChild(t);g.appendChild(gg);auraEls.push(gg);
+  }
+})();
+
+/* ---------- LARISSA fios ---------- */
+var larEls=[];
+(function(){
+  var g=$("#lar-strands");
+  for(var i=0;i<92;i++){
+    var t=i/91, x0=320+(t-0.5)*330, sway=(i%2?1:-1)*(13+((i*37)%30));
+    var h=104+((i*53)%156);
+    var d="M"+x0.toFixed(1)+" 304 C "+(x0+sway).toFixed(1)+" "+(304-h*0.45).toFixed(1)+", "+(x0-sway*0.6).toFixed(1)+" "+(304-h*0.75).toFixed(1)+", "+(x0+sway*0.3).toFixed(1)+" "+(304-h).toFixed(1);
+    var p=document.createElementNS(SVGNS,"path");
+    p.setAttribute("d",d);p.setAttribute("stroke-opacity",(0.18+(i%7)*0.12).toFixed(2));
+    g.appendChild(p);
+    var L=p.getTotalLength();
+    p.style.strokeDasharray=L;p.style.strokeDashoffset=L;
+    larEls.push({el:p,len:L,order:Math.abs(t-0.5)*2});
+  }
+})();
+
+/* ---------- LIGA escudo ---------- */
+var ligaParts=[],ligaOut=null;
+var SHIELD="M320 86 L428 128 C428 222 404 298 320 342 C236 298 212 222 212 128 Z";
+(function(){
+  var g=$("#liga-shield");
+  var defs=document.createElementNS(SVGNS,"defs");
+  var cp=document.createElementNS(SVGNS,"clipPath");
+  cp.setAttribute("id","ligaClip");
+  var sp=document.createElementNS(SVGNS,"path");
+  sp.setAttribute("d",SHIELD);
+  cp.appendChild(sp);defs.appendChild(cp);g.appendChild(defs);
+  var inner=document.createElementNS(SVGNS,"g");
+  inner.setAttribute("clip-path","url(#ligaClip)");
+  g.appendChild(inner);
+  var cols=["#7C3AED","#6D28D9","#6D28D9","#5B21B6"];
+  for(var i=0;i<4;i++){
+    var r=document.createElementNS(SVGNS,"rect");
+    r.setAttribute("x",212+i*54);r.setAttribute("y",70);
+    r.setAttribute("width",55);r.setAttribute("height",290);
+    r.setAttribute("fill",cols[i]);
+    inner.appendChild(r);
+    ligaParts.push({el:r,dy:(i%2?1:-1)*330});
+  }
+  ligaOut=document.createElementNS(SVGNS,"path");
+  ligaOut.setAttribute("d",SHIELD);
+  ligaOut.setAttribute("fill","none");
+  ligaOut.setAttribute("stroke","#8B47F0");
+  ligaOut.setAttribute("stroke-width","1.6");
+  ligaOut.setAttribute("opacity","0");
+  g.appendChild(ligaOut);
+})();
+
+/* ================= STAGES ================= */
+var stages=[],spineEl=$("#spine");
+(function(){
+  var nodes=document.querySelectorAll(".stage");
+  for(var i=0;i<nodes.length;i++){
+    var n=nodes[i];
+    n.style.height=(reduced?115:parseInt(n.dataset.h,10))+"vh";
+    stages.push(n);
+    var b=document.createElement("button");
+    b.innerHTML='<span>'+n.dataset.title+'</span><i></i>';
+    b.setAttribute("data-target",n.id);
+    spineEl.appendChild(b);
+  }
+  spineEl.addEventListener("click",function(e){
+    var el=e.target;
+    while(el&&el!==spineEl&&!el.getAttribute("data-target"))el=el.parentNode;
+    var t=el&&el.getAttribute?el.getAttribute("data-target"):null;
+    if(t){document.getElementById(t).scrollIntoView()}
+  });
+})();
+
+var scenes={
+"st-elo":function(p){
+  var a=easeOut(seg(p,0,.26));
+  $("#elo-L").setAttribute("transform","translate("+lerp(-230,0,a).toFixed(1)+",0)");
+  $("#elo-R").setAttribute("transform","translate("+lerp(230,0,a).toFixed(1)+",0)");
+  var lock=seg(p,.24,.33);
+  $("#elo-flash").setAttribute("r",(lock*(1-lock)*4*90).toFixed(1));
+  $("#elo-flash").setAttribute("opacity",(lock*(1-lock)*4*.5).toFixed(2));
+  var out=seg(p,.4,.52);
+  $("#elo-links").setAttribute("opacity",(1-out).toFixed(2));
+  var ch=seg(p,.46,.9);
+  $("#elo-chaos").setAttribute("opacity",Math.min(1,ch*2.4).toFixed(2));
+  var cards=$("#elo-cards").children, th=$("#elo-threads").children;
+  for(var i=0;i<cards.length;i++){
+    var s=clamp((ch-i*0.1)/0.3);
+    cards[i].setAttribute("opacity",s.toFixed(2));
+    var tr=cards[i].getAttribute("transform").replace(/ scale\([^)]*\)/,"");
+    cards[i].setAttribute("transform",tr+" scale("+lerp(.72,1,easeOut(s)).toFixed(3)+")");
+    th[i].setAttribute("opacity",(clamp((ch-.25-i*0.08)/0.3)*.55).toFixed(2));
+  }
+  var pulse=seg(p,.78,1);
+  $("#elo-you").setAttribute("r",(30+Math.sin(p*34)*1.6+pulse*9).toFixed(1));
+  var cap=$("#elo-cap"),txt="";
+  if(p<.38) txt="Toda clínica é feita de elos.";
+  else if(p<.72) txt="E, sem perceber, você virou gerente de tudo.";
+  else txt="O único elo entre elas é você.";
+  if(cap.textContent!==txt)cap.textContent=txt;
+},
+"st-ark":function(p){
+  var i,s;
+  var phase1=seg(p,0,.34), rew=seg(p,.36,.52), phase2=seg(p,.52,.94);
+  var showB=p>=.46;
+  for(i=0;i<arkSetA.length;i++){
+    arkSetA[i].style.display=showB?"none":"";
+    s=clamp((phase1-i*0.3)/0.26);
+    arkSetA[i].style.opacity=s;
+    arkSetA[i].style.transform="translateY("+((1-s)*8).toFixed(1)+"px)";
+  }
+  for(i=0;i<arkSetB.length;i++){
+    arkSetB[i].style.display=showB?"":"none";
+    s=clamp((phase2-i*0.17)/0.2);
+    arkSetB[i].style.opacity=s;
+    arkSetB[i].style.transform="translateY("+((1-s)*8).toFixed(1)+"px)";
+  }
+  $("#ark-rewind").style.transform="translateX("+lerp(110,-110,rew).toFixed(1)+"%)";
+  var cap=$("#ark-cap"),txt="";
+  if(p<.3) txt="23:47. Uma paciente mandou mensagem.";
+  else if(p<.5) txt="Sem estrutura, ela não volta.";
+  else if(p<.8) txt="A mesma noite, com a Arkyon.";
+  else txt="Mesma paciente. Outro desfecho.";
+  if(cap.textContent!==txt)cap.textContent=txt;
+},
+"st-aura":function(p){
+  var body=seg(p,0,.18);
+  $("#aura-body").setAttribute("opacity",body.toFixed(2));
+  var reveal=seg(p,.16,.92);
+  for(var i=0;i<auraEls.length;i++){
+    var s=clamp((reveal-i*0.13)/0.22);
+    auraEls[i].setAttribute("opacity",s.toFixed(2));
+  }
+  var cap=$("#aura-cap"),txt=p<.25?"O seu corpo, com precisão e delicadeza.":(p<.8?"Aponte onde incomoda.":"Seis regiões. Um caminho para cada uma.");
+  if(cap.textContent!==txt)cap.textContent=txt;
+},
+"st-lar":function(p){
+  var beat=Math.sin(p*46)*0.5+0.5;
+  var grow=seg(p,.1,.84);
+  $("#lar-foll").setAttribute("r",(6+beat*2.4+grow*1.5).toFixed(2));
+  $("#lar-halo").setAttribute("r",(8+beat*16).toFixed(2));
+  $("#lar-halo").setAttribute("opacity",(0.5*(1-beat)*(1-grow*0.7)).toFixed(2));
+  for(var i=0;i<larEls.length;i++){
+    var o=larEls[i], s=clamp((grow-o.order*0.45)/0.5);
+    o.el.style.strokeDashoffset=(o.len*(1-easeOut(s))).toFixed(1);
+  }
+  var cShow=seg(p,.46,.92);
+  var n=Math.round(easeOut(cShow)*6267857);
+  $("#lar-count").textContent=n.toLocaleString("pt-BR");
+  $("#lar-count").setAttribute("opacity",Math.min(1,cShow*3).toFixed(2));
+  $("#lar-lab").setAttribute("opacity",Math.min(1,cShow*3).toFixed(2));
+  var cap=$("#lar-cap"),txt=p<.3?"Começa em um folículo.":(p<.72?"E, dali, um fio de cada vez.":"Assinatura de naturalidade.");
+  if(cap.textContent!==txt)cap.textContent=txt;
+},
+"st-bn":function(p){
+  var b=$("#bn-before"), a=$("#bn-after");
+  if(!b._L){b._L=b.getTotalLength();b.style.strokeDasharray=b._L;a._L=a.getTotalLength();a.style.strokeDasharray=a._L}
+  var s1=seg(p,.04,.34), s2=seg(p,.46,.86);
+  b.style.strokeDashoffset=(b._L*(1-s1)).toFixed(1);
+  a.style.strokeDashoffset=(a._L*(1-easeOut(s2))).toFixed(1);
+  $("#bn-band").setAttribute("opacity",seg(p,.34,.46).toFixed(2));
+  $("#bn-head").setAttribute("opacity",(s2>0?1:0));
+  var pt=a.getPointAtLength(a._L*easeOut(s2));
+  $("#bn-head").setAttribute("cx",pt.x);$("#bn-head").setAttribute("cy",pt.y);
+  var nShow=seg(p,.6,.95);
+  $("#bn-num").textContent="+"+Math.round(easeOut(nShow)*393)+"%";
+  $("#bn-num").setAttribute("opacity",Math.min(1,nShow*2.6).toFixed(2));
+  var cap=$("#bn-cap"),txt=p<.34?"Constante. E parado.":(p<.5?"6 de outubro. A automação entrou.":"30 dias depois, no mesmo perfil.");
+  if(cap.textContent!==txt)cap.textContent=txt;
+},
+"st-liga":function(p){
+  var asm=seg(p,.05,.62);
+  for(var i=0;i<ligaParts.length;i++){
+    var o=ligaParts[i], s=easeOut(clamp((asm-i*0.085)/0.52));
+    o.el.setAttribute("transform","translate(0,"+(o.dy*(1-s)).toFixed(1)+")");
+  }
+  ligaOut.setAttribute("opacity",seg(p,.5,.68).toFixed(2));
+  var m=seg(p,.5,.72);
+  $("#liga-mono").setAttribute("opacity",m.toFixed(2));
+  var d=seg(p,.68,.86);
+  $("#liga-dia").setAttribute("opacity",d.toFixed(2));
+  $("#liga-dia").setAttribute("transform","translate(0,"+((1-easeOut(d))*-40).toFixed(1)+")");
+  var cap=$("#liga-cap"),txt=p<.5?"Peça por peça.":(p<.8?"Até a marca fechar.":"Ative o modo herói da sua empresa.");
+  if(cap.textContent!==txt)cap.textContent=txt;
+}
+};
+
+/* ---------- paleta da página ---------- */
+var curPal="";
+function setPal(o){
+  var key=o.bg;
+  if(key===curPal)return;
+  curPal=key;
+  root.style.setProperty("--pg-bg",o.bg);
+  root.style.setProperty("--pg-ink",o.ink);
+  root.style.setProperty("--pg-acc",o.acc);
+  root.style.setProperty("--pg-soft",o.soft);
+  var m=document.querySelector('meta[name="theme-color"]');
+  if(m)m.setAttribute("content",o.bg);
+}
+
+/* ---------- hero ---------- */
+function hero(){
+  var h=$("#hero"),r=h.getBoundingClientRect(),H=window.innerHeight;
+  var p=clamp(-r.top/(h.offsetHeight-H));
+  var dead=$("#dead");
+  dead.style.opacity=(1-seg(p,.34,.52)).toFixed(2);
+  dead.style.transform="translateY("+(-seg(p,.34,.6)*44).toFixed(1)+"px) scale("+lerp(1,.93,seg(p,.3,.6)).toFixed(3)+")";
+  $("#strike").style.transform="scaleX("+easeOut(seg(p,.2,.36)).toFixed(3)+")";
+  var a=$("#h1a"),b=$("#h1b"),c=$("#h1c");
+  a.style.opacity=(1-seg(p,.3,.46)).toFixed(2);
+  a.style.transform="translateY("+(-seg(p,.3,.5)*28).toFixed(1)+"px)";
+  var bs=seg(p,.44,.66);
+  b.style.opacity=bs.toFixed(2);
+  b.style.transform="translateY("+((1-easeOut(bs))*36).toFixed(1)+"px)";
+  var cs=seg(p,.66,.86);
+  c.style.opacity=cs.toFixed(2);
+  c.style.transform="translateY("+((1-easeOut(cs))*22).toFixed(1)+"px)";
+}
+
+/* ---------- manifesto reveal ---------- */
+var mWords=document.querySelectorAll("#manifesto .w");
+function manifesto(){
+  var el=$("#tese"),r=el.getBoundingClientRect(),H=window.innerHeight;
+  var p=clamp((H*0.86-r.top)/(r.height*0.7));
+  var n=Math.floor(p*mWords.length*1.14);
+  for(var i=0;i<mWords.length;i++){
+    if(i<n)mWords[i].classList.add("on");else mWords[i].classList.remove("on");
+  }
+}
+
+/* ---------- barras de alcance ---------- */
+var barsDone=false;
+function bars(){
+  if(barsDone)return;
+  var r=$("#range").getBoundingClientRect();
+  if(r.top<window.innerHeight*0.75){
+    var b=$("#bars").children;
+    for(var i=0;i<b.length;i++){
+      (function(el,d){setTimeout(function(){el.style.transform="scaleY(1)"},d)})(b[i],i*90);
+    }
+    barsDone=true;
+  }
+}
+
+/* ---------- loop ---------- */
+var spineBtns=spineEl.querySelectorAll("button");
+var ticking=false;
+function frame(){
+  var H=window.innerHeight, doc=document.documentElement;
+  $("#prog").style.width=(clamp(window.scrollY/(doc.scrollHeight-H))*100).toFixed(2)+"%";
+  hero();manifesto();bars();
+  var active=-1;
+  for(var i=0;i<stages.length;i++){
+    var st=stages[i],r=st.getBoundingClientRect();
+    if(r.bottom<-60||r.top>H+60)continue;
+    var p=clamp(-r.top/(st.offsetHeight-H));
+    if(reduced)p=1;
+    scenes[st.id](p);
+    var sc=st.querySelector(".frameWrap");
+    var enter=clamp((H-r.top)/(H*0.85)), leave=clamp((r.bottom)/(H*0.85));
+    var k=Math.min(enter,leave,1);
+    sc.style.transform="scale("+lerp(.94,1,easeOut(k)).toFixed(4)+")";
+    sc.style.opacity=lerp(.25,1,easeOut(k)).toFixed(3);
+    if(r.top<=H*0.45&&r.bottom>H*0.45)active=i;
+  }
+  if(active>=0){
+    var d=stages[active].dataset;
+    setPal({bg:d.bg,ink:d.ink,acc:d.acc,soft:d.soft});
+  }else{
+    setPal(BASE);
+  }
+  for(var j=0;j<spineBtns.length;j++){
+    if(j===active)spineBtns[j].classList.add("on");else spineBtns[j].classList.remove("on");
+  }
+  ticking=false;
+}
+function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+window.addEventListener("scroll",onScroll,{passive:true});
+window.addEventListener("resize",function(){
+  for(var i=0;i<stages.length;i++){stages[i].style.height=(reduced?115:parseInt(stages[i].dataset.h,10))+"vh"}
+  onScroll();
+});
+
+/* ---------- contagem regressiva ---------- */
+(function(){
+  var end=new Date("2026-11-30T23:59:59-03:00").getTime();
+  function tick(){
+    var d=end-Date.now();
+    if(d<0)d=0;
+    var pad=function(n){return(n<10?"0":"")+n};
+    $("#cd-d").textContent=pad(Math.floor(d/864e5));
+    $("#cd-h").textContent=pad(Math.floor(d/36e5)%24);
+    $("#cd-m").textContent=pad(Math.floor(d/6e4)%60);
+    $("#cd-s").textContent=pad(Math.floor(d/1e3)%60);
+  }
+  tick();setInterval(tick,1000);
+})();
+
+frame();
+})();
+</script>
+</body>
+</html>
