@@ -51,7 +51,10 @@ body_media: [{"type":"image/jpeg","url":"<raw>"}, ...]   (carrossel = vários it
 - **edit-post não funciona** (erro de JSON). Para mudar horário ou arte, crie um post novo e peça para o Ighor apagar o antigo no Planejador. Avise sempre.
 - **Antes de agendar, rode `get-posts`** no período (body_type "all") para não marcar dois posts no mesmo horário.
 - **Legenda:** nunca use os caracteres de maior e menor (o HighLevel transforma em &gt;).
-- **Collab** com @arkyon.io não dá pela API. O Ighor coloca à mão.
+- **Collab** com @arkyon.io não dá pela API. O Ighor coloca à mão depois que o post sai (Editar → Marcar pessoas → Convidar colaborador) e aceita no perfil da Arkyon.
+  - Leva collab: posts de negócio, automação, IA, case (+393%), Black e tendências de mercado (ex.: Economist 2027).
+  - Não leva: post pessoal, família, bastidor de viagem, jogos e reações de stories.
+  - Ao agendar, avisar o Ighor quais posts do dia levam collab.
 - **Enquete, caixinha, quiz oficial, link e menção** também não vão pela API. Faça story "toque/responda com emoji" ou deixe para o Ighor colar na hora.
 - Se o conector HighLevel cair: mande os arquivos (SendUserFile) para postar à mão e peça para reconectar.
 - Se uma chamada some sem resposta, confira com get-posts antes de repetir (evita duplicado).
