@@ -70,7 +70,7 @@ Episódio 2: +393% de visualizações nos primeiros 30 dias da automação. No e
 2. "Muita gente passou a me ver. Mas quase ninguém novo me seguiu."
 3. "E sabe por quê? Eu dava dica. Dica a pessoa salva e vai embora."
 4. "Ninguém segue por causa de uma dica. A pessoa segue pra saber o fim de uma história."
-5. "Por isso eu tô fazendo esta série. Você tá vendo o teste acontecer, ao vivo."
+5. "Por isso eu tô fazendo esta série. Hoje eu tenho [NÚMERO DO DIA] seguidores. A minha meta é chegar a 10 mil. Você tá vendo o teste acontecer, ao vivo."
 6. "Mas o +393% me ensinou uma coisa que vale pra qualquer empresa: quem aparece todo dia é lembrado. E quem é lembrado é chamado na hora da compra."
 7. "Amanhã eu te conto o que eu decidi fazer com isso. Me segue."
 
@@ -123,9 +123,10 @@ Pra cada episódio, teve isso aqui. Qual episódio você mais gostou? Me conta n
 
 ---
 
-## Depois da Black: a série continua
-O conflito do ep. 3 (visualização que não vira seguidor) é real e ainda não acabou. Ele rende a temporada 2:
-- "O que eu mudei pra transformar visualização em seguidor";
-- os números de seguidores a cada 2 semanas, só dados do painel.
-
-Antes de começar, vale definir com você uma meta e um prazo de seguidores. É isso que dá tensão à temporada 2.
+## Depois da Black: temporada 2 · "Rumo aos 10 mil"
+Metas do Ighor: **10 mil** (1ª), **50 mil** (2ª) e **100 mil** (3ª) seguidores. Ponto de partida: cerca de 1.915 em 18/11/2026.
+- O título fixo vira "RUMO AOS 10 MIL · EP. X", com o contador de seguidores na tela em todo episódio (só o número real do dia).
+- Atualização a cada 2 semanas: "eram X, hoje são Y, o que funcionou e o que não funcionou".
+- A cada meta batida, um episódio de comemoração ("bateu 10 mil"), e o título passa para "RUMO AOS 50 MIL".
+- Para cumprir a meta é preciso volume de Reels: o método do Afonso pede 1 a 3 Reels por dia falando com a câmera, por 90 dias.
+- Prazo de cada meta: a definir com o Ighor.
