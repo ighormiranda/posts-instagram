@@ -61,7 +61,7 @@ body_media: [{"type":"image/jpeg","url":"<raw>"}, ...]   (carrossel = vários it
 - Se uma chamada some sem resposta, confira com get-posts antes de repetir (evita duplicado).
 
 ## 7. Rotina padrão do perfil do Ighor
-- **Feed:** 2 posts por dia (12h e 19h). Reels às 18h quando houver. Sexta 18h: "Novidades da IA" (ver `ferramentas/README-novidades.md` e a tarefa agendada de quinta 9h47).
+- **Feed (desde 21/11):** 3 posts por dia em horário quebrado: 11h07 foto real + frase (1 imagem), 15h07 carrossel de conteúdo, 19h23 carrossel (oferta na semana da Black). Reels do "Diário da Máquina" às 18h07 quando houver. Conteúdo de 21 a 27/11 em `2026-11-semana-07/` (conteudo.json + legendas.json + plano.json). Sexta 18h: "Novidades da IA" (ver `ferramentas/README-novidades.md` e a tarefa agendada de quinta 9h47).
 - **Stories automáticos:**
   - 9h: dica
   - 12h15: chamada do post das 12h
