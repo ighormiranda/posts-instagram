@@ -1,0 +1,43 @@
+{
+ "id": "ia-2026-11-20",
+ "semana": "SEMANA DE 16 A 20/11",
+ "titulo": "O que saiu de IA essa semana\n*e o que muda pro seu negócio.*",
+ "foto": "estudio-blazer-azul/retrato-bracos-cruzados.jpg",
+ "itens": [
+  {
+   "empresa": "Anthropic",
+   "titulo": "A dona do Claude abriu capital na bolsa",
+   "texto": "A Anthropic fixou o preço da ação em US$ 83 na Nasdaq, com o código ANT. São 980 milhões de ações na oferta, com estreia prevista pra quinta (19/11).",
+   "pratica": "IA virou setor de bolsa: as ferramentas que você usa têm empresa grande e duradoura por trás.",
+   "fonte": "Anthropic, comunicado oficial de 18/11 (anthropic.com/news)"
+  },
+  {
+   "empresa": "OpenAI",
+   "titulo": "Saíram o GPT-6.2 Astra e o GPT-6.2 Sol",
+   "texto": "Lançados na terça (17/11) no ChatGPT Work, no Codex e na API. O Astra é pros trabalhos mais difíceis; o Sol, pro dia a dia, por cerca de um quinto do custo.",
+   "pratica": "Use o Sol nas tarefas do dia e guarde o Astra pras análises pesadas: gasta menos.",
+   "fonte": "OpenAI, anúncio oficial de 17/11 (openai.com)"
+  },
+  {
+   "empresa": "OpenAI",
+   "titulo": "Chegou o ChatGPT for Sales",
+   "texto": "Um espaço só pra vendas, com mais de 30 integrações. Prepara reunião, monta lista de contas, escreve follow-up e aponta negócio em risco.",
+   "pratica": "Seu vendedor chega na call preparado e não esquece o follow-up.",
+   "fonte": "OpenAI, anúncio oficial de 17/11 (openai.com)"
+  },
+  {
+   "empresa": "Google",
+   "titulo": "Google lançou o Gemini 4 Neon",
+   "texto": "Saiu na quarta (18/11) pra quem assina Google AI Pro e Ultra. Entrega qualidade perto do modelo top do Google, só que mais rápido e mais barato.",
+   "pratica": "Se você assina o Gemini, escolha Neon no menu pra análises mais profundas.",
+   "fonte": "Google (blog.google, Introducing Gemini 4 Neon)"
+  },
+  {
+   "empresa": "Microsoft",
+   "titulo": "Word, Excel e PowerPoint dentro do Copilot",
+   "texto": "Anunciado no Microsoft Ignite (17/11): o app Copilot agora abre e edita os arquivos do Office direto, salvando no OneDrive.",
+   "pratica": "Peça a planilha ou a apresentação pro Copilot e já saia com o arquivo pronto pra editar.",
+   "fonte": "Microsoft (Ignite 2026 Book of News)"
+  }
+ ]
+}
