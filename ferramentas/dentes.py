@@ -17,7 +17,13 @@ def whiten(im):
     hsv=cv2.cvtColor(roi,cv2.COLOR_BGR2HSV).astype(np.float32)
     H,S,V=hsv[...,0],hsv[...,1],hsv[...,2]
     m=((H>=11)&(H<=38)&(S<95)&(V>140)).astype(np.float32)
+    hh,ww=m.shape
+    ell=np.zeros((hh,ww),np.uint8); cv2.ellipse(ell,(ww//2,int(hh*0.36)),(int(ww*0.27),int(hh*0.24)),0,0,360,1,-1)
+    m=m*ell
     m=cv2.morphologyEx(m,cv2.MORPH_OPEN,np.ones((3,3)))
+    n,lab,st,_=cv2.connectedComponentsWithStats((m>0).astype(np.uint8))
+    keep=np.zeros(n,bool); keep[1:]=st[1:,cv2.CC_STAT_AREA]>=80
+    m=(keep[lab]).astype(np.float32)
     m=cv2.GaussianBlur(m,(0,0),2.5)
     S2=S*(1-0.55*m); V2=np.minimum(255,V*(1+0.07*m))
     hsv[...,1]=S2; hsv[...,2]=V2
