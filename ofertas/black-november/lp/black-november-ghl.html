@@ -44,6 +44,7 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 .live{animation:pulse 1.6s ease-in-out infinite}
 .ring{transform-box:fill-box;transform-origin:center;animation:ring 1.6s ease-out infinite}
 .chapters{display:flex;gap:10px}
+@media (max-width: 600px){.chapters{gap:6px}.chl{font-size:9.5px!important;letter-spacing:.03em!important;white-space:nowrap}}
 .scrollcue{position:fixed;left:50%;bottom:36px;z-index:70;transform:translateX(-50%);width:76px;height:76px;padding:0;border:0;border-radius:50%;cursor:pointer;background:#9AE04C;color:#0A0A0A;display:flex;align-items:center;justify-content:center;animation:cueGlow 1.8s ease-out infinite;transition:opacity .15s linear}
 .scrollcue:hover{background:#B5F070}
 .scrollcue .cue-arrow{display:inline-flex;animation:cueBob 1.2s ease-in-out infinite}
@@ -147,18 +148,18 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 .zoom{animation:zoomIn linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
 .progress{transform-origin:left;animation:grow linear both;animation-timeline:scroll(root)}
 
-.story{height:4400px;view-timeline-name:--story;view-timeline-axis:block}
+.story{height:5600px;view-timeline-name:--story;view-timeline-axis:block}
 .seg{transform-origin:left;animation:grow linear both;animation-timeline:--story}
-.seg1{animation-range:contain 4% contain 42%}
-.seg2{animation-range:contain 42% contain 54%}
-.seg3{animation-range:contain 54% contain 76%}
-.seg4{animation-range:contain 76% contain 96%}
+.seg1{animation-range:contain 3.2% contain 33.6%}
+.seg2{animation-range:contain 33.6% contain 43.2%}
+.seg3{animation-range:contain 43.2% contain 60.8%}
+.seg4{animation-range:contain 60.8% contain 76.8%}
 .chl{color:#5C5C5C;animation:chOn linear both;animation-timeline:--story}
-.chl1{animation-range:contain 4% contain 42%}
-.chl2{animation-range:contain 42% contain 54%}
-.chl3{animation-range:contain 54% contain 76%}
-.chl4{animation-name:chStay;animation-range:contain 76% contain 80%}
-.enddot{opacity:0;animation:fadeIn linear both;animation-timeline:--story;animation-range:contain 73% contain 76%}
+.chl1{animation-range:contain 3.2% contain 33.6%}
+.chl2{animation-range:contain 33.6% contain 43.2%}
+.chl3{animation-range:contain 43.2% contain 60.8%}
+.chl4{animation-range:contain 60.8% contain 76.8%}
+.enddot{opacity:0;animation:fadeIn linear both;animation-timeline:--story;animation-range:contain 89% contain 92%}
 .st{animation:stepOn linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
 @media (min-width: 900px) and (min-height: 700px){
 .how{height:2800px;view-timeline-name:--how;view-timeline-axis:block}
@@ -174,19 +175,26 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 .stage svg[role=img]{max-height:max(160px,calc(100vh - 420px))}
 .caps{display:block;position:relative;height:clamp(120px,15vw,170px)}
 .cap{position:absolute;left:0;right:0;top:0;opacity:0;animation:capIO linear both;animation-timeline:--story}
-.c0{opacity:1;animation-name:capOut;animation-range:contain 1% contain 6%}
-.c1{animation-range:contain 6% contain 26%}
-.c2{animation-range:contain 24% contain 44%}
-.c3{animation-range:contain 42% contain 56%}
-.c4{animation-range:contain 54% contain 76%}
-.c5{animation-range:contain 76% contain 96%}
+.c0{opacity:1;animation-name:capOut;animation-range:contain 0.8% contain 4.8%}
+.c1{animation-range:contain 4.8% contain 20.8%}
+.c2{animation-range:contain 19.2% contain 35.2%}
+.c3{animation-range:contain 33.6% contain 44.8%}
+.c4{animation-range:contain 43.2% contain 60.8%}
+.c5{animation-range:contain 60.8% contain 76.8%}
 .cap.c6{animation-name:capIn;animation-range:contain 95% contain 99%}
-.gdraw{stroke-dasharray:1;animation-name:draw,dim;animation-timing-function:linear;animation-fill-mode:both;animation-timeline:--story,--story;animation-range:contain 6% contain 40%,contain 56% contain 62%}
-.peak{opacity:0;animation:fadeIn linear both;animation-timeline:--story;animation-range:contain 28% contain 33%}
-.mark{opacity:0;animation:fadeIn linear both;animation-timeline:--story;animation-range:contain 44% contain 50%}
-.vdraw{stroke-dasharray:1;animation:draw linear both;animation-timeline:--story;animation-range:contain 54% contain 74%}
-.countwrap{opacity:0;transform-origin:left bottom;animation:popIn linear both;animation-timeline:--story;animation-range:contain 76% contain 84%}
-.hint{display:flex;animation:fadeOut linear both;animation-timeline:--story;animation-range:contain 0% contain 5%}
+.gdraw{stroke-dasharray:1;animation-name:draw,dim;animation-timing-function:linear;animation-fill-mode:both;animation-timeline:--story,--story;animation-range:contain 4.8% contain 32%,contain 44.8% contain 49.6%}
+.peak{opacity:0;animation:fadeIn linear both;animation-timeline:--story;animation-range:contain 22.4% contain 26.4%}
+.mark{opacity:0;animation:fadeIn linear both;animation-timeline:--story;animation-range:contain 35.2% contain 40%}
+.vdraw{stroke-dasharray:1;animation:draw linear both;animation-timeline:--story;animation-range:contain 43.2% contain 59.2%}
+.countwrap{opacity:0;transform-origin:left bottom;animation-name:popIn,fadeOut;animation-timing-function:linear;animation-fill-mode:both,forwards;animation-timeline:--story,--story;animation-range:contain 60.8% contain 67.2%,contain 77% contain 81%}
+.hint{display:flex;animation:fadeOut linear both;animation-timeline:--story;animation-range:contain 0% contain 4%}
+.seg5{animation-range:contain 77% contain 95%}
+.chl5{animation-name:chStay;animation-range:contain 77% contain 80%}
+.cap.c7{animation-range:contain 77% contain 95%}
+.toprow{position:relative}
+.countwrap2{position:absolute;right:0;bottom:0;opacity:0;transform-origin:right bottom;animation:popIn linear both;animation-timeline:--story;animation-range:contain 81% contain 87%}
+.xdraw{stroke-dasharray:1;animation:draw linear both;animation-timeline:--story;animation-range:contain 78% contain 89%}
+.xlab{opacity:0;animation:fadeIn linear both;animation-timeline:--story;animation-range:contain 78% contain 82%}
 .hint svg{animation:bob 1.8s ease-in-out infinite}
 
 .crm{height:3400px;view-timeline-name:--crm;view-timeline-axis:block}
@@ -240,7 +248,7 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 }
 }
 @media (prefers-reduced-motion: reduce){
-.rv,.w,.zoom,.progress,.live,.hint svg,.ring,.strike::after,.aud,.flood,.tk,.flip,.pillars::before,.tilt,.curtain img,.pop,.rise,.li-in,.boxon,.slots>*,.glow,.ccap,.cm,.ct,.st-new,.st-sent,.dm,.crmbox{animation:none!important}
+.rv,.w,.zoom,.progress,.live,.hint svg,.ring,.strike::after,.aud,.flood,.tk,.flip,.pillars::before,.tilt,.curtain img,.pop,.rise,.li-in,.boxon,.slots>*,.glow,.xdraw,.countwrap2,.xlab,.ccap,.cm,.ct,.st-new,.st-sent,.dm,.crmbox{animation:none!important}
 }
 </style>
 <div style="width: 100%; min-height: 100vh; background: #0A0A0A; color: #F5F5F5; font-family: 'Plus Jakarta Sans', system-ui, sans-serif">
@@ -266,6 +274,7 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 <div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div style="height: 4px; background: #262626; border-radius: 2px; overflow: hidden"><div class="seg seg2" style="height: 100%; background: #9AE04C"></div></div><span class="chl chl2" style="font-size: 12px; font-weight: 800; letter-spacing: 0.1em">A VIRADA</span></div>
 <div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div style="height: 4px; background: #262626; border-radius: 2px; overflow: hidden"><div class="seg seg3" style="height: 100%; background: #9AE04C"></div></div><span class="chl chl3" style="font-size: 12px; font-weight: 800; letter-spacing: 0.1em">CONSTÂNCIA</span></div>
 <div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div style="height: 4px; background: #262626; border-radius: 2px; overflow: hidden"><div class="seg seg4" style="height: 100%; background: #9AE04C"></div></div><span class="chl chl4" style="font-size: 12px; font-weight: 800; letter-spacing: 0.1em">RESULTADO</span></div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 8px"><div style="height: 4px; background: #262626; border-radius: 2px; overflow: hidden"><div class="seg seg5" style="height: 100%; background: #9AE04C"></div></div><span class="chl chl5" style="font-size: 12px; font-weight: 800; letter-spacing: 0.1em">60 DIAS</span></div>
 </div>
 <div class="toprow">
 <div class="caps">
@@ -275,20 +284,26 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 <p class="cap c3">6 de outubro: <span style="color: #9AE04C">liguei a automação.</span></p>
 <p class="cap c4">Post todo dia. <span style="color: #9AE04C">Nenhum dia zerado desde então.</span></p>
 <p class="cap c5">Nos primeiros 30 dias da automação, as visualizações subiram:</p>
+<p class="cap c7">E não parou. Em 60 dias, <span style="color: #9AE04C">31,4 mil visualizações</span> e mais que o dobro de pessoas vendo o perfil.</p>
 <p class="cap c6">Agora imagina isso <span style="color: #9AE04C">na sua empresa.</span></p>
 </div>
 <div class="countwrap" style="display: flex; flex-direction: column; align-items: flex-end">
 <span class="count" style="font-size: clamp(64px, 10vw, 140px); line-height: 0.9; letter-spacing: -0.06em; font-weight: 800; color: #9AE04C; font-variant-numeric: tabular-nums"></span>
 <span style="color: #A3A3A3; font-size: 14px; font-weight: 600">visualizações</span>
 </div>
+<div class="countwrap2" style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px">
+<span style="font-size: clamp(56px, 8.5vw, 120px); line-height: 0.9; letter-spacing: -0.06em; font-weight: 800; color: #9AE04C">31,4 mil</span>
+<span style="color: #A3A3A3; font-size: 14px; font-weight: 600">visualizações em 60 dias · +328%</span>
+<span style="color: #F5F5F5; font-size: 15px; font-weight: 800">+126% de pessoas diferentes</span>
+</div>
 </div>
 
 <div style="width: 100%">
-<svg role="img" aria-label="Visualizações diárias do perfil de 7 de agosto a 4 de novembro. Antes de 6 de outubro: picos isolados e muitos dias zerados. A partir de 6 de outubro, com a automação: visualizações altas todos os dias, sem nenhum dia zerado." viewBox="0 0 900 330" style="width: 100%; height: auto; display: block; overflow: visible">
-<line x1="0" y1="280" x2="900" y2="280" stroke="#262626" stroke-width="1.5"></line>
-<line x1="0" y1="140" x2="900" y2="140" stroke="#1F1F1F" stroke-width="1.5" stroke-dasharray="5 7"></line>
+<svg role="img" aria-label="Visualizações diárias do perfil de 7 de agosto a 18 de novembro. Antes de 6 de outubro: picos isolados e muitos dias zerados. A partir de 6 de outubro, com a automação: visualizações altas todos os dias, sem nenhum dia zerado." viewBox="0 0 1042 330" style="width: 100%; height: auto; display: block; overflow: visible">
+<line x1="0" y1="280" x2="1042" y2="280" stroke="#262626" stroke-width="1.5"></line>
+<line x1="0" y1="140" x2="1042" y2="140" stroke="#1F1F1F" stroke-width="1.5" stroke-dasharray="5 7"></line>
 <g class="mark">
-<rect x="607" y="10" width="293" height="270" fill="#9AE04C" opacity="0.08"></rect>
+<rect x="607" y="10" width="435" height="270" fill="#9AE04C" opacity="0.08"></rect>
 <line x1="607" y1="10" x2="607" y2="280" stroke="#9AE04C" stroke-width="2" stroke-dasharray="6 6"></line>
 <rect x="447" y="0" width="152" height="34" rx="17" fill="#9AE04C"></rect>
 <text x="523" y="23" fill="#0A0A0A" font-size="16" font-weight="800" font-family="Plus Jakarta Sans, sans-serif" text-anchor="middle">6/10 · automação</text>
@@ -299,15 +314,17 @@ a{color:#9AE04C}a:hover{color:#C4F58E}
 </g>
 <path class="gdraw" pathLength="1" d="M0,280 L10.1,280 L20.2,277.5 L30.3,277.5 L40.4,274.9 L50.6,272.4 L60.7,272.4 L70.8,262.2 L80.9,63.6 L91,127.3 L101.1,280 L111.2,280 L121.3,280 L131.5,280 L141.6,280 L151.7,277.5 L161.8,170.5 L171.9,254.5 L182,280 L192.1,280 L202.2,239.3 L212.4,280 L222.5,277.5 L232.6,236.7 L242.7,269.8 L252.8,280 L262.9,280 L273,280 L283.1,280 L293.3,280 L303.4,277.5 L313.5,137.5 L323.6,183.3 L333.7,208.7 L343.8,241.8 L353.9,280 L364,280 L374.2,259.6 L384.3,272.4 L394.4,221.5 L404.5,269.8 L414.6,280 L424.7,280 L434.8,280 L444.9,280 L455.1,280 L465.2,280 L475.3,221.5 L485.4,208.7 L495.5,274.9 L505.6,280 L515.7,280 L525.8,280 L536,280 L546.1,280 L556.2,137.5 L566.3,241.8 L576.4,145.1 L586.5,254.5 L596.6,68.7 L606.7,114.5" fill="none" stroke="#5C5C5C" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"></path>
 <path class="vdraw" pathLength="1" d="M606.7,114.5 L616.9,140 L627,106.9 L637.1,91.6 L647.2,10 L657.3,165.5 L667.4,150.2 L677.5,114.5 L687.6,50.9 L697.8,183.3 L707.9,71.3 L718,101.8 L728.1,178.2 L738.2,196 L748.3,198.5 L758.4,127.3 L768.5,86.5 L778.7,152.7 L788.8,165.5 L798.9,122.2 L809,20.2 L819.1,25.5 L829.2,127.3 L839.3,132.4 L849.4,147.6 L859.6,127.3 L869.7,178.2 L879.8,135 L889.9,127.3 L900,56" fill="none" stroke="#9AE04C" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"></path>
+<path class="xdraw" pathLength="1" d="M900,56 L910.1,149.3 L920.2,120.5 L930.3,86.1 L940.4,132.7 L950.6,89.8 L960.7,6.0 L970.8,98.4 L980.9,145.0 L991.0,104.5 L1001.1,131.5 L1011.2,181.2 L1021.3,175.7 L1031.5,161.6 L1041.6,165.9" fill="none" stroke="#9AE04C" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"></path>
+<g class="xlab"><line x1="900" y1="290" x2="900" y2="296" stroke="#5C5C5C" stroke-width="2"></line></g>
 <g class="enddot">
-<circle class="ring" cx="900" cy="56" r="10" fill="none" stroke="#9AE04C" stroke-width="2"></circle>
-<circle cx="900" cy="56" r="6" fill="#9AE04C"></circle>
+<circle class="ring" cx="1041.6" cy="165.9" r="10" fill="none" stroke="#9AE04C" stroke-width="2"></circle>
+<circle cx="1041.6" cy="165.9" r="6" fill="#9AE04C"></circle>
 </g>
 <text x="0" y="312" fill="#8A8A8A" font-size="16" font-family="Plus Jakarta Sans, sans-serif">7 ago</text>
 <text x="430" y="312" fill="#8A8A8A" font-size="16" font-family="Plus Jakarta Sans, sans-serif" text-anchor="middle">20 set</text>
-<text x="900" y="312" fill="#8A8A8A" font-size="16" font-family="Plus Jakarta Sans, sans-serif" text-anchor="end">4 nov</text>
+<text x="1042" y="312" fill="#8A8A8A" font-size="16" font-family="Plus Jakarta Sans, sans-serif" text-anchor="end">18 nov</text>
 </svg>
-<p style="margin: 10px 0 0; color: #737373; font-size: 12px">Visualizações por dia, redesenhado a partir do painel do Instagram do @o.ighormiranda (90 dias, capturado em 05/11/2026).</p>
+<p style="margin: 10px 0 0; color: #737373; font-size: 12px">Visualizações por dia, redesenhado a partir do painel do Instagram do @o.ighormiranda (painel de 90 dias, capturado em 05/11/2026, e de 60 dias, capturado em 19/11/2026).</p>
 </div>
 
 </div>
