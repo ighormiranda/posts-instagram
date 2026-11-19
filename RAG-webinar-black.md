@@ -85,6 +85,13 @@ Base para montar o webinar que vende a oferta da LP **black.ligadomarketing.com*
   3. **Melhoria:** os próximos posts já saem ajustados.
 - Print original: `ofertas/black-november/lp/print-painel-ig.jpg`. O gráfico redesenhado está na LP.
 
+- **Painel de 60 dias (20/set a 18/nov, capturado em 19/11/2026):**
+  - 31.443 visualizações (+328,4% em relação aos 60 dias anteriores);
+  - 2.455 visualizadores (+126,3%);
+  - 27.735 visualizações de seguidores (88%) e 3.689 de não seguidores (12%);
+  - por tipo: posts 20 mil, stories 6,3 mil, Reels 5,6 mil. O Reels é o formato com a maior fatia de não seguidores.
+  - Neste período, "visualizadores" subiu. A regra de não usar "Visualizadores" vale para o print antigo de 90 dias, em que ele tinha caído.
+
 **Regras de verdade (nunca quebrar):**
 - Dizer "nos primeiros 30 dias da automação", nunca "nos últimos 30 dias".
 - Não usar o número de "Visualizadores", que caiu.

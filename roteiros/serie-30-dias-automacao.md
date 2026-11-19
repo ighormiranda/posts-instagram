@@ -67,7 +67,8 @@ Episódio 2: +393% de visualizações nos primeiros 30 dias da automação. No e
 **Texto do 1º segundo:** MUITA GENTE VIU. QUASE NINGUÉM SEGUIU.
 
 1. "Ontem eu mostrei os 393%. Hoje eu te conto o que o print não mostra."
-2. "Muita gente passou a me ver. Mas quase ninguém novo me seguiu."
+2. "Muita gente passou a me ver. Mas olha esse dado: 88% das visualizações vieram de quem já me seguia. Gente nova quase não chegou."
+   [MOSTRA o print do painel: 27.735 de seguidores x 3.689 de não seguidores]
 3. "E sabe por quê? Eu dava dica. Dica a pessoa salva e vai embora."
 4. "Ninguém segue por causa de uma dica. A pessoa segue pra saber o fim de uma história."
 5. "Por isso eu tô fazendo esta série. Hoje eu tenho [NÚMERO DO DIA] seguidores. A minha meta é chegar a 10 mil. Você tá vendo o teste acontecer, ao vivo."
