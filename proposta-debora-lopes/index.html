@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Liga do Marketing · Proposta para Débora Lopes</title>
+<meta name="description" content="Atendimento no WhatsApp para Débora Lopes — proposta da Liga do Marketing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --preto:#07050B; --sup:#110A1A; --sup2:#1B1228; --linha:#2C2040;
+  --carmim:#CE143D; --carmim-luz:#E8325A;
+  --roxo:#47017D; --roxo-luz:#4E49C1; --roxo-texto:#BCA8EE;
+  --branco:#fff; --nev:rgba(255,255,255,.62); --nev2:rgba(255,255,255,.40);
+  --max:1180px;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--preto); color:var(--branco);
+  font-family:'Poppins',system-ui,sans-serif; font-weight:300;
+  line-height:1.62; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  background-image:radial-gradient(rgba(206,20,61,.16) 1px,transparent 1.45px);
+  background-size:15px 15px; background-attachment:fixed;
+}
+h1,h2,.ank{font-family:'Anton',Impact,sans-serif;font-weight:400;line-height:.94;text-transform:uppercase;letter-spacing:.005em}
+h3{font-family:'Poppins',sans-serif;font-weight:600;line-height:1.25}
+.mono{font-family:'IBM Plex Mono',monospace;font-weight:500;text-transform:uppercase;letter-spacing:.22em;font-size:.66rem}
+.pt{color:var(--carmim)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+section{position:relative}
+
+/* ---------- barra topo ---------- */
+.barra{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;
+  padding:14px clamp(20px,5vw,40px);backdrop-filter:blur(14px);
+  background:linear-gradient(180deg,rgba(7,5,11,.92),rgba(7,5,11,.55) 70%,transparent);
+  transition:background .4s}
+.marca{display:flex;align-items:center;gap:11px;color:var(--carmim)}
+.marca svg{width:21px;height:34px;display:block}
+.marca span{font-family:'Anton',sans-serif;font-size:.92rem;letter-spacing:.055em;color:var(--branco);text-transform:uppercase;white-space:nowrap}
+.barra .data{color:var(--nev2)}
+@media(max-width:560px){.barra .data{display:none}}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .85s cubic-bezier(.22,.8,.3,1),transform .85s cubic-bezier(.22,.8,.3,1);transition-delay:var(--d,0s)}
+.rv.vis{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}*{animation:none!important}}
+
+/* ---------- HERO ---------- */
+.hero{min-height:100svh;display:flex;align-items:center;padding:112px 0 96px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;z-index:0;
+  background:radial-gradient(130% 78% at 78% 8%,rgba(71,1,125,.60),transparent 62%),
+             radial-gradient(90% 60% at 6% 96%,rgba(206,20,61,.26),transparent 64%)}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,5vw,70px);align-items:center}
+.selo{display:inline-flex;align-items:center;gap:10px;color:var(--carmim-luz);margin-bottom:26px}
+.selo i{width:26px;height:1px;background:var(--carmim);display:block}
+.hero h1{font-size:clamp(2.45rem,6.4vw,4.9rem);margin-bottom:24px}
+.hero h1 em{font-style:normal;color:var(--roxo-texto)}
+.lead{font-size:clamp(1.02rem,1.55vw,1.2rem);color:var(--nev);max-width:33em}
+.lead b{color:var(--branco);font-weight:500}
+.para{margin-top:30px;padding:16px 20px;border-left:2px solid var(--carmim);background:linear-gradient(90deg,rgba(206,20,61,.13),transparent);font-size:.95rem;color:rgba(255,255,255,.80)}
+
+/* seta */
+.seta{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:9px;color:var(--nev2);text-decoration:none}
+.seta .mono{font-size:.58rem;letter-spacing:.3em;opacity:.75}
+.seta .fio{width:1px;height:44px;background:linear-gradient(180deg,transparent,var(--carmim));position:relative;overflow:hidden}
+.seta .fio::after{content:'';position:absolute;left:0;top:-44px;width:1px;height:44px;background:linear-gradient(180deg,transparent,#fff);animation:desce 2.4s cubic-bezier(.4,0,.2,1) infinite}
+@keyframes desce{0%{top:-44px}55%{top:44px}100%{top:44px}}
+.seta svg{width:13px;height:9px;animation:bob 2.4s ease-in-out infinite;color:var(--carmim-luz)}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(4px);opacity:1}}
+
+/* ---------- celular ---------- */
+.fone{width:100%;max-width:330px;margin:0 auto;background:#0C0912;border:1px solid var(--linha);border-radius:26px;overflow:hidden;
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.9),0 0 0 7px rgba(255,255,255,.025)}
+.fone-top{display:flex;align-items:center;gap:10px;padding:13px 15px;background:var(--sup2);border-bottom:1px solid var(--linha)}
+.av{width:31px;height:31px;border-radius:50%;background:var(--carmim);display:grid;place-items:center;font-family:'Anton',sans-serif;font-size:.82rem;flex:none}
+.fone-top strong{display:block;font-family:'Poppins';font-weight:500;font-size:.8rem;line-height:1.3}
+.fone-top em{font-style:normal;font-size:.62rem;color:#5BD98A;letter-spacing:.02em}
+.tela{position:relative;height:376px;padding:15px 13px;overflow:hidden;
+  background:linear-gradient(180deg,#0C0912,#120C1B)}
+.cena{position:absolute;inset:0;padding:15px 13px;display:flex;flex-direction:column;justify-content:flex-end;gap:7px;
+  opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease;pointer-events:none}
+.cena.on{opacity:1;transform:none}
+.bolha{max-width:83%;padding:8px 12px;border-radius:13px;font-size:.78rem;line-height:1.5;font-weight:300;
+  opacity:0;transform:translateY(9px) scale(.98);transition:all .5s cubic-bezier(.22,.9,.3,1)}
+.cena.on .bolha{opacity:1;transform:none;transition-delay:calc(var(--i,0)*.17s + .12s)}
+.ent{align-self:flex-start;background:#201830;border:1px solid #2E2342;border-bottom-left-radius:4px}
+.sai{align-self:flex-end;background:linear-gradient(135deg,var(--roxo),#3A0166);border:1px solid rgba(188,168,238,.26);border-bottom-right-radius:4px}
+.sai.viva{background:linear-gradient(135deg,var(--carmim),#9B0E2D);border-color:rgba(232,50,90,.4)}
+.hr{align-self:center;font-family:'IBM Plex Mono',monospace;font-size:.54rem;letter-spacing:.16em;text-transform:uppercase;color:var(--nev2);padding:3px 9px;background:rgba(255,255,255,.04);border-radius:20px;
+  opacity:0;transition:opacity .5s} .cena.on .hr{opacity:1;transition-delay:calc(var(--i,0)*.17s + .12s)}
+.morto{align-self:center;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;color:#8A5563;
+  border:1px dashed rgba(206,20,61,.42);padding:7px 12px;border-radius:7px;background:rgba(206,20,61,.05);
+  opacity:0;transition:opacity .6s} .cena.on .morto{opacity:1;transition-delay:calc(var(--i,0)*.17s + .3s)}
+.tags{align-self:flex-start;display:flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;
+  color:#7DE8A8;border:1px solid rgba(125,232,168,.3);background:rgba(125,232,168,.07);padding:6px 10px;border-radius:7px;
+  opacity:0;transition:opacity .6s} .cena.on .tags{opacity:1;transition-delay:calc(var(--i,0)*.17s + .25s)}
+.digit{align-self:flex-start;display:flex;gap:4px;padding:10px 13px;background:#201830;border:1px solid #2E2342;border-radius:13px;border-bottom-left-radius:4px;
+  opacity:0;transition:opacity .4s} .cena.on .digit{opacity:1;transition-delay:calc(var(--i,0)*.17s + .12s)}
+.digit i{width:5px;height:5px;border-radius:50%;background:var(--nev2);animation:pisca 1.3s infinite}
+.digit i:nth-child(2){animation-delay:.18s} .digit i:nth-child(3){animation-delay:.36s}
+@keyframes pisca{0%,60%,100%{opacity:.25;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+.fone-bar{display:flex;align-items:center;gap:9px;padding:10px 14px;background:var(--sup2);border-top:1px solid var(--linha)}
+.fone-bar div{flex:1;height:25px;border-radius:14px;background:rgba(255,255,255,.055)}
+.fone-bar b{width:25px;height:25px;border-radius:50%;background:var(--carmim);flex:none}
+.rebob{position:absolute;top:13px;left:50%;transform:translateX(-50%);z-index:4;
+  font-family:'IBM Plex Mono',monospace;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--carmim-luz);
+  border:1px solid rgba(206,20,61,.45);background:rgba(7,5,11,.9);padding:5px 11px;border-radius:20px;
+  opacity:0;transition:opacity .5s} .cena.on .rebob{opacity:1;transition-delay:.1s}
+
+/* ---------- SCROLLY ---------- */
+.scrolly{background:linear-gradient(180deg,var(--preto),#0B0713 22%,#0B0713 78%,var(--preto))}
+.sc-head{padding:clamp(80px,11vw,130px) 0 10px;text-align:center}
+.sc-head h2{font-size:clamp(1.9rem,4.4vw,3.3rem);margin:16px auto 16px;max-width:15ch}
+.sc-head p{color:var(--nev);max-width:50ch;margin:0 auto;font-size:1rem}
+.sc-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(30px,5vw,70px);align-items:start}
+.sc-fixo{position:sticky;top:0;height:100svh;display:flex;align-items:center;justify-content:center}
+.passos{padding:16svh 0 22svh}
+.passo{min-height:76svh;display:flex;flex-direction:column;justify-content:center;opacity:.26;transition:opacity .5s ease}
+.passo.at{opacity:1}
+.passo .num{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.24em;color:var(--carmim);margin-bottom:14px;display:flex;align-items:center;gap:11px}
+.passo .num i{width:22px;height:1px;background:var(--carmim);display:block;transition:width .6s ease}
+.passo.at .num i{width:46px}
+.passo h3{font-size:clamp(1.35rem,2.5vw,1.95rem);margin-bottom:13px;max-width:17ch}
+.passo p{color:var(--nev);max-width:38ch;font-size:.97rem}
+.passo.ruim .num,.passo.ruim .num i{color:#9B6B78;background:#9B6B78}
+.passo.ruim .num{color:#9B6B78}
+
+/* ---------- OPÇÕES ---------- */
+.ops{padding:clamp(86px,12vw,140px) 0;background:
+   radial-gradient(100% 64% at 50% 0%,rgba(71,1,125,.42),transparent 70%)}
+.tit-c{text-align:center;margin-bottom:clamp(40px,6vw,64px)}
+.tit-c h2{font-size:clamp(1.9rem,4.6vw,3.4rem);margin:15px auto 16px;max-width:16ch}
+.tit-c p{color:var(--nev);max-width:52ch;margin:0 auto}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.4vw,28px);align-items:start}
+.card{position:relative;background:linear-gradient(170deg,var(--sup2),var(--sup));border:1px solid var(--linha);border-radius:18px;padding:clamp(26px,3.3vw,38px);overflow:hidden}
+.card::after{content:'';position:absolute;inset:0;background:radial-gradient(110% 58% at 50% 0%,rgba(255,255,255,.055),transparent 62%);pointer-events:none}
+.card.rec{border-color:rgba(206,20,61,.5);background:linear-gradient(170deg,#2A0F1D,#150A14)}
+.fita{position:absolute;top:0;right:0;font-family:'IBM Plex Mono',monospace;font-size:.57rem;letter-spacing:.2em;text-transform:uppercase;
+  background:var(--carmim);color:#fff;padding:6px 14px;border-bottom-left-radius:11px}
+.card .op{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.24em;color:var(--roxo-texto);text-transform:uppercase}
+.card.rec .op{color:var(--carmim-luz)}
+.card h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(1.5rem,2.9vw,2.1rem);line-height:1;margin:11px 0 22px;min-height:2.05em}
+@media(max-width:900px){.card h3{min-height:0}}
+.preco{display:flex;flex-wrap:wrap;align-items:baseline;gap:7px;padding-bottom:7px}
+.preco .v{font-family:'Anton',sans-serif;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1;color:var(--branco)}
+.preco .r{font-family:'Anton',sans-serif;font-size:1rem;color:var(--nev2);transform:translateY(-.45em)}
+.preco .q{font-size:.76rem;color:var(--nev2);letter-spacing:.02em}
+.mais{display:flex;align-items:center;gap:12px;margin:13px 0;color:var(--nev2);font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase}
+.mais::before,.mais::after{content:'';flex:1;height:1px;background:var(--linha)}
+.card p.desc{color:var(--nev);font-size:.92rem;margin-top:22px;padding-top:22px;border-top:1px solid var(--linha)}
+.card ul{list-style:none;margin-top:17px;display:flex;flex-direction:column;gap:9px}
+.card li{display:flex;gap:10px;font-size:.87rem;color:rgba(255,255,255,.76)}
+.card li svg{width:14px;height:14px;flex:none;margin-top:5px;color:var(--carmim-luz)}
+.nota-ia{margin-top:clamp(26px,3.5vw,38px);text-align:center;color:var(--nev2);font-size:.83rem}
+
+/* ---------- OPERAÇÃO ---------- */
+.oper{padding:clamp(86px,12vw,140px) 0;background:var(--sup);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+.op-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(16px,2.2vw,26px);margin-top:clamp(36px,5vw,56px)}
+.ofx{padding:26px 24px;background:var(--preto);border:1px solid var(--linha);border-radius:14px;position:relative;overflow:hidden}
+.ofx::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--carmim);transform:scaleY(0);transform-origin:top;transition:transform .7s ease .15s}
+.ofx.vis::before{transform:scaleY(1)}
+.ofx .ic{width:34px;height:34px;border-radius:9px;background:rgba(206,20,61,.13);display:grid;place-items:center;color:var(--carmim-luz);margin-bottom:15px}
+.ofx .ic svg{width:17px;height:17px}
+.ofx h3{font-size:1rem;margin-bottom:8px}
+.ofx p{font-size:.86rem;color:var(--nev)}
+
+/* ---------- ESCOPO ---------- */
+.esc{padding:clamp(86px,12vw,140px) 0}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.6vw,30px);margin-top:clamp(36px,5vw,54px)}
+.col-e{padding:clamp(24px,3vw,34px);border-radius:16px;border:1px solid var(--linha);background:var(--sup)}
+.col-e.sim{border-color:rgba(206,20,61,.32);background:linear-gradient(170deg,#1A0A14,#110A1A)}
+.col-e h3{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:1.25rem;margin-bottom:19px;display:flex;align-items:center;gap:10px}
+.col-e h3 b{width:19px;height:19px;border-radius:50%;display:grid;place-items:center;font-size:.72rem;font-family:'Poppins';font-weight:600;flex:none}
+.col-e.sim h3 b{background:var(--carmim);color:#fff}
+.col-e.nao h3 b{background:var(--linha);color:var(--nev2)}
+.col-e ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.col-e li{font-size:.89rem;color:rgba(255,255,255,.74);padding-left:17px;position:relative}
+.col-e li::before{content:'';position:absolute;left:0;top:.62em;width:6px;height:1px;background:var(--carmim)}
+.col-e.nao li::before{background:var(--linha)}
+.conexao{margin-top:clamp(26px,3.4vw,36px);padding:22px 24px;border:1px dashed var(--linha);border-radius:13px;background:rgba(71,1,125,.10)}
+.conexao p{font-size:.87rem;color:var(--nev)}
+.conexao strong{color:var(--branco);font-weight:500}
+
+/* ---------- CRONOGRAMA ---------- */
+.cron{padding:clamp(86px,12vw,140px) 0;background:linear-gradient(180deg,var(--preto),#0C0714);border-top:1px solid var(--linha)}
+.gantt{margin-top:clamp(36px,5vw,54px);border:1px solid var(--linha);border-radius:15px;overflow:hidden;background:var(--sup)}
+.gl{display:grid;grid-template-columns:1.9fr .85fr repeat(6,1fr);align-items:center;gap:0;border-bottom:1px solid var(--linha)}
+.gl:last-child{border-bottom:0}
+.gl.cab{background:var(--sup2)}
+.gl.cab span{font-family:'IBM Plex Mono',monospace;font-size:.58rem;letter-spacing:.17em;text-transform:uppercase;color:var(--nev2);padding:13px 8px;text-align:center}
+.gl.cab span:first-child,.gl.cab span:nth-child(2){text-align:left;padding-left:18px}
+.gl .et{padding:16px 18px;font-size:.86rem;color:rgba(255,255,255,.82)}
+.gl .rp{padding:16px 10px;font-family:'IBM Plex Mono',monospace;font-size:.57rem;letter-spacing:.09em;text-transform:uppercase;color:var(--roxo-texto)}
+.cel{height:100%;min-height:52px;display:grid;place-items:center;border-left:1px solid rgba(44,32,64,.55)}
+.cel b{display:block;width:72%;height:7px;border-radius:5px;background:var(--carmim);transform:scaleX(0);transform-origin:left;transition:transform .65s cubic-bezier(.3,.9,.3,1);transition-delay:var(--gd,0s)}
+.gantt.vis .cel b{transform:scaleX(1)}
+.cel.vz b{background:transparent}
+.cron-nota{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px 30px}
+.cron-nota div{flex:1 1 230px;padding-left:15px;border-left:2px solid var(--carmim)}
+.cron-nota strong{display:block;font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:1.08rem;margin-bottom:4px}
+.cron-nota p{font-size:.85rem;color:var(--nev)}
+
+/* ---------- CTA ---------- */
+.cta{padding:clamp(90px,13vw,150px) 0;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(85% 70% at 50% 46%,rgba(206,20,61,.26),transparent 66%)}
+.cta .wrap{position:relative;z-index:1}
+.cta h2{font-size:clamp(2rem,5.4vw,4rem);margin:18px auto 22px;max-width:14ch}
+.cta p{color:var(--nev);max-width:46ch;margin:0 auto 34px;font-size:1.02rem}
+.bt{display:inline-flex;align-items:center;gap:11px;background:var(--carmim);color:#fff;text-decoration:none;
+  font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.035em;font-size:1.02rem;
+  padding:17px 34px;border-radius:9px;transition:transform .3s,box-shadow .3s,background .3s;box-shadow:0 14px 40px -14px rgba(206,20,61,.85)}
+.bt:hover{transform:translateY(-2px);background:var(--carmim-luz);box-shadow:0 20px 50px -14px rgba(206,20,61,.95)}
+.bt svg{width:15px;height:15px}
+.rec-box{margin:0 auto 38px;max-width:620px;padding:24px 26px;border:1px solid rgba(206,20,61,.35);border-radius:14px;background:rgba(206,20,61,.06);text-align:left}
+.rec-box .mono{color:var(--carmim-luz);display:block;margin-bottom:10px}
+.rec-box p{color:rgba(255,255,255,.82);margin:0;max-width:none;font-size:.94rem}
+
+/* ---------- RODAPÉ ---------- */
+footer{border-top:1px solid var(--linha);padding:54px 0 46px;background:var(--sup)}
+.fgrid{display:flex;flex-wrap:wrap;gap:30px;align-items:center;justify-content:space-between}
+.fm{display:flex;align-items:center;gap:13px;color:var(--carmim)}
+.fm svg{width:30px;height:48px}
+.fm span{font-family:'Anton',sans-serif;font-size:1.12rem;letter-spacing:.05em;color:var(--branco);text-transform:uppercase;display:block}
+.fm em{font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:.57rem;letter-spacing:.2em;color:var(--nev2);text-transform:uppercase}
+.titan{display:flex;flex-wrap:wrap;gap:7px}
+.titan b{font-family:'IBM Plex Mono',monospace;font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;color:var(--roxo-texto);
+  border:1px solid var(--linha);padding:5px 9px;border-radius:5px;font-weight:400}
+.fval{width:100%;margin-top:30px;padding-top:22px;border-top:1px solid var(--linha);color:var(--nev2);font-size:.76rem;display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between}
+
+/* ---------- RESPONSIVO ---------- */
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .hero{min-height:auto;padding:104px 0 112px}
+  .fone{max-width:300px}
+  .cards,.duas{grid-template-columns:1fr}
+  .sc-grid{grid-template-columns:1fr;gap:0}
+  .sc-fixo{height:auto;position:sticky;top:0;padding:64px 0 16px;background:#0B0713;z-index:20;box-shadow:0 16px 22px -4px #0B0713}
+  .sc-fixo .fone{max-width:252px}
+  .tela{height:290px}
+  .passos{padding:4svh 0 10svh}
+  .passo{min-height:auto;padding:30px 0;opacity:1}
+  .passo p{max-width:none}
+  .gl{grid-template-columns:1.6fr repeat(6,1fr)}
+  .gl .rp,.gl.cab span:nth-child(2){display:none}
+  .gl .et{font-size:.78rem;padding:13px 12px}
+  .cel{min-height:44px}
+}
+@media(max-width:560px){
+  .gl{grid-template-columns:repeat(6,1fr);padding-bottom:12px}
+  .gl .et{grid-column:1/-1;padding:14px 14px 9px;font-weight:500;color:#fff;font-size:.81rem}
+  .gl.cab span:first-child{grid-column:1/-1;padding:12px 14px 6px}
+  .gl.cab span{padding:0 4px 10px;font-size:.52rem}
+  .cel{min-height:24px;border-left:0}
+  .cel b{width:82%;height:6px}
+  .seta{display:none}
+}
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true"><symbol id="escudo" viewBox="327 179 426 682"><path fill="currentColor" fill-rule="evenodd" d="M547.4 853.1 C551.3 851.0 569.6 841.3 588.0 831.7 C624.0 812.9 676.7 785.4 694.5 776.0 C713.5 765.9 734.2 755.1 741.7 751.2 L749.0 747.5 L749.0 528.2 L749.0 309.0 L540.0 309.0 L331.0 309.0 L331.2 529.1 L331.5 749.1 L340.5 753.9 C345.4 756.5 356.2 762.1 364.5 766.4 C372.8 770.8 392.6 781.1 408.5 789.5 C424.4 797.9 443.8 808.0 451.5 812.0 C459.2 816.0 468.2 820.7 471.5 822.5 C474.8 824.3 484.7 829.5 493.5 834.1 C502.3 838.7 515.6 845.7 523.0 849.6 C530.4 853.6 537.3 856.8 538.4 856.9 C539.4 857.0 543.5 855.2 547.4 853.1 Z M525.0 812.6 C510.0 804.6 495.7 797.2 451.0 773.8 C434.2 765.0 416.9 755.9 412.5 753.5 C408.1 751.2 397.3 745.5 388.5 741.0 C379.7 736.4 370.7 731.6 368.5 730.4 L364.5 728.2 L364.2 535.6 L364.0 343.0 L540.0 343.0 L716.0 343.0 L716.0 534.8 L716.0 726.5 L710.2 729.6 C707.1 731.3 684.9 743.0 661.0 755.5 C637.1 768.0 613.0 780.6 607.5 783.5 C602.0 786.4 588.3 793.6 577.0 799.5 C565.7 805.4 552.5 812.4 547.5 815.0 L538.5 819.7 L525.0 812.6 Z M566.8 763.8 L596.4 749.5 L566.2 749.2 C549.6 749.1 522.4 749.1 505.8 749.2 L475.5 749.5 L482.0 752.6 C485.6 754.4 498.2 760.5 510.1 766.2 C533.7 777.7 533.9 777.8 535.9 777.9 C536.6 778.0 550.6 771.6 566.8 763.8 Z M492.0 686.5 L492.0 675.0 L467.5 675.0 L443.0 675.0 L443.0 544.0 L443.0 413.0 L429.0 413.0 L415.0 413.0 L415.0 555.5 L415.0 698.0 L453.5 698.0 L492.0 698.0 L492.0 686.5 Z M542.0 625.6 C542.0 585.8 541.5 540.6 540.9 525.0 C540.3 509.5 540.0 496.7 540.2 496.5 C540.4 496.3 548.4 538.9 557.9 591.3 C567.4 643.7 575.5 687.7 575.7 689.2 L576.2 692.0 L589.4 692.0 L602.6 692.0 L609.4 653.2 C613.1 631.9 619.7 594.5 624.0 570.0 C628.3 545.5 633.0 519.4 634.4 512.0 L636.9 498.5 L636.5 514.0 C636.2 522.5 635.7 567.4 635.4 613.8 L634.8 698.0 L647.9 698.0 L661.0 698.0 L661.0 555.5 L661.0 413.0 L645.6 413.0 L630.2 413.0 L629.6 415.8 C628.2 422.7 590.0 635.2 590.0 636.2 C590.0 636.8 589.8 637.1 589.5 636.8 C589.2 636.6 579.8 587.1 568.5 526.9 C557.2 466.7 547.8 416.5 547.5 415.2 C547.0 413.0 546.7 413.0 532.0 413.0 L517.0 413.0 L517.0 555.5 L517.0 698.0 L529.5 698.0 L542.0 698.0 L542.0 625.6 Z M532.2 258.2 L539.9 254.1 L553.7 261.4 C561.3 265.4 567.6 268.3 567.8 267.9 C568.0 267.5 567.0 260.5 565.5 252.4 L562.9 237.6 L574.1 226.4 C584.2 216.3 585.0 215.2 582.9 214.7 C581.6 214.4 574.6 213.4 567.4 212.4 L554.2 210.6 L547.4 196.8 C543.6 189.2 540.3 183.0 540.0 183.0 C539.7 183.0 536.4 189.2 532.6 196.8 L525.8 210.6 L512.6 212.4 C505.4 213.4 498.4 214.4 497.1 214.7 C495.0 215.2 495.8 216.3 505.9 226.4 L517.1 237.6 L514.5 252.0 C513.1 260.0 512.0 267.0 512.0 267.7 C512.0 268.5 514.3 267.7 518.2 265.6 C521.7 263.8 528.0 260.4 532.2 258.2 Z"/></symbol></svg>
+
+<div class="barra">
+  <div class="marca"><svg><use href="#escudo"/></svg><span>Liga do Marketing</span></div>
+  <div class="mono data">Proposta · 19 nov 2026</div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="topo">
+  <div class="wrap">
+    <div>
+      <div class="selo rv"><i></i><span class="mono">Proposta para Débora Lopes</span></div>
+      <h1 class="rv" style="--d:.08s">São 21h14.<br>Uma cliente<br>acabou de<br><em>querer comprar<span class="pt">.</span></em></h1>
+      <p class="lead rv" style="--d:.18s">Ela viu o mega hair no Instagram, chamou no WhatsApp e perguntou como funciona. <b>A IA respondeu o primeiro "oi".</b> Depois disso, a conversa parou.</p>
+      <div class="para rv" style="--d:.26s">E a avaliação que ia acontecer esta semana simplesmente não acontece — sem ninguém perceber que existiu.</div>
+    </div>
+
+    <div class="rv" style="--d:.3s">
+      <div class="fone" aria-hidden="true">
+        <div class="fone-top">
+          <div class="av">J</div>
+          <div><strong>Jéssica</strong><em>online</em></div>
+        </div>
+        <div class="tela">
+          <div class="cena on">
+            <div class="hr" style="--i:0">Hoje · 21h14</div>
+            <div class="bolha ent" style="--i:1">Oi! vi o mega hair de vocês no insta 😍 queria saber como funciona</div>
+            <div class="bolha sai" style="--i:2">Oii! Que bom que você se interessou 💕 Já te passo as informações.</div>
+            <div class="bolha ent" style="--i:3">Meu cabelo é bem curtinho, dá pra fazer?</div>
+            <div class="digit" style="--i:4"><i></i><i></i><i></i></div>
+            <div class="morto" style="--i:5">Visualizado às 21h14 · sem resposta</div>
+          </div>
+        </div>
+        <div class="fone-bar"><div></div><b></b></div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#virada" class="seta" aria-label="Role para ver a proposta">
+    <span class="mono">role</span>
+    <span class="fio"></span>
+    <svg viewBox="0 0 13 9" fill="none"><path d="M1 1l5.5 6L12 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>
+
+<!-- ============ SCROLLY ============ -->
+<section class="scrolly" id="virada">
+  <div class="wrap sc-head">
+    <div class="rv"><span class="mono pt">O problema, em seis telas</span></div>
+    <h2 class="rv" style="--d:.07s">A conversa não morre por falta de interesse<span class="pt">.</span></h2>
+    <p class="rv" style="--d:.14s">Morre por falta de continuidade. Role devagar: é a mesma conversa, duas vezes.</p>
+  </div>
+
+  <div class="wrap sc-grid">
+    <div class="sc-fixo">
+      <div class="fone" aria-hidden="true">
+        <div class="fone-top">
+          <div class="av">J</div>
+          <div><strong>Jéssica</strong><em>online</em></div>
+        </div>
+        <div class="tela" id="tela">
+
+          <div class="cena on" data-c="1">
+            <div class="hr" style="--i:0">Hoje · 21h14</div>
+            <div class="bolha ent" style="--i:1">Oi! vi o mega hair de vocês no insta 😍 queria saber como funciona</div>
+            <div class="bolha sai" style="--i:2">Oii! Que bom que você se interessou 💕 Já te passo as informações.</div>
+          </div>
+
+          <div class="cena" data-c="2">
+            <div class="bolha ent" style="--i:0">Oii! Que bom que você se interessou 💕</div>
+            <div class="bolha ent" style="--i:1">Meu cabelo é bem curtinho, dá pra fazer? e fica muito caro?</div>
+            <div class="digit" style="--i:2"><i></i><i></i><i></i></div>
+            <div class="morto" style="--i:3">Visualizado às 21h14 · a conversa acabou aqui</div>
+          </div>
+
+          <div class="cena" data-c="3">
+            <div class="rebob">◀ rebobinando</div>
+            <div class="hr" style="--i:0">Hoje · 21h14</div>
+            <div class="bolha ent" style="--i:1">Meu cabelo é bem curtinho, dá pra fazer?</div>
+            <div class="bolha sai viva" style="--i:2">Dá sim! Me conta uma coisa pra eu te orientar direito: você quer mais <b>volume</b>, mais <b>comprimento</b>, ou já usa e quer <b>manutenção</b>?</div>
+            <div class="bolha ent" style="--i:3">Comprimento mesmo</div>
+          </div>
+
+          <div class="cena" data-c="4">
+            <div class="bolha ent" style="--i:0">Comprimento mesmo</div>
+            <div class="bolha sai viva" style="--i:1">Perfeito. Pra comprimento a gente faz uma avaliação antes — é nela que a equipe define a técnica e a quantidade certa pro seu cabelo.</div>
+            <div class="bolha sai viva" style="--i:2">Quer que eu já veja um horário pra você? 😊</div>
+            <div class="bolha ent" style="--i:3">Quero sim!</div>
+          </div>
+
+          <div class="cena" data-c="5">
+            <div class="bolha ent" style="--i:0">Ah, e eu tenho alergia a alguns adesivos. Isso atrapalha?</div>
+            <div class="bolha sai viva" style="--i:1">Essa parte quem responde melhor é a equipe da Débora. Já estou passando a conversa pra elas com tudo que você me contou 💕</div>
+            <div class="tags" style="--i:2">→ repassado com o histórico completo</div>
+          </div>
+
+          <div class="cena" data-c="6">
+            <div class="hr" style="--i:0">No dia seguinte · 10h02</div>
+            <div class="bolha sai viva" style="--i:1">Oi Jéssica! Ontem você perguntou sobre comprimento. Separei dois horários pra avaliação — quer ver?</div>
+            <div class="bolha ent" style="--i:2">Nossa, obrigada! Pode ser o da quinta 🙌</div>
+            <div class="tags" style="--i:3">CRM · etapa: avaliação agendada</div>
+          </div>
+
+        </div>
+        <div class="fone-bar"><div></div><b></b></div>
+      </div>
+    </div>
+
+    <div class="passos" id="passos">
+      <div class="passo at" data-p="1">
+        <div class="num"><i></i>01 — Alguém quer comprar</div>
+        <h3>A IA que a Débora já tem abre a porta.</h3>
+        <p>Ela recebe, cumprimenta, demonstra simpatia. Até aqui, tudo certo — e esse é justamente o trabalho mais fácil da conversa.</p>
+      </div>
+      <div class="passo ruim" data-p="2">
+        <div class="num"><i></i>02 — E para na porta</div>
+        <h3>Na primeira pergunta de verdade, o atendimento trava.</h3>
+        <p>Cabelo curto, preço, técnica, alergia. A cliente pergunta o que importa, não recebe resposta e vai perguntar para outra pessoa. Ninguém na equipe fica sabendo que ela existiu.</p>
+      </div>
+      <div class="passo" data-p="3">
+        <div class="num"><i></i>03 — A virada</div>
+        <h3>A assistente não para no "oi".</h3>
+        <p>Antes de responder qualquer coisa, ela entende o que a cliente procura: volume, comprimento ou manutenção. É essa pergunta que transforma um contato em uma intenção clara.</p>
+      </div>
+      <div class="passo" data-p="4">
+        <div class="num"><i></i>04 — O caminho</div>
+        <h3>Ela conduz até a avaliação.</h3>
+        <p>Explica como a avaliação funciona, por que ela existe e como solicitar — com as informações que a Débora aprovou, sem inventar preço nem prometer resultado.</p>
+      </div>
+      <div class="passo" data-p="5">
+        <div class="num"><i></i>05 — O limite</div>
+        <h3>O que é da equipe vai para a equipe.</h3>
+        <p>Dúvida técnica, exceção e orçamento personalizado não são respondidos pela IA. São repassados para quem sabe — com o histórico junto, para ninguém repetir perguntas que a cliente já respondeu.</p>
+      </div>
+      <div class="passo" data-p="6">
+        <div class="num"><i></i>06 — O retorno</div>
+        <h3>E ninguém some sem um segundo contato.</h3>
+        <p>Se a conversa esfriar, a assistente retoma no tempo combinado, com contexto — e registra contato, interesse e etapa no CRM. O que hoje se perde no histórico vira pipeline visível.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPÇÕES ============ -->
+<section class="ops" id="opcoes">
+  <div class="wrap">
+    <div class="tit-c">
+      <div class="rv"><span class="mono pt">As duas opções</span></div>
+      <h2 class="rv" style="--d:.07s">Escolha pelo que você quer que a assistente atenda<span class="pt">.</span></h2>
+      <p class="rv" style="--d:.14s">Mesma base de atendimento. A diferença é quantas conversas ela conduz em paralelo.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card rec rv">
+        <div class="fita">Recomendada</div>
+        <div class="op">Opção 01</div>
+        <h3>Mega Hair</h3>
+        <div class="preco"><span class="r">R$</span><span class="v">10.000</span><span class="q">de implantação</span></div>
+        <div class="mais">mais</div>
+        <div class="preco"><span class="r">R$</span><span class="v">2.500</span><span class="q">por mês</span></div>
+        <p class="desc">A assistente identifica se a cliente busca volume, comprimento ou manutenção, explica como funciona a avaliação e orienta como solicitá-la. Dúvidas técnicas, exceções e orçamentos personalizados seguem para a equipe.</p>
+        <ul>
+          <li><svg viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.4 3.4L12 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Qualificação por objetivo da cliente</li>
+          <li><svg viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.4 3.4L12 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Condução até a avaliação</li>
+          <li><svg viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.4 3.4L12 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Repasse para a equipe com histórico</li>
+        </ul>
+      </div>
+
+      <div class="card rv" style="--d:.1s">
+        <div class="op">Opção 02</div>
+        <h3>Mega Hair<br>+ cursos presenciais</h3>
+        <div class="preco"><span class="r">R$</span><span class="v">14.000</span><span class="q">de implantação</span></div>
+        <div class="mais">mais</div>
+        <div class="preco"><span class="r">R$</span><span class="v">3.000</span><span class="q">por mês</span></div>
+        <p class="desc">Inclui tudo da Opção 01 e uma conversa separada para interessadas nos cursos. A assistente responde sobre turmas, requisitos, datas e valores aprovados, registra o interesse e encaminha para quem cuida das inscrições — ou entrega o link de inscrição.</p>
+        <ul>
+          <li><svg viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.4 3.4L12 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Tudo da Opção 01</li>
+          <li><svg viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.4 3.4L12 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Trilha separada para os cursos</li>
+          <li><svg viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.4 3.4L12 3.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Registro de interesse e encaminhamento</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="nota-ia rv" style="--d:.16s">As duas opções incluem R$ 100 por mês de consumo de IA dentro da mensalidade. O excedente é cobrado à parte, com cálculo a combinar.</p>
+  </div>
+</section>
+
+<!-- ============ OPERAÇÃO ============ -->
+<section class="oper" id="operacao">
+  <div class="wrap">
+    <div class="tit-c">
+      <div class="rv"><span class="mono pt">Como colocamos em operação</span></div>
+      <h2 class="rv" style="--d:.07s">O que acontece por trás da conversa<span class="pt">.</span></h2>
+    </div>
+
+    <div class="op-grid">
+      <div class="ofx rv">
+        <div class="ic"><svg viewBox="0 0 18 18" fill="none"><path d="M9 1.5A7.5 7.5 0 109 16.5 7.5 7.5 0 009 1.5zM9 5v4.3l2.8 1.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Retoma com contexto</h3>
+        <p>A assistente continua de onde a conversa parou. Não recomeça do zero e não aborda de novo quem já foi atendido.</p>
+      </div>
+      <div class="ofx rv" style="--d:.06s">
+        <div class="ic"><svg viewBox="0 0 18 18" fill="none"><path d="M2 9h11M9.5 5l4 4-4 4M16 2.5v13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Passa o bastão inteiro</h3>
+        <p>Quando o assunto é da equipe, o atendimento é repassado com o histórico completo — a cliente não repete nada.</p>
+      </div>
+      <div class="ofx rv" style="--d:.12s">
+        <div class="ic"><svg viewBox="0 0 18 18" fill="none"><path d="M3 4.5h12M3 9h12M3 13.5h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Follow-up com regra</h3>
+        <p>Os retornos automáticos seguem as regras aprovadas pela Débora. Nada de insistência fora do combinado.</p>
+      </div>
+      <div class="ofx rv" style="--d:.18s">
+        <div class="ic"><svg viewBox="0 0 18 18" fill="none"><rect x="2.3" y="3" width="13.4" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2.3 7h13.4M6 1.8v2.4M12 1.8v2.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Tudo registrado no CRM</h3>
+        <p>Contato, interesse e etapa ficam no CRM do GoHighLevel. O que hoje se perde no WhatsApp vira pipeline que dá para olhar.</p>
+      </div>
+      <div class="ofx rv" style="--d:.24s">
+        <div class="ic"><svg viewBox="0 0 18 18" fill="none"><path d="M9 1.8l6.2 2.6v4.3c0 3.7-2.5 6.6-6.2 7.5-3.7-.9-6.2-3.8-6.2-7.5V4.4L9 1.8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M6.3 8.8l1.9 1.9 3.6-3.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Homologação antes de ativar</h3>
+        <p>A Liga do Marketing testa as jornadas junto com a equipe da Débora. Nada entra no ar sem aprovação das conversas de teste.</p>
+      </div>
+      <div class="ofx rv" style="--d:.3s">
+        <div class="ic"><svg viewBox="0 0 18 18" fill="none"><rect x="2" y="2.5" width="14" height="5.2" rx="1.6" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="10.3" width="14" height="5.2" rx="1.6" stroke="currentColor" stroke-width="1.5"/><path d="M5.2 5.1h.01M5.2 12.9h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Infraestrutura por nossa conta</h3>
+        <p>A solução é desenvolvida e hospedada em servidor próprio da Liga do Marketing, que absorve esse custo enquanto a operação estiver sob nosso suporte. Se a Débora quiser encerrar o suporte e seguir de forma independente, apresentamos um orçamento separado para a transição.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESCOPO ============ -->
+<section class="esc" id="escopo">
+  <div class="wrap">
+    <div class="tit-c">
+      <div class="rv"><span class="mono pt">O combinado</span></div>
+      <h2 class="rv" style="--d:.07s">O que entra e o que fica de fora<span class="pt">.</span></h2>
+      <p class="rv" style="--d:.14s">Proposta sem letra miúda: o que não está nesta coluna da esquerda, não está contratado.</p>
+    </div>
+
+    <div class="duas">
+      <div class="col-e sim rv">
+        <h3><b>✓</b> Está incluído</h3>
+        <ul>
+          <li>Atendimento completo de mega hair — e, na Opção 02, a trilha dos cursos presenciais</li>
+          <li>Agendamento automático</li>
+          <li>Estimativa de gramatura por foto</li>
+          <li>Aprovação pela Débora via Telegram</li>
+          <li>Integração com WhatsApp e com o CRM do GoHighLevel</li>
+          <li>Follow-ups automáticos conforme as regras aprovadas</li>
+          <li>Testes das jornadas e homologação com a equipe</li>
+          <li>R$ 100 por mês de consumo de IA</li>
+          <li>Hospedagem em servidor próprio da Liga durante o suporte</li>
+        </ul>
+      </div>
+      <div class="col-e nao rv" style="--d:.1s">
+        <h3><b>✕</b> Não está incluído</h3>
+        <ul>
+          <li>Cobrança e pagamento dentro da conversa</li>
+          <li>Matrícula das alunas</li>
+          <li>Automação com plataforma de cursos</li>
+          <li>Consumo de IA acima de R$ 100 por mês — cobrado à parte, com cálculo a combinar</li>
+          <li>Custos de conexão do WhatsApp e de outras plataformas</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="conexao rv" style="--d:.16s">
+      <p><strong>Conexão do WhatsApp.</strong> Pode ser feita pela API oficial do WhatsApp Business, via conector nativo do GoHighLevel (cerca de US$ 10), ou, como alternativa, pelo Stevo (R$ 59). A escolha e os custos de conexão e de outras plataformas são confirmados antes do início.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CRONOGRAMA ============ -->
+<section class="cron" id="prazo">
+  <div class="wrap">
+    <div class="tit-c">
+      <div class="rv"><span class="mono pt">Cronograma</span></div>
+      <h2 class="rv" style="--d:.07s">Seis semanas até a assistente entrar no ar<span class="pt">.</span></h2>
+      <p class="rv" style="--d:.14s">Contadas a partir do recebimento dos acessos e materiais necessários.</p>
+    </div>
+
+    <div class="gantt rv" id="gantt">
+      <div class="gl cab">
+        <span>Etapa</span><span>Responsável</span>
+        <span>S1</span><span>S2</span><span>S3</span><span>S4</span><span>S5</span><span>S6</span>
+      </div>
+      <div class="gl">
+        <div class="et">Alinhamento: acessos, materiais e regras de atendimento</div>
+        <div class="rp">Liga + equipe</div>
+        <div class="cel"><b style="--gd:.05s"></b></div><div class="cel vz"><b></b></div><div class="cel vz"><b></b></div><div class="cel vz"><b></b></div><div class="cel vz"><b></b></div><div class="cel vz"><b></b></div>
+      </div>
+      <div class="gl">
+        <div class="et">Configuração do atendimento de mega hair e, na Opção 02, dos cursos</div>
+        <div class="rp">Liga</div>
+        <div class="cel vz"><b></b></div><div class="cel"><b style="--gd:.15s"></b></div><div class="cel"><b style="--gd:.22s"></b></div><div class="cel vz"><b></b></div><div class="cel vz"><b></b></div><div class="cel vz"><b></b></div>
+      </div>
+      <div class="gl">
+        <div class="et">Integrações com WhatsApp e GoHighLevel, follow-ups e repasse à equipe</div>
+        <div class="rp">Liga</div>
+        <div class="cel vz"><b></b></div><div class="cel vz"><b></b></div><div class="cel"><b style="--gd:.3s"></b></div><div class="cel"><b style="--gd:.37s"></b></div><div class="cel vz"><b></b></div><div class="cel vz"><b></b></div>
+      </div>
+      <div class="gl">
+        <div class="et">Testes das jornadas e ajustes com a equipe</div>
+        <div class="rp">Liga + equipe</div>
+        <div class="cel vz"><b></b></div><div class="cel vz"><b></b></div><div class="cel vz"><b></b></div><div class="cel vz"><b></b></div><div class="cel"><b style="--gd:.45s"></b></div><div class="cel vz"><b></b></div>
+      </div>
+      <div class="gl">
+        <div class="et">Homologação e ativação após aprovação</div>
+        <div class="rp">Liga + equipe</div>
+        <div class="cel vz"><b></b></div><div class="cel vz"><b></b></div><div class="cel vz"><b></b></div><div class="cel vz"><b></b></div><div class="cel vz"><b></b></div><div class="cel"><b style="--gd:.53s"></b></div>
+      </div>
+    </div>
+
+    <div class="cron-nota">
+      <div class="rv"><strong>6 semanas</strong><p>Prazo estimado de implantação, passando por configuração, testes e homologação com a equipe da Débora.</p></div>
+      <div class="rv" style="--d:.08s"><strong>30 dias depois</strong><p>A cobrança da mensalidade começa 30 dias após a homologação, nas duas opções.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta" id="proximo">
+  <div class="wrap">
+    <div class="rv"><span class="mono pt">Recomendação e próximo passo</span></div>
+    <h2 class="rv" style="--d:.07s">Comece pelo mega hair<span class="pt">.</span></h2>
+    <p class="rv" style="--d:.12s">É onde a fila de clientes já existe e onde a conversa trava todos os dias.</p>
+
+    <div class="rec-box rv" style="--d:.18s">
+      <span class="mono">Nossa recomendação</span>
+      <p>Começar pela <strong>Opção 01 — Mega Hair</strong>, a menos que já exista uma turma com datas e inscrições definidas; nesse caso a Opção 02 se paga mais rápido. Com a opção escolhida, alinhamos as condições de pagamento da implantação e a cobertura do suporte, e aprovamos juntas as conversas de teste antes de ativar.</p>
+    </div>
+
+    <a class="bt rv" style="--d:.24s" href="https://wa.me/5521998867022?text=Oi%20Ighor!%20Vi%20a%20proposta%20do%20atendimento%20no%20WhatsApp%20e%20quero%20conversar." target="_blank" rel="noopener">
+      Escolher uma opção
+      <svg viewBox="0 0 15 15" fill="none"><path d="M2 7.5h11M9 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fm">
+        <svg><use href="#escudo"/></svg>
+        <div><span>Liga do Marketing</span><em>Método T.I.T.A.N.</em></div>
+      </div>
+      <div class="titan">
+        <b>Tecnologia</b><b>Inteligência Artificial</b><b>Transformação</b><b>Automação</b><b>Nurturing</b>
+      </div>
+    </div>
+    <div class="fval">
+      <span>Proposta comercial · Atendimento no WhatsApp para Débora Lopes</span>
+      <span>19 de novembro de 2026 · validade de 15 dias</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var red = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* reveals */
+  var ob = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('vis'); ob.unobserve(e.target); } });
+  },{threshold:.16, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv,.ofx,#gantt').forEach(function(el){ ob.observe(el); });
+
+  /* scrollytelling */
+  var cenas = document.querySelectorAll('#tela .cena');
+  var passos = document.querySelectorAll('#passos .passo');
+  if(cenas.length && passos.length){
+    var atual = 1;
+    function ir(n){
+      if(n===atual) return;
+      atual = n;
+      cenas.forEach(function(c){ c.classList.toggle('on', c.dataset.c === String(n)); });
+      passos.forEach(function(p){ p.classList.toggle('at', p.dataset.p === String(n)); });
+    }
+    var po = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting) ir(parseInt(e.target.dataset.p,10)); });
+    },{rootMargin:(window.innerWidth<900?'-64% 0px -18% 0px':'-46% 0px -46% 0px'), threshold:0});
+    passos.forEach(function(p){ po.observe(p); });
+  }
+})();
+</script>
+</body>
+</html>
