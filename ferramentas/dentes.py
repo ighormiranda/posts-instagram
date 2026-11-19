@@ -31,12 +31,14 @@ def whiten(im):
     return im
 if __name__=='__main__':
     src,dst=sys.argv[1],sys.argv[2]
+    skip_from=float(sys.argv[3]) if len(sys.argv)>3 else 1e9
     W,H=1080,1920
     dec=subprocess.Popen(['ffmpeg','-v','error','-i',src,'-f','rawvideo','-pix_fmt','bgr24','-'],stdout=subprocess.PIPE)
     enc=subprocess.Popen(['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','bgr24','-s',f'{W}x{H}','-r','30','-i','-','-i',src,'-map','0:v','-map','1:a','-c:v','libx264','-crf','21','-preset','medium','-pix_fmt','yuv420p','-c:a','copy','-movflags','+faststart',dst],stdin=subprocess.PIPE)
-    n=W*H*3
+    n=W*H*3; k=0
     while True:
         b=dec.stdout.read(n)
         if len(b)<n: break
-        enc.stdin.write(whiten(np.frombuffer(b,np.uint8).reshape(H,W,3).copy()).tobytes())
+        fr=np.frombuffer(b,np.uint8).reshape(H,W,3).copy()
+        enc.stdin.write((fr if k/30>=skip_from else whiten(fr)).tobytes()); k+=1
     enc.stdin.close(); enc.wait()
