@@ -1,0 +1,645 @@
+[
+ {
+  "id": "s7c21",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "estudio-branco-camisa-preta/segurando-celular.jpg",
+    "chapeu": "Stories que funcionam agendados",
+    "titulo": "5 stories que fazem o seu cliente *responder.*",
+    "sub": "Testei todos no meu perfil. Nenhum precisa de você online."
+   },
+   {
+    "t": "item",
+    "k": 1,
+    "label": "Responde com emoji",
+    "titulo": "Descreve sua semana em *3 emojis.*",
+    "corpo": "Responder com emoji é rápido. E toda resposta abre uma conversa no seu direct."
+   },
+   {
+    "t": "item",
+    "k": 2,
+    "label": "Toca no coração",
+    "titulo": "Toca no coração se *já aconteceu com você.*",
+    "corpo": "Uma situação que o seu cliente vive. O coração do story conta como interação."
+   },
+   {
+    "t": "item",
+    "k": 3,
+    "label": "Quiz por toque",
+    "titulo": "Pergunta num story, *resposta no próximo.*",
+    "corpo": "A pessoa pensa, toca e volta. Deixe 15 minutos entre os dois pra não sair fora de ordem."
+   },
+   {
+    "t": "item",
+    "k": 4,
+    "label": "Isso ou aquilo",
+    "titulo": "Duas opções. *Me responde com A ou B.*",
+    "corpo": "Ninguém resiste a escolher. E você descobre o que o seu cliente pensa."
+   },
+   {
+    "t": "item",
+    "k": 5,
+    "label": "Jogo",
+    "titulo": "Esconde um objeto na foto *e pergunta onde está.*",
+    "corpo": "A pessoa volta, procura e responde. Toda semana eu faço um no meu perfil."
+   },
+   {
+    "t": "final",
+    "foto": "estudio-branco-camisa-preta/sorrindo-bracos-cruzados.jpg",
+    "titulo": "Qual desses você vai *testar primeiro?*",
+    "cta": "comenta",
+    "cta_titulo": "Me conta nos *comentários*",
+    "cta_sub": "1, 2, 3, 4 ou 5."
+   }
+  ]
+ },
+ {
+  "id": "s7d21",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "escritorio/conversando-networking.jpg",
+    "chapeu": "O que eu estudei essa semana",
+    "titulo": "Estudei perfis que crescem *todo dia.* Achei 5 regras.",
+    "sub": "Já estou aplicando no meu."
+   },
+   {
+    "t": "texto",
+    "chapeu": "Regra 1",
+    "titulo": "O seu *@ na legenda.*",
+    "sub": "Quem vê o post de fora sabe na hora de quem é. E vai pro perfil."
+   },
+   {
+    "t": "texto",
+    "chapeu": "Regra 2",
+    "titulo": "Um pedido só *no final.*",
+    "sub": "Comenta, salva ou segue. Um. Quando você pede tudo, a pessoa não faz nada."
+   },
+   {
+    "t": "texto",
+    "chapeu": "Regra 3",
+    "titulo": "Horário *quebrado.*",
+    "sub": "12h07, 19h23. Quase todo mundo agenda no horário cheio."
+   },
+   {
+    "t": "texto",
+    "chapeu": "Regra 4",
+    "titulo": "Cita o *post anterior.*",
+    "sub": "\"Ontem eu mostrei X.\" A pessoa vai atrás e conhece o resto do perfil."
+   },
+   {
+    "t": "texto",
+    "chapeu": "Regra 5",
+    "titulo": "Simples *ganha* de perfeito.",
+    "sub": "Foto real e uma frase. Post com cara de feito na hora."
+   },
+   {
+    "t": "final",
+    "foto": "escritorio/em-pe-escritorio-janela.jpg",
+    "titulo": "A partir de hoje eu posto *3 vezes por dia.*",
+    "lista": [
+     "@ na legenda",
+     "Um pedido só",
+     "Horário quebrado"
+    ],
+    "cta": "segue",
+    "cta_titulo": "Segue *@o.ighormiranda*",
+    "cta_sub": "e acompanha o teste."
+   }
+  ]
+ },
+ {
+  "id": "s7c22",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "evento-makers/anotando-plateia.jpg",
+    "chapeu": "Black Friday",
+    "titulo": "3 erros de quem só aparece *na Black Friday.*"
+   },
+   {
+    "t": "item",
+    "k": 1,
+    "label": "Erro 1",
+    "titulo": "Sumir o ano inteiro e *voltar com desconto.*",
+    "corpo": "O cliente não lembra de você. E quem não lembra só compara preço."
+   },
+   {
+    "t": "item",
+    "k": 2,
+    "label": "Erro 2",
+    "titulo": "Achar que o desconto *faz a venda sozinho.*",
+    "corpo": "Desconto traz quem compra pelo preço. Na próxima promoção, ele vai pro mais barato."
+   },
+   {
+    "t": "item",
+    "k": 3,
+    "label": "Erro 3",
+    "titulo": "Não ter pra quem *avisar.*",
+    "corpo": "Sem audiência, a oferta não chega em ninguém. Por isso quem posta o ano todo vende mais na Black."
+   },
+   {
+    "t": "texto",
+    "fundo": "escuro",
+    "chapeu": "O que fazer",
+    "titulo": "Apareça *antes* de precisar vender.",
+    "sub": "Presença todo dia vira lembrança. Lembrança vira venda."
+   },
+   {
+    "t": "final",
+    "foto": "evento-makers/bracos-cruzados-em-pe.jpg",
+    "titulo": "Qual desses você *já cometeu?*",
+    "cta": "comenta",
+    "cta_titulo": "Me conta nos *comentários*",
+    "cta_sub": "1, 2 ou 3."
+   }
+  ]
+ },
+ {
+  "id": "s7d22",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "estudio-blazer-marinho/serio-tres-quartos.jpg",
+    "chapeu": "Bastidor real",
+    "titulo": "O que a IA faz no meu negócio *toda semana.*"
+   },
+   {
+    "t": "item",
+    "k": 1,
+    "label": "Pesquisa",
+    "titulo": "Estuda o que está *funcionando no nicho.*",
+    "corpo": "Lê os perfis de referência e compara cada post com a média do próprio perfil."
+   },
+   {
+    "t": "item",
+    "k": 2,
+    "label": "Criação",
+    "titulo": "Monta carrossel e story *com as minhas fotos.*",
+    "corpo": "Nada de banco de imagem. Fotos minhas, a minha marca, as minhas cores."
+   },
+   {
+    "t": "item",
+    "k": 3,
+    "label": "Agenda",
+    "titulo": "Agenda *o mês inteiro.*",
+    "corpo": "Posts e stories. Neste mês foram 74 stories agendados de uma vez."
+   },
+   {
+    "t": "item",
+    "k": 4,
+    "label": "Vídeo",
+    "titulo": "Edita os meus *Reels.*",
+    "corpo": "Corta os erros, coloca legenda e título. Eu só gravo."
+   },
+   {
+    "t": "texto",
+    "fundo": "escuro",
+    "chapeu": "E eu?",
+    "titulo": "Eu *aprovo* e cuido do que só eu posso fazer.",
+    "sub": "Gravar, responder cliente e vender."
+   },
+   {
+    "t": "final",
+    "foto": "estudio-blazer-marinho/sorrindo-tres-quartos.jpg",
+    "titulo": "Qual dessas tarefas *mais te toma tempo?*",
+    "cta": "comenta",
+    "cta_titulo": "Me conta nos *comentários*"
+   }
+  ]
+ },
+ {
+  "id": "s7c23",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "estudio-camisa-roxa/apontando-cima.jpg",
+    "chapeu": "O case: meu próprio perfil",
+    "titulo": "Antes de te oferecer qualquer coisa, *olha o que aconteceu aqui.*"
+   },
+   {
+    "t": "texto",
+    "chapeu": "Agosto e setembro",
+    "titulo": "Eu postava *quando dava.*",
+    "sub": "Às vezes um vídeo ia acima do normal. Depois, semanas paradas."
+   },
+   {
+    "t": "texto",
+    "chapeu": "6 de outubro",
+    "titulo": "Liguei a *automação.*",
+    "sub": "Post todo dia. Nenhum dia zerado desde então."
+   },
+   {
+    "t": "texto",
+    "chapeu": "Primeiros 30 dias",
+    "titulo": "*+393%* de visualizações.",
+    "sub": "Nos primeiros 30 dias da automação. Dado do painel do Instagram."
+   },
+   {
+    "t": "texto",
+    "chapeu": "O que mudou de verdade",
+    "titulo": "Constância, análise e *melhoria.*",
+    "sub": "Postando todo dia, dá pra ver o que funciona. E o próximo post já sai melhor."
+   },
+   {
+    "t": "final",
+    "foto": "estudio-camisa-roxa/sorrindo.jpg",
+    "titulo": "Agora a mesma máquina *roda na sua empresa.*",
+    "lista": [
+     "Carrossel, Reels e stories",
+     "Todo dia",
+     "Você só aprova"
+    ],
+    "cta": "black"
+   }
+  ]
+ },
+ {
+  "id": "s7d23",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "palco/palestrando-fundo-verde.jpg",
+    "chapeu": "Black November da Liga",
+    "titulo": "Todo mundo vai te dar desconto. *Eu vou te dar audiência.*"
+   },
+   {
+    "t": "texto",
+    "chapeu": "O que é",
+    "titulo": "Carrossel, Reels e stories *da sua empresa, todo dia.*",
+    "sub": "A Liga cria, você aprova, a Liga publica."
+   },
+   {
+    "t": "item",
+    "k": 1,
+    "label": "Você manda",
+    "titulo": "Fotos e vídeos *do celular.*",
+    "corpo": "A gente te diz quais. Sua empresa com rosto de verdade."
+   },
+   {
+    "t": "item",
+    "k": 2,
+    "label": "A gente cria",
+    "titulo": "O mês inteiro *numa página só.*",
+    "corpo": "Você aprova em até 3 dias, com uma rodada de ajustes."
+   },
+   {
+    "t": "item",
+    "k": 3,
+    "label": "A gente publica",
+    "titulo": "No horário *certo, todo dia.*",
+    "corpo": "Com story de chamada pra cada post e um story de interação por dia."
+   },
+   {
+    "t": "texto",
+    "fundo": "escuro",
+    "chapeu": "5 vagas em novembro",
+    "titulo": "Antes de fechar, você vê *uma amostra* com a sua empresa.",
+    "sub": "Sem compromisso."
+   },
+   {
+    "t": "final",
+    "foto": "palco/palestrando.jpg",
+    "titulo": "Audiência vale mais *que dinheiro.*",
+    "cta": "black"
+   }
+  ]
+ },
+ {
+  "id": "s7c24",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "blazer-verde-evento/telefone-cafe-sorrindo.jpg",
+    "chapeu": "WhatsApp na prática",
+    "titulo": "O cliente pediu preço *e sumiu.* 3 mensagens pra trazer de volta."
+   },
+   {
+    "t": "chat",
+    "chapeu": "Dia 2",
+    "titulo": "Retoma *sem pressão.*",
+    "msgs": [
+     [
+      "e",
+      "Oi, Ana! Ficou alguma dúvida sobre o que você me perguntou? Posso te explicar melhor por aqui."
+     ]
+    ]
+   },
+   {
+    "t": "chat",
+    "chapeu": "Dia 5",
+    "titulo": "Entrega *valor.*",
+    "msgs": [
+     [
+      "e",
+      "Lembrei de você: separei 2 exemplos parecidos com o seu caso. Quer que eu mande?"
+     ]
+    ]
+   },
+   {
+    "t": "chat",
+    "chapeu": "Dia 10",
+    "titulo": "Fecha *a porta com educação.*",
+    "msgs": [
+     [
+      "e",
+      "Vou parar de te chamar pra não incomodar. Se fizer sentido mais pra frente, é só me responder aqui."
+     ]
+    ]
+   },
+   {
+    "t": "evite",
+    "chapeu": "O que evitar",
+    "titulo": "Mensagem que *afasta.*",
+    "itens": [
+     "\"E aí, vai fechar?\"",
+     "Desconto logo na primeira mensagem",
+     "Áudio de 3 minutos"
+    ]
+   },
+   {
+    "t": "final",
+    "foto": "blazer-verde-evento/rindo-com-cafe.jpg",
+    "titulo": "Salva e usa *na próxima vez* que alguém sumir.",
+    "cta": "salva"
+   }
+  ]
+ },
+ {
+  "id": "s7d24",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "estudio-blazer-marinho/sorrindo-maos-bolso.jpg",
+    "chapeu": "Black November da Liga",
+    "titulo": "O que é nosso, o que é seu *e o que não entra.*",
+    "sub": "Prefiro te contar antes do que te decepcionar depois."
+   },
+   {
+    "t": "texto",
+    "chapeu": "A gente faz",
+    "titulo": "Pesquisa do nicho, carrossel, Reels, stories, *legenda e publicação.*",
+    "sub": "E arruma o seu perfil no primeiro mês: bio, destaques e post fixado."
+   },
+   {
+    "t": "texto",
+    "chapeu": "Você faz",
+    "titulo": "Manda fotos e vídeos *e aprova o mês.*",
+    "sub": "E posta o que o Instagram só deixa você fazer: enquete, caixinha, link e collab."
+   },
+   {
+    "t": "texto",
+    "fundo": "escuro",
+    "chapeu": "Não está incluído",
+    "titulo": "Responder direct, tráfego pago *e promessa de número.*",
+    "sub": "O +393% é do meu perfil, não garantia pro seu. O que a gente entrega é a constância."
+   },
+   {
+    "t": "final",
+    "foto": "estudio-blazer-marinho/sorrindo-frente-aberto.jpg",
+    "titulo": "5 vagas em novembro, *com amostra antes.*",
+    "cta": "black"
+   }
+  ]
+ },
+ {
+  "id": "s7c25",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "escritorio/mesa-reuniao-maos-cruzadas.jpg",
+    "chapeu": "Bastidor",
+    "titulo": "Como eu planejei *um mês de stories* num dia só."
+   },
+   {
+    "t": "texto",
+    "chapeu": "Passo 1",
+    "titulo": "Um quadro fixo *pra cada dia da semana.*",
+    "sub": "Segunda 3 emojis, terça mini-aula, quarta quiz, quinta complete a frase, sexta coração."
+   },
+   {
+    "t": "texto",
+    "chapeu": "Passo 2",
+    "titulo": "Um tema *por fase do mês.*",
+    "sub": "Uma semana de case, uma de oferta, depois fim de ano."
+   },
+   {
+    "t": "texto",
+    "chapeu": "Passo 3",
+    "titulo": "Tudo agendado *de uma vez.*",
+    "sub": "74 stories pro mês inteiro. Eles saem mesmo quando eu esqueço."
+   },
+   {
+    "t": "texto",
+    "fundo": "escuro",
+    "chapeu": "O que eu aprendi",
+    "titulo": "Pergunta e resposta *precisam de intervalo.*",
+    "sub": "Com 2 minutos de diferença, o Instagram publicou fora de ordem. Agora são 15."
+   },
+   {
+    "t": "final",
+    "foto": "escritorio/andando-corredor-caderno.jpg",
+    "titulo": "Qual quadro você *colocaria no seu?*",
+    "cta": "comenta",
+    "cta_titulo": "Me conta nos *comentários*"
+   }
+  ]
+ },
+ {
+  "id": "s7d25",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "estudio-branco-camisa-preta/serio-frente.jpg",
+    "chapeu": "Black November da Liga",
+    "titulo": "Quanto mais você posta, *menos cada post custa.*",
+    "sub": "Preço cheio. Sem desconto."
+   },
+   {
+    "t": "item",
+    "k": 1,
+    "label": "Presença",
+    "titulo": "1 post por dia · *R$ 1.000*",
+    "corpo": "20 carrosséis + 10 Reels + 60 stories por mês. R$ 33 por post."
+   },
+   {
+    "t": "item",
+    "k": 2,
+    "label": "Constância",
+    "titulo": "2 posts por dia · *R$ 1.500*",
+    "corpo": "40 carrosséis + 20 Reels + 90 stories por mês. R$ 25 por post."
+   },
+   {
+    "t": "item",
+    "k": 3,
+    "label": "Domínio",
+    "titulo": "3 posts por dia · *R$ 1.800*",
+    "corpo": "60 carrosséis + 30 Reels + 120 stories e 1 campanha de oferta por mês. R$ 20 por post. Só 2 vagas."
+   },
+   {
+    "t": "final",
+    "foto": "estudio-branco-camisa-preta/sentado-banco.jpg",
+    "titulo": "Antes de escolher, *veja a amostra.*",
+    "cta": "black"
+   }
+  ]
+ },
+ {
+  "id": "s7c26",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "estudio-camisa-roxa/dedo-na-tempora.jpg",
+    "chapeu": "Instagram na prática",
+    "titulo": "4 números que eu olho *no meu painel.*",
+    "sub": "E o que cada um me diz."
+   },
+   {
+    "t": "item",
+    "k": 1,
+    "label": "Visualizações",
+    "titulo": "Quantas vezes *me viram.*",
+    "corpo": "Mostra se a constância está funcionando."
+   },
+   {
+    "t": "item",
+    "k": 2,
+    "label": "Visualizadores",
+    "titulo": "Quantas *pessoas diferentes.*",
+    "corpo": "Se só o primeiro sobe, são as mesmas pessoas te vendo mais vezes."
+   },
+   {
+    "t": "item",
+    "k": 3,
+    "label": "Seguidores x não seguidores",
+    "titulo": "Se estou chegando *em gente nova.*",
+    "corpo": "É o número que mais me ensinou neste mês."
+   },
+   {
+    "t": "item",
+    "k": 4,
+    "label": "Por tipo de conteúdo",
+    "titulo": "Post, story *ou Reels.*",
+    "corpo": "Mostra onde vale colocar mais energia."
+   },
+   {
+    "t": "final",
+    "foto": "estudio-camisa-roxa/sorrindo.jpg",
+    "titulo": "Abre o seu painel *e confere agora.*",
+    "cta": "salva"
+   }
+  ]
+ },
+ {
+  "id": "s7d26",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "evento-a-vida-e-hoje/apontando-letreiro.jpg",
+    "chapeu": "Black November da Liga",
+    "titulo": "Fechou até 30/11? *Ganha o funil de stories.*",
+    "sub": "Todo mês, por 3 meses."
+   },
+   {
+    "t": "texto",
+    "chapeu": "O bônus",
+    "titulo": "Enquete, caixinha e link *numa sequência pronta.*",
+    "sub": "Pensada pra puxar conversa com quem já te segue."
+   },
+   {
+    "t": "texto",
+    "chapeu": "A gente monta",
+    "titulo": "Arte, texto *e ordem.*",
+    "sub": "Você só posta, porque o Instagram não deixa ninguém publicar figurinha por você."
+   },
+   {
+    "t": "texto",
+    "fundo": "escuro",
+    "chapeu": "Por que stories",
+    "titulo": "No meu perfil, posts e stories trouxeram *85% das visualizações.*",
+    "sub": "Painel de 90 dias, de 7/ago a 4/nov."
+   },
+   {
+    "t": "final",
+    "foto": "evento-a-vida-e-hoje/apontando-baixo.jpg",
+    "titulo": "Desconto acaba dia 1º. *Seguidor não.*",
+    "cta": "black"
+   }
+  ]
+ },
+ {
+  "id": "s7c27",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "estudio-moletom-makers/bracos-cruzados.jpg",
+    "chapeu": "Diário do teste",
+    "titulo": "Comecei a postar *3 vezes por dia.* O que eu espero.",
+    "sub": "Não sei se vai dar certo."
+   },
+   {
+    "t": "texto",
+    "chapeu": "Por que",
+    "titulo": "Quase todas as minhas visualizações vinham *de quem já me segue.*",
+    "sub": "Gente nova quase não chegava."
+   },
+   {
+    "t": "texto",
+    "chapeu": "O que mudou",
+    "titulo": "Mais Reels, *mais posts simples* e um pedido só.",
+    "sub": "Reels é o formato que mais chega em quem não me conhece."
+   },
+   {
+    "t": "texto",
+    "chapeu": "A meta",
+    "titulo": "Chegar a *10 mil seguidores.*",
+    "sub": "Mostrando o número real a cada duas semanas."
+   },
+   {
+    "t": "final",
+    "foto": "estudio-moletom-makers/serio-1.jpg",
+    "titulo": "Quer ver *se vai dar certo?*",
+    "cta": "segue",
+    "cta_titulo": "Segue *@o.ighormiranda*",
+    "cta_sub": "e acompanha comigo."
+   }
+  ]
+ },
+ {
+  "id": "s7d27",
+  "slides": [
+   {
+    "t": "capa",
+    "foto": "palco/palestrando.jpg",
+    "chapeu": "Black November da Liga",
+    "titulo": "Últimos dias. *Ainda tem vaga.*"
+   },
+   {
+    "t": "texto",
+    "chapeu": "A prova",
+    "titulo": "*+393%* de visualizações nos primeiros 30 dias da automação.",
+    "sub": "No meu perfil. Print do painel do Instagram."
+   },
+   {
+    "t": "texto",
+    "chapeu": "A oferta",
+    "titulo": "Carrossel, Reels e stories *da sua empresa, todo dia.*",
+    "sub": "Planos de R$ 1.000 a R$ 1.800. Amostra antes de fechar."
+   },
+   {
+    "t": "texto",
+    "fundo": "escuro",
+    "chapeu": "O bônus",
+    "titulo": "Funil de stories *por 3 meses.*",
+    "sub": "Só pra quem fechar até 30/11."
+   },
+   {
+    "t": "final",
+    "foto": "palco/palestrando-fundo-verde.jpg",
+    "titulo": "Audiência vale mais *que dinheiro.*",
+    "cta": "black"
+   }
+  ]
+ }
+]
