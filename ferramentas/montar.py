@@ -24,8 +24,12 @@ def build(W,order,fix,title,hook,hl,broll,out,tokfix=None):
         a0,a1=starts[b['clip']]; a0+=b.get('off',0); a1=min(a1,a0+b.get('dur',1e9)); D=a1-a0
         k=len(inputs); 
         if b['type']=='img':
-            inputs+=['IMG:'+b['src']]
-            fc.append(f"[{k}:v]scale=672:1100,zoompan=z='1+0.05*on/({int(D*30)})':x='iw/2-(iw/zoom/2)':y='ih/3-(ih/zoom/3)':d={int(D*30)+1}:s=672x1100:fps=30,setsar=1,pad=1080:1920:204:220:color=0x0A0A0A,trim=0:{D},setpts=PTS-STARTPTS+{a0}/TB[b{j}]")
+            from PIL import Image as _I
+            im=_I.open(b['src']).convert('RGB'); im.thumbnail((900,1250))
+            cv=_I.new('RGB',(1080,1920),(10,10,10)); cv.paste(im,((1080-im.width)//2,190+(1250-im.height)//2))
+            pth=out+f'.b{j}.png'; cv.save(pth)
+            inputs+=['IMG:'+pth]
+            fc.append(f"[{k}:v]scale=1080:1920,zoompan=z='1+0.04*on/({int(D*30)})':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={int(D*30)+1}:s=1080x1920:fps=30,setsar=1,trim=0:{D},setpts=PTS-STARTPTS+{a0}/TB[b{j}]")
         else:
             inputs+=[b['src']]; L=b['end']-b['start']
             fc.append(f"[{k}:v]trim={b['start']}:{b['end']},setpts=(PTS-STARTPTS)*{D/L},fps=30,crop=1080:1140:0:420,pad=1080:1920:0:220:color=0x0A0A0A,setsar=1,setpts=PTS+{a0}/TB[b{j}]")
