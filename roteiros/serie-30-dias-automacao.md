@@ -108,11 +108,11 @@ Episódio 4: eu testei em mim antes de vender. Amanhã eu abro a máquina pra 5 
 4. "E você não precisa confiar em mim: antes de fechar, eu monto uma amostra com a sua empresa."
 5. "Quem fechar até 30 de novembro ganha o funil de stories com figurinha por 3 meses."
 6. "5 vagas. Manda BLACK no WhatsApp, pelo link da bio."
-7. "Desconto acaba dia 1º. Seguidor não."
+7. (regravado em 20/11) "Lembrando que são só 5 vagas e uma já foi."
 
 **Legenda:**
 @o.ighormiranda
-Abriu a Black November da Liga. A máquina do meu perfil no Instagram da sua empresa, com amostra antes de fechar. 5 vagas, bônus até 30/11. Manda BLACK pelo link da bio.
+Abriu a Black November da Liga. A máquina do meu perfil no Instagram da sua empresa, com amostra antes de fechar. São 5 vagas: quando a última fechar, acabou. Manda BLACK pelo link da bio.
 
 ---
 
