@@ -56,7 +56,7 @@ def T_long(date,hh,slug,ti,body):
     d.text((M,250),'Segura o dedo na tela pra ler',font=fnt('pjs700',36),fill=LM)
     im.alpha_composite(emoji('☝️',56),(M+560,236))
     handle(d); save(im,date,hh,slug)
-def jogo(date,foto,ch,x,y,leg):
+def jogo(date,foto,ch,x,y,leg,nome='um *objeto*\nescondido'):
     ph=ImageOps.fit(ImageOps.exif_transpose(Image.open(FOT+foto)).convert('RGB'),(W,H),centering=(0.5,0.5)).convert('RGBA')
     g=Image.new('L',(1,H))
     for yy in range(H): g.putpixel((0,yy),int(210*max(0,(yy-1300)/620)))
@@ -65,11 +65,11 @@ def jogo(date,foto,ch,x,y,leg):
     a=ph.copy(); a.alpha_composite(e,(x,y)); d=ImageDraw.Draw(a)
     capa.draw_title(d,segs(leg),M,1420,fnt('pjs800',56),900,{'b':BR,'d':LM},66)
     save(a,date,'2030','jogo-1-foto',f'jogo: {ch} escondido em x={x},y={y}')
-    im,d,yy=card('VOCÊ REPAROU?','Tinha um *objeto*\nescondido no\nstory anterior.','Volta um story e procura.\n\nAchou? Me responde com\n*o emoji + onde ele tá.*\n\nO primeiro que acertar ganha\n*30 minutos de conversa\nsobre o seu negócio.*',tom='verde',tam=84,y0=300)
+    im,d,yy=card('VOCÊ REPAROU?',f'Tinha {nome}\nno story anterior.','Volta um story e procura.\n\nAchou? Me responde\n*onde ele tá.*\n\nO primeiro que acertar ganha\n*30 minutos de conversa\nsobre o seu negócio.*',tom='verde',tam=84,y0=300)
     im.alpha_composite(emoji(ch,120),(W-M-130,190))
     im.alpha_composite(emoji('👈',110),(M,yy+50)); d=ImageDraw.Draw(im)
     d.text((M+140,yy+78),'toca do lado esquerdo pra voltar',font=fnt('pjs700',34),fill=BR)
-    handle(d); save(im,date,'2032','jogo-2-pergunta')
+    handle(d); save(im,date,'2045','jogo-2-pergunta')
     r=ph.copy(); r.alpha_composite(e,(x,y)); cx,cy=x+21,y+21
     dim=Image.new('RGBA',(W,H),(0,0,0,130)); mk=Image.new('L',(W,H),130); ImageDraw.Draw(mk).ellipse((cx-75,cy-75,cx+75,cy+75),fill=0); dim.putalpha(mk)
     r=Image.alpha_composite(r,dim); d=ImageDraw.Draw(r); d.ellipse((cx-75,cy-75,cx+75,cy+75),outline=LM,width=8)
