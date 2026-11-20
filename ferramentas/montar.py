@@ -21,7 +21,7 @@ def build(W,order,fix,title,hook,hl,broll,out,tokfix=None):
     fc.append(''.join(f'[v{i}][a{i}]' for i in range(len(segs)))+f'concat=n={len(segs)}:v=1:a=1[v0][a]')
     inputs=[s[0] for s in segs]; cur='v0'
     for j,b in enumerate(broll):
-        a0,a1=starts[b['clip']]; a0+=b.get('off',0); D=a1-a0
+        a0,a1=starts[b['clip']]; a0+=b.get('off',0); a1=min(a1,a0+b.get('dur',1e9)); D=a1-a0
         k=len(inputs); 
         if b['type']=='img':
             inputs+=['IMG:'+b['src']]
