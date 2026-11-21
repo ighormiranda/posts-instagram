@@ -5,6 +5,10 @@
 - Quase todos os stories atuais são arte com texto, postados automaticamente pelo HighLevel, sem figurinha (enquete, caixinha, link, música).
 - O único story com resposta no print de 21/11 foi uma foto pessoal postada pelo celular.
 
+## Checagem de restrição (21/11, 11h30)
+- Status da Conta no Instagram: tudo verde. Sem conteúdo removido, sem restrição de recursos, **sem limite de recomendação** (qualificação de recomendação ok). Não há shadowban.
+- O HighLevel publica pela API oficial da Meta. Testes públicos (Hootsuite, Agorapulse, Buffer) não acharam queda de alcance por agendar.
+
 ## Hipóteses (o que pode ter derrubado)
 - **H1 · Sem figurinha = sem toque.** O HighLevel não põe figurinha. Sem interação, o Instagram empurra os stories para o fim da fila.
 - **H2 · Arte com texto é pulada.** Formato que parece anúncio. Foto ou vídeo do dia a dia segura mais.
