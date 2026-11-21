@@ -9,6 +9,11 @@
 - Status da Conta no Instagram: tudo verde. Sem conteúdo removido, sem restrição de recursos, **sem limite de recomendação** (qualificação de recomendação ok). Não há shadowban.
 - O HighLevel publica pela API oficial da Meta. Testes públicos (Hootsuite, Agorapulse, Buffer) não acharam queda de alcance por agendar.
 
+## Painel 60 dias (21/11, 11h31)
+- 33.006 visualizações (+393,9%), 2.567 visualizadores (+184,3%), 29.013 de seguidores (+397,1%).
+- Por tipo: posts 20 mil, stories 6,6 mil, Reels 6,4 mil. Os Reels são o único formato com fatia grande de não seguidores.
+- Pico em 20/11 (cerca de 1 mil visualizações e 370 visualizadores no dia), dia do ep. 2 + meme do Claudinho + Novidades da IA.
+
 ## Hipóteses (o que pode ter derrubado)
 - **H1 · Sem figurinha = sem toque.** O HighLevel não põe figurinha. Sem interação, o Instagram empurra os stories para o fim da fila.
 - **H2 · Arte com texto é pulada.** Formato que parece anúncio. Foto ou vídeo do dia a dia segura mais.
