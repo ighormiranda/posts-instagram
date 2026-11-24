@@ -26,3 +26,12 @@ Custo: cerca de US$ 0,17 (2 runs basicData + 1 teste).
 | 19h23 | Reels | Falando com a câmera (lote gravado) ou Reels sem fala (texto + música). 1 por semana com o Claudinho. |
 - Imagem por post: pedir ao GPT uma imagem criativa ligada ao tema, com o rosto do Ighor. Nunca personagem com dono (Ultron, Homem de Ferro, Exterminador): usar robô original ou o Claudinho.
 - Número só com fonte. Pessoal só o que o Ighor contar.
+
+## Painel do @o.ighormiranda (23/11/2026, 23h50)
+- 60 dias: 34.103 visualizações (+420,5%), 2.722 pessoas alcançadas (+242,4%), 4.200 visualizações de não seguidores.
+- Seguidores: 1.920. Em 60 dias: +74 seguiram, -71 deixaram de seguir. Saldo +3. **O problema não é alcance, é conversão em seguidor e retenção.**
+- Pico de "deixaram de seguir" (-8 num dia) perto de 30/10.
+- Top do ano por visualizações: "Nunca desista" (Reels, rosto, praia, 856, 28 comentários); "O melhor da vida em dose..." (filha, 838, 63 curtidas, 20 comentários); "Grande parceiro" (evento, 778); Makers 11/10 (635).
+- Posts de arte automáticos recentes: 12 a 104 visualizações. Reels do Diário: 74 a 171.
+- Público: 50,7% mulheres, 49,3% homens. 25-34 anos: 24,5%.
+- Decisão para dezembro: 3 por dia, mas com o rosto e a vida do Ighor em todo post. Menos arte só com texto.
