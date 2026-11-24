@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sua jornada na mídia social — Liga do Marketing</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --preto:#07050B; --sup:#110A1A; --sup2:#1B1228; --linha:#2C2040;
+  --carmim:#CE143D; --carmim-luz:#E8325A; --roxo:#47017D; --roxo-luz:#4E49C1;
+  --ink:#FFFFFF; --texto:#CFC4DF; --fraco:#8E7FA8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--preto);color:var(--texto);
+  font-family:Poppins,system-ui,sans-serif;font-size:17px;line-height:1.65;
+  background-image:radial-gradient(rgba(206,20,61,.16) 1px,transparent 1.45px);
+  background-size:15px 15px;overflow-x:hidden;
+}
+h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;letter-spacing:.5px;text-transform:uppercase;color:var(--ink);margin:0}
+a{color:var(--carmim-luz)}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--fraco)}
+
+/* progresso */
+#barra{position:fixed;top:0;left:0;height:3px;width:0;background:var(--carmim);z-index:60}
+
+/* régua de dias */
+#regua{position:fixed;right:28px;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+#regua .d{display:flex;align-items:center;gap:9px;opacity:.3;transition:opacity .45s}
+#regua .d.on{opacity:1}
+#regua .rot{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:1.6px;color:var(--fraco)}
+#regua .d.on .rot{color:var(--ink)}
+#regua .pt{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--linha);background:transparent;transition:.45s}
+#regua .d.on .pt{background:var(--carmim);border-color:var(--carmim);box-shadow:0 0 0 5px rgba(206,20,61,.18)}
+
+/* hero */
+header{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:90px 7vw 60px;max-width:1200px}
+header .et{font-family:Anton,sans-serif;font-size:13px;letter-spacing:5px;color:var(--carmim);text-transform:uppercase;margin-bottom:26px}
+header h1{font-size:clamp(40px,7.2vw,96px);line-height:.98}
+header p{max-width:620px;margin:30px 0 0;font-size:clamp(16px,1.8vw,20px);color:var(--texto)}
+.cue{margin-top:56px;display:flex;align-items:center;gap:12px;color:var(--fraco);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2px}
+.cue i{display:block;width:1px;height:46px;background:linear-gradient(var(--carmim),transparent);animation:desce 1.9s infinite}
+@keyframes desce{0%{opacity:0;transform:translateY(-10px)}40%{opacity:1}100%{opacity:0;transform:translateY(10px)}}
+
+/* cenas */
+.cena{min-height:190vh;position:relative}
+.palco{position:sticky;top:0;min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:7vw;align-items:center;padding:0 10vw 0 7vw;max-width:1500px}
+.lado{max-width:520px}
+.dia{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2.4px;color:var(--carmim-luz);text-transform:uppercase;margin-bottom:14px;opacity:0;transform:translateY(14px);transition:.7s}
+.lado h2{font-size:clamp(28px,3.6vw,46px);line-height:1.04;opacity:0;transform:translateY(18px);transition:.7s .08s}
+.lado p{opacity:0;transform:translateY(18px);transition:.7s .18s;margin:20px 0 0}
+.lado p+p{margin-top:16px}
+.on .dia,.on h2,.on p{opacity:1;transform:none}
+
+/* visual */
+.visual{position:relative;min-height:380px;display:flex;align-items:center;justify-content:center}
+.quadro{width:100%;max-width:440px;background:var(--sup);border:1px solid var(--linha);border-radius:20px;padding:28px;opacity:0;transform:scale(.95);transition:.8s}
+.on .quadro{opacity:1;transform:none}
+
+.bolha{background:var(--sup2);border:1px solid var(--linha);border-radius:14px;border-bottom-left-radius:4px;padding:14px 16px;font-size:14.5px;color:var(--texto);margin-bottom:12px;opacity:0;transform:translateX(-18px);transition:.6s}
+.on .bolha{opacity:1;transform:none}
+.on .b2{transition-delay:.45s}
+.selo{margin-top:18px;display:inline-flex;align-items:center;gap:10px;border:1px solid var(--carmim);color:var(--ink);border-radius:999px;padding:9px 16px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;opacity:0;transition:.6s .9s}
+.on .selo{opacity:1}
+
+.risco{font-size:15px;color:var(--fraco);padding:14px 16px;border:1px dashed var(--linha);border-radius:12px;transition:.7s .3s}
+.on .risco{text-decoration:line-through;opacity:.4}
+.botaofake{margin-top:16px;display:flex;align-items:center;gap:12px;background:var(--carmim);color:#fff;border-radius:12px;padding:15px 18px;font-weight:600;font-size:15px;opacity:0;transform:translateY(12px);transition:.6s .7s}
+.on .botaofake{opacity:1;transform:none}
+.legenda{margin-top:14px;font-size:13px;color:var(--fraco);opacity:0;transition:.6s 1s}
+.on .legenda{opacity:1}
+
+.num3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.num3 div{background:var(--sup2);border:1px solid var(--linha);border-radius:12px;padding:14px 12px;text-align:center}
+.num3 b{display:block;font-family:Anton,sans-serif;font-size:26px;color:var(--ink);letter-spacing:1px}
+.num3 span{font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--fraco);font-family:'IBM Plex Mono',monospace}
+.carimbo{margin-top:20px;display:inline-block;border:2px solid var(--carmim);color:var(--carmim-luz);font-family:Anton,sans-serif;font-size:18px;letter-spacing:4px;padding:7px 18px;border-radius:6px;transform:rotate(-7deg) scale(1.5);opacity:0;transition:.7s .6s}
+.on .carimbo{opacity:1;transform:rotate(-7deg) scale(1)}
+
+.grade{display:grid;grid-template-columns:repeat(10,1fr);gap:6px}
+.grade i{display:block;aspect-ratio:1;border-radius:3px;background:var(--sup2);border:1px solid var(--linha);opacity:0;transform:scale(.4);transition:.42s}
+.on .grade i{opacity:1;transform:none;background:var(--roxo)}
+.on .grade i.r{background:var(--roxo-luz)}
+.on .grade i.s{background:#2B1C3E}
+.on .grade i.erro{background:var(--carmim);box-shadow:0 0 0 3px rgba(206,20,61,.3)}
+.on .grade i.ok{background:var(--roxo);box-shadow:none}
+.varredura{position:absolute;left:0;right:0;top:0;height:2px;background:var(--carmim-luz);box-shadow:0 0 18px 3px rgba(232,50,90,.5);opacity:0}
+.on .varredura{animation:varre 2.6s .3s ease-in-out}
+@keyframes varre{0%{opacity:1;top:0}100%{opacity:0;top:100%}}
+.gradebox{position:relative}
+
+.fone{width:220px;border:1px solid var(--linha);border-radius:26px;background:var(--sup2);padding:16px 14px}
+.linhapost{height:11px;border-radius:3px;background:#2B1C3E;margin-bottom:9px}
+.linhapost.a{width:85%}.linhapost.b{width:60%}.linhapost.c{width:72%}
+.pedido{margin-top:16px;background:var(--sup2);border:1px solid var(--linha);border-radius:14px;border-bottom-right-radius:4px;padding:13px 15px;font-size:14px;opacity:0;transform:translateX(16px);transition:.6s .4s}
+.on .pedido{opacity:1;transform:none}
+.regra{margin-top:14px;border-left:3px solid var(--carmim);padding:10px 14px;background:rgba(206,20,61,.07);font-size:13.5px;opacity:0;transform:translateY(10px);transition:.6s .9s}
+.on .regra{opacity:1;transform:none}
+
+.relogio{font-family:Anton,sans-serif;font-size:54px;color:var(--ink);letter-spacing:3px}
+.saiu{margin-top:16px;display:flex;align-items:center;gap:10px;font-size:14px;color:var(--texto);opacity:0;transition:.6s .5s}
+.on .saiu{opacity:1}
+.virou{margin-top:12px;display:flex;align-items:center;gap:10px;font-size:14px;color:var(--texto);opacity:0;transition:.6s .9s}
+.on .virou{opacity:1}
+.pino{width:8px;height:8px;border-radius:50%;background:var(--carmim);flex:none}
+
+.ciclos{display:flex;align-items:flex-end;gap:14px;height:150px}
+.ciclos div{flex:1;background:linear-gradient(var(--roxo-luz),var(--roxo));border-radius:6px 6px 0 0;height:20%;transition:height .9s}
+.on .ciclos .c1{height:38%}.on .ciclos .c2{height:64%;transition-delay:.25s}.on .ciclos .c3{height:92%;transition-delay:.5s}
+.marcos{margin-top:18px;display:flex;gap:10px}
+.marcos span{flex:1;text-align:center;border:1px solid var(--linha);border-radius:10px;padding:9px 4px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.4px;color:var(--fraco)}
+
+/* fecho */
+footer{padding:16vh 7vw 18vh;max-width:900px}
+footer h2{font-size:clamp(32px,5.4vw,68px);line-height:1}
+footer p{margin:24px 0 0;font-size:clamp(16px,1.8vw,19px)}
+.cta{margin-top:40px;display:inline-flex;align-items:center;gap:12px;background:var(--carmim);color:#fff;text-decoration:none;font-weight:600;font-size:17px;padding:19px 30px;border-radius:14px;transition:.25s}
+.cta:hover{background:var(--carmim-luz);transform:translateY(-2px)}
+.nota{margin-top:26px;font-size:13.5px;color:var(--fraco);max-width:560px}
+.assina{margin-top:70px;font-family:Anton,sans-serif;font-size:13px;letter-spacing:5px;color:var(--carmim);text-transform:uppercase}
+
+@media (max-width:900px){
+  #regua{display:none}
+  .cena{min-height:auto}
+  .palco{position:static;grid-template-columns:1fr;gap:34px;padding:70px 7vw;min-height:auto}
+  .visual{order:2;min-height:auto}
+  .lado{order:1}
+  .grade{grid-template-columns:repeat(10,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .dia,.lado h2,.lado p,.quadro,.bolha,.selo,.botaofake,.legenda,.carimbo,.pedido,.regra,.saiu,.virou,.grade i{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<div id="barra"></div>
+
+<nav id="regua" aria-hidden="true">
+  <div class="d" data-d="0"><span class="rot">Dia 0</span><span class="pt"></span></div>
+  <div class="d" data-d="1"><span class="rot">Dia 1</span><span class="pt"></span></div>
+  <div class="d" data-d="2"><span class="rot">Dia 2</span><span class="pt"></span></div>
+  <div class="d" data-d="3"><span class="rot">Dias 3–5</span><span class="pt"></span></div>
+  <div class="d" data-d="5"><span class="rot">Dia 5</span><span class="pt"></span></div>
+  <div class="d" data-d="6"><span class="rot">Dia 6</span><span class="pt"></span></div>
+  <div class="d" data-d="7"><span class="rot">Dia 7</span><span class="pt"></span></div>
+  <div class="d" data-d="8"><span class="rot">Depois</span><span class="pt"></span></div>
+</nav>
+
+<header>
+  <div class="et">Liga do Marketing · Mídia Social</div>
+  <h1>Você sabe o que<br>precisa postar.<br>Você só não posta.</h1>
+  <p>Não é falta de ideia — é falta de operação. Role a tela e atravesse, do seu lado, os sete dias que separam a sua assinatura do seu primeiro post no ar.</p>
+  <div class="cue"><i></i> Role</div>
+</header>
+
+<section class="cena" data-d="0">
+  <div class="palco">
+    <div class="visual">
+      <div class="quadro">
+        <div class="bolha b1">📄 Contrato de mídia social — pra você assinar</div>
+        <div class="bolha b2">💳 Link do pagamento</div>
+        <div class="selo">⏱ Relógio ligado · 7 dias</div>
+      </div>
+    </div>
+    <div class="lado">
+      <div class="dia">Dia 0 · você assina e paga</div>
+      <h2>As duas coisas chegam juntas</h2>
+      <p>O contrato e o link de pagamento vêm na mesma mensagem. Nunca um sem o outro.</p>
+      <p>É o que protege os dois lados: ninguém começa a trabalhar no escuro, e você não paga por nada que não esteja escrito. Com os dois confirmados, o relógio começa a correr.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cena" data-d="1">
+  <div class="palco">
+    <div class="visual">
+      <div class="quadro">
+        <div class="risco">“Me passa o login e a senha do seu Instagram”</div>
+        <div class="botaofake">🔒 Conectar meu Instagram</div>
+        <div class="legenda">Você clica, entra na sua conta e autoriza. A autorização fica na sua mão — e sai quando você quiser.</div>
+      </div>
+    </div>
+    <div class="lado">
+      <div class="dia">Dia 1 · quinze minutos com você</div>
+      <h2>A gente nunca vai te pedir sua senha</h2>
+      <p>Uma ligação curta e gravada para entender o que você vende, quem compra de você e o que você não quer ver no seu perfil de jeito nenhum.</p>
+      <p>No fim dela, um link. É assim que a sua conta se conecta — sem senha trocada por mensagem, sem acesso que você não consiga tirar sozinho.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cena" data-d="2">
+  <div class="palco">
+    <div class="visual">
+      <div class="quadro">
+        <div class="num3">
+          <div><b>—</b><span>Alcance</span></div>
+          <div><b>—</b><span>Seguidores</span></div>
+          <div><b>—</b><span>Comentários</span></div>
+        </div>
+        <div class="carimbo">Antes</div>
+      </div>
+    </div>
+    <div class="lado">
+      <div class="dia">Dia 2 · a foto do antes</div>
+      <h2>Seus números de hoje ficam congelados</h2>
+      <p>Antes de publicar qualquer coisa, a gente registra como o seu perfil está agora: alcance, seguidores, comentários.</p>
+      <p>Parece detalhe, e é o contrário. Sem o antes, daqui a três meses ninguém consegue provar o depois — nem a gente, nem você.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cena" data-d="3">
+  <div class="palco">
+    <div class="visual">
+      <div class="quadro">
+        <div class="grade" id="g1"></div>
+        <div class="legenda" style="transition-delay:1.4s">60 publicações prontas antes de o mês começar.</div>
+      </div>
+    </div>
+    <div class="lado">
+      <div class="dia">Dias 3 a 5 · produção</div>
+      <h2>O mês inteiro fica pronto de uma vez</h2>
+      <p>A gente lê o que está funcionando no seu nicho agora e produz o ciclo completo: carrosséis, Reels editados e stories.</p>
+      <p>E aqui vem a parte em que ninguém acredita de primeira: no primeiro mês você não grava nada novo. Os Reels saem dos vídeos que já estão no seu celular.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cena" data-d="5">
+  <div class="palco">
+    <div class="visual">
+      <div class="quadro gradebox">
+        <div class="varredura"></div>
+        <div class="grade" id="g2"></div>
+        <div class="legenda" style="transition-delay:2.6s">3 peças retidas e corrigidas antes de você ver.</div>
+      </div>
+    </div>
+    <div class="lado">
+      <div class="dia">Dia 5 · auditoria de conformidade</div>
+      <h2>A varredura que nenhuma agência faz</h2>
+      <p>Antes de chegar em você, tudo passa por uma revisão de risco: conselho de classe, imagem de pessoas, promessa de resultado, coerência entre capa, foto e legenda.</p>
+      <p>Na nossa primeira cliente, três peças foram pegas aqui. Uma delas a chamava de especialista num título que ela não tem registrado. Ia ao ar no primeiro post.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cena" data-d="6">
+  <div class="palco">
+    <div class="visual">
+      <div class="quadro">
+        <div class="fone">
+          <div class="linhapost a"></div><div class="linhapost b"></div><div class="linhapost c"></div><div class="linhapost a"></div><div class="linhapost b"></div>
+        </div>
+        <div class="pedido">“Essa capa do dia 12 não é a minha cara”</div>
+        <div class="regra">✓ Regra deste perfil: capa com foto só com fundo claro</div>
+      </div>
+    </div>
+    <div class="lado">
+      <div class="dia">Dia 6 · sua aprovação</div>
+      <h2>Você pede quantos ajustes quiser</h2>
+      <p>O mês inteiro abre numa página no seu celular: post por post, legenda por legenda, na ordem em que vão sair.</p>
+      <p>Sem cota de alteração e sem cobrança extra. Cada ajuste que você pede vira regra permanente do seu perfil — o ciclo seguinte já nasce do seu jeito, e você não precisa repetir.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cena" data-d="7">
+  <div class="palco">
+    <div class="visual">
+      <div class="quadro">
+        <div class="relogio">12:07</div>
+        <div class="saiu"><span class="pino"></span> Carrossel publicado no seu perfil</div>
+        <div class="virou"><span class="pino"></span> Quem comentou virou contato salvo</div>
+        <div class="legenda" style="transition-delay:1.3s">Se um post falhar, o alerta chega na hora. Você descobre pelo resultado, não pelo susto.</div>
+      </div>
+    </div>
+    <div class="lado">
+      <div class="dia">Dia 7 · seu primeiro post no ar</div>
+      <h2>A gente publica. Você não abre o aplicativo.</h2>
+      <p>No horário certo, todo dia, sem depender de você lembrar. Horário quebrado, de propósito: é quando o feed está menos disputado.</p>
+      <p>E o que chega de volta não se perde. Quem comenta vira contato salvo, pronto para virar conversa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cena" data-d="8">
+  <div class="palco">
+    <div class="visual">
+      <div class="quadro">
+        <div class="ciclos"><div class="c1"></div><div class="c2"></div><div class="c3"></div></div>
+        <div class="marcos"><span>30 dias</span><span>60 dias</span><span>90 dias</span></div>
+      </div>
+    </div>
+    <div class="lado">
+      <div class="dia">E aí começa de novo</div>
+      <h2>Cada ciclo nasce melhor que o anterior</h2>
+      <p>Uma semana antes de o seu mês virar, o próximo já está na sua mão — com o relatório do que funcionou e do que não funcionou, sem número inventado e sem promessa que ninguém pode garantir.</p>
+      <p>Aos 30, 60 e 90 dias a gente senta e revisa de verdade: o que muda, o que sai, o que entra.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h2>Agora imagina<br>isso no seu perfil.</h2>
+  <p>Sete dias. Começa com uma conversa de quinze minutos.</p>
+  <a class="cta" href="https://wa.me/5521998867022?text=Quero%20come%C3%A7ar%20a%20jornada">Quero começar essa jornada →</a>
+  <p class="nota">A gente não pede sua senha, não promete número que não pode garantir e não publica nada que você não tenha aprovado.</p>
+  <div class="assina">Liga do Marketing</div>
+</footer>
+
+<script>
+(function(){
+  var g1=document.getElementById('g1'), g2=document.getElementById('g2');
+  function monta(el,marcados){
+    var h='';
+    for(var i=0;i<60;i++){
+      var cls = i%3===2 ? 'r' : (i%5===4 ? 's' : '');
+      if(marcados && marcados.indexOf(i)>-1) cls='erro';
+      h+='<i class="'+cls+'" style="transition-delay:'+(i*18)+'ms"></i>';
+    }
+    el.innerHTML=h;
+  }
+  monta(g1,null);
+  monta(g2,[7,26,41]);
+
+  var cenas=[].slice.call(document.querySelectorAll('.cena'));
+  var dias=[].slice.call(document.querySelectorAll('#regua .d'));
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('on');
+        var d=e.target.getAttribute('data-d');
+        dias.forEach(function(x){ x.classList.toggle('on', x.getAttribute('data-d')===d); });
+        if(d==='5'){
+          setTimeout(function(){
+            [].slice.call(g2.querySelectorAll('.erro')).forEach(function(q,i){
+              setTimeout(function(){ q.classList.remove('erro'); q.classList.add('ok'); }, i*260);
+            });
+          },2900);
+        }
+      }
+    });
+  },{threshold:.35});
+  cenas.forEach(function(c){ io.observe(c); });
+
+  var barra=document.getElementById('barra');
+  window.addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    barra.style.width=(h>0?(window.scrollY/h)*100:0)+'%';
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
