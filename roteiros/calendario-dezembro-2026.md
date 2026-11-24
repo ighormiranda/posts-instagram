@@ -7,7 +7,14 @@ Regra: o rosto ou a vida do Ighor em todo post. Sem política. Número só com f
 - 📸 = foto real do Ighor (pasta fotos/) ou foto feita no GPT com o rosto dele (eu passo o prompt)
 - 👨‍👧 = momento pessoal que só o Ighor tem (foto ou vídeo do celular)
 - 🤖 = Claudinho
-- Os horários são fixos: **9h07 frase com foto · 15h07 carrossel · 19h23 Reels**
+- Os horários são fixos: **9h07 frase com foto · 15h07 carrossel · 19h23 Reels da série 365**
+
+## Série "1/365" (ideia do Érico Rocha)
+- Todo Reels das 19h23 leva o selo **N/365** no centro da tela. Começa em **1/365 no dia 1/12/2026** e termina em **365/365 em 30/11/2027**.
+- O selo vai no Reels todo dia, sem falhar, inclusive Natal e Réveillon (gravado antes e agendado).
+- Formatos que contam: falando com a câmera, react (Remix do Instagram ou trecho curto com crédito e o Ighor comentando no fim), Claudinho, bastidor, Reels sem fala.
+- "Rumo aos 10 mil" vira o tema da série nos primeiros episódios, com o contador de seguidores na tela.
+- React: preferir o **Remix** do próprio Instagram. Trecho de vídeo de outra pessoa só curto, com @ do autor, e com a fala do Ighor sendo a maior parte.
 
 ---
 
@@ -50,13 +57,13 @@ Regra: o rosto ou a vida do Ighor em todo post. Sem política. Número só com f
 | ter 22 | "Desligar também é estratégia." 📸 | Checklist: deixe a empresa rodando no recesso | 🎥 Rumo aos 10 mil · ep. 8 |
 | qua 23 | "A máquina trabalha, eu fico com a família." 👨‍👧 | Como eu programei o Instagram do recesso inteiro | 🤖 Claudinho de gorro trabalhando no Natal |
 | qui 24 | Feliz Natal 👨‍👧 | (sem carrossel) | 👨‍👧 Vídeo curto de Natal |
-| sex 25 | (sem post) | (sem post) | (sem post) |
+| sex 25 | (sem post) | (sem post) | 👨‍👧 25/365 · Natal em família (gravado antes) |
 | sáb 26 | "Recesso não é sumiço." 📸 | Novidades da IA do ano: as 5 maiores | Reels sem fala: retrospectiva do ano |
 | dom 27 | Palavra do ano 📸 | O que muda em 2027 para quem tem empresa (com fonte) 📸 | 🎥 Rumo aos 10 mil · ep. 9 |
 | seg 28 | "Metas sem rotina viram desejo." 📸 | Minhas 3 metas de 2027 (10 mil, 50 mil, 100 mil) | 🎥 Pergunta dos seguidores |
 | ter 29 | "Comece pequeno. Comece hoje." 📸 | Planner de janeiro em 1 página | 🤖 Claudinho fazendo a retrospectiva |
 | qua 30 | "Obrigado, 2026." 📸 | Retrospectiva do perfil em números | 🎥 Rumo aos 10 mil · ep. 10: quantos somos hoje |
-| qui 31 | Feliz Ano Novo 👨‍👧 | (sem carrossel) | (sem Reels) |
+| qui 31 | Feliz Ano Novo 👨‍👧 | (sem carrossel) | 31/365 · o último Reels de 2026 (gravado antes) |
 
 ---
 
