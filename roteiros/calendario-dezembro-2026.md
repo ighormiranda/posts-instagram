@@ -21,8 +21,8 @@ Regra: o rosto ou a vida do Ighor em todo post. Sem política. Número só com f
 ## Semana 1 · 1 a 7/12 · série "Rumo aos 10 mil" começa
 | Dia | 9h07 Frase com foto | 15h07 Carrossel | 19h23 Reels |
 |---|---|---|---|
-| ter 1 | "Dezembro não é fim de ano. É o começo do próximo." 📸 | Resultado da Black: o que funcionou e o que não funcionou (só número real) | 🎥 Rumo aos 10 mil · ep. 1: "Eram 1.920. A meta é 10 mil. Me segue que eu mostro o caminho." |
-| qua 2 | "Quem aparece todo dia é lembrado." 📸 | Fato x boato da semana (notícia de IA ou golpe digital) 📸 GPT | 🎥 IA na prática: 1 tarefa que eu tirei da minha semana com IA |
+| ter 1 | "Dezembro não é fim de ano. É o começo do próximo." 📸 | **Lançamento: Conheça a Maré Alta, da Presença 365** (pronto em 2026-11-avulsos/mare-alta/) | 🎥 Rumo aos 10 mil · ep. 1: "Eram 1.920. A meta é 10 mil. Me segue que eu mostro o caminho." |
+| qua 2 | "Quem aparece todo dia é lembrado." 📸 | Resultado da Black: o que funcionou e o que não funcionou (só número real) | 🎥 IA na prática: 1 tarefa que eu tirei da minha semana com IA |
 | qui 3 | "Sistema vence motivação." 📸 | Bastidor da Liga: como a máquina monta 90 posts | 🎥 Rumo aos 10 mil · ep. 2: o erro que eu não vou repetir (painel: +74 e -71) |
 | sex 4 | "IA não substitui você. Substitui a sua desculpa." 📸 | Novidades da IA da semana (série que já existe) | 🤖 Meme do Claudinho da semana |
 | sáb 5 | "Fiz um negócio que não depende de cada hora da minha agenda." 👨‍👧 | Pessoal + negócio: jogar com as filhas e o tempo que a automação devolveu 👨‍👧 | 🎥 Bastidor do sábado, sem roteiro 👨‍👧 |
@@ -71,7 +71,7 @@ Regra: o rosto ou a vida do Ighor em todo post. Sem política. Número só com f
 1. **Gravação semanal** (uma tarde): cerca de 4 Reels por semana marcados com 🎥. Os roteiros eu mando no domingo anterior.
 2. **Momentos pessoais 👨‍👧**: 1 ou 2 por semana (foto ou vídeo do celular). Só o que ele topar mostrar.
 3. **Fotos no GPT 📸 GPT**: cerca de 2 por semana, com o prompt que eu passo.
-4. **Confirmar a oferta de dezembro**: depois da Black, qual chamada vale (ex.: "Manda MÁQUINA no WhatsApp")?
+4. **Oferta de dezembro**: Presença 365, com a Maré Alta como rosto. Chamada "Manda PRESENÇA no WhatsApp" (cadastrar a palavra na automação antes de 1/12). Conferir antes: presenca365.com.br, @presenca365 e busca no INPI (classe 35).
 
 ## O que eu faço sozinho
 - Frases do dia com fotos da pasta fotos/ (não precisa de nada).
