@@ -58,7 +58,7 @@ p{margin:0}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(60% 70% at 78% 30%, rgba(139,71,240,.35), rgba(4,4,4,0) 70%)}
 .hero .dots{position:absolute;inset:0;z-index:-1;mask-image:linear-gradient(180deg, #000 0%, transparent 85%);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 85%);opacity:.7}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:48px;align-items:center}
-.hero h1{font-size:clamp(44px, 7.4vw, 104px);line-height:.95;letter-spacing:-.045em;margin-top:22px}
+.hero h1{font-size:clamp(40px, 5.6vw, 80px);line-height:.98;letter-spacing:-.03em;margin-top:22px}
 .hero .lead{font-size:clamp(17px,1.5vw,19px);color:var(--suave);max-width:560px;margin-top:28px}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px;align-items:center}
 .hero .note{font-family:var(--f-mono);font-size:12.5px;color:var(--apagado);letter-spacing:.04em}
@@ -244,6 +244,17 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
   .js .manifesto .w{opacity:1}
   .js .steps .fill{transform:scaleY(1)}
 }
+
+/* marca oficial: escudo + LIGA DO MARKETING numa linha */
+.brand .wm{font-family:var(--f-display);font-size:21px;letter-spacing:.01em;line-height:1;color:var(--branco);white-space:nowrap}
+footer .brand svg{width:20px;height:31px;color:var(--branco)}
+@media (max-width:420px){.brand .wm{font-size:17px}}
+/* provas */
+.provas{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:56px}
+.provas div{border:1px solid var(--linha);border-radius:10px;padding:24px;background:var(--sup)}
+.provas b{display:block;font-family:var(--f-display);font-weight:400;font-size:clamp(34px,3.6vw,48px);line-height:1;color:var(--branco)}
+.provas b em{font-style:normal;color:var(--carmim);margin:0 .18em}
+.provas span{display:block;margin-top:12px;color:var(--suave);font-size:15px;line-height:1.5}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -257,18 +268,15 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
   <div class="wrap">
     <a class="brand" href="#topo" aria-label="Liga do Marketing, início">
       <svg aria-hidden="true"><use href="#escudo"/></svg>
-      <div>
-        <div class="n1"><i></i>LIGA</div>
-        <div class="n2">DO MARKETING</div>
-      </div>
+      <span class="wm">LIGA DO MARKETING</span>
     </a>
     <nav class="nav-links" aria-label="Seções">
-      <a href="#historia">A noite</a>
-      <a href="#sistema">O sistema</a>
-      <a href="#titan">Método</a>
-      <a href="#cases">Cases</a>
+      <a href="#sistema">Serviços</a>
+      <a href="#presenca">Presença 365</a>
+      <a href="#titan">Como começa</a>
+      <a href="#cases">Clientes</a>
     </nav>
-    <a class="btn btn-primary" href="https://wa.me/5521998867022?text=Ol%C3%A1!%20Quero%20ativar%20o%20modo%20her%C3%B3i%20da%20minha%20empresa." target="_blank" rel="noopener">Falar com a Liga</a>
+    <a class="btn btn-primary" href="https://wa.me/5521998867022?text=Ol%C3%A1!%20Quero%20um%20diagn%C3%B3stico%20gr%C3%A1tis%20da%20minha%20empresa." target="_blank" rel="noopener">Falar com a Liga</a>
   </div>
 </header>
 
@@ -280,18 +288,18 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
       <div class="hero-grid">
         <div>
           <div class="tag"><b>◆</b>&nbsp; De brasileiros para brasileiros</div>
-          <h1 id="h-hero" class="hero-title">Ative o <span class="hl">modo herói</span> da sua empresa.</h1>
-          <p class="lead">Site, Google, anúncios, conteúdo e uma IA que atende seu cliente em segundos, de dia e de madrugada. Tudo num sistema comercial só, montado e operado pela Liga.</p>
+          <h1 id="h-hero" class="hero-title">Sua empresa <span class="hl">aparecendo todo dia.</span> E nenhum cliente sem resposta.</h1>
+          <p class="lead">A Liga monta e cuida do marketing da sua empresa: Instagram postando todo dia, site, Google, anúncios e uma IA que responde o seu cliente no WhatsApp em segundos. Até de madrugada.</p>
           <div class="ctas">
-            <a class="btn btn-primary" href="https://wa.me/5521998867022?text=Ol%C3%A1!%20Quero%20ativar%20o%20modo%20her%C3%B3i%20da%20minha%20empresa." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Ativar minha operação</a>
-            <a class="btn btn-ghost" href="#historia">Ver o que acontece às 23:47</a>
+            <a class="btn btn-primary" href="https://wa.me/5521998867022?text=Ol%C3%A1!%20Quero%20um%20diagn%C3%B3stico%20gr%C3%A1tis%20da%20minha%20empresa." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Quero um diagnóstico grátis</a>
+            <a class="btn btn-ghost" href="#historia">Ver a noite das 23:47</a>
           </div>
           <div class="cue"><span class="line"></span><span class="note">Role a página · a história começa às 23:47</span></div>
         </div>
         <div class="shield-stage" aria-hidden="true">
           <div class="ring"><span></span></div>
           <div class="ring r2"></div>
-          <svg class="big" viewBox="327 179 426 682"><use href="#escudo"/></svg>
+          <svg class="big" viewBox="0 0 426 682"><use href="#escudo" width="426" height="682"/></svg>
         </div>
       </div>
     </div>
@@ -299,8 +307,8 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
 
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span>BRANDING</span><span>SITES</span><span>SEO LOCAL</span><span>GOOGLE ADS</span><span>META ADS</span><span>60 POSTS / MÊS</span><span>AGENTE DE IA 24H</span><span>CRM + AUTOMAÇÕES</span>
-      <span>BRANDING</span><span>SITES</span><span>SEO LOCAL</span><span>GOOGLE ADS</span><span>META ADS</span><span>60 POSTS / MÊS</span><span>AGENTE DE IA 24H</span><span>CRM + AUTOMAÇÕES</span>
+      <span>INSTAGRAM TODO DIA</span><span>SITE QUE VENDE</span><span>APARECER NO GOOGLE</span><span>ANÚNCIO QUE TRAZ PEDIDO</span><span>IA RESPONDENDO 24H</span><span>NENHUM CLIENTE ESQUECIDO</span>
+      <span>INSTAGRAM TODO DIA</span><span>SITE QUE VENDE</span><span>APARECER NO GOOGLE</span><span>ANÚNCIO QUE TRAZ PEDIDO</span><span>IA RESPONDENDO 24H</span><span>NENHUM CLIENTE ESQUECIDO</span>
     </div>
   </div>
 
@@ -388,9 +396,14 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
   <!-- MANIFESTO -->
   <section class="manifesto" aria-labelledby="h-man">
     <div class="wrap">
-      <div class="tag" id="h-man">Quem somos</div>
-      <p class="big" id="manifesto">Não somos uma agência de posts. Somos a <span data-c="p">estrutura comercial</span> do empresário brasileiro. Post sem atendimento é <span data-c="y">dinheiro jogado fora.</span></p>
-      <p class="sub">A Liga vende o que o dono realmente compra: cliente atendido na hora, orçamento enviado no mesmo dia e serviço fechado.</p>
+      <div class="tag" id="h-man">O que a Liga faz</div>
+      <p class="big" id="manifesto">Aparecer todo dia traz o cliente. <span data-c="p">Responder na hora</span> fecha a venda. Uma coisa sem a outra é <span data-c="y">dinheiro jogado fora.</span></p>
+      <p class="sub">Por isso a Liga cuida das duas pontas: de quem te vê e de quem te chama. Você continua fazendo o que sabe.</p>
+      <div class="provas">
+        <div><b>25 mil<em>→</em>300 mil+</b><span>reais por mês. Clínicas atendidas pelo Ighor, em menos de um ano.</span></div>
+        <div><b>+393%</b><span>de visualizações nos primeiros 30 dias de post automático no perfil do Ighor.</span></div>
+        <div><b>0 dia</b><span>sem post no perfil do dono da Liga desde 6 de outubro.</span></div>
+      </div>
     </div>
   </section>
 
@@ -401,9 +414,9 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
         <div class="sys-head">
           <div>
             <div class="tag">O sistema</div>
-            <h2 id="h-sys">Seis peças. Uma operação comercial funcionando.</h2>
+            <h2 id="h-sys">Tudo que a sua empresa precisa pra vender, num lugar só.</h2>
           </div>
-          <p>Cada peça sozinha é um serviço. Juntas, são a estrutura que faz o cliente que chega virar cliente que compra.</p>
+          <p>Dá pra começar por uma peça só. Juntas, elas fazem quem chega virar quem compra.</p>
         </div>
       </div>
       <div class="rail-wrap">
@@ -447,8 +460,8 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
           </article>
           <article class="mod final">
             <div class="tag">Resultado</div>
-            <h3>Sua empresa no modo herói.</h3>
-            <a class="btn btn-ghost" href="#titan" style="margin-top:12px">Ver como a gente implanta</a>
+            <h3>Você escolhe por onde começar.</h3>
+            <a class="btn btn-ghost" href="#titan" style="margin-top:12px">Ver como a gente começa</a>
           </article>
         </div>
       </div>
@@ -480,16 +493,16 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
     <div class="wrap">
       <div class="titan-grid">
         <div class="titan-sticky intro">
-          <div class="tag">Metodologia TITAN</div>
-          <h2 id="h-titan">Resultado que você pode ver e medir.</h2>
+          <div class="tag">Como a gente começa</div>
+          <h2 id="h-titan">4 passos. Em cada um, você sabe o que recebe.</h2>
           <p>Antes de qualquer anúncio, a gente entende o seu mercado. Depois, cada etapa entrega uma peça concreta da sua operação.</p>
         </div>
         <div class="steps" id="steps">
           <div class="track"></div><div class="fill" id="fill"></div>
-          <div class="step"><div class="num">01</div><div><h3>Diagnóstico de mercado</h3><p>Onde estão seus clientes, quem são seus concorrentes e por onde a sua empresa está perdendo venda hoje.</p><div class="get">VOCÊ RECEBE · O MAPA DOS VAZAMENTOS</div></div></div>
-          <div class="step"><div class="num">02</div><div><h3>Reposicionamento estratégico</h3><p>Marca, site e perfil reorganizados para comunicar valor e atrair o cliente certo, pelo preço certo.</p><div class="get">VOCÊ RECEBE · MARCA E SITE NOVOS</div></div></div>
-          <div class="step"><div class="num">03</div><div><h3>Qualificação de leads</h3><p>Tráfego e conteúdo trazem contatos; a IA e o CRM separam quem está pronto para comprar de quem só está olhando.</p><div class="get">VOCÊ RECEBE · IA E CRM FUNCIONANDO</div></div></div>
-          <div class="step"><div class="num">04</div><div><h3>Conversão em vendas</h3><p>Agenda, follow-up e lembretes automáticos. Acompanhamento mensal dos números para ajustar o que precisa.</p><div class="get">VOCÊ RECEBE · AGENDA CHEIA E NÚMEROS NA MÃO</div></div></div>
+          <div class="step"><div class="num">01</div><div><h3>Mostra onde a venda escapa</h3><p>Onde estão seus clientes, quem são seus concorrentes e por onde a sua empresa está perdendo venda hoje.</p><div class="get">VOCÊ RECEBE · O MAPA DOS VAZAMENTOS</div></div></div>
+          <div class="step"><div class="num">02</div><div><h3>Arruma a sua vitrine</h3><p>Marca, site e perfil reorganizados para comunicar valor e atrair o cliente certo, pelo preço certo.</p><div class="get">VOCÊ RECEBE · MARCA E SITE NOVOS</div></div></div>
+          <div class="step"><div class="num">03</div><div><h3>Separa quem quer comprar</h3><p>Tráfego e conteúdo trazem contatos; a IA e o CRM separam quem está pronto para comprar de quem só está olhando.</p><div class="get">VOCÊ RECEBE · IA E CRM FUNCIONANDO</div></div></div>
+          <div class="step"><div class="num">04</div><div><h3>Transforma conversa em venda</h3><p>Agenda, follow-up e lembretes automáticos. Acompanhamento mensal dos números para ajustar o que precisa.</p><div class="get">VOCÊ RECEBE · AGENDA CHEIA E NÚMEROS NA MÃO</div></div></div>
         </div>
       </div>
     </div>
@@ -500,10 +513,10 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
     <div class="wrap">
       <div class="cases-head">
         <div>
-          <div class="tag">O que a gente faz</div>
-          <h2 id="h-cases">Os sites que a gente fez. Abra qualquer um.</h2>
+          <div class="tag">Clientes e projetos</div>
+          <h2 id="h-cases">Quem já trabalha com a Liga. Abra e confira.</h2>
         </div>
-        <div class="stars"><span aria-hidden="true">◆</span>Nenhum print. Todos no ar agora.</div>
+        <div class="stars"><span aria-hidden="true">◆</span>Nenhum caso inventado.</div>
       </div>
       <div class="case-grid">
         <article class="case feat">
@@ -515,27 +528,27 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
           <div class="res"><a class="btn btn-primary" href="https://elo.ligadomarketing.com" target="_blank" rel="noopener">Abrir o site</a><span>elo.ligadomarketing.com</span></div>
         </article>
         <article class="case">
-          <div class="seg">Transformação comercial para clínicas</div>
+          <div class="seg">Empresa parceira · IA comercial para clínicas</div>
           <h3>Arkyon</h3>
           <p>Explicar CRM e automação para dono de clínica não funciona. Então o site perde uma paciente na frente da pessoa, às 23:47, e só depois volta no tempo.</p>
           <div class="res"><a href="https://arkyon.io" target="_blank" rel="noopener"><b>arkyon.io</b></a><span>abrir</span></div>
         </article>
         <article class="case">
-          <div class="seg">Medicina · transplante capilar</div>
-          <h3>Dra. Larissa Fontaine</h3>
-          <p>Publicidade médica proíbe preço, promessa e antes e depois. Sobra pouquíssimo para dizer — e foi por isso que esse site ficou bonito. Um folículo pulsa e dali crescem milhares de fios.</p>
-          <div class="res"><a href="https://site.ligadomarketing.com/dra.larissafontaine" target="_blank" rel="noopener"><b>Ver o site</b></a><span>abrir</span></div>
+          <div class="seg">Odontologia · Niterói</div>
+          <h3>Dra. Shakti</h3>
+          <p>Nosso primeiro case de sucesso na Presença 365. Em uma semana, o perfil dela passou de 1.000 para 10.000 visualizações. Ela só aprova.</p>
+          <div class="res"><a href="#presenca"><b>Ver como funciona</b></a><span>Presença 365</span></div>
         </article>
         <article class="case">
-          <div class="seg">Demonstração · clínica fictícia</div>
-          <h3>Clínica Aura</h3>
-          <p>Modelo para clínicas de estética. A clínica não existe e isso está escrito na tela. Em vez de uma lista de procedimentos, um mapa do corpo: a paciente aponta onde incomoda.</p>
-          <div class="res"><a href="https://aura.arkyon.io" target="_blank" rel="noopener"><b>aura.arkyon.io</b></a><span>abrir</span></div>
+          <div class="seg">O laboratório da Liga · Instagram</div>
+          <h3>@o.ighormiranda</h3>
+          <p>O perfil do dono da Liga. Tudo é testado ali antes de chegar no cliente. Desde 6 de outubro, nenhum dia sem post.</p>
+          <div class="res"><a href="https://www.instagram.com/o.ighormiranda/" target="_blank" rel="noopener"><b>Abrir o perfil</b></a><span>abrir</span></div>
         </article>
         <article class="case" style="justify-content:center">
-          <div class="seg">Os seis juntos</div>
+          <div class="seg">E outros clientes</div>
           <h3>O portfólio completo.</h3>
-          <p>Cada site com a cena que o faz ser lembrado. Nenhum deles se parece com o outro.</p>
+          <p>Sites que a Liga já fez. Cada um com a cena que faz ele ser lembrado.</p>
           <div class="res"><a class="btn btn-ghost" href="https://site.ligadomarketing.com/portfolio" target="_blank" rel="noopener">Ver o portfólio</a></div>
         </article>
       </div>
@@ -549,14 +562,14 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
         <div>
           <div class="tag">Onde estamos</div>
           <h2 id="h-reach">Onde tem empresário brasileiro, a Liga atende.</h2>
-          <p class="l">Atendimento em português, do Brasil aos Estados Unidos. Seu cliente vê uma empresa profissional no idioma dele; você conversa com a gente no seu.</p>
+          <p class="l">Atendimento em português, no Brasil e nos Estados Unidos. A Liga já atendeu empresários brasileiros na Flórida, no Texas e nas Carolinas.</p>
         </div>
         <div class="places">
-          <div class="place"><b>Brasil</b><span>SEDE · MG</span></div>
-          <div class="place"><b>Flórida</b><span>EUA</span></div>
-          <div class="place"><b>Texas</b><span>EUA</span></div>
-          <div class="place"><b>Carolina do Sul</b><span>EUA</span></div>
-          <div class="place"><b>Carolina do Norte</b><span>EUA</span></div>
+          <div class="place"><b>Brasil</b><span>SEDE · NITERÓI, RJ</span></div>
+          <div class="place"><b>Flórida</b><span>JÁ ATENDEMOS · EUA</span></div>
+          <div class="place"><b>Texas</b><span>JÁ ATENDEMOS · EUA</span></div>
+          <div class="place"><b>Carolina do Sul</b><span>JÁ ATENDEMOS · EUA</span></div>
+          <div class="place"><b>Carolina do Norte</b><span>JÁ ATENDEMOS · EUA</span></div>
         </div>
       </div>
     </div>
@@ -569,7 +582,7 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
       <h2 id="h-cta">Seu próximo cliente pode estar mandando mensagem <span class="hl">agora.</span> Quem vai responder?</h2>
       <p>Comece com um diagnóstico gratuito do seu comercial. Em uma conversa, a gente mostra onde sua empresa está perdendo venda e o que ativar primeiro.</p>
       <div class="ctas">
-        <a class="btn btn-primary" href="https://wa.me/5521998867022?text=Ol%C3%A1!%20Quero%20meu%20diagn%C3%B3stico%20gratuito%20com%20a%20Liga." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Ativar minha operação</a>
+        <a class="btn btn-primary" href="https://wa.me/5521998867022?text=Ol%C3%A1!%20Quero%20meu%20diagn%C3%B3stico%20gratuito%20com%20a%20Liga." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Quero um diagnóstico grátis</a>
         <button class="copy" type="button" id="copyphone" aria-label="Copiar número de WhatsApp">(21) 9 9886-7022 <span id="copyhint">copiar</span></button>
       </div>
     </div>
@@ -580,7 +593,7 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
   <div class="wrap">
     <a class="brand" href="#topo" aria-label="Liga do Marketing, voltar ao topo">
       <svg aria-hidden="true"><use href="#escudo"/></svg>
-      <div><div class="n1"><i></i>LIGA</div><div class="n2">DO MARKETING</div></div>
+      <svg aria-hidden="true"><use href="#escudo"/></svg><span class="wm">LIGA DO MARKETING</span>
     </a>
     <div class="fl">
       <a href="https://www.instagram.com/o.ighormiranda/" target="_blank" rel="noopener">Instagram</a>
@@ -719,4 +732,3 @@ footer .fl{display:flex;gap:24px;flex-wrap:wrap}
   window.addEventListener('load', function(){ ScrollTrigger.refresh(); });
 })();
 </script>
-
