@@ -1,0 +1,62 @@
+[
+ {"id": "s8c28", "slides": [
+  {"t": "capa", "foto": "escritorio/mesa-laptop-cafe.jpg", "chapeu": "Sábado: pessoal + negócio", "titulo": "O que os *jogos de estratégia* me ensinaram sobre empresa.", "sub": "Sou nerd desde sempre. Board game, RPG, estratégia."},
+  {"t": "texto", "chapeu": "Lição 1", "titulo": "Recurso é limitado. *Escolhe onde gastar.*", "sub": "No jogo e na empresa, quem tenta fazer tudo ao mesmo tempo perde."},
+  {"t": "texto", "fundo": "claro", "chapeu": "Lição 2", "titulo": "Quem tem *sistema* ganha de quem tem sorte.", "sub": "Partida boa não é jogada genial. É jogada boa repetida."},
+  {"t": "texto", "chapeu": "Lição 3", "titulo": "Olha o placar *toda rodada.*", "sub": "Eu olho o painel do Instagram toda semana e ajusto o mês seguinte."},
+  {"t": "texto", "fundo": "claro", "chapeu": "Lição 4", "titulo": "Perder uma rodada *não é perder o jogo.*", "sub": "Post que não foi bem vira aprendizado pro próximo."},
+  {"t": "final", "foto": "estudio-camisa-roxa/sorrindo.jpg", "titulo": "Qual jogo *te ensinou algo* sobre negócio?", "cta": "comenta", "cta_sub": "Board game, videogame ou RPG. Vale tudo."}]},
+ {"id": "s8d28", "slides": [
+  {"t": "capa", "foto": "blazer-verde-evento/explicando-gesticulando.jpg", "chapeu": "Black November da Liga", "titulo": "Faltam *3 dias.*"},
+  {"t": "texto", "chapeu": "O que você recebe", "titulo": "Carrossel, Reels e stories *da sua empresa, todo dia.*", "sub": "A Liga cria, você aprova, a Liga publica."},
+  {"t": "texto", "fundo": "claro", "chapeu": "Antes de fechar", "titulo": "Você recebe *uma amostra* com a sua empresa.", "sub": "Sem compromisso."},
+  {"t": "texto", "chapeu": "O bônus", "titulo": "Funil de stories *por 3 meses.*", "sub": "Só pra quem fechar até 30/11."},
+  {"t": "final", "foto": "estudio-blazer-marinho/sorrindo-maos-bolso.jpg", "titulo": "Desconto acaba dia 1º. *Seguidor não.*", "cta": "black"}]},
+ {"id": "s8c29", "slides": [
+  {"t": "capa", "foto": "estudio-branco-camisa-preta/mao-no-queixo.jpg", "chapeu": "A conta que ninguém faz", "titulo": "3 posts por semana *ou um por dia?*", "sub": "Faz essa conta antes de contratar alguém."},
+  {"t": "texto", "chapeu": "No mês", "titulo": "3 por semana dá *12 posts.* Um por dia dá *30.*", "sub": "Mais que o dobro de vezes pro seu cliente lembrar de você."},
+  {"t": "texto", "fundo": "claro", "chapeu": "O que o cliente vê", "titulo": "Perfil parado parece *empresa parada.*", "sub": "Mesmo quando você está lotado de trabalho."},
+  {"t": "texto", "chapeu": "O que eu aprendi", "titulo": "Com post todo dia, *dá pra ver o que funciona.*", "sub": "Com 12 por mês, quase não tem dado pra decidir nada."},
+  {"t": "texto", "fundo": "claro", "chapeu": "A pergunta certa", "titulo": "Não é quanto custa o post. *É quanto custa sumir.*"},
+  {"t": "final", "foto": "estudio-branco-camisa-preta/caneca.jpg", "titulo": "Manda pro sócio que *acha que 3 por semana basta.*", "cta": "manda", "cta_titulo": "Manda *pro seu sócio*", "cta_sub": "Ele precisa fazer essa conta."}]},
+ {"id": "s8d29", "slides": [
+  {"t": "capa", "foto": "evento-makers/falando-na-mesa-redonda.jpg", "chapeu": "Black November da Liga", "titulo": "Como funciona, *em 4 passos.*"},
+  {"t": "item", "k": 1, "label": "Uma vez só", "titulo": "Você conecta o Instagram *uma vez.*", "corpo": "Conta profissional e página do Facebook. A gente te guia."},
+  {"t": "item", "k": 2, "label": "A Liga cria", "titulo": "Pesquisa do seu nicho e *o mês inteiro pronto.*", "corpo": "Com as suas fotos e a cara da sua marca."},
+  {"t": "item", "k": 3, "label": "Você aprova", "titulo": "Você olha tudo *em até 3 dias.*", "corpo": "Uma rodada de ajustes incluída."},
+  {"t": "item", "k": 4, "label": "A Liga publica", "titulo": "Post *todo dia.* Você não precisa lembrar.", "corpo": "Feed, Reels e stories programados."},
+  {"t": "final", "foto": "escritorio/em-pe-lounge.jpg", "titulo": "Faltam *2 dias.*", "cta": "black"}]},
+ {"id": "s8c30", "slides": [
+  {"t": "capa", "foto": "com-pedro-quintanilha/com-pedro-makers.jpg", "chapeu": "Radar da semana", "titulo": "Estudei 90 posts *do meu mentor e do mentor dele.*", "sub": "@phmquintanilha e @joeljota. O que os dois repetem."},
+  {"t": "texto", "chapeu": "Manhã", "titulo": "Uma *frase com foto.*", "sub": "No Joel, são os posts com mais curtida."},
+  {"t": "texto", "fundo": "claro", "chapeu": "Tarde", "titulo": "Reels *falando com a câmera.*", "sub": "Palco, bastidor ou conselho direto."},
+  {"t": "texto", "chapeu": "Noite", "titulo": "Carrossel com *tendência e fonte.*", "sub": "Número sempre com de onde veio."},
+  {"t": "texto", "fundo": "claro", "chapeu": "O que mais gera comentário", "titulo": "Vida pessoal *ligada ao negócio.*", "sub": "Filho no videogame. Filha no balé. Presente pro mentor."},
+  {"t": "final", "foto": "estudio-blazer-marinho/serio-tres-quartos.jpg", "titulo": "Em dezembro eu vou *testar isso no meu perfil.*", "cta": "segue", "cta_titulo": "Segue *@o.ighormiranda*", "cta_sub": "e acompanha o teste comigo."}]},
+ {"id": "s8d30", "slides": [
+  {"t": "capa", "foto": "evento-a-vida-e-hoje/apontando-letreiro.jpg", "chapeu": "Black November da Liga", "titulo": "Último dia. *Fecha hoje.*"},
+  {"t": "texto", "chapeu": "Quem fechar hoje leva", "titulo": "Funil de stories *por 3 meses.*", "sub": "Enquete, caixinha e link numa sequência pronta. Você só posta."},
+  {"t": "texto", "fundo": "claro", "chapeu": "E antes de fechar", "titulo": "Uma *amostra* com a sua empresa.", "sub": "Você vê antes de decidir."},
+  {"t": "final", "foto": "blazer-verde-evento/encostado-vidro-sorrindo.jpg", "titulo": "Amanhã o bônus *acaba.*", "cta": "black"}]},
+ {"id": "s8c03", "slides": [
+  {"t": "capa", "foto": "escritorio/mesa-reuniao-maos-cruzadas.jpg", "chapeu": "Bastidor da Liga", "titulo": "Como sai *um mês inteiro* de posts aqui.", "sub": "O mesmo processo que roda no meu perfil."},
+  {"t": "item", "k": 1, "label": "Pesquisa", "titulo": "Olho o que *deu certo* no nicho.", "corpo": "Perfis de referência e o que mais gerou comentário na semana."},
+  {"t": "item", "k": 2, "label": "Pauta", "titulo": "Um tema por dia, *horário fixo.*", "corpo": "Assim ninguém precisa decidir o que postar na hora."},
+  {"t": "item", "k": 3, "label": "Arte", "titulo": "Com *foto real,* não banco de imagem.", "corpo": "Rosto de verdade chama mais atenção que arte só com texto."},
+  {"t": "item", "k": 4, "label": "Aprovação", "titulo": "Nada sai *sem um sim.*", "corpo": "O dono olha tudo antes."},
+  {"t": "item", "k": 5, "label": "Agenda", "titulo": "Feed e stories *programados de uma vez.*", "corpo": "No meu perfil, 74 stories foram agendados num dia só."},
+  {"t": "final", "foto": "estudio-camisa-roxa/apontando-lado.jpg", "titulo": "Quer isso *na sua empresa?*", "cta": "presenca"}]},
+ {"id": "s8c05", "slides": [
+  {"t": "capa", "foto": "jaqueta-externa/olhando-lado.jpg", "chapeu": "Sábado: pessoal + negócio", "titulo": "Antes da agência, *eu dava aula de wakeboard.*", "sub": "No Club Med. E isso me ensinou muito sobre vender."},
+  {"t": "texto", "chapeu": "A história", "titulo": "Fui GO no Club Med: *wakeboard, ski aquático, vela.*", "sub": "Até dei aula de wakeboard pro The Amazing Race China, quando uma etapa foi no Brasil."},
+  {"t": "texto", "fundo": "claro", "chapeu": "Lição 1", "titulo": "Ninguém levanta *na primeira tentativa.*", "sub": "Nem no wake, nem no Instagram."},
+  {"t": "texto", "chapeu": "Lição 2", "titulo": "O instrutor *não puxa por você.*", "sub": "Ele mostra o caminho e ajusta a cada tentativa."},
+  {"t": "texto", "fundo": "claro", "chapeu": "Lição 3", "titulo": "Quem levanta uma vez *quer ir de novo.*", "sub": "O primeiro resultado é o que dá vontade de continuar."},
+  {"t": "final", "foto": "estudio-blazer-marinho/sorrindo-frente-aberto.jpg", "titulo": "Qual foi o seu *primeiro trabalho?*", "cta": "comenta", "cta_sub": "Quero saber o que ele te ensinou."}]},
+ {"id": "s8c07", "slides": [
+  {"t": "capa", "foto": "estudio-branco-camisa-preta/segurando-celular.jpg", "chapeu": "Antes de te chamar", "titulo": "3 coisas que o cliente *olha no seu perfil.*", "sub": "Em menos de um minuto."},
+  {"t": "item", "k": 1, "label": "A bio", "titulo": "Diz *o que você faz* e pra quem?", "corpo": "Se ele precisar adivinhar, ele vai embora."},
+  {"t": "item", "k": 2, "label": "O último post", "titulo": "Foi *essa semana?*", "corpo": "Perfil parado parece empresa fechada."},
+  {"t": "item", "k": 3, "label": "Os fixados", "titulo": "Mostram *quem você é* e um resultado?", "corpo": "É a sua vitrine. Escolhe o que fica ali."},
+  {"t": "final", "foto": "estudio-branco-camisa-preta/sentado-banco.jpg", "titulo": "Abre o seu perfil agora *e confere os 3.*", "cta": "salva", "cta_titulo": "Salva *esse post*", "cta_sub": "e confere de novo no mês que vem."}]}
+]

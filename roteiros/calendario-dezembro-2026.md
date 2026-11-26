@@ -71,7 +71,7 @@ Regra: o rosto ou a vida do Ighor em todo post. Sem política. Número só com f
 1. **Gravação semanal** (uma tarde): cerca de 4 Reels por semana marcados com 🎥. Os roteiros eu mando no domingo anterior.
 2. **Momentos pessoais 👨‍👧**: 1 ou 2 por semana (foto ou vídeo do celular). Só o que ele topar mostrar.
 3. **Fotos no GPT 📸 GPT**: cerca de 2 por semana, com o prompt que eu passo.
-4. **Oferta de dezembro**: Presença 365, com a Maré Alta como rosto. Chamada "Manda PRESENÇA no WhatsApp" (cadastrar a palavra na automação antes de 1/12). Conferir antes: presenca365.com.br, @presenca365 e busca no INPI (classe 35).
+4. **Oferta de dezembro**: Presença 365, com a Maré Alta como rosto. Chamada "Manda PRESENÇA no WhatsApp" (cadastrar a palavra na automação antes de 1/12). Presença 365 é um produto dentro da Liga: sem marca, domínio ou @ próprios por enquanto (rebranding da Liga fica para quando houver caixa).
 
 ## O que eu faço sozinho
 - Frases do dia com fotos da pasta fotos/ (não precisa de nada).

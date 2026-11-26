@@ -122,6 +122,9 @@ CTA = {
     'manda': ('Manda pra', None),
     'salva': ('Salva esse post', None),
     'diagnostico': ('Comenta DIAGNÓSTICO', 'que eu te chamo no direct pra gente marcar um horário.'),
+    'comenta': ('Me conta nos *comentários*', None),
+    'black': ('Manda BLACK', 'no WhatsApp pelo link da bio. Eu monto uma amostra com a sua empresa.'),
+    'presenca': ('Manda PRESENÇA', 'no WhatsApp pelo link da bio.'),
     'arkybook': ('Comenta ARKYBOOK', 'que eu te mando os 12 prompts pra usar no comercial da sua clínica.'),
 }
 
