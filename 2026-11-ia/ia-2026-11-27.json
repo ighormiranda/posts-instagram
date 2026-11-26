@@ -1,0 +1,36 @@
+{
+ "id": "ia-2026-11-27",
+ "semana": "SEMANA DE 23 A 27/11",
+ "titulo": "O que saiu de IA essa semana\n*e o que muda pro seu negócio.*",
+ "foto": "blazer-vinho/em-pe-falando-mesa.jpg",
+ "itens": [
+  {
+   "empresa": "Anthropic",
+   "titulo": "Agora o que o Claude cria vira app no computador",
+   "texto": "Saiu na terça (24/11), em beta no Claude pra Mac e Windows. Você pede uma ferramenta, clica em \"Instalar como app\" e ela ganha ícone e janela própria.",
+   "pratica": "Peça ao Claude uma calculadora de orçamento ou um painel de vendas e deixe aberto como qualquer programa.",
+   "fonte": "Anthropic (@ClaudeDevs no X, 24/11)"
+  },
+  {
+   "empresa": "OpenAI",
+   "titulo": "O GPT-6.2 Sol chegou no chat do ChatGPT",
+   "texto": "Desde segunda (23/11), quem assina Plus, Pro, Business ou Enterprise já usa o Sol na conversa do dia a dia. Ele lê melhor detalhes de foto e segue melhor suas instruções.",
+   "pratica": "Mande foto de nota, cardápio ou etiqueta e peça a informação organizada.",
+   "fonte": "OpenAI (@ChatGPT no X, 23/11)"
+  },
+  {
+   "empresa": "Meta",
+   "titulo": "A IA Muse entrou no Direct do Instagram",
+   "texto": "Desde terça (24/11), a Muse resume conversas do Direct, explica posts e organiza seus salvos. Por enquanto: EUA, Canadá, México, Japão e Singapura.",
+   "pratica": "Seu cliente vai pesquisar produto pela IA dentro do Instagram. Perfil e posts claros contam ainda mais.",
+   "fonte": "Instagram (@instagram no X, 24/11)"
+  },
+  {
+   "empresa": "Google",
+   "titulo": "Gemini: guarde o histórico sem treinar a IA",
+   "texto": "Google separou duas opções: guardar suas conversas e deixar ou não elas treinarem a IA. O treino vem ligado por padrão e a mudança chega nas próximas semanas.",
+   "pratica": "Usa o Gemini com dado de cliente? Desligue o treino e mantenha o histórico.",
+   "fonte": "Google (blog.google, updated controls)"
+  }
+ ]
+}
