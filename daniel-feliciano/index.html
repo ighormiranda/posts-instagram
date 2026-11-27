@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>By Process · Daniel Feliciano</title>
+<meta name="description" content="Daniel Feliciano, consultor de processos no Rio de Janeiro. Para donos de empresas que cresceram e passaram a depender deles para tudo: mapeamento, POP, indicadores e implantação.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23233864'/%3E%3Ccircle cx='9' cy='16' r='4' fill='%2300A79D'/%3E%3Ccircle cx='23' cy='16' r='4' fill='%23fff'/%3E%3Cpath d='M13 16h6' stroke='%2300A79D' stroke-width='2.5'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://site.ligadomarketing.com/daniel-feliciano">
+<meta name="theme-color" content="#16244a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="By Process · Daniel Feliciano">
+<meta property="og:title" content="Sua empresa fatura. Mas funciona sem você?">
+<meta property="og:description" content="Daniel Feliciano, consultor de processos no Rio de Janeiro. Para donos de empresas que cresceram e passaram a depender deles para tudo.">
+<meta property="og:url" content="https://site.ligadomarketing.com/daniel-feliciano">
+<meta property="og:image" content="https://raw.githubusercontent.com/ighormiranda/posts-instagram/main/daniel-feliciano/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Daniel Feliciano, By Process: sua empresa fatura, mas funciona sem você?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ighormiranda/posts-instagram/main/daniel-feliciano/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: conversa de igual pra igual com dono de empresa que fatura bem e está cansado; firme, sem jargão, sem promessa
+   IDEA: a página é um mapa de processo sendo redesenhado ao vivo, da bagunça das 22h47 ao fluxo que anda sozinho
+   PICTURE: o organograma preso na tela, com pedidos correndo até o dono, que rebobina e vira uma linha de produção limpa
+   COLOUR and TYPE: navy By Process domina, royal de apoio, verde-água só para o que está resolvido, vermelho só para o custo; Inter Tight + Inter
+   LAYOUT: cena 22h47, história presa, frase-tese, custo, método com linha, frentes, Daniel, para quem é, teste, objeções, conversa */
+:root{--navy:#233864;--navy2:#16244a;--royal:#385BA1;--teal:#00A79D;--teal2:#00897F;--red:#e25c5c;--ice:#F3F6FB;--ink:#1b2a4e;--mut:#5b6785;--line:#dbe2ef}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font:17px/1.6 Inter,system-ui,sans-serif;color:var(--ink);background:var(--ice);overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Inter Tight",Inter,sans-serif;letter-spacing:-.03em;line-height:1.04;margin:0;text-wrap:balance}
+p{margin:0}a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(5vw,18px)}
+.grid-bg{background-image:linear-gradient(var(--gl) 1px,transparent 1px),linear-gradient(90deg,var(--gl) 1px,transparent 1px);background-size:56px 56px}
+.dark{--gl:rgba(255,255,255,.04);background-color:var(--navy2);color:#fff}
+.light{--gl:rgba(56,91,161,.06)}
+.eyebrow{font:700 13px Inter;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+.light .eyebrow{color:var(--royal)}
+em{font-style:normal;color:var(--teal)}.light em{color:var(--teal2)}
+.btn{position:relative;display:inline-flex;align-items:center;gap:12px;min-height:58px;padding:0 30px;border-radius:14px;background:var(--teal);color:#fff;font:700 17px Inter;text-decoration:none;box-shadow:0 18px 40px -18px rgba(0,167,157,.85);transition:transform .25s,box-shadow .25s;overflow:hidden;border:0;cursor:pointer}
+.btn:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);animation:shine 4.5s 2s infinite}
+@keyframes shine{0%,70%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+.btn:hover{transform:translateY(-2px);box-shadow:0 24px 50px -16px rgba(0,167,157,.95)}
+.btn b{font-weight:400;transition:transform .25s}.btn:hover b{transform:translateX(4px)}
+.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.35);box-shadow:none}.btn.ghost:after{display:none}
+.btn:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.light .btn:focus-visible,.light button:focus-visible{outline-color:var(--navy)}
+
+.bar{position:fixed;inset:0 0 auto;z-index:50;height:64px;display:flex;align-items:center;transition:background .3s,box-shadow .3s}
+.bar .wrap{width:100%;display:flex;justify-content:space-between;align-items:center}
+.bar img{height:30px;display:block}
+.bar .btn{min-height:42px;padding:0 18px;font-size:15px;box-shadow:none}
+.bar.on{background:rgba(22,36,74,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.prog{position:fixed;left:0;top:0;height:3px;background:var(--teal);z-index:60;width:0}
+.mcta{display:none}
+
+/* hero preso: a cena anda com o scroll */
+.hero{position:relative;height:360vh;background:radial-gradient(110% 80% at 85% 0%,#3a5fae 0%,#233864 42%,#16244a 100%)}
+.hstick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:center;padding:84px 0 40px}
+.hero .glow{position:absolute;width:640px;height:640px;border-radius:50%;background:var(--teal);filter:blur(140px);opacity:.2;right:-120px;top:20%;pointer-events:none;transition:opacity .6s,background .6s}
+.hero[data-b="3"] .glow{opacity:.32}
+.bgclk{position:absolute;left:-1vw;bottom:-7vh;font:900 clamp(160px,30vw,460px)/1 "Inter Tight";letter-spacing:-.06em;color:rgba(255,255,255,.025);pointer-events:none;white-space:nowrap}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(28px,5vw,80px);align-items:center;width:100%}
+.clock{font:800 clamp(16px,1.5vw,20px) Inter;letter-spacing:.14em;color:#9fb0d8;display:flex;align-items:center;gap:12px}
+.clock b{font:800 clamp(16px,1.5vw,20px) "Inter Tight";color:#fff;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.clock i{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(226,92,92,.6);animation:ping 1.6s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 12px rgba(226,92,92,0)}100%{box-shadow:0 0 0 0 rgba(226,92,92,0)}}
+.beats{position:relative;min-height:clamp(380px,52vh,520px);margin-top:18px}
+.beat{position:absolute;left:0;right:0;top:0;opacity:0;transform:translateY(28px);transition:opacity .6s,transform .7s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.beat.on{opacity:1;transform:none;pointer-events:auto}
+.beat.gone{transform:translateY(-28px)}
+.hero h1{font-size:clamp(36px,4.8vw,66px);margin:0 0 22px}
+.hero p.lead{font-size:clamp(17px,1.45vw,20px);color:#d5def3;max-width:34em}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:24px;color:#9fb0d8;font:600 14px Inter}
+.trust span:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--teal);margin-right:9px;vertical-align:middle}
+.hbar{display:flex;gap:8px;margin-top:8px}.hbar i{width:34px;height:4px;border-radius:4px;background:rgba(255,255,255,.18);overflow:hidden;position:relative}.hbar i b{position:absolute;inset:0;width:0;background:var(--teal)}
+@keyframes fade{to{opacity:1}}
+.phone{position:relative;width:min(380px,100%);margin-left:auto;aspect-ratio:9/16;max-height:78svh;border-radius:46px;background:linear-gradient(170deg,#0f1a38,#0a1230);border:10px solid #0b132c;box-shadow:0 60px 120px -40px #000,inset 0 0 0 1px rgba(255,255,255,.08);padding:56px 16px 20px;overflow:hidden;will-change:transform}
+.phone:before{content:"";position:absolute;left:50%;top:14px;width:96px;height:26px;border-radius:20px;background:#000;transform:translateX(-50%)}
+.phone.buzz{animation:buzz .4s}
+@keyframes buzz{20%{transform:translateX(-4px) rotate(-1deg)}40%{transform:translateX(4px) rotate(1deg)}60%{transform:translateX(-3px)}80%{transform:translateX(2px)}}
+.phone .lock{text-align:center;color:#fff;margin-bottom:18px}
+.phone .lock b{display:block;font:700 62px/1 "Inter Tight";letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.phone .lock small{font:500 14px Inter;color:#9fb0d8}
+.nt{background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border-radius:18px;padding:12px 14px;margin-bottom:10px;color:#fff;display:grid;grid-template-columns:34px 1fr;gap:10px;animation:drop .55s cubic-bezier(.2,.8,.2,1) both}
+.nt i{width:34px;height:34px;border-radius:9px;background:#25D366;display:grid;place-items:center;font:700 15px Inter;font-style:normal}
+.nt b{font:700 14px Inter;display:flex;justify-content:space-between}.nt b span{font-weight:500;color:#9fb0d8}
+.nt p{font-size:14px;line-height:1.35;color:#e8eefb}
+@keyframes drop{from{opacity:0;transform:translateY(-16px) scale(.97)}}
+.unread{position:absolute;left:16px;right:16px;bottom:18px;text-align:center;font:700 13px Inter;color:#fff;background:var(--red);border-radius:12px;padding:9px;opacity:0;transition:opacity .4s;font-variant-numeric:tabular-nums}
+.phone .dim{position:absolute;inset:0;background:#000;opacity:0;transition:opacity .6s;pointer-events:none;border-radius:36px}
+.phone .bat{position:absolute;right:22px;top:20px;font:700 11px Inter;color:#fff;font-variant-numeric:tabular-nums}
+.phone .bat.low{color:var(--red)}
+.unread.on{opacity:1}
+.cue{position:absolute;left:50%;bottom:24px;transition:opacity .4s;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;color:#9fb0d8;font:700 11px Inter;letter-spacing:.22em}
+.cue i{width:2px;height:42px;background:rgba(255,255,255,.15);position:relative;overflow:hidden;display:block}
+.cue i:after{content:"";position:absolute;left:0;right:0;height:14px;background:var(--teal);animation:fall 1.6s ease-in infinite}
+@keyframes fall{from{top:-14px}to{top:42px}}
+
+/* história presa */
+.story .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,5vw,72px)}
+.stage{position:sticky;top:64px;height:calc(100svh - 64px);display:flex;align-items:center;z-index:2}
+.board{position:relative;width:100%;aspect-ratio:1/1;max-height:calc(100svh - 110px);margin:auto;background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:0 40px 80px -50px rgba(35,56,100,.45);overflow:hidden;transition:box-shadow .6s}
+.board[data-s="5"],.board[data-s="6"]{box-shadow:0 40px 90px -40px rgba(0,167,157,.45)}
+.board svg{position:absolute;inset:0;width:100%;height:100%}
+.tag{position:absolute;left:22px;top:20px;font:700 12px Inter;letter-spacing:.16em;color:var(--mut);text-transform:uppercase;display:flex;gap:10px;align-items:center;z-index:3}
+.tag b{width:9px;height:9px;border-radius:50%;background:var(--red);transition:background .4s}
+.board[data-s="4"] .tag b{background:var(--royal)}.board[data-s="5"] .tag b,.board[data-s="6"] .tag b{background:var(--teal)}
+.dots{position:absolute;right:20px;top:22px;display:flex;gap:6px;z-index:3}
+.dots i{width:22px;height:4px;border-radius:4px;background:var(--line);transition:background .4s}
+.dots i.on{background:var(--navy)}
+.rew{position:absolute;inset:0;z-index:4;pointer-events:none;opacity:0;transition:opacity .3s;background:repeating-linear-gradient(0deg,rgba(35,56,100,.06) 0 2px,transparent 2px 5px)}
+.rew span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:800 15px Inter;letter-spacing:.16em;color:#fff;background:var(--navy);padding:12px 20px;border-radius:30px;box-shadow:0 20px 40px -16px rgba(0,0,0,.5)}
+.board.rw .rew{opacity:1}.board.rw svg{animation:jit .12s steps(2) infinite;filter:grayscale(1) contrast(.9)}
+@keyframes jit{50%{transform:translateX(3px) skewX(-1deg)}}
+.steps{padding:30vh 0 34vh}
+.step{min-height:80vh;display:flex;flex-direction:column;justify-content:center;opacity:.22;transition:opacity .5s}
+.step.on{opacity:1}
+.step .n{font:800 14px Inter;color:var(--red);letter-spacing:.14em;margin-bottom:14px}
+.step.turn .n{color:var(--teal2)}
+.step h3{font-size:clamp(28px,3vw,42px);margin-bottom:16px}
+.step p{color:var(--mut);font-size:18px;max-width:30em}
+.step .chip{align-self:flex-start;margin-top:20px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:10px;padding:12px 16px;font:600 15px Inter;color:var(--navy)}
+.step .chip.red{border-left-color:var(--red)}
+.cost{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:8px}
+.cost li{display:flex;gap:12px;align-items:baseline;font:600 16px Inter;color:var(--navy)}.cost li:before{content:"–";color:var(--red);font-weight:800}
+/* svg */
+.nd{transition:transform 1.1s cubic-bezier(.65,0,.35,1),opacity .6s}
+.nd rect{fill:#fff;stroke:#c3cde2;stroke-width:2;transition:fill .6s,stroke .6s}
+.nd text{font:700 15px Inter;fill:var(--navy);text-anchor:middle;dominant-baseline:central}
+.nd.dono rect{fill:var(--navy);stroke:var(--navy)}.nd.dono text{fill:#fff}
+.board[data-s="3"] .nd.dono rect{animation:hot 1.2s infinite}
+@keyframes hot{50%{fill:#8c2f3f;stroke:#8c2f3f}}
+.board[data-s="5"] .nd:not(.dono) rect,.board[data-s="6"] .nd:not(.dono) rect{stroke:var(--teal)}
+.lk{stroke:#b7c2da;stroke-width:2;fill:none}.lk.mess{stroke-dasharray:5 7}
+.flow{stroke:var(--teal);stroke-width:3;fill:none;stroke-dasharray:420;stroke-dashoffset:420;transition:stroke-dashoffset 1.2s .7s ease}
+.board[data-s="5"] .flow,.board[data-s="6"] .flow{stroke-dashoffset:0}
+.loop{fill:none;stroke:var(--red);stroke-width:2.5}
+.lbl-r{font:700 12px Inter;fill:var(--red)}
+.layer{transition:opacity .6s}
+.badge circle{fill:var(--red)}.badge text{font:800 14px Inter;fill:#fff;text-anchor:middle;dominant-baseline:central}
+.kpi rect{fill:rgba(0,167,157,.12)}.kpi text{font:700 11.5px Inter;fill:var(--teal2);text-anchor:middle;dominant-baseline:central}
+.cap{position:absolute;left:0;right:0;bottom:18px;text-align:center;font:600 14px Inter;color:var(--mut);padding:0 20px;z-index:3}
+
+/* tese */
+.mani{height:240vh;position:relative}
+.mani .pin{position:sticky;top:0;height:100svh;display:flex;align-items:center;overflow:hidden}
+.mani .qm{position:absolute;right:-2vw;top:8vh;font:900 46vw/1 "Inter Tight";color:rgba(255,255,255,.03);pointer-events:none}
+.mani h2{font-size:clamp(36px,6vw,88px);line-height:1.04;max-width:13em}
+.mani .w{opacity:.14;transition:opacity .25s}.mani .w.lit{opacity:1}
+.mani .sig{margin-top:30px;font:600 16px Inter;color:#9fb0d8;opacity:0;transition:opacity .6s}.mani .sig.on{opacity:1}
+
+.sec{padding:clamp(84px,10vw,140px) 0}
+.sec h2{font-size:clamp(32px,4vw,56px);margin:14px 0 18px}
+.sec .intro{color:var(--mut);font-size:19px;max-width:38em}
+.dark .intro{color:#c4d0ee}
+
+/* custo */
+.costs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:54px}
+.costs div{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 28px 30px;position:relative;overflow:hidden}
+.costs div:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red)}
+.costs b{display:block;font:800 24px "Inter Tight";letter-spacing:-.02em;color:var(--navy);margin-bottom:10px}
+.costs p{color:var(--mut);font-size:16px}
+
+/* método */
+.tl{position:relative;margin-top:60px;display:grid;gap:22px;padding-left:60px}
+.tl:before{content:"";position:absolute;left:20px;top:8px;bottom:8px;width:3px;background:var(--line);border-radius:3px}
+.tl .fill{position:absolute;left:20px;top:8px;width:3px;height:0;background:var(--teal);border-radius:3px;box-shadow:0 0 14px rgba(0,167,157,.7)}
+.tl article{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 30px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:24px;align-items:start;transition:border-color .4s,transform .4s,box-shadow .4s}
+.tl article.on{border-color:rgba(0,167,157,.45);box-shadow:0 24px 50px -36px rgba(0,167,157,.6)}
+.tl article:before{content:attr(data-n);position:absolute;left:-60px;top:22px;width:44px;height:44px;border-radius:50%;background:#fff;border:3px solid var(--royal);display:grid;place-items:center;font:800 15px "Inter Tight";color:var(--royal);transition:.4s}
+.tl article.on:before{background:var(--teal);border-color:var(--teal);color:#fff;transform:scale(1.08)}
+.tl h3{font-size:26px}.tl .when{font:700 13px Inter;letter-spacing:.14em;color:var(--teal2);text-transform:uppercase;margin-bottom:8px}
+.tl p{color:var(--mut)}
+
+/* frentes */
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:54px;perspective:1000px}
+.svc div{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);border-radius:20px;padding:24px 24px 26px;transition:transform .35s,background .35s,border-color .35s}
+.svc div:hover{transform:translateY(-4px) rotateX(3deg);background:rgba(255,255,255,.08);border-color:rgba(0,167,157,.5)}
+.svc b{display:block;font:700 20px "Inter Tight";letter-spacing:-.01em;margin-bottom:8px}
+.svc p{color:#c4d0ee;font-size:15.5px}
+.svc svg{width:30px;height:30px;margin-bottom:14px;stroke:var(--teal);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* daniel */
+.who .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,80px);align-items:center}
+.portrait{position:relative;border-radius:30px;overflow:hidden;background:radial-gradient(90% 80% at 50% 25%,#3a5fae,#233864 60%,#16244a);aspect-ratio:4/5}
+.portrait:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:40px 40px}
+.portrait img{position:absolute;left:50%;bottom:0;height:96%;transform:translateX(-50%);filter:drop-shadow(0 30px 50px rgba(0,0,0,.45));will-change:transform}
+.portrait .stamp{position:absolute;left:20px;bottom:20px;background:rgba(22,36,74,.88);border:1px solid rgba(255,255,255,.18);color:#fff;border-radius:16px;padding:12px 16px;font:600 14px Inter;z-index:2}
+.portrait .stamp b{display:block;font:800 22px "Inter Tight";letter-spacing:-.02em}
+.nums{display:flex;flex-wrap:wrap;gap:18px 44px;margin:30px 0 34px}
+.nums div{font:500 15px Inter;color:var(--mut)}.nums b{display:block;font:800 clamp(44px,4.6vw,62px)/1 "Inter Tight";color:var(--navy);letter-spacing:-.04em}
+.path{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
+.path li{position:relative;padding:0 0 22px 26px}
+.path li:before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--royal)}
+.path li:last-child:before{background:var(--teal);box-shadow:0 0 0 6px rgba(0,167,157,.18)}
+.path b{font:700 17px Inter;color:var(--navy)}.path span{display:block;color:var(--mut);font-size:15.5px}
+.case{margin-top:30px;background:var(--navy);color:#fff;border-radius:22px;padding:26px 28px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:center}
+.case b{font:900 54px/1 "Inter Tight";letter-spacing:-.04em;color:var(--teal)}
+.case p{color:#d5def3;font-size:16px}.case small{display:block;color:#9fb0d8;font-size:13px;margin-top:6px}
+
+/* para quem */
+.fit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;margin-top:50px}
+.fit div{border-radius:24px;padding:30px 32px}
+.fit .yes{background:var(--navy);color:#fff}.fit .no{background:#fff;border:1px solid var(--line)}
+.fit h3{font-size:24px;margin-bottom:16px}
+.fit ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.fit li{display:flex;gap:12px;font-size:16.5px;line-height:1.45}
+.fit .yes li{color:#d5def3}.fit .yes li:before{content:"✓";color:var(--teal);font-weight:800}
+.fit .no li{color:var(--mut)}.fit .no li:before{content:"✕";color:var(--red);font-weight:800}
+
+/* teste */
+.quiz{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,60px);align-items:start;margin-top:48px}
+.qs{display:grid;gap:12px}
+.q{display:flex;gap:16px;align-items:center;min-height:64px;padding:14px 20px;border-radius:16px;border:1.5px solid var(--line);background:#fff;font:600 17px Inter;color:var(--navy);cursor:pointer;text-align:left;width:100%;transition:border-color .2s,background .2s,transform .2s}
+.q:hover{transform:translateX(3px)}
+.q i{flex:none;width:28px;height:28px;border-radius:8px;border:2px solid #b7c2da;display:grid;place-items:center;font-style:normal;color:#fff;font-size:16px;transition:.2s}
+.q[aria-pressed=true]{border-color:var(--teal);background:#effaf9}.q[aria-pressed=true] i{background:var(--teal);border-color:var(--teal)}
+.res{position:sticky;top:96px;background:var(--navy);color:#fff;border-radius:26px;padding:34px 34px 36px;min-height:330px}
+.meter{height:12px;border-radius:12px;background:rgba(255,255,255,.12);overflow:hidden;margin:18px 0 26px}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),#e2b45c,var(--red));background-size:600px 100%;border-radius:12px;transition:width .5s}
+.res h3{font-size:30px;margin-bottom:12px}.res p{color:#d5def3}.res .btn{margin-top:26px}
+
+details{border-bottom:1px solid var(--line);padding:22px 0}
+summary{cursor:pointer;font:700 20px "Inter Tight";letter-spacing:-.01em;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--teal);font-size:26px;line-height:1;transition:transform .3s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{color:var(--mut);margin-top:12px;max-width:46em}
+
+.end{position:relative;overflow:hidden;background:radial-gradient(100% 90% at 80% 10%,#3a5fae,#233864 45%,#16244a)}
+.end .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;align-items:end}
+.end h2{font-size:clamp(36px,5vw,70px)}
+.end p{color:#d5def3;font-size:19px;margin:22px 0 30px;max-width:32em}
+.end img{width:100%;max-width:420px;display:block;margin-left:auto;margin-bottom:calc(-1 * clamp(84px,10vw,140px));filter:drop-shadow(0 30px 50px rgba(0,0,0,.45))}
+.agenda{display:grid;gap:12px;margin:0 0 32px;max-width:34em}
+.agenda div{display:grid;grid-template-columns:34px 1fr;gap:14px;align-items:start;color:#d5def3;font-size:16.5px}
+.agenda b{width:34px;height:34px;border-radius:50%;background:rgba(0,167,157,.2);color:var(--teal);display:grid;place-items:center;font:800 15px "Inter Tight"}
+.small{margin-top:18px;color:#9fb0d8;font-size:14px}
+footer{background:#0f1a38;color:#9fb0d8;font-size:14px;padding:34px 0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+footer img{height:28px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+ .hero .wrap,.who .wrap,.quiz,.end .wrap,.fit{grid-template-columns:minmax(0,1fr)}
+ .hstick{align-items:flex-start;padding:76px 0 20px}
+ .hero .wrap{display:flex;flex-direction:column-reverse;gap:14px}
+ .phone{margin:0 auto;width:min(300px,80vw);aspect-ratio:auto;height:40svh;max-height:none;border-radius:32px;border-width:7px;padding:38px 12px 12px}
+ .phone:before{width:64px;height:18px;top:10px}
+ .phone .bat{top:11px;right:18px;font-size:10px}
+ .phone .lock{margin-bottom:8px}.phone .lock b{font-size:38px}.phone .lock small{font-size:12px}
+ .nt{padding:9px 11px;grid-template-columns:28px minmax(0,1fr);gap:9px;border-radius:14px;margin-bottom:7px}.nt i{width:28px;height:28px;font-size:12px}
+ .nt b{font-size:12.5px;gap:6px}.nt b>span{flex:none;font-size:11px}.nt b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex}
+ .nt p{font-size:12.5px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+ .beats{min-height:44svh;margin-top:6px}
+ .hero h1{font-size:clamp(28px,8vw,36px);margin-bottom:12px}.hero p.lead{font-size:15.5px}.hero .cta{margin-top:18px}.hero .cta .btn{min-height:50px;padding:0 20px;font-size:15.5px}.trust{display:none}
+ .bgclk{font-size:46vw;bottom:auto;top:12svh}
+ .unread{font-size:12px;padding:7px;bottom:10px;left:10px;right:10px}
+ .story .wrap{grid-template-columns:minmax(0,1fr);gap:0}
+ .stage{height:auto;padding:10px 0 0;background:linear-gradient(var(--ice) 88%,rgba(243,246,251,0))}
+ .board{max-height:none;width:min(330px,82vw)}
+ .steps{padding:2vh 0 24vh}
+ .step{min-height:72vh;justify-content:center;padding:0}
+ .step>*{position:relative}
+ .step .inner{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 22px;box-shadow:0 20px 40px -30px rgba(35,56,100,.4)}
+ .step h3{font-size:25px}.step p{font-size:16.5px}
+ .tl article{grid-template-columns:minmax(0,1fr)}
+ .svc,.costs{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .res{position:static}
+ .end img{margin:0 auto -84px;max-width:300px}
+ .mcta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:55;justify-content:center;min-height:54px;transform:translateY(140%);transition:transform .4s}
+ .mcta.on{transform:none}
+}
+@media(max-width:560px){.case{grid-template-columns:minmax(0,1fr);gap:8px}.case b{font-size:46px}.svc,.costs{grid-template-columns:minmax(0,1fr)}.cue{display:none}.bar .btn{display:none}}
+@media(prefers-reduced-motion:reduce){.hero{height:auto}.hstick{position:relative;height:auto;min-height:100svh}.beat{position:relative;opacity:1;transform:none;pointer-events:auto}.beat:not(:last-child){display:none}*,*:after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.mani .w{opacity:1}}
+</style>
+</head>
+<body>
+<div class="prog" id="prog"></div>
+<header class="bar" id="bar"><div class="wrap"><img src="https://raw.githubusercontent.com/ighormiranda/posts-instagram/main/daniel-feliciano/logo-branco.png" alt="By Process"><a class="btn" href="#conversa">Agendar conversa</a></div></header>
+<a class="btn mcta" id="mcta" href="#conversa">Agendar conversa com o Daniel</a>
+
+<section class="hero grid-bg dark" id="hero" data-b="1">
+ <div class="hstick">
+ <div class="glow" id="glow"></div>
+ <div class="bgclk" id="ghost" aria-hidden="true">22:47</div>
+ <div class="wrap">
+  <div>
+   <div class="clock"><i></i><b id="clk">22:47</b><span id="day">QUINTA-FEIRA</span></div>
+   <div class="beats">
+    <div class="beat on" data-b="1"><h1>Você construiu uma empresa <em>que fatura.</em></h1><p class="lead">O expediente acabou faz tempo. O seu, não. Repare no celular.</p></div>
+    <div class="beat" data-b="2"><h1>Só que ela <em>não funciona sem você.</em></h1><p class="lead">Desconto, aprovação, reclamação, caixa. Toda dúvida do time tem uma única resposta possível: a sua. A qualquer hora.</p></div>
+    <div class="beat" data-b="3"><h1>Não é falta de gente boa. <em>É falta de processo.</em></h1><p class="lead">E quem paga a conta é você: na margem, no crescimento e no fim de semana. Dá pra virar esse jogo.</p>
+     <div class="cta"><a class="btn" href="#conversa">Quero sair do meio da operação <b>→</b></a><a class="btn ghost" href="#historia">Ver como muda</a></div>
+     <div class="trust"><span>+90 empresas atendidas</span><span>11 anos em processos</span><span>Lean Six Sigma</span></div></div>
+   </div>
+   <div class="hbar" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i></div>
+  </div>
+  <div class="phone" id="phone" aria-label="Notificações chegando no celular do dono">
+   <span class="bat" id="bat">38%</span>
+   <div class="lock"><b id="lclk">22:47</b><small id="lday">quinta-feira</small></div>
+   <div id="nts"></div>
+   <div class="unread" id="unread">+ 0 mensagens não lidas</div>
+   <div class="dim" id="dim"></div>
+  </div>
+ </div>
+ <div class="cue" id="cue">ROLE<i></i></div>
+ </div>
+</section>
+
+<section class="story light grid-bg" id="historia">
+ <div class="wrap">
+  <div class="stage">
+   <div class="board" id="board" data-s="1">
+    <div class="tag"><b></b><span id="tagt">Sua empresa hoje</span></div>
+    <div class="dots" id="dots"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="rew"><span>◀◀ REBOBINANDO</span></div>
+    <svg viewBox="0 0 600 600" id="map" aria-label="Mapa da empresa: de tudo ligado ao dono para um fluxo organizado"></svg>
+    <div class="cap" id="cap"></div>
+   </div>
+  </div>
+  <div class="steps">
+   <div class="step" data-s="1"><div class="inner"><div class="n">01 · O CENTRO DE TUDO</div><h3>Toda decisão passa <em>pela sua mesa</em></h3><p>Comercial não fecha sem você. Compras não libera sem você. O financeiro não confia no número sem você. A empresa anda exatamente na velocidade da sua agenda.</p></div></div>
+   <div class="step" data-s="2"><div class="inner"><div class="n">02 · O PROCESSO OCULTO</div><h3>O trabalho volta. <em>E ninguém anota.</em></h3><p>O orçamento que vai e volta três vezes. O pedido que sai errado. O atalho que alguém criou num dia de aperto e virou regra. Nada disso está escrito. Tudo isso custa.</p></div></div>
+   <div class="step" data-s="3"><div class="inner"><div class="n">03 · A CONTA QUE NÃO APARECE NO DRE</div><h3>Você virou o <em>gargalo mais caro</em> da empresa</h3><p>O trabalho não atrasa enquanto está sendo feito. Atrasa parado, esperando você. E cada hora sua gasta apagando incêndio é uma hora a menos pensando no crescimento.</p><ul class="cost"><li>Margem que escorre em retrabalho</li><li>Cliente que espera e não volta</li><li>Crescimento que trava no limite de uma pessoa</li></ul></div></div>
+   <div class="step turn" data-s="4"><div class="inner"><div class="n">04 · AGORA, A MESMA EMPRESA</div><h3>Antes de melhorar, <em>é preciso enxergar</em></h3><p>O primeiro passo não é comprar sistema nem mandar o time pra treinamento. É mapear: escutar quem executa, ver o trabalho acontecendo e desenhar o processo do jeito que ele é.</p></div></div>
+   <div class="step turn" data-s="5"><div class="inner"><div class="n">05 · O FLUXO DESENHADO</div><h3>Cada um sabe o que é seu. <em>O trabalho anda.</em></h3><p>Quem faz o quê, em que ordem, com que critério de qualidade. O passo a passo escrito com quem executa. E você sai do meio da operação para o lugar de onde nunca deveria ter saído: a direção.</p></div></div>
+   <div class="step turn" data-s="6"><div class="inner"><div class="n">06 · O QUE SUSTENTA</div><h3>Controle sem precisar <em>perguntar a ninguém</em></h3><p>Poucos indicadores, cada um com dono, meta e um dia fixo de leitura. Você sabe como a empresa está olhando para cinco números, não respondendo cinquenta mensagens.</p><span class="chip">Processo tira você do meio sem tirar você do controle.</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="mani dark grid-bg" id="maniS"><div class="pin"><div class="qm">“</div><div class="wrap"><h2 id="mani">Uma empresa que depende do dono não vale o que fatura. <em>Vale o que o dono aguenta.</em></h2><div class="sig" id="sig">Daniel Feliciano · By Process</div></div></div></section>
+
+<section class="sec light grid-bg">
+ <div class="wrap">
+  <div class="eyebrow">O custo de deixar como está</div>
+  <h2>Empresa sem processo não para. <em>Ela vaza.</em></h2>
+  <p class="intro">Não aparece como uma grande perda. Aparece como pequenos custos todo dia, que ninguém soma.</p>
+  <div class="costs">
+   <div class="rv"><b>Na margem</b><p>Retrabalho, desperdício e erro repetido pagos duas vezes, sem linha própria no relatório.</p></div>
+   <div class="rv"><b>No crescimento</b><p>Contratar mais gente aumenta a bagunça quando ninguém sabe o caminho. A empresa cresce até o limite do dono e trava ali.</p></div>
+   <div class="rv"><b>No valor da empresa</b><p>Negócio que só funciona com o dono presente vale menos para um sócio, um investidor ou um comprador. E pesa mais para quem toca.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec light grid-bg" id="metodo" style="padding-top:0">
+ <div class="wrap">
+  <div class="eyebrow">Como funciona</div>
+  <h2>Do improviso ao processo <em>que roda sem você</em></h2>
+  <p class="intro">Sem manual de 200 páginas entregue e esquecido. O trabalho acontece dentro da sua operação, com o seu time, até virar rotina.</p>
+  <div class="tl" id="tl"><span class="fill" id="tlf"></span>
+   <article data-n="1"><div><div class="when">A primeira conversa</div><h3>Diagnóstico</h3></div><p>Onde o trabalho espera, o que só você sabe fazer e o que se repete toda semana. Dessa conversa sai o ponto exato por onde começar e o tamanho real do problema.</p></article>
+   <article data-n="2"><div><div class="when">Dentro da empresa</div><h3>Mapeamento</h3></div><p>Escuta com você e com quem executa, acompanhamento do trabalho em campo e o desenho do processo como ele acontece de verdade, não como deveria.</p></article>
+   <article data-n="3"><div><div class="when">Com quem faz</div><h3>Redesenho e POP</h3></div><p>Corta o que só existe por hábito, define responsáveis e escreve o passo a passo de cada tarefa junto com o time. Uma página por tarefa, que alguém de fato usa.</p></article>
+   <article data-n="4"><div><div class="when">O painel do dono</div><h3>Indicadores</h3></div><p>Poucos números, cada um com dono, meta e dia fixo de leitura. É assim que você acompanha a empresa sem precisar estar em todas as conversas.</p></article>
+   <article data-n="5"><div><div class="when">Até virar hábito</div><h3>Implantação e acompanhamento</h3></div><p>Treinar é acompanhar, corrigir e conferir até ficar automático. E, quando faz sentido, implantar o sistema certo em cima de um processo que já funciona.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="sec dark grid-bg">
+ <div class="wrap">
+  <div class="eyebrow">O que a By Process faz</div>
+  <h2>Nove frentes. <em>Um objetivo:</em> a empresa funcionar sem depender de uma pessoa.</h2>
+  <p class="intro">Processo, gente e tecnologia, nessa ordem. Sistema sem processo acelera o erro. Treinamento sem padrão ensina a improvisar.</p>
+  <div class="svc" id="svc"></div>
+ </div>
+</section>
+
+<section class="sec light grid-bg who" id="daniel">
+ <div class="wrap">
+  <div class="portrait rv" id="portrait"><img src="https://raw.githubusercontent.com/ighormiranda/posts-instagram/main/daniel-feliciano/braco.png" alt="Daniel Feliciano" id="pimg"><div class="stamp"><b>Lean Six Sigma</b>certificação em melhoria de processos</div></div>
+  <div class="rv">
+   <div class="eyebrow">Quem vai estar com você</div>
+   <h2 style="font-size:clamp(32px,4vw,56px);margin:14px 0 16px">Daniel Feliciano</h2>
+   <p class="intro" style="color:var(--mut);font-size:19px">Consultor de processos no Rio de Janeiro. Começou dentro de projetos de melhoria, coordenou equipes de consultores e hoje conduz pessoalmente cada diagnóstico da By Process. Quem fala com você é quem vai entrar na sua operação.</p>
+   <div class="nums"><div><b data-c="90" data-p="+">+90</b>empresas atendidas</div><div><b data-c="11">11</b>anos em processos</div></div>
+   <ul class="path">
+    <li><b>Consultor júnior</b><span>O começo, dentro de projetos de melhoria de processos.</span></li>
+    <li><b>Três promoções em um ano</b><span>Até a coordenação de operações, liderando a equipe de consultores.</span></li>
+    <li><b>Lean Six Sigma e pesquisa</b><span>Certificação e um estudo apresentado no Simpósio de Engenharia de Produção.</span></li>
+    <li><b>By Process</b><span>A consultoria própria: método aplicado no dia a dia de empresas reais.</span></li>
+   </ul>
+   <div class="case"><b>+150%</b><p>de produtividade de um gestor em um projeto, só tirando da mesa dele o que não precisava passar por ele.<small>Resultado de um caso específico. Cada empresa tem o seu ponto de partida.</small></p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec light grid-bg" style="padding-top:0">
+ <div class="wrap">
+  <div class="eyebrow">Para quem é</div>
+  <h2>Não é para toda empresa. <em>Talvez seja para a sua.</em></h2>
+  <div class="fit">
+   <div class="yes rv"><h3>Faz sentido se você</h3><ul><li>Tem uma empresa que já fatura bem e tem equipe</li><li>Sente que cresceu, mas ficou mais difícil de administrar</li><li>Quer sair da operação sem perder o controle</li><li>Está disposto a envolver o time na mudança</li></ul></div>
+   <div class="no rv"><h3>Não faz sentido se você</h3><ul><li>Procura um manual pronto para engavetar</li><li>Quer resolver tudo só comprando um sistema</li><li>Espera mudança sem mexer na rotina de ninguém</li><li>Ainda está começando e trabalha sozinho</li></ul></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec light" style="background:#fff" id="teste">
+ <div class="wrap">
+  <div class="eyebrow">Teste de 30 segundos</div>
+  <h2>Sua empresa <em>cresceu</em> ou só aumentou?</h2>
+  <p class="intro">Marque o que acontece aí hoje. Sem enfeitar.</p>
+  <div class="quiz">
+   <div class="qs" id="qs"></div>
+   <div class="res" aria-live="polite"><div class="eyebrow">Seu resultado</div><div class="meter"><i id="mt"></i></div><h3 id="rt"></h3><p id="rp"></p><a class="btn wa" href="#conversa">Levar este resultado pra conversa <b>→</b></a></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec light grid-bg">
+ <div class="wrap" style="max-width:900px">
+  <div class="eyebrow">Antes de marcar</div>
+  <h2 style="margin-bottom:24px">As dúvidas de quem <em>está do seu lado da mesa</em></h2>
+  <details><summary>Minha empresa é diferente. Isso funciona pra mim?</summary><p>Toda empresa acha que é diferente, e em parte é. Mas onde há tarefa que se repete, há processo, escrito ou não. O mapeamento parte do jeito que a sua empresa funciona hoje, não de um modelo pronto.</p></details>
+  <details><summary>Preciso parar a operação?</summary><p>Não. O mapeamento acontece com a empresa funcionando. A ideia é justamente ver o trabalho real, no dia a dia.</p></details>
+  <details><summary>Quanto tempo leva?</summary><p>Depende do tamanho da empresa e de quantos processos entram no escopo. A conversa inicial e o diagnóstico existem para definir isso com clareza antes de qualquer proposta.</p></details>
+  <details><summary>Já tenho um sistema. Ainda faz sentido?</summary><p>Faz, e muitas vezes é por isso que o sistema não entregou o que prometia. Processo vem antes da ferramenta. Depois de desenhado, o sistema passa a ter um caminho claro para seguir.</p></details>
+  <details><summary>Meu time vai resistir.</summary><p>Resiste quando o processo chega pronto, de cima pra baixo. Por isso ele é desenhado com quem executa e acompanhado até virar hábito. Quem ajuda a construir, segue.</p></details>
+  <details><summary>Vou receber um manual e ficar sozinho?</summary><p>Não. O processo é escrito com o time, implantado na rotina e acompanhado com indicadores para você saber se está funcionando.</p></details>
+ </div>
+</section>
+
+<section class="sec dark end grid-bg" id="conversa">
+ <div class="wrap">
+  <div>
+   <div class="eyebrow">Próximo passo</div>
+   <h2>Descubra qual processo está <em>segurando a sua empresa.</em></h2>
+   <p>Uma conversa direta com o Daniel sobre a sua operação. Você sai sabendo por onde começar, com ou sem a By Process.</p>
+   <div class="agenda">
+    <div><b>1</b><span>Você conta o que mais trava hoje: onde o trabalho espera e o que só você resolve.</span></div>
+    <div><b>2</b><span>O Daniel aponta onde está o primeiro processo a organizar e o que ele custa.</span></div>
+    <div><b>3</b><span>Se fizer sentido seguir juntos, vocês combinam o diagnóstico. Se não, você leva o caminho.</span></div>
+   </div>
+   <a class="btn wa" id="ctaMain" href="#">Agendar minha conversa <b>→</b></a>
+   <div class="small">Online ou presencial no Rio de Janeiro. Sem compromisso e sem proposta empurrada.</div>
+  </div>
+  <img src="https://raw.githubusercontent.com/ighormiranda/posts-instagram/main/daniel-feliciano/pasta.png" alt="Daniel Feliciano segurando relatórios" loading="lazy">
+ </div>
+</section>
+<footer><div class="wrap"><img src="https://raw.githubusercontent.com/ighormiranda/posts-instagram/main/daniel-feliciano/logo-branco.png" alt="By Process"><span>Daniel Feliciano · Consultoria em processos · Rio de Janeiro</span><a href="https://byprocess.com.br" style="color:#c4d0ee">byprocess.com.br</a><a href="https://instagram.com/danielfelicciano" style="color:#c4d0ee">@danielfelicciano</a></div></footer>
+
+<script>
+{
+// contato: coloque aqui o WhatsApp do Daniel (só números, com 55 e DDD). Vazio = abre o direct do Instagram.
+const WHATS="";
+const MSG="Oi, Daniel! Vi sua página e quero entender qual processo está segurando a minha empresa.";
+const link=WHATS?`https://wa.me/${WHATS}?text=${encodeURIComponent(MSG)}`:"https://ig.me/m/danielfelicciano";
+document.querySelectorAll("#ctaMain").forEach(a=>{a.href=link;a.target="_blank";a.rel="noopener"});
+
+// hero preso: cada pedaço de scroll é um minuto da noite do dono
+const N=[["Equipe Operação","agora","Chefe, o cliente das 14h ligou de novo reclamando 😬"],["Comercial","agora","Posso dar 10% de desconto? Ele quer resposta hoje"],["Financeiro","agora","Qual planilha é a certa? Tem três versões aqui"],["Compras","agora","Só falta a sua aprovação pra liberar o pedido"],["Atendimento","agora","Fulano faltou amanhã. Quem sabe fechar o caixa?"],["Comercial","agora","O cliente pediu o contrato de novo, qual versão eu mando?"],["Equipe Operação","agora","Deu problema na entrega de hoje, me liga quando puder"],["Sócio","agora","Amanhã a gente precisa conversar sobre a margem"]];
+const hero=document.getElementById("hero"),nts=document.getElementById("nts"),phone=document.getElementById("phone"),beats=[...document.querySelectorAll(".beat")],hb=[...document.querySelectorAll(".hbar b")],clk=document.getElementById("clk"),lclk=document.getElementById("lclk"),ghost=document.getElementById("ghost"),unread=document.getElementById("unread"),dim=document.getElementById("dim"),bat=document.getElementById("bat"),cue=document.getElementById("cue"),day=document.getElementById("day"),lday=document.getElementById("lday");
+let shown=0,curB=1;
+function heroUpd(){
+ const r=hero.getBoundingClientRect(),tot=r.height-innerHeight,p=Math.min(1,Math.max(0,-r.top/tot));
+ const m=47+Math.floor(p*88),hh=(22+Math.floor(m/60))%24,t=`${String(hh).padStart(2,"0")}:${String(m%60).padStart(2,"0")}`;
+ clk.textContent=lclk.textContent=ghost.textContent=t;
+ const late=hh<22;day.textContent=late?"SEXTA-FEIRA":"QUINTA-FEIRA";lday.textContent=late?"sexta-feira":"quinta-feira";
+ const want=Math.min(N.length,1+Math.floor(p*N.length*1.15));
+ if(want!==shown){
+  if(want>shown){for(let i=shown;i<want;i++){const n=N[i];nts.insertAdjacentHTML("afterbegin",`<div class="nt"><i>W</i><div><b>${n[0]}<span>${n[1]}</span></b><p>${n[2]}</p></div></div>`)}phone.classList.remove("buzz");void phone.offsetWidth;phone.classList.add("buzz")}
+  else{nts.innerHTML="";for(let i=0;i<want;i++){const n=N[i];nts.insertAdjacentHTML("afterbegin",`<div class="nt" style="animation:none"><i>W</i><div><b>${n[0]}<span>${n[1]}</span></b><p>${n[2]}</p></div></div>`)}}
+  const mx=innerWidth<900?2:4;while(nts.children.length>mx)nts.lastElementChild.remove();shown=want}
+ const u=Math.round(Math.max(0,p-.18)/.82*47);unread.textContent=`+ ${u} mensagens não lidas`;unread.classList.toggle("on",u>0);
+ const bv=Math.max(4,38-Math.round(p*34));bat.textContent=bv+"%";bat.classList.toggle("low",bv<15);
+ dim.style.opacity=p>.78?Math.min(.55,(p-.78)*2.5):0;
+ const b=p<.3?1:p<.62?2:3;
+ if(b!==curB){curB=b;hero.dataset.b=b;beats.forEach(x=>{const k=+x.dataset.b;x.classList.toggle("on",k===b);x.classList.toggle("gone",k<b)})}
+ hb.forEach((x,i)=>{const lo=[0,.3,.62][i],hi=[.3,.62,1][i];x.style.width=Math.min(100,Math.max(0,(p-lo)/(hi-lo)*100))+"%"});
+ cue.style.opacity=p<.92?1:0;
+}
+
+// mapa
+const map=document.getElementById("map"),W=104,H=48;
+const nodes=[{id:"dono",t:"Dono",a:[300,300],b:[300,96]},{id:"at",t:"Atendimento",a:[300,118],b:[70,300]},{id:"co",t:"Comercial",a:[465,205],b:[185,300]},{id:"op",t:"Operação",a:[465,395],b:[300,300]},{id:"cp",t:"Compras",a:[300,482],b:[300,445]},{id:"en",t:"Entrega",a:[135,395],b:[415,300]},{id:"fi",t:"Financeiro",a:[135,205],b:[530,300]}];
+const P=Object.fromEntries(nodes.map(n=>[n.id,n]));
+const ks=["at","co","op","cp","en","fi"];
+const chaos=ks.map(k=>`<line class="lk" x1="300" y1="300" x2="${P[k].a[0]}" y2="${P[k].a[1]}"/>`).join("")+[["at","op"],["co","en"],["fi","cp"],["at","fi"],["op","en"]].map(([x,y])=>`<line class="lk mess" x1="${P[x].a[0]}" y1="${P[x].a[1]}" x2="${P[y].a[0]}" y2="${P[y].a[1]}"/>`).join("");
+const pulses=ks.map((k,i)=>`<circle r="5" fill="#e25c5c"><animateMotion dur="${1.6+i*.23}s" repeatCount="indefinite" path="M${P[k].a[0]} ${P[k].a[1]} L300 300"/></circle>`).join("");
+const loops=[["co",1],["op",1],["fi",-1]].map(([k,d])=>{const [x,y]=P[k].a,ox=x+d*62;return `<path class="loop" d="M${x+d*52} ${y-10} C ${ox+d*40} ${y-52}, ${ox+d*40} ${y+52}, ${x+d*52} ${y+10}"/><text class="lbl-r" x="${ox+d*44}" y="${y+42}" text-anchor="middle">refaz</text>`}).join("");
+const waits=[["at",0,-44],["cp",0,44],["en",-30,46]].map(([k,dx,dy])=>`<text class="lbl-r" x="${P[k].a[0]+dx}" y="${P[k].a[1]+dy}" text-anchor="middle">⏳ esperando o dono</text>`).join("");
+const fl=[["at","co"],["co","op"],["op","en"],["en","fi"]].map(([x,y])=>`<line class="flow" x1="${P[x].b[0]+W/2}" y1="300" x2="${P[y].b[0]-W/2}" y2="300" marker-end="url(#ar)"/>`).join("")+`<path class="flow" d="M300 ${300+H/2} V ${445-H/2}"/>`;
+const goods=[0,1,2].map(i=>`<circle r="5" fill="#00A79D"><animateMotion dur="3.6s" begin="${i*1.2}s" repeatCount="indefinite" path="M122 300 H478"/></circle>`).join("");
+const kp=[["at","no prazo"],["co","proposta em 24h"],["op","sem retrabalho"],["en","conferido"],["fi","fecha sozinho"]].map(([k,t],i)=>{const y=i%2?352:214;return `<g><rect x="${P[k].b[0]-54}" y="${y}" width="108" height="26" rx="13"/><text x="${P[k].b[0]}" y="${y+13}">${t}</text></g>`}).join("");
+map.innerHTML=`<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#00A79D"/></marker></defs>
+<g class="layer" id="L1">${chaos}${pulses}</g><g class="layer" id="L2">${loops}</g><g class="layer" id="L3">${waits}</g>
+<g class="layer" id="L5">${fl}<path d="M300 ${96+H/2} V 196" stroke="#00A79D" stroke-dasharray="4 8" fill="none" opacity=".6"/></g><g class="layer" id="L5b">${goods}</g><g class="layer kpi" id="L6">${kp}</g>
+${nodes.map(n=>`<g class="nd ${n.id==='dono'?'dono':''}" id="n-${n.id}" style="transform:translate(${n.a[0]}px,${n.a[1]}px)"><rect x="${-W/2}" y="${-H/2}" width="${W}" height="${H}" rx="14"/><text>${n.t}</text></g>`).join("")}
+<g class="layer badge" id="bd"><circle cx="348" cy="274" r="18"/><text x="348" y="274" id="bdt">0</text></g>`;
+const board=document.getElementById("board"),cap=document.getElementById("cap"),tagt=document.getElementById("tagt"),dots=[...document.querySelectorAll("#dots i")];
+const CAP={1:["Sua empresa hoje","Cada linha vermelha é um pedido, uma dúvida ou uma aprovação indo até você."],2:["Sua empresa hoje","Em vermelho: o trabalho que volta e não aparece em lugar nenhum."],3:["Sua empresa hoje","Pendências esperando uma única pessoa."],4:["Mapeando","Primeiro, enxergar como o trabalho acontece de verdade."],5:["Depois do mapeamento","Um caminho claro, com responsável em cada etapa."],6:["Depois do mapeamento","Cada etapa com um número que alguém acompanha."]};
+const op=(id,v)=>document.getElementById(id).style.opacity=v;
+let cur=0,cnt=null;
+function setS(s){
+ if(s===cur)return;const prev=cur;cur=s;
+ board.dataset.s=s;tagt.textContent=CAP[s][0];cap.textContent=CAP[s][1];dots.forEach((d,i)=>d.classList.toggle("on",i<s));
+ if((prev<4&&s>=4)||(prev>=4&&s<4&&prev)){board.classList.add("rw");setTimeout(()=>board.classList.remove("rw"),650)}
+ const B=s>=5;
+ nodes.forEach(n=>{const p=B?n.b:n.a;const g=document.getElementById("n-"+n.id);g.style.transform=`translate(${p[0]}px,${p[1]}px)`;g.style.opacity=s==4?.4:1});
+ document.querySelector("#n-dono text").textContent=B?"Direção":"Dono";
+ op("L1",s<=3?1:0);op("L2",(s==2||s==3)?1:0);op("L3",s==3?1:0);op("bd",s==3?1:0);op("L5",B?1:0);op("L5b",B?1:0);op("L6",s==6?1:0);
+ clearInterval(cnt);if(s==3){let v=0;const t=document.getElementById("bdt");cnt=setInterval(()=>{v+=2;t.textContent=Math.min(v,47);if(v>=47)clearInterval(cnt)},30)}
+}
+setS(1);
+const steps=[...document.querySelectorAll(".step")];
+const mob=matchMedia("(max-width:900px)").matches;
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){steps.forEach(x=>x.classList.toggle("on",x===e.target));setS(+e.target.dataset.s)}})},{rootMargin:mob?"-55% 0px -25% 0px":"-45% 0px -45% 0px"});
+steps.forEach(s=>io.observe(s));
+
+// tese palavra a palavra
+const mh=document.getElementById("mani");let inEm=false;
+mh.innerHTML=mh.innerHTML.replace(/<em>(.*?)<\/em>/,"§$1§").split(/(\s+)/).map(w=>{if(!w.trim())return w;const o=w.startsWith("§"),c=w.endsWith("§");const s=w.replace(/§/g,"");if(o)inEm=true;const r=`<span class="w">${inEm?`<em>${s}</em>`:s}</span>`;if(c)inEm=false;return r}).join("");
+const words=[...mh.querySelectorAll(".w")],maniS=document.getElementById("maniS"),sig=document.getElementById("sig");
+
+// frentes
+const SV=[["Mapeamento de processos","Ver e desenhar como o trabalho acontece hoje, sem filtro.","M4 6h16M4 12h10M4 18h6"],["Otimização","Cortar etapas, esperas e retrabalho que não agregam nada ao cliente.","M4 18l6-6 4 4 6-8"],["POP","O passo a passo de cada tarefa, escrito com quem faz.","M7 3h10v18H7zM10 8h4M10 12h4M10 16h2"],["Estudo de produtividade","Onde o tempo da equipe realmente está indo.","M12 7v5l3 3M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0-18"],["Auditoria de processos","Achar onde o processo deixa o erro passar.","M11 4a7 7 0 1 0 0 14a7 7 0 0 0 0-14M21 21l-5-5"],["Indicadores (KPIs)","Poucos números, com dono, meta e ação combinada.","M5 20V10M12 20V4M19 20v-7"],["Segurança de processos","Controles para o que não pode falhar.","M12 3l8 3v6c0 5-3.5 8-8 9c-4.5-1-8-4-8-9V6z"],["Automação","Automatizar só o que já funciona bem na mão.","M13 3L5 14h6l-1 7l8-11h-6z"],["Implantação de sistemas","A ferramenta certa em cima de um processo claro.","M4 5h16v11H4zM8 20h8M12 16v4"]];
+document.getElementById("svc").innerHTML=SV.map((s,i)=>`<div class="rv" style="transition-delay:${(i%3)*.08}s"><svg viewBox="0 0 24 24"><path d="${s[2]}"/></svg><b>${s[0]}</b><p>${s[1]}</p></div>`).join("");
+
+// teste
+const Q=["Suas férias têm celular do lado","Seu WhatsApp virou a central de dúvidas do time","O atendimento muda conforme quem pegou","O mesmo erro volta todo mês","Funcionário novo leva meses pra render","Quando alguém falta, ninguém sabe fazer o que ela fazia"];
+const qs=document.getElementById("qs");
+qs.innerHTML=Q.map((q,i)=>`<button class="q" aria-pressed="false" data-i="${i}"><i>✓</i>${q}</button>`).join("");
+const R=[["Comece marcando ao lado","Cada item marcado é uma parte da empresa que hoje depende de alguém lembrar, improvisar ou te ligar."],["Um ponto solto","Acontece em toda empresa. Vale resolver antes que vire hábito, porque hábito é mais difícil de desfazer."],["Sinal de alerta","A empresa já depende de pessoas específicas para funcionar. É o melhor momento para organizar: ainda dá pra fazer sem pressa e sem crise."],["Sua empresa aumentou, mas não ficou mais forte","Boa parte da operação está apoiada em você ou em quem sabe de cabeça. Uma conversa mostra por onde começar a tirar esse peso."]];
+function upd(){const n=qs.querySelectorAll('[aria-pressed=true]').length,k=n==0?0:n==1?1:n<=3?2:3;const m=document.getElementById("mt");m.style.width=(n/Q.length*100)+"%";m.style.backgroundPosition=`${-n*60}px 0`;document.getElementById("rt").textContent=n?`${n} de ${Q.length} · ${R[k][0]}`:R[0][0];document.getElementById("rp").textContent=R[k][1]}
+qs.addEventListener("click",e=>{const b=e.target.closest(".q");if(!b)return;b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")!=="true");upd()});upd();
+
+// contadores
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,to=+el.dataset.c,p=el.dataset.p||"";let v=0;const t=setInterval(()=>{v+=Math.ceil(to/30);el.textContent=p+Math.min(v,to);if(v>=to)clearInterval(t)},30);cio.unobserve(el)}),{threshold:.6});
+document.querySelectorAll("[data-c]").forEach(el=>cio.observe(el));
+
+// revelar + scroll
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");rio.unobserve(e.target)}}),{rootMargin:"0px 0px -10% 0px"});
+document.querySelectorAll(".rv").forEach(el=>rio.observe(el));
+const bar=document.getElementById("bar"),prog=document.getElementById("prog"),tl=document.getElementById("tl"),tlf=document.getElementById("tlf"),arts=[...tl.querySelectorAll("article")],pimg=document.getElementById("pimg"),portrait=document.getElementById("portrait"),mcta=document.getElementById("mcta"),end=document.getElementById("conversa");
+const still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+let tick=false;
+function onScroll(){
+ tick=false;const y=scrollY,vh=innerHeight,dh=document.documentElement.scrollHeight-vh;
+ bar.classList.toggle("on",y>40);prog.style.width=(dh>0?y/dh*100:0)+"%";
+ heroUpd();
+ const mr=maniS.getBoundingClientRect(),mp=Math.min(1,Math.max(0,(-mr.top)/(mr.height-vh)*1.2));const lit=Math.round(mp*words.length);words.forEach((w,i)=>w.classList.toggle("lit",i<lit));sig.classList.toggle("on",mp>.98);
+ const tr=tl.getBoundingClientRect(),tp=Math.min(1,Math.max(0,(vh*.6-tr.top)/tr.height));tlf.style.height=(tp*(tr.height-16))+"px";arts.forEach(a=>a.classList.toggle("on",a.getBoundingClientRect().top<vh*.6));
+ if(!still){const pr=portrait.getBoundingClientRect();if(pr.top<vh&&pr.bottom>0){const k=(pr.top+pr.height/2-vh/2)/vh;pimg.style.transform=`translateX(-50%) translateY(${k*40}px) scale(1.04)`}}
+ const er=end.getBoundingClientRect(),hr=document.getElementById('historia').getBoundingClientRect();mcta.classList.toggle("on",hero.getBoundingClientRect().bottom<0&&er.top>vh*.6&&!(hr.top<vh&&hr.bottom>0));
+}
+addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});addEventListener("resize",onScroll);onScroll();
+}
+</script>
+</body>
+</html>
