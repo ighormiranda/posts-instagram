@@ -54,10 +54,12 @@ def pessoal(path,dur,texto,sub=None,cta=None,size=104):
         if sub: yy=draw_block(img,sub,yy+20,t-0.4,'pjs500',44,cor=(225,225,225),dest=LM,lh=1.3)
         if cta: draw_block(img,cta,yy+40,t-0.6,'pjs800',48,cor=(4,4,4),dest=(4,4,4),box=LM)
     return {'dur':dur,'bg':bg,'draw':dr}
-r3=[pessoal(FOT+'jaqueta-externa/bracos-cruzados.jpg',2.4,'3 coisas que\nquase ninguém\n*sabe sobre mim.*'),
-    pessoal(FOT+'estudio-camisa-roxa/sorrindo.jpg',3.2,'1. Minha primeira\nvenda foi aos *7 anos.*','Bijuteria pras professoras.\nPra comprar um anel de dragão.',size=88),
-    pessoal(FOT+'jaqueta-externa/olhando-lado.jpg',3.2,'2. Dei aula de wakeboard\npro *Amazing Race China.*','Quando eu era GO\nno Club Med.',size=80),
-    pessoal(FOT+'escritorio/em-pe-escritorio-janela.jpg',3.0,'3. Antes do marketing,\ntrabalhei na *Petrobras.*','E na Eletronuclear.',size=80),
+r3=[pessoal(FOT+'jaqueta-externa/bracos-cruzados.jpg',2.4,'4 coisas que\nquase ninguém\n*sabe sobre mim.*'),
+    pessoal(FOT+'jaqueta-externa/olhando-lado.jpg',3.2,'1. Já fui GO\nno *Club Med.*','Wakeboard, ski aquático, vela,\nstand-up, caiaque e arco e flecha.',size=92),
+    pessoal(FOT+'estudio-camisa-roxa/sorrindo.jpg',3.4,'2. Depois que saí\ndo Club Med, dei aula\nde wakeboard pro\n*Amazing Race China.*',size=78),
+    pessoal(FOT+'escritorio/em-pe-escritorio-janela.jpg',3.4,'3. Sou formado em\n*Gestão Ambiental.*','E trabalhei na gerência de\nmeio ambiente da Eletronuclear.',size=84),
+    pessoal(FOT+'escritorio/mesa-reuniao-maos-cruzadas.jpg',3.4,'4. Fui pra *Petrobras*\na convite da\ngerente do setor.','Pra ajudar a implantar a\nLei das Estatais (13.303).',size=80),
+    pessoal(FOT+'estudio-blazer-verde/retrato.jpg',3.8,'O motivo do convite:\n*ética.*','O projeto tinha fim.\nEu sabia que ia sair.\nE trabalhei como se fosse ficar.',size=88),
     pessoal(FOT+'palco/palestrando.jpg',3.0,'Hoje eu junto\ntudo isso *na Liga.*',cta='Segue pra conhecer o resto',size=96)]
 
 quais=sys.argv[1:] or ['1','2','3']
