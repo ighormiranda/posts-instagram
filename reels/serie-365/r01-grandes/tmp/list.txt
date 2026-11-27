@@ -1,0 +1,4 @@
+file '/home/claude/posts-instagram/reels/serie-365/r01-grandes/tmp/p0.mp4'
+file '/home/claude/posts-instagram/reels/serie-365/r01-grandes/tmp/p1.mp4'
+file '/home/claude/posts-instagram/reels/serie-365/r01-grandes/tmp/p2.mp4'
+file '/home/claude/posts-instagram/reels/serie-365/r01-grandes/tmp/p3.mp4'

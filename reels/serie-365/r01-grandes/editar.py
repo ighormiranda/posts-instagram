@@ -39,7 +39,8 @@ for i,(f,a,b,segs) in enumerate(cuts):
 TOTAL=t0
 with open('tmp/list.txt','w') as fl:
     for p in parts: fl.write(f"file '{os.path.abspath(p)}'\n")
-subprocess.run(['ffmpeg','-v','error','-y','-f','concat','-safe','0','-i','tmp/list.txt','-c','copy','tmp/base.mp4'],check=True)
+subprocess.run(['ffmpeg','-v','error','-y','-f','concat','-safe','0','-i','tmp/list.txt','-c','copy','tmp/base0.mp4'],check=True)
+subprocess.run(['python3','../dentes.py','tmp/base0.mp4','tmp/base.mp4'],check=True)
 
 def fnt(n,s): return ImageFont.truetype(F+n+'.ttf',s)
 def segs(t):
@@ -69,11 +70,28 @@ def title_png(path):
 def title_only(path):
     im=Image.open('tmp/title_fonte.png').copy(); ImageDraw.Draw(im).rectangle((0,435,W,485),fill=(0,0,0,0)); im.save(path)
 title_png('tmp/title_fonte.png'); title_only('tmp/title.png')
+def card_png(nome,num,path):
+    im=Image.new('RGBA',(W,H),(0,0,0,0)); d=ImageDraw.Draw(im)
+    f1=fnt('pjs800',46); f2=fnt('Anton-Regular',120); f3=fnt('pjs800',40)
+    w=max(d.textlength(nome,font=f1), d.textlength(num,font=f2)+d.textlength(' por dia',font=f3))+60
+    x0,y0=60,500
+    d.rounded_rectangle((x0,y0,x0+w,y0+230),26,fill=(8,8,8,225),outline=LM,width=4)
+    d.text((x0+30,y0+22),nome,font=f1,fill=(255,255,255))
+    d.text((x0+30,y0+72),num,font=f2,fill=LM)
+    d.text((x0+40+d.textlength(num,font=f2),y0+150),'por dia',font=f3,fill=(230,230,230))
+    # seta apontando pro dedo (canto de cima)
+    d.polygon([(x0+60,y0),(x0+100,y0-34),(x0+140,y0)],fill=LM)
+    im.save(path)
+CARDS=[('Primo Rico','3',0.22,2.5),('Hormozi','3',2.74,4.6),('Pedro Quintanilha','3',4.88,6.9),('Joel Jota','2,7',7.18,11.3)]
 inputs=['-i','tmp/base.mp4','-i','tmp/title_fonte.png','-i','tmp/title.png']
 chain='[0:v][1:v]overlay=0:0:enable=\'between(t,0,13.6)\'[v1];[v1][2:v]overlay=0:0:enable=\'gt(t,13.6)\'[v2]'
 last='v2'
+for j,(nome,num,a0,a1) in enumerate(CARDS):
+    p=f'tmp/card{j}.png'; card_png(nome,num,p); inputs+=['-i',p]
+    idx=len(inputs)//2-1
+    chain+=f";[{last}][{idx}:v]overlay=0:0:enable='between(t,{a0},{a1})'[k{j}]"; last=f'k{j}'
 for k,(s,e,c) in enumerate(caps):
     p=f'tmp/c{k}.png'; caption_png(c,p); inputs+=['-i',p]
-    chain+=f";[{last}][{k+3}:v]overlay=0:0:enable='between(t,{s:.2f},{e:.2f})'[w{k}]"; last=f'w{k}'
+    chain+=f";[{last}][{len(inputs)//2-1}:v]overlay=0:0:enable='between(t,{s:.2f},{e:.2f})'[w{k}]"; last=f'w{k}'
 subprocess.run(['ffmpeg','-v','error','-y',*inputs,'-filter_complex',chain,'-map',f'[{last}]','-map','0:a','-c:v','libx264','-preset','medium','-crf','19','-pix_fmt','yuv420p','-c:a','copy','-movflags','+faststart','r01-os-grandes-postam-3.mp4'],check=True)
 print('total',round(TOTAL,2),'legendas',len(caps))

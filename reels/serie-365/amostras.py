@@ -47,16 +47,26 @@ r2=[foto_cena(CENA,2.8,'Toda empresa tem\num inimigo *invisível.*',chapeu='EPIS
 
 # ---------- 3. Pessoal (sábado) ----------
 def pessoal(path,dur,texto,sub=None,cta=None,size=104):
+    src=ImageOps.exif_transpose(Image.open(path)).convert('RGB')
+    quad=src.width/src.height>0.8
     base=load_bg(path)
-    def bg(t): return shade(kb_frame(base,t),bot=0.9)
+    if quad:
+        blur=ImageOps.fit(src,(W,H)).filter(ImageFilter.GaussianBlur(40))
+        blur=Image.blend(blur,Image.new('RGB',(W,H),(0,0,0)),0.55)
+    def bg(t):
+        if not quad: return shade(kb_frame(base,t),bot=0.9)
+        im=blur.copy(); z=1+0.06*t; w=int(960*z); h=int(960*src.height/src.width*z)
+        ph=src.resize((w,h),Image.LANCZOS); im.paste(ph,((W-w)//2,250+(960-h)//2 if h<960 else 250))
+        return shade(im,top=0.3,bot=0.8)
     def dr(img,t):
-        yy=draw_block(img,texto,1000,t,'pjs800',size,dest=LM,lh=1.12)
+        yy=draw_block(img,texto,1080 if quad else 1000,t,'pjs800',size,dest=LM,lh=1.12)
         if sub: yy=draw_block(img,sub,yy+20,t-0.4,'pjs500',44,cor=(225,225,225),dest=LM,lh=1.3)
         if cta: draw_block(img,cta,yy+40,t-0.6,'pjs800',48,cor=(4,4,4),dest=(4,4,4),box=LM)
     return {'dur':dur,'bg':bg,'draw':dr}
 r3=[pessoal(FOT+'jaqueta-externa/bracos-cruzados.jpg',2.4,'4 coisas que\nquase ninguém\n*sabe sobre mim.*'),
-    pessoal(FOT+'jaqueta-externa/olhando-lado.jpg',3.2,'1. Já fui GO\nno *Club Med.*','Wakeboard, ski aquático, vela,\nstand-up, caiaque e arco e flecha.',size=92),
-    pessoal(FOT+'estudio-camisa-roxa/sorrindo.jpg',3.4,'2. Depois que saí\ndo Club Med, dei aula\nde wakeboard pro\n*Amazing Race China.*',size=78),
+    pessoal(FOT+'club-med/ski-club-med.jpg',3.2,'1. Já fui GO\nno *Club Med.*','Wakeboard, ski aquático, vela,\nstand-up, caiaque e arco e flecha.',size=92),
+    pessoal(FOT+'club-med/show-backstreet-boys.jpg',3.0,'E fui o *Nick*\ndos *Backstreet Boys*\nnum show de lá.',size=84),
+    pessoal(FOT+'club-med/amazing-race-lancha.jpg',3.6,'2. Depois que saí\ndo Club Med, dei aula\nde wakeboard pro\n*Amazing Race China.*','Na foto, eu pilotando a lancha\nno dia da gravação.',size=70),
     pessoal(FOT+'escritorio/em-pe-escritorio-janela.jpg',3.4,'3. Sou formado em\n*Gestão Ambiental.*','E trabalhei na gerência de\nmeio ambiente da Eletronuclear.',size=84),
     pessoal(FOT+'escritorio/mesa-reuniao-maos-cruzadas.jpg',3.4,'4. Fui pra *Petrobras*\na convite da\ngerente do setor.','Pra ajudar a implantar a\nLei das Estatais (13.303).',size=80),
     pessoal(FOT+'estudio-blazer-verde/retrato.jpg',3.8,'O motivo do convite:\n*ética.*','O projeto tinha fim.\nEu sabia que ia sair.\nE trabalhei como se fosse ficar.',size=88),
