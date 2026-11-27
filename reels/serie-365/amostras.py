@@ -63,13 +63,14 @@ def pessoal(path,dur,texto,sub=None,cta=None,size=104):
         if sub: yy=draw_block(img,sub,yy+20,t-0.4,'pjs500',44,cor=(225,225,225),dest=LM,lh=1.3)
         if cta: draw_block(img,cta,yy+40,t-0.6,'pjs800',48,cor=(4,4,4),dest=(4,4,4),box=LM)
     return {'dur':dur,'bg':bg,'draw':dr}
-r3=[pessoal(FOT+'jaqueta-externa/bracos-cruzados.jpg',2.4,'4 coisas que\nquase ninguém\n*sabe sobre mim.*'),
+r3=[pessoal(FOT+'jaqueta-externa/bracos-cruzados.jpg',2.4,'5 coisas que\nquase ninguém\n*sabe sobre mim.*'),
     pessoal(FOT+'club-med/ski-club-med.jpg',3.2,'1. Já fui GO\nno *Club Med.*','Wakeboard, ski aquático, vela,\nstand-up, caiaque e arco e flecha.',size=92),
-    pessoal(FOT+'club-med/show-backstreet-boys.jpg',3.0,'E fui o *Nick*\ndos *Backstreet Boys*\nnum show de lá.',size=84),
+    pessoal(FOT+'club-med/show-backstreet-boys.jpg',3.0,'Eu era o *Nick* dos\n*Backstreet Boys*\nno show *History*\ndo Club Med.',size=80),
     pessoal(FOT+'club-med/amazing-race-lancha.jpg',3.6,'2. Depois que saí\ndo Club Med, dei aula\nde wakeboard pro\n*Amazing Race China.*','Na foto, eu pilotando a lancha\nno dia da gravação.',size=70),
-    pessoal(FOT+'escritorio/em-pe-escritorio-janela.jpg',3.4,'3. Sou formado em\n*Gestão Ambiental.*','E trabalhei na gerência de\nmeio ambiente da Eletronuclear.',size=84),
-    pessoal(FOT+'escritorio/mesa-reuniao-maos-cruzadas.jpg',3.4,'4. Fui pra *Petrobras*\na convite da\ngerente do setor.','Pra ajudar a implantar a\nLei das Estatais (13.303).',size=80),
-    pessoal(FOT+'estudio-blazer-verde/retrato.jpg',3.8,'O motivo do convite:\n*ética.*','O projeto tinha fim.\nEu sabia que ia sair.\nE trabalhei como se fosse ficar.',size=88),
+    pessoal(FOT+'evento-caio-carneiro.jpg',3.6,'3. Fui representante\nda *MonaVie* e da\n*Jeunesse.*','Na linha do Caio Carneiro.\nFoi lá que eu aprendi a vender.',size=80),
+    pessoal(FOT+'escritorio/em-pe-escritorio-janela.jpg',3.4,'4. Sou formado em\n*Gestão Ambiental.*','E trabalhei na gerência de\nmeio ambiente da Eletronuclear.',size=84),
+    pessoal(FOT+'escritorio/mesa-reuniao-maos-cruzadas.jpg',3.4,'5. Fui pra *Petrobras*\na convite da\ngerente do setor.','Pra ajudar a implantar a\nLei das Estatais (13.303).',size=80),
+    pessoal(FOT+'estudio-blazer-verde/retrato.jpg',3.8,'O motivo do convite:\n*ética.*','Eu sabia que, no fim do contrato,\nseria mandado embora.\nE trabalhei da melhor forma possível.',size=88),
     pessoal(FOT+'palco/palestrando.jpg',3.0,'Hoje eu junto\ntudo isso *na Liga.*',cta='Segue pra conhecer o resto',size=96)]
 
 quais=sys.argv[1:] or ['1','2','3']

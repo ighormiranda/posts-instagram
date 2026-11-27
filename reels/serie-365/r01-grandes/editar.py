@@ -62,32 +62,34 @@ def title_png(path):
     im=Image.new('RGBA',(W,H),(0,0,0,0)); d=ImageDraw.Draw(im); f=fnt('pjs800',50)
     lines=['Quantas vezes por dia','os grandes postam?']
     ws=[d.textlength(l,font=f) for l in lines]; bw=max(ws)+70
-    d.rounded_rectangle(((W-bw)/2,250,(W+bw)/2,250+2*64+44),22,fill=(255,255,255,240))
-    for k,l in enumerate(lines): d.text(((W-ws[k])/2,270+k*64),l,font=f,fill=(10,10,10))
+    POS='right'
+    bx0=(W-bw)/2 if POS=='center' else W-40-bw
+    d.rounded_rectangle((bx0,250,bx0+bw,250+2*64+44),22,fill=(255,255,255,240))
+    for k,l in enumerate(lines): d.text((bx0+(bw-ws[k])/2,270+k*64),l,font=f,fill=(10,10,10))
     f2=fnt('mono500',26); s='posts no feed de 12 a 26/11/2026'
-    d.text(((W-d.textlength(s,font=f2))/2,445),s,font=f2,fill=(235,235,235),stroke_width=3,stroke_fill=(0,0,0))
+    0 and d.text(((W-d.textlength(s,font=f2))/2,445),s,font=f2,fill=(235,235,235),stroke_width=3,stroke_fill=(0,0,0))
     im.save(path)
 def title_only(path):
     im=Image.open('tmp/title_fonte.png').copy(); ImageDraw.Draw(im).rectangle((0,435,W,485),fill=(0,0,0,0)); im.save(path)
 title_png('tmp/title_fonte.png'); title_only('tmp/title.png')
-def card_png(nome,num,path):
+def card_png(nome,num,path,tip=(80,500)):
     im=Image.new('RGBA',(W,H),(0,0,0,0)); d=ImageDraw.Draw(im)
     f1=fnt('pjs800',46); f2=fnt('Anton-Regular',120); f3=fnt('pjs800',40)
     w=max(d.textlength(nome,font=f1), d.textlength(num,font=f2)+d.textlength(' por dia',font=f3))+60
-    x0,y0=60,500
+    x0=max(30,tip[0]-50); y0=tip[1]-25-230
     d.rounded_rectangle((x0,y0,x0+w,y0+230),26,fill=(8,8,8,225),outline=LM,width=4)
     d.text((x0+30,y0+22),nome,font=f1,fill=(255,255,255))
     d.text((x0+30,y0+72),num,font=f2,fill=LM)
     d.text((x0+40+d.textlength(num,font=f2),y0+150),'por dia',font=f3,fill=(230,230,230))
     # seta apontando pro dedo (canto de cima)
-    d.polygon([(x0+60,y0),(x0+100,y0-34),(x0+140,y0)],fill=LM)
+    d.polygon([(tip[0]-22,y0+230),(tip[0],y0+256),(tip[0]+22,y0+230)],fill=LM)
     im.save(path)
-CARDS=[('Primo Rico','3',0.22,2.5),('Hormozi','3',2.74,4.6),('Pedro Quintanilha','3',4.88,6.9),('Joel Jota','2,7',7.18,11.3)]
+CARDS=[('Primo Rico','3',0.22,2.5,(80,500)),('Hormozi','3',2.74,4.6,(60,495)),('Pedro Quintanilha','3',4.88,6.9,(96,675)),('Joel Jota','2,7',7.18,11.3,(210,900))]
 inputs=['-i','tmp/base.mp4','-i','tmp/title_fonte.png','-i','tmp/title.png']
 chain='[0:v][1:v]overlay=0:0:enable=\'between(t,0,13.6)\'[v1];[v1][2:v]overlay=0:0:enable=\'gt(t,13.6)\'[v2]'
 last='v2'
-for j,(nome,num,a0,a1) in enumerate(CARDS):
-    p=f'tmp/card{j}.png'; card_png(nome,num,p); inputs+=['-i',p]
+for j,(nome,num,a0,a1,tp) in enumerate(CARDS):
+    p=f'tmp/card{j}.png'; card_png(nome,num,p,tp); inputs+=['-i',p]
     idx=len(inputs)//2-1
     chain+=f";[{last}][{idx}:v]overlay=0:0:enable='between(t,{a0},{a1})'[k{j}]"; last=f'k{j}'
 for k,(s,e,c) in enumerate(caps):

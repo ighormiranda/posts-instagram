@@ -28,7 +28,8 @@ while True:
             roi=img[y0:y1,x0:x1]; m=mask[y0:y1,x0:x1]
             hsv=cv2.cvtColor(roi,cv2.COLOR_BGR2HSV).astype(np.float32)
             # dente: claro e amarelado (matiz 8-40 no OpenCV), não lábio vermelho/escuro
-            teeth=(m>0)&(hsv[...,2]>95)&(hsv[...,0]>=8)&(hsv[...,0]<=40)
+            m=cv2.erode(m,np.ones((5,5),np.uint8))
+            teeth=(m>0)&(hsv[...,2]>150)&(hsv[...,1]<110)&(hsv[...,0]>=8)&(hsv[...,0]<=40)
             k=cv2.GaussianBlur(teeth.astype(np.float32),(7,7),0)
             hsv[...,1]=hsv[...,1]*(1-0.7*k)
             hsv[...,2]=np.clip(hsv[...,2]*(1+0.14*k),0,255)
