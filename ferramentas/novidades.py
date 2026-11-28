@@ -47,9 +47,31 @@ def foot(d, n, tot):
     d.text((W - M - d.textlength(p, font=f), 1260), p, font=f, fill=(150, 160, 150))
 
 
+def fit_rosto(im, size):
+    """Recorta para o tamanho pedido sem cortar a cabeça: acha o rosto (dlib) e deixa folga acima dele."""
+    tw, th = size
+    sc = max(tw / im.width, th / im.height)
+    big = im.resize((int(im.width * sc) + 1, int(im.height * sc) + 1))
+    top = int((big.height - th) * 0.3)
+    try:
+        import dlib, numpy as np
+        g = np.array(big.convert('L').resize((big.width // 4, big.height // 4)))
+        ds = dlib.get_frontal_face_detector()(g, 1)
+        if ds:
+            d = max(ds, key=lambda r: r.area())
+            face_top = d.top() * 4; face_h = d.height() * 4
+            # topo da cabeça fica ~0.6 da altura do rosto acima da testa; deixa mais 8% de folga
+            top = max(0, min(big.height - th, int(face_top - 0.6 * face_h - 0.08 * th)))
+    except Exception:
+        top = 0
+    left = (big.width - tw) // 2
+    return big.crop((left, top, left + tw, top + th))
+
+
 def capa_slide(ed, tot, out):
     im = Image.new('RGB', (W, H), PR)
-    ph = ImageOps.fit(ImageOps.exif_transpose(Image.open(gen.FOT + ed['foto'])).convert('RGB'), (W, 760), centering=(0.5, 0.3))
+    src = ImageOps.exif_transpose(Image.open(gen.FOT + ed['foto'])).convert('RGB')
+    ph = fit_rosto(src, (W, 760))
     im.paste(ph, (0, 0))
     g = Image.new('L', (1, 760))
     for y in range(760): g.putpixel((0, y), int(255 * max(0, (y - 380) / 380)))
